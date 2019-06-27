@@ -82,18 +82,19 @@ def _pelican_generate():
     os.system('rm -rf content/images/.ipynb_checkpoints')
     os.system('rm -rf content/downloads/.ipynb_checkpoints')
     os.system('rm -rf content/.ipynb_checkpoints')
-    
     config = os.path.join(BASE_DIR, 'pelicanconf.py')
     settings = pelican.settings.read_settings(path=config)
     pelican.Pelican(settings).run()
 
 
 def _push_github():
+    # backup
     cmd = 'git init && git add --all . && git commit -a -m ...' 
     os.system(cmd)
     cmd = f'git push origin master'
     os.system(cmd)
     print(DASHES)
+    # publish
     path = os.path.join(BASE_DIR, 'output')
     os.chdir(path)        
     cmd = 'git init && git add --all . && git commit -a -m ...' 

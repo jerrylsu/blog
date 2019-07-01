@@ -96,7 +96,7 @@ def _push_github():
     print(DASHES)
     # publish
     path = os.path.join(BASE_DIR, 'output')
-    os.chdir(path)        
+    os.chdir(path)
     cmd = 'git init && git add --all . && git commit -a -m ...' 
     os.system(cmd)
     cmd = f'git push origin master'

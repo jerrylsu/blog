@@ -16,3 +16,5 @@ Tags: Machine Learning, Featuretools
 [https://github.com/Featuretools](https://github.com/Featuretools)
 
 [https://towardsdatascience.com/automated-feature-engineering-in-python-99baf11cc219](https://towardsdatascience.com/automated-feature-engineering-in-python-99baf11cc219)
+
+[https://www.kaggle.com/frednavruzov/auto-feature-generation-featuretools-example](https://www.kaggle.com/frednavruzov/auto-feature-generation-featuretools-example)

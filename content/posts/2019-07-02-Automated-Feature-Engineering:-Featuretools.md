@@ -14,8 +14,9 @@ Tags: Machine Learning, Featuretools
 
 2. 生成的特征过多带来新的问题：维度诅咒，那么如何选取特征？
 
-   - [feature reduction and selection](https://scikit-learn.org/stable/modules/feature_selection.html)
-   - [feature selection](https://machinelearningmastery.com/feature-selection-machine-learning-python/)
+   [feature reduction and selection](https://scikit-learn.org/stable/modules/feature_selection.html)
+   
+   [feature selection](https://machinelearningmastery.com/feature-selection-machine-learning-python/)
 
 [http://www.jmaxkanter.com/static/papers/DSAA_DSM_2015.pdf](http://www.jmaxkanter.com/static/papers/DSAA_DSM_2015.pdf)
 

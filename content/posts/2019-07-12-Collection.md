@@ -1,8 +1,8 @@
 Status: published
 Date: 2019-07-12 07:51:32
 Author: Jerry Su
-Slug: Collection
-Title: Collection
+Slug: Scala-Collection
+Title: Scala Collection
 Category: Scala
 Tags: Scala
 

@@ -27,3 +27,5 @@ Tags: Machine Learning, Featuretools
 [https://towardsdatascience.com/automated-feature-engineering-in-python-99baf11cc219](https://towardsdatascience.com/automated-feature-engineering-in-python-99baf11cc219)
 
 [https://github.com/WillKoehrsen/automated-feature-engineering/blob/master/walk_through/Automated_Feature_Engineering.ipynb](https://github.com/WillKoehrsen/automated-feature-engineering/blob/master/walk_through/Automated_Feature_Engineering.ipynb)
+
+[https://www.kaggle.com/liananapalkova/automated-feature-engineering-for-titanic-dataset](https://www.kaggle.com/liananapalkova/automated-feature-engineering-for-titanic-dataset)

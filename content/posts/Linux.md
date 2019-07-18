@@ -9,66 +9,101 @@ Tags: Linux
 [TOC]
 
 [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+
 http://www.gnu.org/software/bash/manual/bashref.html
+
 [explainshell-command](https://www.explainshell.com/)
 
 
 ### Redirection of standard output `>`
+
 The default standard output is the screen.
 `>` is output redirection symbol and syntax is:
 `$ command > output.file.name`
 https://bash.cyberciti.biz/guide/Standard_output
 
 ### Appending redirected output `>>`
+
 Appending the output to the same file using `>>` operator.
 
 ### Pipes `|`
+
 https://bash.cyberciti.biz/guide/Chapter_7:_Pipes_and_Filters
 
 ### cat
+
 - **Displaying The Contents of Files**
+
 `$ cat filename`
+
 `$ cat file > newfile`
+
 [Use a pipe to filter data](https://bash.cyberciti.biz/guide/Pipes):
+
 `$ cat file | less`
+
 - **Concatenate files**
+
 `$ cat file1 file2`
+
 `$ cat file1 file2 >  newcombinedfile`
+
 - **Create new text files**
+
  note that if a file already exists, it will be overwritten. 
+ 
 `$ cat > filename`
+
 [append the output to the same file](https://bash.cyberciti.biz/guide/Appending_redirected_output) using `>>` operator:
+
 `$ cat >> filename`
+
 - **Copy file**
+
 `$ cat oldfile > newfile`
 
 https://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/
 
 ### chmod
+
 `$ chmod +x tarbackup.sh`
+
 `$ ./tarbackup.sh`
 
 ### ps (process status)
+
 `ps -aux` 显示所有包含其他使用者的行程
+
 `ps -aux | grep ssh` 与`grep`结合，查找特定进程
 
 ### unzip
+
 `sudo apt-get install unzip`
+
 `unzip file.zip -d destination_folde`
+
 [unzip](https://askubuntu.com/questions/86849/how-to-unzip-a-zip-file-from-the-terminal)
 
 ### tar
+
 `tar -czvf ***.tar.gz directory`
+
 `tar -xzvf ***.tar.gz`
+
 [tar](https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html)
 
 ### windows '\r\n' to linux '\n'
+
 `cat -A filename`
+
 `vim filename` && `set ff=unix`
 
 ### rsync
+
 upload: `rsync -avh --progress --delete --exclude=analysis/ src_dir/ host:dest_dir`
+
 download: `rsync -avh --progress host:dest_dir ./`
+
 ```
 -a, ––archive	  # 归档模式，表示以递归方式传输文件，并保持所有文件属性，等价于 -rlptgoD
 -r, ––recursive	  # 对子目录以递归模式处理
@@ -86,38 +121,60 @@ download: `rsync -avh --progress host:dest_dir ./`
 -h, ––human-readable # 输出文件大小使用易读的单位（如，K，M等）
 
 ```
+
 [rsync man page](https://download.samba.org/pub/rsync/rsync.html)
+
 [How rsync works](https://rsync.samba.org/how-rsync-works.html)
 
 ## SSH
+
 ### SSH Passwordless Login Server
+
 SSH Client : 192.168.0.12
+
 SSH Remote Host : 192.168.0.11
+
 1. Create Authentication SSH-Kegen Keys on – 192.168.0.12
+
 `ssh-keygen -t rsa`
+
+`ssh-keygen -t rsa -b 4096 -m pem`
+
 2. Create .ssh Directory on – 192.168.0.11
+
 `ssh 192.168.0.11 mkdir -p .ssh`
+
 3. Upload Generated Public Keys to – 192.168.0.11
+
 `cat .ssh/id_rsa.pub | ssh 192.168.0.11 'cat >> .ssh/authorized_keys'`
 
 - Set Permissions on – 192.168.0.11
+
 `ssh 192.168.0.11 "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"`
+
 - Set StrictModes
+
 `sudo vim /etc/ssh/sshd_config` ===> `StrictModes no`
+
 `sudo service ssh restart`
 
 [SSH Passwordless Login](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
 
 ## Setting Shell and Environmental Variables 
+
 ### Setting permanent var: in `~/.bashrc` file
+
 `vim ~/.bashrc`
+
 ```
 # open ~/.bashrc file &
 # set environmental varuable
 TEST="Hi Jerry"
 alias ll='ls -alF'
 ```
+
 `source ~/.bashrc`
+
 ```
 lsu1@3b956a9b2b24:~$ vim ~/.bashrc
 lsu1@3b956a9b2b24:~$ echo $TEST
@@ -126,7 +183,9 @@ lsu1@3b956a9b2b24:~$ source ~/.bashrc
 lsu1@3b956a9b2b24:~$ echo $TEST
 Hi Jerry
 ```
+
 ### Setting temporary var: in Shell
+
 ```
 lsu1@3b956a9b2b24:~$ TEST="Hi Jerry"
 lsu1@3b956a9b2b24:~$ echo $TEST

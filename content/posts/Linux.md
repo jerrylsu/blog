@@ -8,14 +8,8 @@ Tags: Linux
 
 [TOC]
 
-[Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 
-http://www.gnu.org/software/bash/manual/bashref.html
-
-[explainshell-command](https://www.explainshell.com/)
-
-
-### Redirection of standard output `>`
+## Redirection of standard output `>`
 
 The default standard output is the screen.
 `>` is output redirection symbol and syntax is:
@@ -26,11 +20,11 @@ https://bash.cyberciti.biz/guide/Standard_output
 
 Appending the output to the same file using `>>` operator.
 
-### Pipes `|`
+## Pipes `|`
 
 https://bash.cyberciti.biz/guide/Chapter_7:_Pipes_and_Filters
 
-### cat
+## cat
 
 - **Displaying The Contents of Files**
 
@@ -64,19 +58,19 @@ https://bash.cyberciti.biz/guide/Chapter_7:_Pipes_and_Filters
 
 https://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/
 
-### chmod
+## chmod
 
 `$ chmod +x tarbackup.sh`
 
 `$ ./tarbackup.sh`
 
-### ps (process status)
+## ps (process status)
 
 `ps -aux` 显示所有包含其他使用者的行程
 
 `ps -aux | grep ssh` 与`grep`结合，查找特定进程
 
-### unzip
+## unzip
 
 `sudo apt-get install unzip`
 
@@ -84,7 +78,7 @@ https://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/
 
 [unzip](https://askubuntu.com/questions/86849/how-to-unzip-a-zip-file-from-the-terminal)
 
-### tar
+## tar
 
 `tar -czvf ***.tar.gz directory`
 
@@ -92,13 +86,13 @@ https://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/
 
 [tar](https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html)
 
-### windows '\r\n' to linux '\n'
+## windows '\r\n' to linux '\n'
 
 `cat -A filename`
 
 `vim filename` && `set ff=unix`
 
-### rsync
+## rsync
 
 upload: `rsync -avh --progress --delete --exclude=analysis/ src_dir/ host:dest_dir`
 
@@ -128,7 +122,7 @@ download: `rsync -avh --progress host:dest_dir ./`
 
 ## SSH
 
-### SSH Passwordless Login Server
+### Passwordless Login
 
 SSH Client : 192.168.0.12
 
@@ -160,7 +154,7 @@ SSH Remote Host : 192.168.0.11
 
 [SSH Passwordless Login](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
 
-### ssh链接断开问题
+### Auto disconnect
 
 ```
 /etc/ssh/sshd_config
@@ -177,9 +171,9 @@ MAC: service: command not found
 
 MAC: `brew services start sshd`
 
-## Setting Shell and Environmental Variables 
+## Setting Environmental Var 
 
-### Setting permanent var: in `~/.bashrc` file
+### Permanent var in `~/.bashrc`
 
 `vim ~/.bashrc`
 
@@ -201,7 +195,7 @@ lsu1@3b956a9b2b24:~$ echo $TEST
 Hi Jerry
 ```
 
-### Setting temporary var: in Shell
+### Temporary var in Shell
 
 ```
 lsu1@3b956a9b2b24:~$ TEST="Hi Jerry"
@@ -221,3 +215,11 @@ lsu1@3b956a9b2b24:~$
 **Note: var is temporary, and shutting down Shell, then the var is gone!**
 
 [How To Read and Set Environmental and Shell Variables on a Linux VPS](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)
+
+## Reference
+
+[Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+
+http://www.gnu.org/software/bash/manual/bashref.html
+
+[explainshell-command](https://www.explainshell.com/)

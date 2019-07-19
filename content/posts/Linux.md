@@ -16,7 +16,7 @@ The default standard output is the screen.
 `$ command > output.file.name`
 https://bash.cyberciti.biz/guide/Standard_output
 
-### Appending redirected output `>>`
+## Redirected output `>>`
 
 Appending the output to the same file using `>>` operator.
 
@@ -84,7 +84,7 @@ https://www.cyberciti.biz/faq/howto-use-cat-command-in-unix-linux-shell-script/
 
 `tar -xzvf ***.tar.gz`
 
-[tar](https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html)
+[https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html](https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html)
 
 ## windows '\r\n' to linux '\n'
 
@@ -116,9 +116,9 @@ download: `rsync -avh --progress host:dest_dir ./`
 
 ```
 
-[rsync man page](https://download.samba.org/pub/rsync/rsync.html)
+[https://download.samba.org/pub/rsync/rsync.html](https://download.samba.org/pub/rsync/rsync.html)
 
-[How rsync works](https://rsync.samba.org/how-rsync-works.html)
+[https://rsync.samba.org/how-rsync-works.html](https://rsync.samba.org/how-rsync-works.html)
 
 ## SSH
 
@@ -152,7 +152,7 @@ SSH Remote Host : 192.168.0.11
 
 `sudo service ssh restart`
 
-[SSH Passwordless Login](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
+[https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps)
 
 ### Auto disconnect
 
@@ -220,6 +220,6 @@ lsu1@3b956a9b2b24:~$
 
 [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 
-http://www.gnu.org/software/bash/manual/bashref.html
+[http://www.gnu.org/software/bash/manual/bashref.html](http://www.gnu.org/software/bash/manual/bashref.html)
 
-[explainshell-command](https://www.explainshell.com/)
+[https://www.explainshell.com](https://www.explainshell.com)

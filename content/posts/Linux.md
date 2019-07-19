@@ -160,6 +160,23 @@ SSH Remote Host : 192.168.0.11
 
 [SSH Passwordless Login](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
 
+### ssh链接断开问题
+
+```
+/etc/ssh/sshd_config
+
+ClientAliveInterval 60
+ClientAliveCountMax 3
+```
+
+restart sshd：
+
+Linux: `service sshd restart`
+
+MAC: service: command not found
+
+MAC: `brew services start sshd`
+
 ## Setting Shell and Environmental Variables 
 
 ### Setting permanent var: in `~/.bashrc` file

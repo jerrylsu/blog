@@ -10,6 +10,8 @@ Tags: Hadoop
 
 If there are too many small files then the NameNode might get loaded since it stores the name space for HDFS. 
 
+![partition](images/Hadoop/partition.png)
+
 repartition
 
 `sellerTransStatsFeatures.repartition(num)`

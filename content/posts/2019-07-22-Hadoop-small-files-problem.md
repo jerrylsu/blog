@@ -18,3 +18,4 @@ check
 
 `hdfs dfs -du -s -h /apps/hdmi-technology/item_pla_event/*`
 
+[https://stackoverflow.com/questions/8562934/small-files-and-hdfs-blocks](https://stackoverflow.com/questions/8562934/small-files-and-hdfs-blocks)

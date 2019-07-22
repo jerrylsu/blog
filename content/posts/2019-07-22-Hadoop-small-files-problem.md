@@ -12,13 +12,15 @@ If there are too many small files then the NameNode might get loaded since it st
 
 ![partition](images/Hadoop/partition.png)
 
-repartition
-
-`sellerTransStatsFeatures.repartition(num)`
-
-check
+Check
 
 `hdfs dfs -du -s -h /apps/hdmi-technology/item_pla_event/*`
+
+先按照不分区执行Job，查看整张表的大小。然后计算一个合适的分区数num，按照重新分区repartitioN(num)重新跑Job。
+
+Repartition
+
+`sellerTransStatsFeatures.repartition(num)`
 
 NameNode
 

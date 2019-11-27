@@ -46,6 +46,16 @@ DISPLAY_PAGES_ON_MENU = True
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# Home Page — Projects List
+PROJECTS_TITLE = "Related Projects"
+
+PROJECTS = [{
+    'name': 'Algorithms',
+    'url': 'https://github.com/jerrylsu/Algorithms',
+    'description': 'Algorithms in python'},
+    {'name': 'Blog',
+     'url': 'https://github.com/jerrylsu/blog',
+     'description': 'Jerry\'s Blog'}]
 
 # Plugins and extensions
 MARKDOWN = {

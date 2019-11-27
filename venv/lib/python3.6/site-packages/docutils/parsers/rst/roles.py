@@ -1,4 +1,4 @@
-# $Id: roles.py 7937 2016-05-24 10:48:48Z milde $
+# $Id: roles.py 8254 2019-04-15 10:23:34Z milde $
 # Author: Edward Loper <edloper@gradient.cis.upenn.edu>
 # Copyright: This module has been placed in the public domain.
 
@@ -276,7 +276,11 @@ register_canonical_role('pep-reference', pep_reference_role)
 def rfc_reference_role(role, rawtext, text, lineno, inliner,
                        options={}, content=[]):
     try:
-        rfcnum = int(text)
+        if "#" in text:
+            rfcnum, section = text.split("#", 1)
+        else:
+            rfcnum, section  = text, None
+        rfcnum = int(rfcnum)
         if rfcnum <= 0:
             raise ValueError
     except ValueError:
@@ -287,8 +291,10 @@ def rfc_reference_role(role, rawtext, text, lineno, inliner,
         return [prb], [msg]
     # Base URL mainly used by inliner.rfc_reference, so this is correct:
     ref = inliner.document.settings.rfc_base_url + inliner.rfc_url % rfcnum
+    if section is not None:
+        ref += "#"+section
     set_classes(options)
-    node = nodes.reference(rawtext, 'RFC ' + utils.unescape(text), refuri=ref,
+    node = nodes.reference(rawtext, 'RFC ' + utils.unescape(str(rfcnum)), refuri=ref,
                            **options)
     return [node], []
 
@@ -308,7 +314,7 @@ def raw_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
         prb = inliner.problematic(rawtext, rawtext, msg)
         return [prb], [msg]
     set_classes(options)
-    node = nodes.raw(rawtext, utils.unescape(text, 1), **options)
+    node = nodes.raw(rawtext, utils.unescape(text, True), **options)
     node.source, node.line = inliner.reporter.get_source_and_line(lineno)
     return [node], []
 
@@ -325,7 +331,7 @@ def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     if language and language not in classes:
         classes.append(language)
     try:
-        tokens = Lexer(utils.unescape(text, 1), language,
+        tokens = Lexer(utils.unescape(text, True), language,
                        inliner.document.settings.syntax_highlight)
     except LexerError as error:
         msg = inliner.reporter.warning(error)

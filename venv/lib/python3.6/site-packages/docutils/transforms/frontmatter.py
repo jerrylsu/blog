@@ -1,4 +1,4 @@
-# $Id: frontmatter.py 8117 2017-06-18 23:38:18Z milde $
+# $Id: frontmatter.py 8231 2018-11-20 23:55:14Z milde $
 # Author: David Goodger, Ueli Schlaepfer <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -424,6 +424,7 @@ class DocInfo(Transform):
                             base_node=field)
                         raise TransformError
                     title = nodes.title(name, labels[canonical])
+                    title[0].rawsource =  labels[canonical]
                     topics[canonical] = biblioclass(
                         '', title, classes=[canonical], *field[1].children)
                 else:
@@ -433,10 +434,10 @@ class DocInfo(Transform):
                        and isinstance(field[-1][0], nodes.paragraph):
                     utils.clean_rcs_keywords(
                         field[-1][0], self.rcs_keyword_substitutions)
-                if normedname not in bibliofields:
-                    classvalue = nodes.make_id(normedname)
-                    if classvalue:
-                        field['classes'].append(classvalue)
+                # if normedname not in bibliofields:
+                classvalue = nodes.make_id(normedname)
+                if classvalue:
+                    field['classes'].append(classvalue)
                 docinfo.append(field)
         nodelist = []
         if len(docinfo) != 0:
@@ -503,20 +504,28 @@ class DocInfo(Transform):
             raise
 
     def authors_from_one_paragraph(self, field):
-        text = field[1][0].astext().strip()
+        """Return list of Text nodes for ";"- or ","-separated authornames."""
+        # @@ keep original formatting? (e.g. ``:authors: A. Test, *et-al*``)
+        text = ''.join(str(node)
+                       for node in field[1].traverse(nodes.Text))
         if not text:
             raise TransformError
         for authorsep in self.language.author_separators:
-            authornames = text.split(authorsep)
+            # don't split at escaped `authorsep`:
+            pattern = '(?<!\x00)%s' % authorsep
+            authornames = re.split(pattern, text)
             if len(authornames) > 1:
                 break
-        authornames = [author.strip() for author in authornames]
-        authors = [[nodes.Text(author)] for author in authornames if author]
+        authornames = (name.strip() for name in authornames)
+        authors = [[nodes.Text(name, utils.unescape(name, True))]
+                   for name in authornames if name]
         return authors
 
     def authors_from_bullet_list(self, field):
         authors = []
         for item in field[1][0]:
+            if isinstance(item, nodes.comment):
+                continue
             if len(item) != 1 or not isinstance(item[0], nodes.paragraph):
                 raise TransformError
             authors.append(item[0].children)
@@ -526,7 +535,8 @@ class DocInfo(Transform):
 
     def authors_from_paragraphs(self, field):
         for item in field[1]:
-            if not isinstance(item, nodes.paragraph):
+            if not isinstance(item, (nodes.paragraph, nodes.comment)):
                 raise TransformError
-        authors = [item.children for item in field[1]]
+        authors = [item.children for item in field[1]
+                   if not isinstance(item, nodes.comment)]
         return authors

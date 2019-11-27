@@ -3,7 +3,7 @@
 
 # :Author: Günter Milde <milde@users.sourceforge.net>
 # :Revision: $Revision: 8046 $
-# :Date: $Date: 2017-03-11 13:09:36 +0100 (Sa, 11 Mär 2017) $
+# :Date: $Date: 2017-03-11 13:09:36 +0100 (Sa, 11. Mär 2017) $
 # :Copyright: © 2010 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:
 # 

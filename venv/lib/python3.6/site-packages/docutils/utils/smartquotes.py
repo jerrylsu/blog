@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# :Id: $Id: smartquotes.py 8095 2017-05-30 21:04:18Z milde $
+# :Id: $Id: smartquotes.py 8253 2019-04-15 10:01:10Z milde $
 # :Copyright: © 2010 Günter Milde,
 #             original `SmartyPants`_: © 2003 John Gruber
 #             smartypants.py:          © 2004, 2007 Chad Miller
@@ -261,6 +261,10 @@ the source::
 Version History
 ===============
 
+1.8.1   2017-10-25
+        - Use open quote after Unicode whitespace, ZWSP, and ZWNJ.
+        - Code cleanup.
+
 1.8:    2017-04-24
         - Command line front-end.
 
@@ -400,11 +404,7 @@ class smartchars(object):
     # [9] Typografisk håndbok. Oslo: Spartacus. 2000. s. 67. ISBN 8243001530.
     # [10] http://www.typografi.org/sitat/sitatart.html
     #
-    # TODO: configuration option, e.g.::
-    #
-    #   smartquote-locales: nl: „“’’,  # apostrophe for ``'s Gravenhage``
-    #                       nr: se,    # alias
-    #                       fr: « : »:‹ : ›, # :-separated list with NBSPs
+    # See also configuration option "smartquote-locales".
     quotes = {'af':           '“”‘’',
               'af-x-altquot': '„”‚’',
               'bg':           '„“‚‘', # Bulgarian, https://bg.wikipedia.org/wiki/Кавички
@@ -448,6 +448,7 @@ class smartchars(object):
               'it-x-altquot': '“”‘’',
               # 'it-x-altquot2': u'“„‘‚', # [7] in headlines
               'ja':           '「」『』',
+              'ko':           '《》〈〉',
               'lt':           '„“‚‘',
               'lv':           '„“‚‘',
               'mk':           '„“‚‘', # Macedonian, https://mk.wikipedia.org/wiki/Правопис_и_правоговор_на_македонскиот_јазик
@@ -635,8 +636,10 @@ def educateQuotes(text, language='en'):
 
     smart = smartchars(language)
 
-    # oldtext = text
     punct_class = r"""[!"#\$\%'()*+,-.\/:;<=>?\@\[\\\]\^_`{|}~]"""
+    close_class = r"""[^\ \t\r\n\[\{\(\-]"""
+    open_class = '[\u200B\u200C]' # ZWSP, ZWNJ
+    dec_dashes = r"""&#8211;|&#8212;"""
 
     # Special case if the very first character is a quote
     # followed by punctuation at a non-word-break.
@@ -651,24 +654,23 @@ def educateQuotes(text, language='en'):
 
     # Special case for decade abbreviations (the '80s):
     if language.startswith('en'): # TODO similar cases in other languages?
-        text = re.sub(r"""'(?=\d{2}s)""", smart.apostrophe, text, re.UNICODE)
-
-    close_class = r"""[^\ \t\r\n\[\{\(\-]"""
-    dec_dashes = r"""&#8211;|&#8212;"""
+        text = re.sub(r"'(?=\d{2}s)", smart.apostrophe, text)
 
     # Get most opening single quotes:
     opening_single_quotes_regex = re.compile(r"""
-                    (
+                    (# ?<=  # look behind fails: requires fixed-width pattern
                             \s          |   # a whitespace char, or
+                            %s          |   # another separating char, or
                             &nbsp;      |   # a non-breaking space entity, or
-                            --          |   # dashes, or
-                            &[mn]dash;  |   # named dash entities
-                            %s          |   # or decimal entities
-                            &\#x201[34];    # or hex
+                            [–—]        |   # literal dashes, or
+                            --          |   # dumb dashes, or
+                            &[mn]dash;  |   # dash entities (named or
+                            %s          |   # decimal or
+                            &\#x201[34];    # hex)
                     )
                     '                 # the quote
                     (?=\w)            # followed by a word character
-                    """ % (dec_dashes,), re.VERBOSE | re.UNICODE)
+                    """ % (open_class,dec_dashes), re.VERBOSE | re.UNICODE)
     text = opening_single_quotes_regex.sub(r'\1'+smart.osquote, text)
 
     # In many locales, single closing quotes are different from apostrophe:
@@ -679,21 +681,10 @@ def educateQuotes(text, language='en'):
     # "Ich fass' es nicht."
 
     closing_single_quotes_regex = re.compile(r"""
-                    (%s)
+                    (?<=%s)
                     '
-                    (?!\s  |       # whitespace
-                       s\b |
-                        \d         # digits   ('80s)
-                    )
-                    """ % (close_class,), re.VERBOSE | re.UNICODE)
-    text = closing_single_quotes_regex.sub(r'\1'+smart.csquote, text)
-
-    closing_single_quotes_regex = re.compile(r"""
-                    (%s)
-                    '
-                    (\s | s\b)
-                    """ % (close_class,), re.VERBOSE | re.UNICODE)
-    text = closing_single_quotes_regex.sub(r'\1%s\2' % smart.csquote, text)
+                    """ % close_class, re.VERBOSE)
+    text = closing_single_quotes_regex.sub(smart.csquote, text)
 
     # Any remaining single quotes should be opening ones:
     text = re.sub(r"""'""", smart.osquote, text)
@@ -702,30 +693,27 @@ def educateQuotes(text, language='en'):
     opening_double_quotes_regex = re.compile(r"""
                     (
                             \s          |   # a whitespace char, or
+                            %s          |   # another separating char, or
                             &nbsp;      |   # a non-breaking space entity, or
-                            --          |   # dashes, or
-                            &[mn]dash;  |   # named dash entities
-                            %s          |   # or decimal entities
-                            &\#x201[34];    # or hex
+                            [–—]        |   # literal dashes, or
+                            --          |   # dumb dashes, or
+                            &[mn]dash;  |   # dash entities (named or
+                            %s          |   # decimal or
+                            &\#x201[34];    # hex)
                     )
                     "                 # the quote
                     (?=\w)            # followed by a word character
-                    """ % (dec_dashes,), re.VERBOSE)
+                    """ % (open_class,dec_dashes), re.VERBOSE | re.UNICODE)
     text = opening_double_quotes_regex.sub(r'\1'+smart.opquote, text)
 
     # Double closing quotes:
     closing_double_quotes_regex = re.compile(r"""
-                    #(%s)?   # character that indicates the quote should be closing
-                    "
-                    (?=\s)
-                    """ % (close_class,), re.VERBOSE)
+                    (
+                    (?<=%s)" | # char indicating the quote should be closing
+                    "(?=\s)    # whitespace behind
+                    )
+                    """ % (close_class,), re.VERBOSE | re.UNICODE)
     text = closing_double_quotes_regex.sub(smart.cpquote, text)
-
-    closing_double_quotes_regex = re.compile(r"""
-                    (%s)   # character that indicates the quote should be closing
-                    "
-                    """ % (close_class,), re.VERBOSE)
-    text = closing_double_quotes_regex.sub(r'\1'+smart.cpquote, text)
 
     # Any remaining quotes should be opening ones.
     text = re.sub(r'"', smart.opquote, text)

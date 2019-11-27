@@ -1,1 +1,1 @@
-/opt/conda/lib/python3.6/sre_constants.py
+/root/anaconda3/lib/python3.6/sre_constants.py

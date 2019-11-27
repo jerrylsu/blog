@@ -1,5 +1,5 @@
-# .. coding: utf8
-# $Id: __init__.py 8041 2017-03-01 11:02:33Z milde $
+# .. coding: utf-8
+# $Id: __init__.py 8181 2017-09-22 10:29:55Z milde $
 # :Author: Günter Milde <milde@users.sf.net>
 #          Based on the html4css1 writer by David Goodger.
 # :Maintainer: docutils-develop@lists.sourceforge.net
@@ -162,21 +162,30 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
     def depart_acronym(self, node):
         self.body.append('</abbr>')
 
-    # no meta tag in HTML5
+    # no standard meta tag name in HTML5, use separate "author" meta tags
+    # https://www.w3.org/TR/html5/document-metadata.html#standard-metadata-names
     def visit_authors(self, node):
         self.visit_docinfo_item(node, 'authors', meta=False)
+        for subnode in node:
+            self.add_meta('<meta name="author" content="%s" />\n' % 
+                          self.attval(subnode.astext()))
     def depart_authors(self, node):
         self.depart_docinfo_item()
 
-    # no meta tag in HTML5
+    # no standard meta tag name in HTML5, use dcterms.rights
+    # see https://wiki.whatwg.org/wiki/MetaExtensions
     def visit_copyright(self, node):
         self.visit_docinfo_item(node, 'copyright', meta=False)
+        self.add_meta('<meta name="dcterms.rights" content="%s" />\n'
+                      % self.attval(node.astext()))
     def depart_copyright(self, node):
         self.depart_docinfo_item()
 
-    # no meta tag in HTML5
+    # no standard meta tag name in HTML5, use dcterms.date
     def visit_date(self, node):
         self.visit_docinfo_item(node, 'date', meta=False)
+        self.add_meta('<meta name="dcterms.date" content="%s" />\n'
+                      % self.attval(node.astext()))
     def depart_date(self, node):
         self.depart_docinfo_item()
 
@@ -199,7 +208,7 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
     def depart_meta(self, node):
         pass
 
-    # no meta tag in HTML5
+    # no standard meta tag name in HTML5
     def visit_organization(self, node):
         self.visit_docinfo_item(node, 'organization', meta=False)
     def depart_organization(self, node):

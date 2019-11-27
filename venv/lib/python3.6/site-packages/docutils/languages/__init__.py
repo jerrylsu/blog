@@ -1,4 +1,4 @@
-# $Id: __init__.py 7648 2013-04-18 07:36:22Z milde $
+# $Id: __init__.py 8239 2018-11-21 21:46:00Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -14,8 +14,7 @@ __docformat__ = 'reStructuredText'
 import sys
 
 from docutils.utils import normalize_language_tag
-if sys.version_info < (2,5):
-    from docutils._compat import __import__
+
 
 _languages = {}
 

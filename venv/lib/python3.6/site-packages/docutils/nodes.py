@@ -1,4 +1,4 @@
-# $Id: nodes.py 7788 2015-02-16 22:10:52Z milde $
+# $Id: nodes.py 8295 2019-07-24 09:22:01Z grubert $
 # Author: David Goodger <goodger@python.org>
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -87,6 +87,10 @@ class Node(object):
 
     def deepcopy(self):
         """Return a deep copy of self (also copying children)."""
+        raise NotImplementedError
+
+    def astext(self):
+        """Return a string representation of this Node."""
         raise NotImplementedError
 
     def setup_child(self, child):
@@ -304,8 +308,6 @@ if sys.version_info < (3,):
 
         def __repr__(self):
             return str.__repr__(self)[1:]
-
-
 else:
     reprunicode = str
 
@@ -317,6 +319,20 @@ def ensure_str(s):
     if sys.version_info < (3,) and isinstance(s, str):
         return s.encode('ascii', 'backslashreplace')
     return s
+
+# definition moved here from `utils` to avoid circular import dependency
+def unescape(text, restore_backslashes=False, respect_whitespace=False):
+    """
+    Return a string with nulls removed or restored to backslashes.
+    Backslash-escaped spaces are also removed.
+    """
+    # `respect_whitespace` is ignored (since introduction 2016-12-16)
+    if restore_backslashes:
+        return text.replace('\x00', '\\')
+    else:
+        for sep in ['\x00 ', '\x00\n', '\x00']:
+            text = ''.join(text.split(sep))
+        return text
 
 
 class Text(Node, reprunicode):
@@ -344,7 +360,6 @@ class Text(Node, reprunicode):
             return reprunicode.__new__(cls, data)
 
     def __init__(self, data, rawsource=''):
-
         self.rawsource = rawsource
         """The raw text from which this element was constructed."""
 
@@ -361,7 +376,7 @@ class Text(Node, reprunicode):
         return domroot.createTextNode(str(self))
 
     def astext(self):
-        return reprunicode(self)
+        return reprunicode(unescape(self))
 
     # Note about __unicode__: The implementation of __unicode__ here,
     # and the one raising NotImplemented in the superclass Node had
@@ -379,21 +394,21 @@ class Text(Node, reprunicode):
         return self.copy()
 
     def pformat(self, indent='    ', level=0):
-        result = []
         indent = indent * level
-        for line in self.splitlines():
-            result.append(indent + line + '\n')
-        return ''.join(result)
+        lines = [indent+line for line in self.astext().splitlines()]
+        if not lines:
+            return ''
+        return '\n'.join(lines) + '\n'
 
     # rstrip and lstrip are used by substitution definitions where
     # they are expected to return a Text instance, this was formerly
-    # taken care of by UserString. Note that then and now the
-    # rawsource member is lost.
+    # taken care of by UserString.
 
     def rstrip(self, chars=None):
-        return self.__class__(reprunicode.rstrip(self, chars))
+        return self.__class__(reprunicode.rstrip(self, chars), self.rawsource)
+
     def lstrip(self, chars=None):
-        return self.__class__(reprunicode.lstrip(self, chars))
+        return self.__class__(reprunicode.lstrip(self, chars), self.rawsource)
 
 class Element(Node):
 
@@ -447,7 +462,7 @@ class Element(Node):
     """List attributes, automatically initialized to empty lists for
     all nodes."""
 
-    known_attributes = list_attributes + ('source',)
+    known_attributes = list_attributes + ('source', 'rawsource')
     """List attributes that are known to the Element base class."""
 
     tagname = None
@@ -459,7 +474,10 @@ class Element(Node):
 
     def __init__(self, rawsource='', *children, **attributes):
         self.rawsource = rawsource
-        """The raw text from which this element was constructed."""
+        """The raw text from which this element was constructed.
+
+        NOTE: some elements do not set this value (default '').
+        """
 
         self.children = []
         """List of child nodes (elements and/or `Text`)."""
@@ -785,7 +803,7 @@ class Element(Node):
 
     def copy_attr_consistent(self, attr, value, replace):
         """
-        If replace is True or selfpattr] is None, replace self[attr] with
+        If replace is True or self[attr] is None, replace self[attr] with
         value.  Otherwise, do nothing.
         """
         if self.get(attr) is not value:
@@ -1001,7 +1019,11 @@ class Element(Node):
                         for child in self.children])
 
     def copy(self):
-        return self.__class__(rawsource=self.rawsource, **self.attributes)
+        obj = self.__class__(rawsource=self.rawsource, **self.attributes)
+        obj.document = self.document
+        obj.source = self.source
+        obj.line = self.line
+        return obj
 
     def deepcopy(self):
         copy = self.copy()
@@ -1468,8 +1490,11 @@ class document(Root, Structural, Element):
             self.current_line = offset + 1
 
     def copy(self):
-        return self.__class__(self.settings, self.reporter,
+        obj = self.__class__(self.settings, self.reporter,
                               **self.attributes)
+        obj.source = self.source
+        obj.line = self.line
+        return obj
 
     def get_decoration(self):
         if not self.decoration:
@@ -1668,11 +1693,12 @@ class system_message(Special, BackLinkable, PreBibliographic, Element):
     """
 
     def __init__(self, message=None, *children, **attributes):
+        rawsource = attributes.get('rawsource', '')
         if message:
             p = paragraph('', message)
             children = (p,) + children
         try:
-            Element.__init__(self, '', *children, **attributes)
+            Element.__init__(self, rawsource, *children, **attributes)
         except:
             print('system_message: children=%r' % (children,))
             raise
@@ -1748,8 +1774,12 @@ class pending(Special, Invisible, Element):
                            for line in internals]))
 
     def copy(self):
-        return self.__class__(self.transform, self.details, self.rawsource,
+        obj = self.__class__(self.transform, self.details, self.rawsource,
                               **self.attributes)
+        obj.document = self.document
+        obj.source = self.source
+        obj.line = self.line
+        return obj
 
 
 class raw(Special, Inline, PreBibliographic, FixedTextElement):

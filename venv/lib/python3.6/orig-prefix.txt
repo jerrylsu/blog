@@ -1,1 +1,1 @@
-/opt/conda
+/root/anaconda3

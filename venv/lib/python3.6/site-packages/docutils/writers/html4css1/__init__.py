@@ -1,4 +1,4 @@
-# $Id: __init__.py 8035 2017-02-13 22:01:47Z milde $
+# $Id: __init__.py 8242 2018-11-29 08:11:18Z milde $
 # Author: David Goodger
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -484,10 +484,9 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
                 self.context.append('<a class="fn-backref" href="#%s">'
                                     % backrefs[0])
             else:
-                # Python 2.4 fails with enumerate(backrefs, 1)
-                for (i, backref) in enumerate(backrefs):
+                for (i, backref) in enumerate(backrefs, 1):
                     backlinks.append('<a class="fn-backref" href="#%s">%s</a>'
-                                     % (backref, i+1))
+                                     % (backref, i))
                 self.context.append('<em>(%s)</em> ' % ', '.join(backlinks))
                 self.context += ['', '']
         else:
@@ -758,11 +757,14 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
     def visit_table(self, node):
         self.context.append(self.compact_p)
         self.compact_p = True
+        atts = {'border': 1}
         classes = ['docutils', self.settings.table_style]
         if 'align' in node:
             classes.append('align-%s' % node['align'])
+        if 'width' in node:
+            atts['style'] = 'width: %s' % node['width']
         self.body.append(
-            self.starttag(node, 'table', CLASS=' '.join(classes), border="1"))
+            self.starttag(node, 'table', CLASS=' '.join(classes), **atts))
 
     def depart_table(self, node):
         self.compact_p = self.context.pop()
@@ -812,14 +814,11 @@ class SimpleListChecker(writers._html_base.SimpleListChecker):
     # def visit_enumerated_list(self, node):
     #     pass
 
-    # def visit_paragraph(self, node):
-    #     raise nodes.SkipNode
+    def visit_paragraph(self, node):
+        raise nodes.SkipNode
 
     def visit_definition_list(self, node):
         raise nodes.NodeFound
 
     def visit_docinfo(self, node):
-        raise nodes.NodeFound
-
-    def visit_definition_list(self, node):
         raise nodes.NodeFound

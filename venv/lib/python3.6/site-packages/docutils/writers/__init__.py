@@ -1,4 +1,4 @@
-# $Id: __init__.py 7969 2016-08-18 21:40:00Z milde $
+# $Id: __init__.py 8239 2018-11-21 21:46:00Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -14,8 +14,6 @@ import sys
 import docutils
 from docutils import languages, Component
 from docutils.transforms import universal
-if sys.version_info < (2,5):
-    from docutils._compat import __import__
 
 
 class Writer(Component):

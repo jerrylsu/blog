@@ -2,7 +2,7 @@
 /* Rules for easy reading and pre-defined style variants.		   */
 /*                                                                         */
 /* :Author: Günter Milde, based on html4css1.css by David Goodger          */
-/* :Id: $Id: plain.css 8120 2017-06-22 21:02:40Z milde $               */
+/* :Id: $Id: plain.css 8229 2018-11-20 17:47:12Z milde $               */
 /* :Copyright: © 2015 Günter Milde.                                        */
 /* :License: Released under the terms of the `2-Clause BSD license`_,      */
 /*    in short:                                                            */
@@ -22,8 +22,8 @@
 
 /* "page layout" */
 body {
-  padding: 0 5%;
-  margin: 8px 0;
+  margin: 0;
+  background-color: #dbdbdb;
 }
 div.document {
   line-height:1.3;
@@ -32,7 +32,9 @@ div.document {
   /* avoid long lines --> better reading */
   /* OTOH: lines should not be too short because of missing hyphenation, */
   max-width: 50em;
+  padding: 1px 2%; /* 1px on top avoids grey bar above title (mozilla) */
   margin: auto;
+  background-color: white;
 }
 
 /* Sections */
@@ -124,19 +126,9 @@ span.fn-backref {
 /* ============          */
 
 /* Literal Blocks           */
-pre.literal-block, pre.doctest-block,
-pre.math, pre.code {
-  margin-left: 1.5em;
-  margin-right: 1.5em
-}
 
 /* Block Quotes             */
 
-blockquote,
-div.topic {
-  margin-left: 1.5em;
-  margin-right: 1.5em
-}
 blockquote > table,
 div.topic > table {
   margin-top: 0;
@@ -231,6 +223,7 @@ div.sidebar {
 
 /* Code                     */
 
+pre.code { padding: 0.7ex }
 pre.code, code { background-color: #eeeeee }
 pre.code .ln { color: gray; } /* line numbers */
 /* basic highlighting: for a complete scheme, see */

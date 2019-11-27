@@ -4,10 +4,15 @@
 """Lexical analysis of formal languages (i.e. code) using Pygments."""
 
 # :Author: Georg Brandl; Felix Wiemann; Günter Milde
-# :Date: $Date: 2015-04-20 16:05:27 +0200 (Mo, 20 Apr 2015) $
+# :Date: $Date: 2018-01-16 21:43:16 +0100 (Di, 16. Jän 2018) $
 # :Copyright: This module has been placed in the public domain.
 
 from docutils import ApplicationError
+try:
+    from pkg_resources import DistributionNotFound as ResourceError
+except (ImportError, RuntimeError):
+    class ResourceError(ApplicationError):
+        pass # stub
 try:
     import pygments
     from pygments.lexers import get_lexer_by_name
@@ -22,7 +27,7 @@ unstyled_tokens = ['token', # Token (base token type)
                    '']      # short name for Token and Text
 # (Add, e.g., Token.Punctuation with ``unstyled_tokens += 'punctuation'``.)
 
-class LexerError(ApplicationError): 
+class LexerError(ApplicationError):
     pass
 
 class Lexer(object):
@@ -61,14 +66,17 @@ class Lexer(object):
                                     'Pygments package not found.')
         try:
             self.lexer = get_lexer_by_name(self.language)
-        except pygments.util.ClassNotFound:
+        except (pygments.util.ClassNotFound, ResourceError):
             raise LexerError('Cannot analyze code. '
                 'No Pygments lexer found for "%s".' % language)
+        # self.lexer.add_filter('tokenmerge')
+        # Since version 1.2. (released Jan 01, 2010) Pygments has a
+        # TokenMergeFilter. # ``self.merge(tokens)`` in __iter__ could
+        # be replaced by ``self.lexer.add_filter('tokenmerge')`` in __init__.
+        # However, `merge` below also strips a final newline added by pygments.
+        #
+        # self.lexer.add_filter('tokenmerge')
 
-    # Since version 1.2. (released Jan 01, 2010) Pygments has a
-    # TokenMergeFilter. However, this requires Python >= 2.4. When Docutils
-    # requires same minimal version,  ``self.merge(tokens)`` in __iter__ can
-    # be replaced by ``self.lexer.add_filter('tokenmerge')`` in __init__.
     def merge(self, tokens):
         """Merge subsequent tokens of same token-type.
 

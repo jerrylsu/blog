@@ -1,4 +1,4 @@
-# $Id: parts.py 6073 2009-08-06 12:21:10Z milde $
+# $Id: parts.py 8251 2019-03-12 17:03:11Z milde $
 # Authors: David Goodger <goodger@python.org>; Ueli Schlaepfer; Dmitry Jemerov
 # Copyright: This module has been placed in the public domain.
 
@@ -174,7 +174,6 @@ class ContentsFilter(nodes.TreeCopyVisitor):
     def ignore_node_but_process_children(self, node):
         raise nodes.SkipDeparture
 
-    visit_interpreted = ignore_node_but_process_children
     visit_problematic = ignore_node_but_process_children
     visit_reference = ignore_node_but_process_children
     visit_target = ignore_node_but_process_children

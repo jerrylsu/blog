@@ -5,7 +5,7 @@
 
     Lexers for Makefiles and similar.
 
-    :copyright: Copyright 2006-2017 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2019 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 
@@ -102,8 +102,8 @@ class BaseMakefileLexer(RegexLexer):
             (r'\$\(', Keyword, 'expansion'),
         ],
         'expansion': [
-            (r'[^$a-zA-Z_()]+', Text),
-            (r'[a-zA-Z_]+', Name.Variable),
+            (r'[^\w$().-]+', Text),
+            (r'[\w.-]+', Name.Variable),
             (r'\$', Keyword),
             (r'\(', Keyword, '#push'),
             (r'\)', Keyword, '#pop'),

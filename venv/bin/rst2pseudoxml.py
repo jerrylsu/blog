@@ -1,4 +1,4 @@
-#!/workdir/blog/venv/bin/python3.6
+#!/root/blog/venv/bin/python
 
 # $Id: rst2pseudoxml.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>

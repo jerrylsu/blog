@@ -1,5 +1,5 @@
 # .. coding: utf-8
-# $Id: __init__.py 8058 2017-04-19 16:45:32Z milde $
+# $Id: __init__.py 8256 2019-05-13 07:39:07Z milde $
 # Author: Engelbert Gruber, Günter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -170,11 +170,11 @@ class Writer(writers.Writer):
           'for compound enumerated lists.  Default is "-".',
           ['--section-enumerator-separator'],
           {'default': '-', 'metavar': '<char>'}),
-         ('When possibile, use the specified environment for literal-blocks. '
+         ('When possible, use the specified environment for literal-blocks. '
           'Default is quoting of whitespace and special chars.',
           ['--literal-block-env'],
           {'default': ''}),
-         ('When possibile, use verbatim for literal-blocks. '
+         ('When possible, use verbatim for literal-blocks. '
           'Compatibility alias for "--literal-block-env=verbatim".',
           ['--use-verbatim-when-possible'],
           {'default': 0, 'action': 'store_true',
@@ -217,9 +217,9 @@ class Writer(writers.Writer):
     config_section_dependencies = ('writers',)
 
     head_parts = ('head_prefix', 'requirements', 'latex_preamble',
-                  'stylesheet', 'fallbacks', 'pdfsetup',
-                  'title', 'subtitle', 'titledata')
-    visitor_attributes = head_parts + ('body_pre_docinfo', 'docinfo',
+                  'stylesheet', 'fallbacks', 'pdfsetup', 'titledata')
+    visitor_attributes = head_parts + ('title', 'subtitle',
+                                       'body_pre_docinfo', 'docinfo',
                                        'dedication', 'abstract', 'body')
 
     output = None
@@ -565,11 +565,15 @@ PreambleCmds.inline = r"""
 % inline markup (custom roles)
 % \DUrole{#1}{#2} tries \DUrole#1{#2}
 \providecommand*{\DUrole}[2]{%
-  % backwards compatibility: try \docutilsrole#1{#2}
-  \ifcsname docutilsrole#1\endcsname%
-    \csname docutilsrole#1\endcsname{#2}%
-  \else
+  \ifcsname DUrole#1\endcsname%
     \csname DUrole#1\endcsname{#2}%
+  \else
+    % backwards compatibility: try \docutilsrole#1{#2}
+    \ifcsname docutilsrole#1\endcsname%
+      \csname docutilsrole#1\endcsname{#2}%
+    \else%
+      #2%
+    \fi%
   \fi%
 }"""
 
@@ -596,8 +600,7 @@ PreambleCmds.lineblock = r"""
 }{}"""
 # PreambleCmds.lineblock._depends = 'providelength'
 
-PreambleCmds.linking = r"""
-%% hyperlinks:
+PreambleCmds.linking = r"""%% hyperlinks:
 \ifthenelse{\isundefined{\hypersetup}}{
   \usepackage[%s]{hyperref}
   \usepackage{bookmark}
@@ -966,14 +969,14 @@ class Table(object):
         return ''
 
     # horizontal lines are drawn below a row,
-    def get_opening(self):
+    def get_opening(self, width=r'\linewidth'):
         align_map = {'left': 'l',
                      'center': 'c',
                      'right': 'r'}
         align = align_map.get(self.get('align') or 'center')
         opening = [r'\begin{%s}[%s]' % (self.get_latex_type(), align)]
         if not self.colwidths_auto:
-            opening.insert(0, r'\setlength{\DUtablewidth}{\linewidth}')
+            opening.insert(0, r'\setlength{\DUtablewidth}{%s}'%width)
         return '\n'.join(opening)
 
     def get_closing(self):
@@ -1205,9 +1208,9 @@ class LaTeXTranslator(nodes.NodeVisitor):
         self.section_enumerator_separator = (
             settings.section_enumerator_separator.replace('_', r'\_'))
         # literal blocks:
-        self.literal_block_env = 'alltt'
+        self.literal_block_env = ''
         self.literal_block_options = ''
-        if settings.literal_block_env != '':
+        if settings.literal_block_env:
             (none,
              self.literal_block_env,
              self.literal_block_options,
@@ -1493,7 +1496,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
         if not self.alltt:
             table.update(CharMaps.special)
         # keep the underscore in citation references
-        if self.inside_citation_reference_label:
+        if self.inside_citation_reference_label and not self.alltt:
             del(table[ord('_')])
         # Workarounds for OT1 font-encoding
         if self.font_encoding in ['OT1', ''] and not self.is_xetex:
@@ -1513,6 +1516,10 @@ class LaTeXTranslator(nodes.NodeVisitor):
                 table[ord('>')] = r'\textgreater{}'
         if self.insert_non_breaking_blanks:
             table[ord(' ')] = r'~'
+            # tab chars may occur in included files (literal or code)
+            # quick-and-dirty replacement with spaces
+            # (for better results use `--literal-block-env=lstlisting`)
+            table[ord('\t')] = '~' * self.settings.tab_width
         # Unicode replacements for 8-bit tex engines (not required with XeTeX/LuaTeX):
         if not self.is_xetex:
             if not self.latex_encoding.startswith('utf8'):
@@ -1527,7 +1534,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
                     self.requirements['textcomp'] = PreambleCmds.textcomp
                 elif cp in CharMaps.pifont:
                     self.requirements['pifont'] = '\\usepackage{pifont}'
-                # preamble-definitions for unsupported Unicode characters 
+                # preamble-definitions for unsupported Unicode characters
                 elif (self.latex_encoding == 'utf8'
                       and cp in CharMaps.unsupported_unicode):
                     self.requirements['_inputenc'+str(cp)] = (
@@ -1687,6 +1694,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
         self.out.append('}\n')
 
     def visit_author(self, node):
+        self.pdfauthor.append(self.attval(node.astext()))
         self.visit_docinfo_item(node, 'author')
 
     def depart_author(self, node):
@@ -1922,8 +1930,6 @@ class LaTeXTranslator(nodes.NodeVisitor):
                                 '\\end{center}\n')
 
     def visit_docinfo_item(self, node, name):
-        if name == 'author':
-            self.pdfauthor.append(self.attval(node.astext()))
         if self.use_latex_docinfo:
             if name in ('author', 'organization', 'contact', 'address'):
                 # We attach these to the last author.  If any of them precedes
@@ -1989,12 +1995,10 @@ class LaTeXTranslator(nodes.NodeVisitor):
         #   'author', 'organization', 'contact', 'address' and 'date')
         if self.title or (
            self.use_latex_docinfo and (self.author_stack or self.date)):
-            # with the default template, titledata is written to the preamble
-            self.titledata.append('%%% Title Data')
             # \title (empty \title prevents error with \maketitle)
+            title = [''.join(self.title)]
             if self.title:
-                self.title.insert(0, '\\phantomsection%\n  ')
-            title = [''.join(self.title)] + self.title_labels
+                title += self.title_labels
             if self.subtitle:
                 title += [r'\\ % subtitle',
                           r'\DUdocumentsubtitle{%s}' % ''.join(self.subtitle)
@@ -2102,7 +2106,9 @@ class LaTeXTranslator(nodes.NodeVisitor):
             self.context.append('')
 
         # if line ends with '{', mask line break to prevent spurious whitespace
-        if not self.active_table.colwidths_auto and self.out[-1].endswith("{"):
+        if (not self.active_table.colwidths_auto
+            and self.out[-1].endswith("{")
+            and node.astext()):
                 self.out.append("%")
 
         self.active_table.visit_entry() # increment cell count
@@ -2185,12 +2191,6 @@ class LaTeXTranslator(nodes.NodeVisitor):
     def depart_field(self, node):
         pass
         ##self.out.append('%[depart_field]\n')
-
-    def visit_field_argument(self, node):
-        self.out.append('%[visit_field_argument]\n')
-
-    def depart_field_argument(self, node):
-        self.out.append('%[depart_field_argument]\n')
 
     def visit_field_body(self, node):
         pass
@@ -2435,14 +2435,6 @@ class LaTeXTranslator(nodes.NodeVisitor):
     def depart_inline(self, node):
         self.out.append('}' * len(node['classes']))
 
-    def visit_interpreted(self, node):
-        # @@@ Incomplete, pending a proper implementation on the
-        # Parser/Reader end.
-        self.visit_literal(node)
-
-    def depart_interpreted(self, node):
-        self.depart_literal(node)
-
     def visit_legend(self, node):
         self.fallbacks['legend'] = PreambleCmds.legend
         self.out.append('\\begin{DUlegend}')
@@ -2515,49 +2507,77 @@ class LaTeXTranslator(nodes.NodeVisitor):
         return (len(node) == 1) and isinstance(node[0], nodes.Text)
 
     def visit_literal_block(self, node):
-        """Render a literal block."""
-        # environments and packages to typeset literal blocks
-        packages = {'alltt': r'\usepackage{alltt}',
+        """Render a literal block.
+
+        Corresponding rST elements: literal block, parsed-literal, code.
+        """
+        packages = {'lstlisting':  r'\usepackage{listings}' '\n'
+                                   r'\lstset{xleftmargin=\leftmargin}',
                     'listing': r'\usepackage{moreverb}',
-                    'lstlisting': r'\usepackage{listings}',
                     'Verbatim': r'\usepackage{fancyvrb}',
-                    # 'verbatim': '',
                     'verbatimtab': r'\usepackage{moreverb}'}
 
+        environment = self.literal_block_env
+        _in_table = self.active_table.is_open()
+        # TODO: fails if normal text precedes the literal block.
+        #       Check parent node instead?
+        _autowidth_table = _in_table and self.active_table.colwidths_auto
+        _plaintext = self.is_plaintext(node)
+        _listings = (environment == 'lstlisting') and _plaintext
+
+        # Labels and classes:
         if node.get('ids'):
             self.out += ['\n'] + self.ids_to_labels(node)
-
         self.duclass_open(node)
-        if not self.active_table.is_open():
-            # no quote inside tables, to avoid vertical space between
-            # table border and literal block.
-            # TODO: fails if normal text precedes the literal block.
-            # check parent node instead?
+        if (not _plaintext and 'code' in node['classes']
+            and self.settings.syntax_highlight != 'none'):
+            self.requirements['color'] = PreambleCmds.color
+            self.fallbacks['code'] = PreambleCmds.highlight_rules
+
+        # Wrapper?
+        if _in_table and _plaintext and not _autowidth_table:
+            # minipage prevents extra vertical space with alltt
+            # and verbatim-like environments
+            self.fallbacks['ttem'] = '\n'.join(['',
+                r'% character width in monospaced font',
+                r'\newlength{\ttemwidth}',
+                r'\settowidth{\ttemwidth}{\ttfamily M}'])
+            self.out.append('\\begin{minipage}{%d\\ttemwidth}\n' %
+                (max(len(line) for line in node.astext().split('\n'))))
+            self.context.append('\n\\end{minipage}\n')
+        elif not _in_table and not _listings:
+            # wrap in quote to set off vertically and indent
             self.out.append('\\begin{quote}\n')
             self.context.append('\n\\end{quote}\n')
         else:
             self.context.append('\n')
 
-        if self.is_plaintext(node):
-            environment = self.literal_block_env
-            self.requirements['literal_block'] = packages.get(environment, '')
-            if environment == 'alltt':
-                self.alltt = True
-            else:
-                self.verbatim = True
+        # Use verbatim-like environment, if defined and possible
+        if environment and _plaintext and (not _autowidth_table or _listings):
+            try:
+                self.requirements['literal_block'] = packages[environment]
+            except KeyError:
+                pass
+            self.verbatim = True
+            if _in_table and _listings:
+                self.out.append('\\lstset{xleftmargin=0pt}\n')
             self.out.append('\\begin{%s}%s\n' %
                             (environment, self.literal_block_options))
             self.context.append('\n\\end{%s}' % environment)
+        elif _plaintext and not _autowidth_table:
+            self.alltt = True
+            self.requirements['alltt'] = r'\usepackage{alltt}'
+            self.out.append('\\begin{alltt}\n')
+            self.context.append('\n\\end{alltt}')
         else:
             self.literal = True
             self.insert_newline = True
             self.insert_non_breaking_blanks = True
-            if 'code' in node['classes'] and (
-                    self.settings.syntax_highlight != 'none'):
-                self.requirements['color'] = PreambleCmds.color
-                self.fallbacks['code'] = PreambleCmds.highlight_rules
-            self.out.append('{\\ttfamily \\raggedright \\noindent\n')
-            self.context.append('\n}')
+            # \raggedright ensures leading blanks are respected but
+            # leads to additional leading vspace if the first line
+            # of the block is overfull :-(
+            self.out.append('\\ttfamily\\raggedright\n')
+            self.context.append('')
 
     def depart_literal_block(self, node):
         self.insert_non_breaking_blanks = False
@@ -2928,7 +2948,11 @@ class LaTeXTranslator(nodes.NodeVisitor):
         # wrap content in the right environment:
         content = self.out
         self.pop_output_collector()
-        self.out.append('\n' + self.active_table.get_opening())
+        try:
+            width = self.to_latex_length(node.attributes['width'])
+        except KeyError:
+            width = r'\linewidth'
+        self.out.append('\n' + self.active_table.get_opening(width))
         self.out += content
         self.out.append(self.active_table.get_closing() + '\n')
         self.active_table.close()
@@ -2975,7 +2999,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
     def depart_term(self, node):
         # \leavevmode results in a line break if the
         # term is followed by an item list.
-        self.out.append('}] \leavevmode ')
+        self.out.append('}] \\leavevmode ')
 
     def visit_tgroup(self, node):
         #self.out.append(self.starttag(node, 'colgroup'))

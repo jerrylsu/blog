@@ -5,7 +5,7 @@
 
     Lexers for esoteric languages.
 
-    :copyright: Copyright 2006-2017 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2019 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 
@@ -245,7 +245,7 @@ class AheuiLexer(RegexLexer):
 
     Aheui_ is esoteric language based on Korean alphabets.
 
-    .. _Aheui:: http://aheui.github.io/
+    .. _Aheui: http://aheui.github.io/
 
     """
 

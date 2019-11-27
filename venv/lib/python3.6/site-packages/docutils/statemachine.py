@@ -1,4 +1,4 @@
- # $Id: statemachine.py 7464 2012-06-25 13:16:03Z milde $
+ # $Id: statemachine.py 8163 2017-08-11 14:05:30Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -1452,10 +1452,7 @@ class StringList(ViewList):
         Pad all double-width characters in self by appending `pad_char` to each.
         For East Asian language support.
         """
-        if hasattr(unicodedata, 'east_asian_width'):
-            east_asian_width = unicodedata.east_asian_width
-        else:
-            return                      # new in Python 2.4
+        east_asian_width = unicodedata.east_asian_width
         for i in range(len(self.data)):
             line = self.data[i]
             if isinstance(line, str):

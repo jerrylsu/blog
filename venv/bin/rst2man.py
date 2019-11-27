@@ -1,4 +1,4 @@
-#!/workdir/blog/venv/bin/python3.6
+#!/root/blog/venv/bin/python
 
 # Author: 
 # Contact: grubert@users.sf.net

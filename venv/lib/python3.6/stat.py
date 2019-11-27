@@ -1,1 +1,1 @@
-/opt/conda/lib/python3.6/stat.py
+/root/anaconda3/lib/python3.6/stat.py

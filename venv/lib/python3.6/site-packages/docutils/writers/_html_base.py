@@ -3,7 +3,7 @@
 # :Author: David Goodger, Günter Milde
 #          Based on the html4css1 writer by David Goodger.
 # :Maintainer: docutils-develop@lists.sourceforge.net
-# :Revision: $Revision: 8118 $
+# :Revision: $Revision: 8244 $
 # :Date: $Date: 2005-06-28$
 # :Copyright: © 2016 David Goodger, Günter Milde
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:
@@ -183,7 +183,7 @@ class HTMLTranslator(nodes.NodeVisitor):
 
     stylesheet_link = '<link rel="stylesheet" href="%s" type="text/css" />\n'
     embedded_stylesheet = '<style type="text/css">\n\n%s\n</style>\n'
-    words_and_spaces = re.compile(r'\S+| +|\n')
+    words_and_spaces = re.compile(r'[^ \n]+| +|\n')
     # wrap point inside word:
     in_word_wrap_point = re.compile(r'.+\W\W.+|[-?].+', re.U)
     lang_attribute = 'lang' # name changes to 'xml:lang' in XHTML 1.1
@@ -681,6 +681,7 @@ class HTMLTranslator(nodes.NodeVisitor):
         self.body.append('</dd>\n')
 
     def visit_docinfo(self, node):
+        self.context.append(len(self.body))
         classes = 'docinfo'
         if (self.is_compactable(node)):
             classes += ' simple'
@@ -688,6 +689,9 @@ class HTMLTranslator(nodes.NodeVisitor):
 
     def depart_docinfo(self, node):
         self.body.append('</dl>\n')
+        start = self.context.pop()
+        self.docinfo = self.body[start:]
+        self.body = []
 
     def visit_docinfo_item(self, node, name, meta=True):
         if meta:
@@ -720,6 +724,9 @@ class HTMLTranslator(nodes.NodeVisitor):
         self.html_prolog.append(self.doctype)
         self.meta.insert(0, self.content_type % self.settings.output_encoding)
         self.head.insert(0, self.content_type % self.settings.output_encoding)
+        if 'name="dcterms.' in ''.join(self.meta):
+            self.head.append(
+             '<link rel="schema.dcterms" href="http://purl.org/dc/terms/">')
         if self.math_header:
             if self.math_output == 'mathjax':
                 self.head.extend(self.math_header)
@@ -997,9 +1004,8 @@ class HTMLTranslator(nodes.NodeVisitor):
                 self.body.append('</a>')
         self.body.append('</span>')
         if self.settings.footnote_backlinks and len(backrefs) > 1:
-            # Python 2.4 fails with enumerate(backrefs, 1)
-            backlinks = ['<a href="#%s">%s</a>' % (ref, i+1)
-                            for (i, ref) in enumerate(backrefs)]
+            backlinks = ['<a href="#%s">%s</a>' % (ref, i)
+                            for (i, ref) in enumerate(backrefs, 1)]
             self.body.append('<span class="fn-backref">(%s)</span>'
                                 % ','.join(backlinks))
         self.body.append('</dt>\n<dd>')
@@ -1401,14 +1407,14 @@ class HTMLTranslator(nodes.NodeVisitor):
             classes = 'sidebar-subtitle'
         elif isinstance(node.parent, nodes.document):
             classes = 'subtitle'
-            self.in_document_title = len(self.body)
+            self.in_document_title = len(self.body)+1
         elif isinstance(node.parent, nodes.section):
             classes = 'section-subtitle'
         self.body.append(self.starttag(node, 'p', '', CLASS=classes))
 
     def depart_subtitle(self, node):
         self.body.append('</p>\n')
-        if self.in_document_title:
+        if isinstance(node.parent, nodes.document):
             self.subtitle = self.body[self.in_document_title:-1]
             self.in_document_title = 0
             self.body_pre_docinfo.extend(self.body)
@@ -1450,16 +1456,15 @@ class HTMLTranslator(nodes.NodeVisitor):
     def depart_system_message(self, node):
         self.body.append('</div>\n')
 
-    # tables
-    # ------
-    # no hard-coded border setting in the table head::
-
     def visit_table(self, node):
+        atts = {}
         classes = [cls.strip(' \t\n')
                    for cls in self.settings.table_style.split(',')]
         if 'align' in node:
             classes.append('align-%s' % node['align'])
-        tag = self.starttag(node, 'table', CLASS=' '.join(classes))
+        if 'width' in node:
+            atts['style'] = 'width: %s' % node['width']
+        tag = self.starttag(node, 'table', CLASS=' '.join(classes), **atts)
         self.body.append(tag)
 
     def depart_table(self, node):

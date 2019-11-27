@@ -1,4 +1,4 @@
-# $Id: docutils_xml.py 7966 2016-08-18 13:06:09Z milde $
+# $Id: docutils_xml.py 8240 2018-11-21 21:46:06Z milde $
 # Author: David Goodger, Paul Tremblay, Guenter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -198,7 +198,7 @@ class XMLTranslator(nodes.GenericNodeVisitor):
         raise nodes.SkipNode # content already processed
 
 
-class TestXml(xml.sax.ContentHandler):
+class TestXml(xml.sax.handler.ContentHandler):
 
     def setDocumentLocator(self, locator):
         self.locator = locator

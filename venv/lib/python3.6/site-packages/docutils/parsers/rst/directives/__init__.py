@@ -1,4 +1,4 @@
-# $Id: __init__.py 8024 2017-02-06 00:41:48Z goodger $
+# $Id: __init__.py 8239 2018-11-21 21:46:00Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -15,8 +15,6 @@ import sys
 from docutils import nodes
 from docutils.utils import split_escaped_whitespace, escape2null, unescape
 from docutils.parsers.rst.languages import en as _fallback_language_module
-if sys.version_info < (2,5):
-    from docutils._compat import __import__
 
 
 _directive_registry = {

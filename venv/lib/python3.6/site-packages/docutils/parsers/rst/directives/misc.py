@@ -1,4 +1,4 @@
-# $Id: misc.py 7961 2016-07-28 22:02:47Z milde $
+# $Id: misc.py 8257 2019-06-24 17:11:29Z milde $
 # Authors: David Goodger <goodger@python.org>; Dethe Elza
 # Copyright: This module has been placed in the public domain.
 
@@ -114,7 +114,7 @@ class Include(Directive):
         include_lines = statemachine.string2lines(rawtext, tab_width,
                                                   convert_whitespace=True)
         if 'literal' in self.options:
-            # Convert tabs to spaces, if `tab_width` is positive.
+            # Don't convert tabs to spaces, if `tab_width` is positive.
             if tab_width >= 0:
                 text = rawtext.expandtabs(tab_width)
             else:
@@ -144,6 +144,9 @@ class Include(Directive):
             return [literal_block]
         if 'code' in self.options:
             self.options['source'] = path
+            # Don't convert tabs to spaces, if `tab_width` is negative:
+            if tab_width < 0:
+                include_lines = rawtext.splitlines()
             codeblock = CodeBlock(self.name,
                                   [self.options.pop('code')], # arguments
                                   self.options,
@@ -320,7 +323,7 @@ class Unicode(Directive):
             except ValueError as error:
                 raise self.error('Invalid character code: %s\n%s'
                     % (code, ErrorString(error)))
-            element += nodes.Text(decoded)
+            element += nodes.Text(utils.unescape(decoded), decoded)
         return element.children
 
 
@@ -446,7 +449,6 @@ class DefaultRole(Directive):
                 line=self.lineno)
             return messages + [error]
         roles._roles[''] = role
-        # @@@ should this be local to the document, not the parser?
         return messages
 
 

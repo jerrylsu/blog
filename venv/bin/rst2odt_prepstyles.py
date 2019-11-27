@@ -1,4 +1,4 @@
-#!/workdir/blog/venv/bin/python3.6
+#!/root/blog/venv/bin/python
 
 # $Id: rst2odt_prepstyles.py 5839 2009-01-07 19:09:28Z dkuhlman $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>

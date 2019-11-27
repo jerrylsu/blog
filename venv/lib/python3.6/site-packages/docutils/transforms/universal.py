@@ -1,4 +1,4 @@
-# $Id: universal.py 8144 2017-07-26 21:25:08Z milde $
+# $Id: universal.py 8235 2018-11-21 13:58:51Z milde $
 # -*- coding: utf-8 -*-
 # Authors: David Goodger <goodger@python.org>; Ueli Schlaepfer; Günter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net

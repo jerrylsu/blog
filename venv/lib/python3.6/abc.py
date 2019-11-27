@@ -1,1 +1,1 @@
-/opt/conda/lib/python3.6/abc.py
+/root/anaconda3/lib/python3.6/abc.py

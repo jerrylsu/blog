@@ -1,4 +1,4 @@
-#!/workdir/blog/venv/bin/python
+#!/root/blog/venv/bin/python
 
 import sys
 import getopt

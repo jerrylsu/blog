@@ -1,1 +1,1 @@
-/opt/conda/lib/python3.6/sre_compile.py
+/root/anaconda3/lib/python3.6/sre_compile.py

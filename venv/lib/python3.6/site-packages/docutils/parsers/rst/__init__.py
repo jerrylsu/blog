@@ -1,4 +1,4 @@
-# $Id: __init__.py 8068 2017-05-08 22:10:39Z milde $
+# $Id: __init__.py 8258 2019-06-25 18:15:26Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -189,6 +189,9 @@ class Parser(docutils.parsers.Parser):
               inputstring, tab_width=document.settings.tab_width,
               convert_whitespace=True)
         self.statemachine.run(inputlines, document, inliner=self.inliner)
+        # restore the "default" default role after parsing a document
+        if '' in roles._roles:
+            del roles._roles['']
         self.finish_parse()
 
 

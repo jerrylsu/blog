@@ -11,9 +11,6 @@ SITESUBTITLE = 'Copyright © 2017'
 AUTHOR = 'Jerry Su'
 SITENAME = "Jerry Su's Blog"
 
-SITE_LICENSE = """Content licensed under <a rel="license"
-    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
-    Creative Commons Attribution 4.0 International License</a>."""
 
 # Times and dates
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
@@ -43,7 +40,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 30
 
 # You can use the DISPLAY_PAGES_ON_MENU setting to control whether all those pages are displayed in the primary navigation menu. (Default is True.)
 DISPLAY_PAGES_ON_MENU = True

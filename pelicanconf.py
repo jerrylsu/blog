@@ -81,3 +81,8 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+SOCIAL = (
+    ('Email', 'sa517301@mail.ustc.edu.cn', 'My Email Address'),
+    ("Github", "https://github.com/jerrylsu/", "Jerry Github Repository"),
+)

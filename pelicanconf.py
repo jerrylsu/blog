@@ -57,6 +57,9 @@ PROJECTS = [{
      'url': 'https://github.com/jerrylsu/blog',
      'description': 'Jerry\'s Blog'}]
 
+# Home Page — Write Welcome Message
+LANDING_PAGE_TITLE = "Jerry - Hello~"
+
 # Plugins and extensions
 MARKDOWN = {
 'extension_configs': {

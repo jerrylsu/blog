@@ -47,7 +47,6 @@ DISPLAY_PAGES_ON_MENU = True
 #RELATIVE_URLS = True
 
 
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 # Plugins and extensions
 MARKDOWN = {
 'extension_configs': {
@@ -68,8 +67,8 @@ STATIC_PATHS = ['images']
 # add plugin
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img', 'neighbors', 'render_math', 'related_posts', 'assets', 'share_post', 'series']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
-DIRECT_TEMPLATES = ['search']
 
 SITEMAP = {
     'format': 'xml',

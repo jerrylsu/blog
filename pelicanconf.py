@@ -10,6 +10,11 @@ SITEURL = 'https://www.jerrulsu.com'
 SITESUBTITLE = 'Copyright © 2017'
 AUTHOR = 'Jerry Su'
 SITENAME = "Jerry Su's Blog"
+
+SITE_LICENSE = """Content licensed under <a rel="license"
+    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+    Creative Commons Attribution 4.0 International License</a>."""
+
 # Times and dates
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
 TIMEZONE = 'Asia/Shanghai'

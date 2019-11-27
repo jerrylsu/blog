@@ -55,7 +55,10 @@ PROJECTS = [{
     'description': 'Algorithms in python'},
     {'name': 'Blog',
      'url': 'https://github.com/jerrylsu/blog',
-     'description': 'Jerry\'s Blog'}]
+     'description': 'Jerry\'s Blog'},
+    {'name': 'Featuretools_demo',
+     'url': 'https://github.com/jerrylsu/featuretools_demo',
+     'description': 'Featuretools automatically creates features from temporal and relational datasets'}]
 
 # Home Page — Write Welcome Message
 LANDING_PAGE_TITLE = "Jerry - Hello~"

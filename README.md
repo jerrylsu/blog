@@ -19,5 +19,7 @@ https://github.com/getpelican/pelican-themes
 
 https://github.com/getpelican/pelican-plugins
 
+### output
 
+git clone git@github.com:jerrylsu/jerrylsu.github.io.git
 

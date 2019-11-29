@@ -7,7 +7,7 @@ import os
 # http:// is necessary!
 SITEURL = 'https://www.jerrulsu.com'
 #-------------------------------------------------------------------------
-SITESUBTITLE = 'Copyright © 2017'
+SITESUBTITLE = 'Copyright © 2018'
 AUTHOR = 'Jerry Su'
 SITENAME = "Jerry Su's Blog"
 

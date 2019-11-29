@@ -107,12 +107,3 @@ SOCIAL = (
     ("Github", "https://github.com/jerrylsu/", "Jerry Github Repository"),
 )
 
-# Footer
-NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
-NEST_SITEMAP_RSS_LINK = u'RSS Feed'
-NEST_SOCIAL_COLUMN_TITLE = u'社交'
-NEST_LINKS_COLUMN_TITLE = u'链接'
-NEST_COPYRIGHT = u'&copy; 果园 2017'
-
-# Footer optional
-NEST_FOOTER_HTML = ''

@@ -12,10 +12,3 @@ Elegant is the only Pelican theme that search, live filter tags, zero clutter ca
 
  <div align=center> ![home](images/home.jpeg) </div>
 
-<script src="https://utteranc.es/client.js"
-        repo="https://github.com/jerrylsu/Utterances_comment"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

@@ -5,5 +5,5 @@ Tags: about
 
 **Hello Jerry**
 
-- Github: [https://github.com/jerrylsu](https://github.com/jerrylsu)
+- Github: [github.com/jerrylsu](https://github.com/jerrylsu)
 - Email: sa517301@mail.ustc.edu.cn

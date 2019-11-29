@@ -10,9 +10,9 @@ The dir of themes and plugins can be pulled by pelican site.
 
 https://github.com/getpelican/pelican-themes
 
-- `git clone git@github.com:Pelican-Elegant/elegant.git`
+- `cd /blog/themes`
 
-- `pip install pelican`
+- `git clone git@github.com:Pelican-Elegant/elegant.git`
 
 - `pelican-themes --install themes/elegant --verbose`
 

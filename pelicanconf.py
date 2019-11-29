@@ -11,6 +11,8 @@ SITESUBTITLE = 'Copyright © 2018'
 AUTHOR = 'Jerry Su'
 SITENAME = "Jerry Su's Blog"
 
+# comment
+UTTERANCES_REPO = True
 
 # Times and dates
 DEFAULT_DATE_FORMAT = '%b %d, %Y'

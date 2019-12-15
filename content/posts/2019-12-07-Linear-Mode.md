@@ -26,6 +26,8 @@ Tags: Machine Learning, Logistic Regression
 
 平方损失函数是连续可微的凸函数，存在全局最小值，可以通过梯度下降法求解最优值。
 
+### 1.3 线性回归的正则化
+
 ## 2. Logistic Regression
 
 ### 2.1 逻辑回归模型
@@ -74,3 +76,7 @@ Tags: Machine Learning, Logistic Regression
 对损失函数：**梯度下降法**
 
 ![gd](images/linear_mode/gd.png)
+
+### 2.7 极大似然估计
+
+### 2.8 逻辑回归的正则化

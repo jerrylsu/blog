@@ -10,9 +10,9 @@ Tags: Machine Learning, Logistic Regression
 
 ## Linear Regression
 
-线性模型： $f(X) = W^TX$
+线性模型： $f(x) = w^Tx$
 
-损失函数：平方损失$\frac{1}{m}\sum_{n=1}^{m} \frac{1}{2} \left ( f(X) - y^{(n)} \right )^2$
+损失函数：平方损失$\frac{1}{m}\sum_{n=1}^{m} \frac{1}{2} \left ( f(x^{(n)}) - y^{(n)} \right )^2$
 
 - **什么是最小二乘法？**
 
@@ -26,7 +26,7 @@ Tags: Machine Learning, Logistic Regression
 
 损失函数：
 
-逻辑回归解决的是分类问题，是**广义线性模型**，在线性模型$z=W^TX$上套一层sigmoid函数。
+逻辑回归解决的是分类问题，是**广义线性模型**，在线性模型$z=w^Tx$上套一层sigmoid函数。
 
 - **LR模型的损失函数可以使用线性模型的平方损失函数吗？**
 

@@ -68,3 +68,9 @@ Tags: Machine Learning, Logistic Regression
 通过最小化损失函数，来拟合训练数据集，从而找到模型参数$\Theta$，最终确定模型。
 
 ![theta](images/linear_mode/arg.png)
+
+### 2.6 如何最小化损失函数？
+
+对损失函数：**梯度下降法**
+
+![gd](images/linear_mode/gd.png)

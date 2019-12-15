@@ -38,4 +38,6 @@ Tags: Machine Learning, Logistic Regression
 
 ![cost1](images/linear_mode/cost_1.png)
 
+**图像性质：**
 
+- 如果标签y=1，预测值h(x)预测值也为1，此时的损失值最小为0；当h(x)趋向0时，损失值趋近于无穷大。所以，预测值h(x)与y越接近，损失值越趋向于0。

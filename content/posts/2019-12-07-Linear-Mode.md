@@ -36,5 +36,6 @@ Tags: Machine Learning, Logistic Regression
 
 - **LR模型的损失函数如何推导？**
 
+![cost1](images/linear_mode/cost_1.png)
 
 

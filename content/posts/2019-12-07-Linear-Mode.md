@@ -30,7 +30,7 @@ Tags: Machine Learning, Logistic Regression
 
 1. **LR模型的损失函数可以使用线性模型的平方损失函数吗？**
 
-![lo](images/linear_mode/logi.PNG)
+![lo](images/linear_mode/logi.png)
 
 不可以，将LR模型非线性的sigmoid函数带入平方损失函数f(x)得到的是一个非凸函数，存在若干个局部最小值，无法利用梯度下降法求解最优值问题。
 

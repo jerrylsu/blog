@@ -1,8 +1,8 @@
 Status: published
 Date: 2019-12-07 10:31:33
 Author: Jerry Su
-Slug: Linear-Mode
-Title: Linear Mode
+Slug: Logistic-Regression
+Title: Logistic RegressionL
 Category: Machine Learning 
 Tags: Machine Learning, Logistic Regression
 

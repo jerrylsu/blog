@@ -12,7 +12,7 @@ Tags: Machine Learning, Logistic Regression
 
 线性模型： $f(X) = W^TX$
 
-损失函数：平方损失
+损失函数：平方损失$\frac{1}{2}\sum_{n=1}^{m} \left ( f(X) - y^{(n)} \right )^2$
 
 **什么是最小二乘法？**
 

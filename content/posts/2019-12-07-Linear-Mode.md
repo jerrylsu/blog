@@ -22,11 +22,11 @@ Tags: Machine Learning, Logistic Regression
 
 ## Logistic Regression
 
-逻辑回归模型：sigmoid函数
+逻辑回归模型：$\frac{1}{1+e^{-z}}$ sigmoid函数
 
 损失函数：
 
-逻辑回归解决的是分类问题，是**广义线性模型**，在线性模型$W^TX$上套一层sigmoid函数。
+逻辑回归解决的是分类问题，是**广义线性模型**，在线性模型$z=W^TX$上套一层sigmoid函数。
 
 **LR模型的损失函数可以使用线性模型的平方损失函数吗？**
 

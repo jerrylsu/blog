@@ -65,3 +65,11 @@ Merge the specified branch (dev) to the current branch.
 `$ git commit -m "remove file.txt"`
 And to push changes to remote repo
 `$ git push origin branch_name`  
+
+## 拉取远程分支
+
+- 先拉远程master分支：`git clone ...`
+
+- 拉取远程分支： `git fetch origin remote_branch_name:local_branch_name`
+
+- 查看拉取到本地的分支：`git checkout local_branch_name`

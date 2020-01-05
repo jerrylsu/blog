@@ -54,7 +54,10 @@ DISPLAY_PAGES_ON_MENU = True
 PROJECTS_TITLE = "Related Projects"
 
 PROJECTS = [{
-    'name': 'Algorithms',
+    'name': 'RASA',
+    'url': 'https://github.com/RasaHQ/rasa',
+    'description': 'Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants'},
+    {'name': 'Algorithms',
     'url': 'https://github.com/jerrylsu/Algorithms',
     'description': 'Algorithms in python'},
     {'name': 'Blog',
@@ -107,5 +110,6 @@ SITEMAP = {
 SOCIAL = (
     ('Email', 'sa517301@mail.ustc.edu.cn', 'My Email Address'),
     ("Github", "https://github.com/jerrylsu/", "Jerry Github Repository"),
+    ("Docker", "https://hub.docker.com/u/jerrysu666", "Jerry Docker Repository")
 )
 

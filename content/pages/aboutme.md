@@ -7,8 +7,17 @@ status: hidden
 slug: landing-page-about-hidden
 ---
 
-Elegant is the only Pelican theme that search, live filter tags, zero clutter categories, lazy load comments, Mailchimp, FreeLists support and a customizable landing page. That’s not all. Go through our documentation, you will find several unique features and nuances that you will not find in any other theme.
+## TensorFlow2.0
 
+### 1. Neural Networks
+
+#### [1.1 Keras implements deep neural networks](https://github.com/jerrylsu/learning/blob/master/deep_learning/tensorflow2_0/tf_keras_classification_model-dnn.ipynb)
+
+#### [1.2 Keras change activation function]
+
+#### [1.3 Keras for batch normalization]
+
+#### [1.4 Keras implementats dropout]
 
  <div align=center> ![home](images/home.jpeg) </div>
 

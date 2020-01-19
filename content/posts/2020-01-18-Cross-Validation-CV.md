@@ -2,7 +2,7 @@ Status: published
 Date: 2020-01-18 19:43:25
 Author: Jerry Su
 Slug: Cross-Validation-CV
-Tchitle: Cross Validation-CV
+Title: Cross Validation-CV
 Category: Machine Learning
 Tags: Machine Learning
 

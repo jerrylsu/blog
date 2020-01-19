@@ -2,7 +2,7 @@ Status: published
 Date: 2019-12-07 10:31:33
 Author: Jerry Su
 Slug: Logistic-Regression
-Title: Logistic RegressionL
+Title: Logistic Regression
 Category: Machine Learning 
 Tags: Machine Learning, Logistic Regression
 

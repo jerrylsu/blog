@@ -27,5 +27,5 @@ Embedding层的任务：
 
 3. 模型训练时是以batch_size为单位的，所以embedding层最终的输出是：batch_size * max_len * embedding_dim的3维矩阵。
 
-4. embedding层输出的数据做[GlobalAveragePooling1D](https://www.jerrulsu.com/[NLP]-GlobalAveragePooling1D.html)合并。
+embedding层输出的数据可以做[GlobalAveragePooling1D](https://www.jerrulsu.com/[NLP]-GlobalAveragePooling1D.html)合并。
 

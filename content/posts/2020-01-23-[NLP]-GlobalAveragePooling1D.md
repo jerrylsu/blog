@@ -3,7 +3,7 @@ Date: 2020-01-23 10:53:08
 Author: Jerry Su
 Slug: [NLP]-GlobalAveragePooling1D
 Title: [NLP]-GlobalAveragePooling1D
-Category: Deep Learning, NLP 
+Category: Deep Learning 
 Tags: Deep Learning, NLP
 
 [TOC]
@@ -19,7 +19,7 @@ model = keras.Sequential([
 ])
 ```
 
-文本数据的全局平均池化操作GlobalAveragePooling1D：
+[embedding](https://www.jerrulsu.com/[NLP]-Embedding.html)输出的文本数据batch_size * max_len * embedding_size的全局平均池化操作GlobalAveragePooling1D：
 
 输入数据：(batch-size, steps, features)。是经过embedding层的稠密矩阵，steps是文本中tokens的个数（变长），features是embedding-dim的维度。
 

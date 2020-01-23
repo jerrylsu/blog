@@ -3,9 +3,7 @@ Date: 2020-01-23 11:17:17
 Author: Jerry Su
 Slug: [NLP]-Embedding
 Title: [NLP]-Embedding
-Category:
-- Deep Learning
-- NLP
+Category: Deep Learning
 Tags: Deep Learning, NLP
 
 [TOC]

@@ -4,7 +4,7 @@ Author: Jerry Su
 Slug: [NLP]-Embedding
 Title: [NLP]-Embedding
 Category:
-- Deep Learing
+- Deep Learning
 - NLP
 Tags: Deep Learning, NLP
 

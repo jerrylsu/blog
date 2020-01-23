@@ -19,7 +19,7 @@ model = keras.Sequential([
 ])
 ```
 
-[embedding](https://www.jerrulsu.com/[NLP]-Embedding.html)输出的文本数据batch_size * max_len * embedding_size的全局平均池化操作GlobalAveragePooling1D：
+[embedding](https://www.jerrulsu.com/[NLP]-Embedding.html)输出的文本数据batch_size * max_len * embedding_size的**合并** -> **全局平均池化操作GlobalAveragePooling1D**：
 
 输入数据：(batch-size, steps, features)。是经过embedding层的稠密矩阵，steps是文本中tokens的个数（变长），features是embedding-dim的维度。
 
@@ -28,3 +28,9 @@ model = keras.Sequential([
 优点：解决本文语句的变长问题
 
 缺点：
+
+- 信息损失，由于是均值降维且padding噪音稀释数据。
+
+- 无效计算过多，由于padding。
+
+解决方法：循环神经网络RNN

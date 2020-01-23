@@ -19,6 +19,8 @@ model = keras.Sequential([
 ])
 ```
 
+> Embedding:  This layer takes the integer-encoded vocabulary and looks up the embedding vector for each word-index. These vectors are learned as the model trains.
+
 Embedding层的任务：
 
 1. 定义矩阵，大小为[vocab_size, embedding_dim]

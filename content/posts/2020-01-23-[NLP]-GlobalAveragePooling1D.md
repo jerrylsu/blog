@@ -18,8 +18,10 @@ model = keras.Sequential([
   layers.Dense(1, activation='sigmoid')
 ])
 ```
+> GlobalAveragePooling1D: return a fixed-length output vector for each example by averaging over the steps dimension. This allows the model to handle input of variable length, in the simplest way possible.
 
-[embedding](https://www.jerrulsu.com/[NLP]-Embedding.html)输出的文本数据batch_size * max_len * embedding_size的**合并** -> **全局平均池化操作GlobalAveragePooling1D**：
+
+[Embedding](https://www.jerrulsu.com/[NLP]-Embedding.html)输出的文本数据batch_size * max_len * embedding_size的**合并** -> **全局平均池化操作GlobalAveragePooling1D**：
 
 输入数据：(batch-size, steps, features)。是经过embedding层的稠密矩阵，steps是文本中tokens的个数（变长），features是embedding-dim的维度。
 

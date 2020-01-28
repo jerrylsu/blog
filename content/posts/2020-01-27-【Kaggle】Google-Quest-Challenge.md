@@ -21,3 +21,9 @@ Tags: Kaggle
 ### Issues
 
 [QUEST : CV analysis on Different Splitting Methods](https://www.kaggle.com/ratthachat/quest-cv-analysis-on-different-splitting-methods/comments)
+
+1. Submission CSV Not Found
+
+问题描述：使用inference kernel在commit下成功，submit失败。提示Submission CSV Not Found。
+
+原因两条综合造成：使用

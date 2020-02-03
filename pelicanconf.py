@@ -53,8 +53,11 @@ DISPLAY_PAGES_ON_MENU = True
 # Home Page — Projects List
 PROJECTS_TITLE = "Related Projects"
 
-PROJECTS = [{
-    'name': 'RASA',
+PROJECTS = [
+    {'name': 'Google QUEST Q&A Labeling',
+     'url': 'https://github.com/jerrylsu/google_qa_challenge',
+     'description': 'Improving automated understanding of complex question answer content.'},
+    {'name': 'RASA',
     'url': 'https://github.com/RasaHQ/rasa',
     'description': 'Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants'},
     {'name': 'Algorithms',

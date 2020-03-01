@@ -1,8 +1,16 @@
-### 1. `git clone git@github.com:jerrylsu/blog.git`
+### 1. Clone Blog 
 
-### 2. `source venv/bin/activate`
+`git clone git@github.com:jerrylsu/blog.git`
 
-### 3. themes & plugins
+### 2. Create virtual environment
+
+- `conda create -n blog python=3.6.8`
+
+- `conda activate blog`
+
+- `pip install pelican`
+
+### 3. Install themes & plugins
 
 The dir of themes and plugins can be pulled by pelican site.
 
@@ -16,10 +24,11 @@ https://github.com/getpelican/pelican-themes
 
 - `pelican-themes --install themes/elegant --verbose`
 
-
 https://github.com/getpelican/pelican-plugins
 
-### 4. output
+### 4. Clone Deployment
 
-git clone git@github.com:jerrylsu/jerrylsu.github.io.git
+- `mkdir output`
+
+- `git clone git@github.com:jerrylsu/jerrylsu.github.io.git`
 

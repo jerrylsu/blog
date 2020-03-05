@@ -3,8 +3,8 @@ Date: 2020-03-05 09:26:25
 Author: Jerry Su
 Slug: rasa-featurizer
 Title: 【NLP】rasa featurizer
-Category:  rasa
-Tags: Deep Learning, NLP, rasa
+Category:  RASA
+Tags: Deep Learning, NLP, RASA
 
 [TOC]
 

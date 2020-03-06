@@ -1,8 +1,8 @@
 Status: published
 Date: 2020-03-05 09:26:25
 Author: Jerry Su
-Slug: rasa-featurizer
-Title: 【NLP】rasa featurizer
+Slug: RASA-Featurizer
+Title: 【NLP】RASA Featurizer
 Category:  RASA
 Tags: Deep Learning, NLP, RASA
 

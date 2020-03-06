@@ -45,3 +45,5 @@ Bot_features作为每一轮预测的输出特征，同样-1 padding并最终默�
 References:
 
 [https://arxiv.org/abs/1910.00486](https://arxiv.org/abs/1910.00486)
+
+[https://github.com/jerrylsu/learning/tree/master/nlp/rasa/featurizers](https://github.com/jerrylsu/learning/tree/master/nlp/rasa/featurizers)

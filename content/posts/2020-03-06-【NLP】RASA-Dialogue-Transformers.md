@@ -4,7 +4,7 @@ Author: Jerry Su
 Slug: 【NLP】RASA-Dialogue-Transformers
 Title: 【NLP】RASA Dialogue Transformers
 Category: RASA
-Tags: Deep Learning, NLP, RASA
+Tags: Deep Learning, NLP, RASA, BERT
 
 [TOC]
 

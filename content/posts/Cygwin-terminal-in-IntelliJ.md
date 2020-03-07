@@ -4,7 +4,7 @@ Author: Jerry Su
 Slug: Cygwin
 Title: Cygwin
 Category: Cygwin
-Tags: Cygwin, Tools
+Tags: Cygwin
 
 [TOC]
 

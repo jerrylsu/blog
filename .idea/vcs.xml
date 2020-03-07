@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jerrylsu.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/output" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pelican-plugins" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins/pelican-plugins" vcs="Git" />

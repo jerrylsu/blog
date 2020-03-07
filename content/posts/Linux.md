@@ -171,48 +171,19 @@ MAC: service: command not found
 
 MAC: `brew services start sshd`
 
-## Setting Environmental Var 
+## 设置环境变量 
 
-### Permanent var in `~/.bashrc`
+- Shell临时设置, 终端关闭后失效
 
-`vim ~/.bashrc`
+`export PATH=/cygdrive/c/Users/YCKJ2939/AppData/Local/Continuum/anaconda3:$PATH`
 
-```
-# open ~/.bashrc file &
-# set environmental varuable
-TEST="Hi Jerry"
-alias ll='ls -alF'
-```
-
-`source ~/.bashrc`
+- ~/.bashrc永久设置，只对本用户可见
 
 ```
-lsu1@3b956a9b2b24:~$ vim ~/.bashrc
-lsu1@3b956a9b2b24:~$ echo $TEST
-
-lsu1@3b956a9b2b24:~$ source ~/.bashrc
-lsu1@3b956a9b2b24:~$ echo $TEST
-Hi Jerry
+$ echo 'export PATH=/cygdrive/c/Users/YCKJ2939/AppData/Local/Continuum/anaconda3:$PATH' >> ~/.bashrc
+$ source ~./bashrc
 ```
-
-### Temporary var in Shell
-
-```
-lsu1@3b956a9b2b24:~$ TEST="Hi Jerry"
-lsu1@3b956a9b2b24:~$ echo $TEST
-Hi Jerry
-lsu1@3b956a9b2b24:~$ set | grep TEST
-TEST='Hi Jerry'
-lsu1@3b956a9b2b24:~$ env | grep TEST
-lsu1@3b956a9b2b24:~$ export TEST
-lsu1@3b956a9b2b24:~$ env | grep TEST
-TEST=Hi Jerry
-lsu1@3b956a9b2b24:~$ unset TEST
-lsu1@3b956a9b2b24:~$ echo $TEST
-
-lsu1@3b956a9b2b24:~$
-```
-**Note: var is temporary, and shutting down Shell, then the var is gone!**
+- /etc/profile永久设置，对所有用户可见
 
 [How To Read and Set Environmental and Shell Variables on a Linux VPS](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)
 

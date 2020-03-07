@@ -8,7 +8,9 @@
 
 - `conda activate blog`
 
-- `pip install pelican`
+- `pip install pelican -i https://pypi.doubanio.com/simple`
+
+- `pip install bs4 markdown webassets cssmin -i https://pypi.doubanio.com/simple`
 
 ### 3. Install themes & plugins
 

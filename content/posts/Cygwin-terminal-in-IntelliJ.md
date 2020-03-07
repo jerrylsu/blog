@@ -4,7 +4,7 @@ Author: Jerry Su
 Slug: Cygwin
 Title: Cygwin
 Category: Cygwin
-Tags: Tools, Cygwin
+Tags: Cygwin, Tools
 
 [TOC]
 
@@ -51,12 +51,12 @@ And an addition to my `~/.bashrc`:
 
 `${INTELLIJ-false} && cd ${OLDPWD-.}`
 
-## Cygwin中使用windows的anaconda环境
+## Cygwin中使用windows anaconda
 
-`vim ~/.bashrc`加入一下脚本：
+`vim ~/.bashrc`加入以下脚本：
 
 ```
-####################################By Jerry for using Anaconda on Cygwin#########################################
+##########################By Jerry for using Anaconda on Cygwin#################
 
 #  Anaconda Environment Selection - Plese set CONDA_BASE_DIR to the directory
 #  containing the base installation of anaconda/miniconda.

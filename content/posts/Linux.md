@@ -175,12 +175,12 @@ MAC: `brew services start sshd`
 
 - Shell临时设置, 终端关闭后失效
 
-`export PATH=/cygdrive/c/Users/YCKJ2939/AppData/Local/Continuum/anaconda3:$PATH`
+`export PATH=/cygdrive/c/Users/YCKJ2939/anaconda3:$PATH`
 
 - ~/.bashrc永久设置，只对本用户可见
 
 ```
-$ echo 'export PATH=/cygdrive/c/Users/YCKJ2939/AppData/Local/Continuum/anaconda3:$PATH' >> ~/.bashrc
+$ echo 'export PATH=/cygdrive/c/Users/YCKJ2939/anaconda3:$PATH' >> ~/.bashrc
 $ source ~./bashrc
 ```
 - /etc/profile永久设置，对所有用户可见

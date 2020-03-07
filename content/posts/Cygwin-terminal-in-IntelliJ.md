@@ -13,7 +13,7 @@ Tags: Tools, Cygwin
 ```
 #download setup-x86_64.exe https://cygwin.com/setup-x86_64.exe
 $ cd C:cygwin64
-$ ./setup-x86_64.exe -q -P wget,tar,qawk,bzip2,subversion,vim,git
+$ ./setup-x86_64.exe -q -P wget, tar, qawk, bzip2, subversion, vim, git
 ```
 
 ```
@@ -53,5 +53,77 @@ And an addition to my `~/.bashrc`:
 
 ## Cygwin中使用windows的anaconda环境
 
+`vim ~/.bashrc`加入一下脚本：
+
+```
+####################################By Jerry for using Anaconda on Cygwin#########################################
+
+#  Anaconda Environment Selection - Plese set CONDA_BASE_DIR to the directory
+#  containing the base installation of anaconda/miniconda.
+
+export CONDA_BASE_DIR=/cygdrive/c/Users/YCKJ2939/AppData/Local/Continuum/anaconda3
+
+#  Proxy Servers & Network Setup (if needed)
+
+export HTTP_PROXY=
+export HTTPS_PROXY=
+
+#  IMPORTANT - Ignore carriage returns when using a Cygwin environment.
+
+export SHELLOPTS
+set -o igncr
+
+###############################################################################
+
+#  Manage conda environments for Python.  We check the environment variable
+#  $CONDA_DEFAULT_ENV to see which environment is desired.  The default (base)
+#  environment will be chosen if nothing is specified.  Note that this variable
+#  will be explicitly managed by the cactivate ( ) function we have defined
+#  below, specifically for the purpose of changing environments.  The root
+#  environment is also handled slightly different from the others when it comes
+#  to setting the CONDA_DEFAULT_ENV variable.
+
+if [ ${CONDA_DEFAULT_ENV} ] && [ ${CONDA_DEFAULT_ENV} != 'base' ] 
+then
+    #  SELECT ONE OF THE NON-DEFAULT ENVIRONMENTS
+    export CONDA_PREFIX=${CONDA_BASE_DIR}/envs/${CONDA_DEFAULT_ENV}
+else
+    #  SELECT THE DEFAULT ENVIRONMENT (and set CONDA_DEFAULT_ENV full path)
+    export CONDA_DEFAULT_ENV=root
+    export CONDA_PREFIX=${CONDA_BASE_DIR}
+fi
+
+###############################################################################
+
+#  Define cconda and cactivate to facilitate management of conda.
+
+alias cconda=${CONDA_BASE_DIR}/Scripts/conda.exe
+
+cactivate() {
+    export CONDA_DEFAULT_ENV=$1
+    source ~/.bashrc
+    cyg-conda info --envs
+}
+
+###############################################################################
+
+#  PATH - ALl of the anaconda/miniconda path entries appear first.
+
+PATH=
+PATH=$PATH:$CONDA_PREFIX
+PATH=$PATH:$CONDA_PREFIX/Library/mingw-w64/bin
+PATH=$PATH:$CONDA_PREFIX/Library/usr/bin
+PATH=$PATH:$CONDA_PREFIX/Library/bin
+PATH=$PATH:$CONDA_PREFIX/Scripts
+PATH=$PATH:$HOME/scripts
+PATH=$PATH:$HOME/local/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
+
+export PATH
+
+###############################################################################
+
+```
 
 [Reference: using-anaconda-environments-with-cygwin-on-windows](https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows)

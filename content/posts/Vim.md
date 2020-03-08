@@ -86,7 +86,7 @@ Tags: Vim
 	- **`E`** → go to the end of this WORD.
 	
 	By default, words are composed of letters and the underscore character. Let’s call a WORD a group of letter separated by blank characters. If you want to consider WORDS, then just use uppercase characters.
-{% asset_img word_moves.jpg %}
+![word_moves](images/Vim/word_moves.jpg)
 	
 - **<font color=red>`%`</font>** : Go to the corresponding **`(`**, **`{`**, **`[`**.
 - **<font color=red>`*`</font>** (resp. **`#`**) : go to next (resp. previous) occurrence of the word under the cursor
@@ -118,7 +118,7 @@ But what was true for **`y`** (yank), is also true for **`d`** (delete), **`v`**
 - **`3fa`** → find the 3rd occurrence of **`a`** on this line.
 - **`F`** and **`T`** → like **`f`** and **`t`** but backward.
 
-{% asset_img line_moves.jpg %}
+![line_moves](images/Vim/line_moves.jpg)
 A useful tip is: **`dt"`** → remove everything until the **`"`**.
 
 ### Zone selection **`<action>a<object>`** or **`<action>i<object>`**
@@ -138,7 +138,7 @@ Suppose the cursor is on the first **`o`** of **`(map (+) ("foo"))`**.
 - **`v2i)`** → will select **`map (+) ("foo")`**
 - **`v2a)`** → will select **`(map (+) ("foo"))`**
 
-{% asset_img textobjects.jpg %}
+![textobjects](images/Vim/textobjects.jpg)
 
 ### Select rectangular blocks: **`<C-v>`**.
 
@@ -149,6 +149,6 @@ Rectangular blocks are very useful for commenting many lines of code. Typically:
 - **`<C-d>`** → move down (could also be jjj or %, etc…)
 - **`I-- [ESC]`** → write -- to comment each line
 
-{% asset_img rectangular-blocks.gif %}
+![rectangular-blocks](images/Vim/rectangular-blocks.gif)
 
 Note: in Windows you might have to use **`<C-q>`** instead of **`<C-v>`** if your clipboard is not empty.

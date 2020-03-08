@@ -167,7 +167,7 @@ def iFactorial(n:Int):Int = {
 ```
 
 方法二：
-{% asset_img Immutability.jpg %}
+![Immutability](images/Scala/Immutability.jpg)
 
 可变性可能有其明显的优势.
 

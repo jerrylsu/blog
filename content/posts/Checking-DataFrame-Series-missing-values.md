@@ -10,7 +10,7 @@ Tags: Python
 
 ## Checking DataFrame missing values
 `cols_missing = frame.columns[frame.isna().any()]`
-{% asset_img missing_value.jpg %}
+![asset_img missing_value](images/Checking-DataFrame-Series-missing-values/missing_value.jpg)
 
 ## Checking Series missing values
 `series.isna().any()`

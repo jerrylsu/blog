@@ -126,7 +126,7 @@ partitions, iterator and dependencies
 ## Execution & Scheduling
 
 **当在Spark上运行我们的应用程序 ( 调用一个Action ) 时会发生什么？**
-{% asset_img Spark.jpg %}
+![Spark](content/images/Spark-RDD/Spark.jpg)
 1. **SparkContext**：是应用的核心
     - 告诉应用如何访问集群
     - 协调集群上的进程集来运行我们的应用
@@ -171,7 +171,7 @@ Wide dependencies forbid it.
 - 有时，变量需要跨任务共享，或者在任务和驱动程序之间共享。通常跨任务的读写共享变量是低效的，但是，Spark还是为两种常见的使用模式提供了两种有限的共享变量：**广播变量 ( Broadcast Variables ) 和累加器 ( Accumulator )**。
 
 ### Broadcast Variables
-{% asset_img BroadcastVariable.jpg %}
+![BroadcastVariable](images/Spark-RDD/BroadcastVariable.jpg)
 **1. 为什么需要广播变量？**
 如果我们要在分布式计算里面分发大的对象，例如：字典，模型等，这个都会由**Driver**端进行分发。一般来讲，如果这个变量不是广播变量，那么每个**Task**就会分发一份，这在**Task**数目十分多的情况下**Driver**的带宽会成为系统的瓶颈，而且会大量消耗**Task**服务器上的资源，如果将这个变量声明为**广播变量**，那么只是每个**Executor**拥有一份，由这个**Executor**启动的**Task**会共享这个变量，节省了通信的成本和服务器的资源。
 

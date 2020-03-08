@@ -50,13 +50,13 @@ val purchases = List(CFFPurchase(100, "Geneva", 22.25),
                      CFFPurchase (300, ''Basel'', 16. 20)) 
 ```
 
-{% asset_img groupByKey.jpg %}
+![groupByKey](images/Spark-Shuffling-and-Partitioning/groupByKey.jpg)
 
 **注意：`groupByKey`会为每个`Key`生成一个键值对。 且单个键值对不能跨越多个`worker`节点。**
 
 ## Reminder: Latency
 
-{% asset_img Latency.jpg %}
+![Latency](images/Spark-Shuffling-and-Partitioning/Latency.jpg)
 
 如果不是绝对必要，我们不希望通过网络发送所有数据。 太多的网络通信会导致性能下降。
 如何优化？或许我们没有必要通过网络发送所有的键值对。也许我们可以在shuffle之前减少。 这可以大大减少我们必须通过网络发送的数据量。
@@ -92,9 +92,9 @@ purchasesRdd.map(p => (p.customerld, (1, p.price))) // Pair ROD
 
 **1. map**
 **2. `reduceByKey`reduce on mapper side first !**  从而减少了用于`shuffle`的`key-value pairs`数据量，如下图所示：
-{% asset_img reduceByKey1.jpg %}
+![reduceByKey1](content/images/Spark-Shuffling-and-Partitioning/reduceByKey1.jpg)
 **3. reduce again after shuffle**
-{% asset_img reduceByKey2.jpg %}
+![reduceByKey2](content/images/Spark-Shuffling-and-Partitioning/reduceByKey2.jpg)
 
 
 `reduceByKey`方法有什么好处？
@@ -103,7 +103,7 @@ purchasesRdd.map(p => (p.customerld, (1, p.price))) // Pair ROD
 ## groupByKey and reduceByKey Running Times 
 在真实集群上进行基准测试：
 
-{% asset_img runTime.jpg %}
+![runTime](images/Spark-Shuffling-and-Partitioning/runTime.jpg)
 
 ## Shuffling
 

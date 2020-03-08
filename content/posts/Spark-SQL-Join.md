@@ -14,7 +14,7 @@ Tags: Spark
 在Hive查询的性能调优期间，需要注意的一个方面是执行期间的join的类型。
 Common Join是Hive中的默认join类型，也称为Shuffle Join, Distributed Join, **Sort Merged Join**。
 在join期间，两个表中的所有行都将根据join key分发到所有节点，来自相同join key的值最终在同一节点上。
-{% asset_img CommonJoin.jpg %}
+![CommonJoin](images/Spark-SQL-Join/CommonJoin.jpg)
 1. In the map stage, mappers reads the tables and output the join-column value as the key. The key-value pairs are written into an intermediate file.
 2. In the shuffle stage, these pairs are sorts and merged. All rows from the same key will be sent to the same reducer instance.
 3. In the reduce stage, reducer gets the sorted data and performs the join.
@@ -31,7 +31,7 @@ Common join数据shuffle代价比较高。为了加速Hive查询，可以使用M
 Map Join使用准则：如果join操作中，存在可以装入内存的小表即可。
 在join期间，两个表中的所有行都将根据join key分发到所有节点，来自相同join key的值最终在同一节点上。
 
-{% asset_img MapJoin.jpg %}
+![MapJoin](images/Spark-SQL-Join/MapJoin.jpg)
 1. Map Join的第一步是在原始Map Reduce任务之前创建Map Reduce本地任务,此map/reduce任务从HDFS读取小表的数据并将其保存到内存中的哈希表中,然后保存到哈希表文件中。
 2. 当原始join Map Reduce任务启动时，它会将哈希表文件移动到Hadoop分布式缓存(这将把哈希表文件填充到每个mapper的本地磁盘,即广播broadcast)。
 对于具有大表A和小表B的连接，对于表A的每个映射器，完全读取表B。当较小的表被加载到内存中然后在MapReduce作业的map阶段中执行join时，不需要reducer并且跳过reduce阶段。Map Join比常规默认join执行得更快。

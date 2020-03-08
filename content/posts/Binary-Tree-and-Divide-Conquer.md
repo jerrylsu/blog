@@ -16,7 +16,7 @@ Tags: Algorithm, Divide Conquer
 3. **`遍历法`**的结果要改参数，返回参数；**`分治法`**的结果直接返回，是个更好的接口，因为传入的参数最好不要改。
 4. **`递归是自顶向下`**Top down  VS  **`分治是自底向上`**Bottom up
 
-{% asset_img TraversalDivideConquer.jpg %}
+![TraversalDivideConquer](images/Binary-Tree-and-Divide-Conquer/TraversalDivideConquer.jpg)
 
 ### **递归 VS 非递归**
 - 非递归其实是模拟递归用的Stack

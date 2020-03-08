@@ -9,7 +9,7 @@ Tags: Hadoop
 [TOC]
 
 ## Hadoop Cluster Architecture
-{% asset_img Hadoop-Cluster-Architecture.jpg %}
+![Hadoop-Cluster-Architecture](images/Hadoop-Architecture/Hadoop-Cluster-Architecture.jpg)
 
 ## Hadoop Cluster Rack
 - One column of computers is called one Rack.
@@ -28,7 +28,7 @@ There are three actors there.
 - Hadoop Name Node.
 - Hadoop Data Nodes.
 
-{% asset_img How-hadoop-stores-a-file.jpg %}
+![How-hadoop-stores-a-file](images/Hadoop-Architecture/How-hadoop-stores-a-file.jpg)
 
 - The Hadoop client will send a request to Name Node that it wants to create a file. The client will also supply the target directory name and the filename. On receiving a request, the Name Node will perform various checks like directory already exists, the file doesn’t already exist, and the client has the right permissions to create a file. Name Node can perform these checks because it maintains an image of entire HDFS namespace into memory (In memory fsImage). 
 If all the tests pass, the Name Node will create an entry for the new file and return success to the client. The file name creation is over, but it is empty, you haven’t started writing data to the file yet. Now it’s time to start writing data. 

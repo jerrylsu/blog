@@ -202,7 +202,7 @@ def recursion(level, param1, param2, ...):
 
 ## Divide and Conquer
 递归的高阶算法应用：分治
-{% asset_img divide-and-conquer1.jpg %}
+![divide-and-conquer](images/Algorithm/divide-and-conquer1.jpg)
 ### Template
 ```
 def divide_conquer(problem, param1, param2, ...):

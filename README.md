@@ -56,5 +56,5 @@ $ echo 'www.jerrulsu.com' >> output/CNAME
 # Generate automatically deployment files into output directory
 # and deploy blog to github.com:jerrylsu/jerrylsu.github.io.git.
 
-$ ./cmder p
+$ ./cmder p  # if use windows conda environment on cygwin, you must use python -i ./cmder p command.
 ```

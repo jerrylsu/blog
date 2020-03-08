@@ -21,7 +21,7 @@ The directory of themes and plugins can be pulled by pelican site.
 #### download and install theme elegant
 
 ```
-https://github.com/getpelican/pelican-themes
+[github.com/getpelican/pelican-themes](github.com/getpelican/pelican-themes)
 
 $ cd /blog/themes
 
@@ -33,7 +33,7 @@ $ pelican-themes --install themes/elegant --verbose
 #### download pelican plugins
 
 ```
-https://github.com/getpelican/pelican-plugins
+[github.com/getpelican/pelican-plugins](github.com/getpelican/pelican-plugins)
 
 $ cd blog
 

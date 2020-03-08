@@ -5,13 +5,13 @@
 ### 2. Create virtual environment
 
 ```
-- `conda create -n blog python=3.6.8`
+- conda create -n blog python=3.6.8
 
-- `conda activate blog`
+- conda activate blog
 
-- `pip install pelican -i https://pypi.doubanio.com/simple`
+- pip install pelican -i https://pypi.doubanio.com/simple
 
-- `pip install bs4 markdown webassets cssmin -i https://pypi.doubanio.com/simple`
+- pip install bs4 markdown webassets cssmin -i https://pypi.doubanio.com/simple
 ```
 
 ### 3. Install themes & plugins
@@ -23,11 +23,11 @@ The directory of themes and plugins can be pulled by pelican site.
 ```
 https://github.com/getpelican/pelican-themes
 
-- `cd /blog/themes`
+- cd /blog/themes
 
-- `git clone git@github.com:Pelican-Elegant/elegant.git`
+- git clone git@github.com:Pelican-Elegant/elegant.git
 
-- `pelican-themes --install themes/elegant --verbose`
+- pelican-themes --install themes/elegant --verbose
 ```
 
 #### download pelican plugins
@@ -35,25 +35,26 @@ https://github.com/getpelican/pelican-themes
 ```
 https://github.com/getpelican/pelican-plugins
 
-- `cd blog`
+- cd blog
 
-- `git clone git@github.com:getpelican/pelican-plugins.git`
+- git clone git@github.com:getpelican/pelican-plugins.git
 
-- `mv peliacn-plugins plugins`
+- mv peliacn-plugins plugins
 ```
 
 ### 4. Deploy Blog
 
 ```
-- `mkdir output`
+- mkdir output
 
 # Binding  domain name.
 
-- `touch output/CNAME`
+- touch output/CNAME
 
-- `echo 'www.jerrulsu.com' >> output/CNAME`
+- echo 'www.jerrulsu.com' >> output/CNAME
 
-# Generate automatically deployment files into output directory and deploy blog to **github.com:jerrylsu/jerrylsu.github.io.git**.
+# Generate automatically deployment files into output directory
+# and deploy blog to github.com:jerrylsu/jerrylsu.github.io.git.
 
-- `./cmder p`
+- ./cmder p
 ```

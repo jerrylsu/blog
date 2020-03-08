@@ -77,11 +77,11 @@ def _pelican_generate():
     """Generate the (sub) blog/site using Pelican.
     :param dir_: the sub blog directory to generate.
     """
-    os.system('rm -rf content/pages/.ipynb_checkpoints')
-    os.system('rm -rf content/posts/.ipynb_checkpoints')
-    os.system('rm -rf content/images/.ipynb_checkpoints')
-    os.system('rm -rf content/downloads/.ipynb_checkpoints')
-    os.system('rm -rf content/.ipynb_checkpoints')
+    # os.system('rm -rf content/pages/.ipynb_checkpoints')
+    # os.system('rm -rf content/posts/.ipynb_checkpoints')
+    # os.system('rm -rf content/images/.ipynb_checkpoints')
+    # os.system('rm -rf content/downloads/.ipynb_checkpoints')
+    # os.system('rm -rf content/.ipynb_checkpoints')
     config = os.path.join(BASE_DIR, 'pelicanconf.py')
     settings = pelican.settings.read_settings(path=config)
     pelican.Pelican(settings).run()

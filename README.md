@@ -20,9 +20,8 @@ The directory of themes and plugins can be pulled by pelican site.
 
 #### download and install theme elegant
 
-```
 [github.com/getpelican/pelican-themes](github.com/getpelican/pelican-themes)
-
+```
 $ cd /blog/themes
 
 $ git clone git@github.com:Pelican-Elegant/elegant.git
@@ -32,9 +31,8 @@ $ pelican-themes --install themes/elegant --verbose
 
 #### download pelican plugins
 
-```
 [github.com/getpelican/pelican-plugins](github.com/getpelican/pelican-plugins)
-
+```
 $ cd blog
 
 $ git clone git@github.com:getpelican/pelican-plugins.git
@@ -55,6 +53,8 @@ $ echo 'www.jerrulsu.com' >> output/CNAME
 
 # Generate automatically deployment files into output directory
 # and deploy blog to github.com:jerrylsu/jerrylsu.github.io.git.
+# if use windows conda environment on cygwin, you must use command
+# python -i ./cmder p
 
-$ ./cmder p  # if use windows conda environment on cygwin, you must use python -i ./cmder p command.
+$ ./cmder p
 ```

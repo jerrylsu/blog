@@ -26,15 +26,15 @@ Tags: Machine Learning, Regularization
     
     Ridge回归
 
-![L1&L2](images/Regularization/L1&L2.PNG)
+![l1_l2](images/Regularization/l1_l2.png)
 
 - **LP范数**
 
-    ![LP](images/Regularization/L norm.png)
+    ![lp](images/Regularization/l_norm.png)
 
     LP-Norm推导：
 
-    ![LP-Norm](images/Regularization/LP.PNG) 
+    ![lp_norm](images/Regularization/lp.png) 
 
     LP-Norm最终是：**$max(x_1, x_2,..,x_n)$**中的绝对值最大的元素，即二维是一个正方形。
 
@@ -46,7 +46,7 @@ Tags: Machine Learning, Regularization
 
 - 几何解释：解空间
 
-    ![L1L2space](images/Regularization/L1L2space.JPG)
+    ![l1l2space](images/Regularization/l1_l2space.jpg)
     
     解空间：损失函数的等高线与圆形正方形相交的区域。
     
@@ -56,7 +56,7 @@ Tags: Machine Learning, Regularization
 
 - 下降速度
 
-    ![l1&l2](images/Regularization/l1&l2.png)
+    ![l1_l2](images/Regularization/l1_l2.png)
     
     当w较大时，L2的斜率大于L1，L2正则化权重衰减地比L1正则化快。
     

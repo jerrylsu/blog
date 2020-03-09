@@ -97,4 +97,6 @@ Tags: Machine Learning, Logistic Regression
   
   方法： **`$$minimize dst(p_θ(y|x), p_r(y|x))$$`** 
 
+[entropy](https://www.jerrulsu.com/Information-Theory.html)
+
 ![cross_entropy](images/entropy/cross_entropy.png)

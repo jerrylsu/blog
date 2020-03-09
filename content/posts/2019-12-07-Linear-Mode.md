@@ -80,3 +80,21 @@ Tags: Machine Learning, Logistic Regression
 ### 2.7 极大似然估计
 
 ### 2.8 逻辑回归的正则化
+
+## 3. 回归和分类的本质区别
+
+**目标和方法：**
+
+- 对于回归问题：目标和方法是一致的
+  
+  目标： **`pred = y`**
+  
+  方法： 最小化预测值pred和真实值y的距离，即`minimize dist(pred, y)`
+  
+- 对于分类问题：
+
+  目标： maxmize baseline. e.g. accuracy
+  
+  方法： **`$$minimize dst(p_θ(y|x), p_r(y|x))$$`** 
+
+![cross_entropy](images/entropy/cross_entropy.png)

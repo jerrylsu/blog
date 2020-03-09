@@ -91,6 +91,8 @@ def cond_entropy(dataset, feature_idx):
     return cond_entropy
 ```
 
+![entropy](images/entropy/entropy.png)
+
 ### Information Gain
 
 **信息增益：原始数据集$D$的熵 减去 按特征$A$划分若干个子数据集$D_i$的加权熵**

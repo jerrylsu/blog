@@ -8,8 +8,8 @@ Tags: English
 
 [TOC]
 
-[https://www.etymonline.com/](https://www.etymonline.com/)
+[www.etymonline.com](https://www.etymonline.com/)
 
-[https://dictionary.cambridge.org/](https://dictionary.cambridge.org/)
+[dictionary.cambridge.org](https://dictionary.cambridge.org/)
 
-[https://bbdc.cn/](https://bbdc.cn/)
+[不背单词](https://bbdc.cn/)

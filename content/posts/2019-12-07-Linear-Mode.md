@@ -95,7 +95,7 @@ Tags: Machine Learning, Logistic Regression
 
   目标： maxmize baseline. e.g. accuracy
   
-  方法： **`$$minimize dst(p_θ(y|x), p_r(y|x))$$`** 
+  方法： **$$minimize dst(p_θ(y|x), p_r(y|x))$$** 
 
 [entropy](https://www.jerrulsu.com/Information-Theory.html)
 

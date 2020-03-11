@@ -25,7 +25,7 @@ Tags:  Deep Learning, NLP, RASA
 
 [data-augmentation](https://forum.rasa.com/t/data-augmentation/5612)
 
-## 3. Policy
+## 4. Policy
 
 [Transformer Embedding Dialogue (TED) Policy](https://rasa.com/docs/rasa/core/policies/#ted-policy)
 

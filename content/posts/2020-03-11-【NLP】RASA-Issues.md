@@ -8,16 +8,11 @@ Tags:  Deep Learning, NLP, RASA
 
 [TOC]
 
-## Conversation Design
+## 1. Conversation Design
 
 [Dialogue Elements](https://rasa.com/docs/rasa/dialogue-elements/dialogue-elements/)
 
 **intent** and **goal** are easily confused.
-
-## 1. Data Augmentation
-[rasa-data-augmentation](https://rasa.com/docs/rasa/core/policies/#data-augmentation)
-
-[data-augmentation](https://forum.rasa.com/t/data-augmentation/5612)
 
 ## 2. Stories
 
@@ -25,8 +20,13 @@ Tags:  Deep Learning, NLP, RASA
 
 [rasa-core-understanding-stories](https://forum.rasa.com/t/rasa-core-understanding-stories/672)
 
+## 3. Data Augmentation
+[rasa-data-augmentation](https://rasa.com/docs/rasa/core/policies/#data-augmentation)
+
+[data-augmentation](https://forum.rasa.com/t/data-augmentation/5612)
+
 ## 3. Policy
 
 [Transformer Embedding Dialogue (TED) Policy](https://rasa.com/docs/rasa/core/policies/#ted-policy)
 
-[Dialogue Transformers](https://arxiv.org/abs/1910.00486)
+[Paper: Dialogue Transformers](https://arxiv.org/abs/1910.00486)

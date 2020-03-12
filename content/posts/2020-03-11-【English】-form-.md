@@ -8,8 +8,6 @@ Tags: English
 
 [TOC]
 
-![form](images/English/form/form_bk.png)
-
 ![form](images/English/form/form.png)
 
 formally

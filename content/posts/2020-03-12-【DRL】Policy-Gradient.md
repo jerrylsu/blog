@@ -12,6 +12,7 @@ Tags: Reinforcement Learning
 
 - **Actor(Policy)**
 
+
 Neural Network as Actor (Deep). vs lookup Table(Q Learning).
 
 **使用神经网络作为Actor比查表的优势？**

@@ -58,7 +58,54 @@ Tags: Algorithm, BackTrack
  * */
 ```
 
-## wordsearch
+## Permutation
+
+```C++
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<iostream>
+
+class Solution {
+    private:
+        std::vector<std::string> res;
+        std::string track;
+    public:
+        std::vector<std::string> permutation(std::string s) {
+            if(s.empty()){
+                return res;
+            }
+            std::vector<bool> visited(s.size(), false);
+            std::sort(s.begin(), s.end());
+            dfs(res, track, s, visited);
+            return res;
+        }
+
+        void dfs(std::vector<std::string>& res, std::string& track, std::string& s, std::vector<bool>& visited){
+            if(track.size() == s.size()){
+                res.push_back(track);
+            }
+
+            for(int i = 0; i < s.size(); i++){
+                if(visited[i]){
+                    continue;
+                }
+
+                if(i > 0 && visited[i-1] && s[i-1] == s[i]){
+                    continue;
+                }
+
+                visited[i] = true;
+                track.push_back(s[i]);
+                dfs(res, track, s, visited);
+                track.pop_back();
+                visited[i] = false;
+            }
+        }
+};
+```
+
+## Word Search
 
 ```C++
 #include<vector>

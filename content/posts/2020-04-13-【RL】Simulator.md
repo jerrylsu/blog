@@ -1,8 +1,8 @@
 Status: published
 Date: 2020-04-13 11:21:03
 Author: Jerry Su
-Slug: 【RL】Simulator
-Title: 【RL】Simulator
+Slug: 【RL】User-Simulator
+Title: 【RL】User Simulator
 Category: Reinforcement Learning
 Tags: Reinforcement Learning 
 
@@ -43,7 +43,10 @@ User model：用户模型对应对话系统的对话管理模块。它的任务�
 
 Paper: End-to-End Task-Completion Neural Dialogue Systems
 
-## Rule-Based Simulator：Agenda-Based Simulator
+## Rule-Based Simulator
+
+**Agenda-Based Simulator:**
+
 Plato Paper: Statistical User Simulation with a Hidden Agenda
 在对话过程中，用户模拟器维护着一个紧凑的，类似堆栈的表示形式，称为用户议程Agenda，其中用户状态被分解为议程A和目标G。该目标G由约束C和请求R组成。在每个时间步t处，用户模拟器都会基于当前状态和上一个代理动作生成下一个用户动作，然后更新当前状态。
 当用户模拟器收到输入时，它会参考Policy/ Rule以查看将哪些内容推送到议程Agenda中，作为对输入的响应。 经过一些整理后（例如，删除重复的内容或不再有效的内容），用户模拟器会将一个或多个项目从议程Agenda中弹出作为回复。

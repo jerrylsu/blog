@@ -51,7 +51,7 @@ Paper: End-to-End Task-Completion Neural Dialogue Systems
 
 ## Rule-Based Simulator
 
-**Agenda-Based Simulator:**
+### Agenda-Based Simulator
 
 Plato Paper: Statistical User Simulation with a Hidden Agenda
 

@@ -26,6 +26,7 @@ NLG：对话动作 ---> 自然语言
 User goal：用户模拟器第一步首先生成对话目标。对话系统Agent对此目标不可知，但是需要通过多轮对话完成用户模拟器的目标。
 
 e.g.  user goal = inform_slots + request_slots：
+
 ```
 { 
 “request_slots”: { 
@@ -51,7 +52,7 @@ Paper: End-to-End Task-Completion Neural Dialogue Systems
 
 ## Rule-Based Simulator
 
-### Agenda-Based Simulator
+**Agenda-Based Simulator:**
 
 Plato Paper: Statistical User Simulation with a Hidden Agenda
 

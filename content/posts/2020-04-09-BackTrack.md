@@ -174,7 +174,7 @@ class Solution {
 class Solution {
 /* In this problem, we can go row by row, and in each position, we need to check
 *  if the column, the 45° diagonal and the 135° diagonal had a queen before.
-* Solution: Directly check the validity of each position
+* Solution: Directly check the validity of each position using nQueens.
 */
 public:
     vector<vector<string> > solveNQueens(int n) {

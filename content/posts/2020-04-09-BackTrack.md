@@ -83,7 +83,10 @@ class Solution {
             return res;
         }
 
-        void dfs(std::vector<std::string>& res, std::string& track, std::string& s, std::vector<bool>& visited){
+        void dfs(std::vector<std::string>& res, \
+                 std::string& track, \
+                 std::string& s, \
+                 std::vector<bool>& visited){
             if(track.size() == s.size()){
                 res.push_back(track);
             }
@@ -119,7 +122,7 @@ using std::string;
 class Solution {
     private:
         int row, col;
-        const int delta[4][2]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // {}列表元素拷贝初始化
+        const int delta[4][2]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     public:
         bool exist(vector<vector<char>>& board, string word) {
             if(board.empty() || word.empty()){
@@ -127,11 +130,11 @@ class Solution {
             }
             row = board.size();
             col = board[0].size();
-            vector<vector<bool>> visted(row, vector<bool>(col, false)); // 构造器初始化(num, content)
+            vector<vector<bool>> visted(row, vector<bool>(col, false));
             for(int i = 0; i < row; i++){
                 for(int j = 0; j < col; j++){
                     // 如果搜到直接返回，否则继续搜索
-                    if(dfs(i, j, board, word, visted, 0)){ // true立即返回，false继续搜索
+                    if(dfs(i, j, board, word, visted, 0)){
                         return true;
                     }
                 }
@@ -139,8 +142,12 @@ class Solution {
             return false;
         }
 
-        bool dfs(int x, int y, vector<vector<char>>& board, string word, vector<vector<bool>>& visted, int index){
-            std::cout << "index " << index << ": " << board[x][y] << "->" << word.at(index) << "\n";
+        bool dfs(int x, \
+                 int y, \
+                 vector<vector<char>>& board, \
+                 string word, \
+                 vector<vector<bool>>& visted, \
+                 int index){
             if(index == word.size()-1){
                 return board[x][y] == word.at(index);
             }
@@ -150,12 +157,13 @@ class Solution {
                 for(int i = 0; i < 4; i++){
                     int newRow = x + delta[i][0];
                     int newCol = y + delta[i][1];
-                    std::cout << "(" << newRow << ", " << newCol << ")\n";
-                    if(checkValid(newRow, newCol, visted) && dfs(newRow, newCol, board, word, visted, index + 1)){
+                    if(checkValid(newRow, newCol, visted) && \
+                       dfs(newRow, newCol, board, word, visted, index + 1)){
                         return true;
                     }
                 }
-                // 当前点(x, y)的四个方向都没搜到，回溯需要重置visted[x][y]为false，用于其他位置开始查询。
+                // 当前点(x, y)的四个方向都没搜到，
+                // 回溯需要重置visted[x][y]为false，用于其他位置开始查询。
                 visted[x][y] = false;
             }
             return false;
@@ -186,7 +194,9 @@ public:
         return res;
     }
 private:
-    void solveNQueens(vector<vector<string> >& res, vector<string>& nQueens, int row, int& n) {
+    void solveNQueens(vector<vector<string> >& res, \
+                      vector<string>& nQueens, \
+                      int row, int& n) {
         if (row == n) {
             res.push_back(nQueens);
             return;

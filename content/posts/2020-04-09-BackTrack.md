@@ -6,6 +6,7 @@ Title: BackTracking
 Category: Algorithm
 Tags: Algorithm, BackTracking
 
+[TOC]
 
 ## BackTracking
 

@@ -8,6 +8,8 @@ Tags: Algorithm, BackTracking
 
 [TOC]
 
+[https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/)
+
 ## BackTracking
 
 ```

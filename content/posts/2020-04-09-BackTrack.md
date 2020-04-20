@@ -8,17 +8,17 @@ Tags: Algorithm, BackTracking
 
 [TOC]
 
-[ref. backtracking](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/)
+[Ref. Backtracking](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/)
 
 ## BackTracking
 
-**回溯算法：本质是N叉树的遍历问题，**关键就是在前序遍历和后序遍历的位置做一些操作。回溯算法框架：
+**回溯算法：本质是N叉树的遍历问题**，关键就是在前序遍历和后序遍历的位置做一些操作。回溯算法框架：
 
-1. 路径：也就是已经做出的选择。
+- 路径：也就是已经做出的选择。
 
-2. 选择列表：也就是你当前可以做的选择。（一般会定义一个visited布尔数组，用于剪枝）
+- 选择列表：也就是你当前可以做的选择。（一般会定义一个visited布尔数组，用于剪枝）
 
-3. 结束条件：也就是到达决策树底层，无法再做选择的条件。
+- 结束条件：也就是到达决策树底层，无法再做选择的条件。
 
 ```
 result = []
@@ -32,9 +32,9 @@ def dfs(路径, 选择列表):
         dfs(路径, 选择列表)
         撤销选择
 ```
-写dfs函数时，需要维护走过的「路径」和当前可以做的「选择列表」，当触发「结束条件」时，将「路径」记入结果集。
+写dfs函数时，需要维护走过的**路径**和当前可以做的**选择列表**，当触发**结束条件**时，将**路径**记入结果集。
 
-## Permutation
+## Permutation I/II
 
 ```C++
 #include<string>
@@ -81,6 +81,58 @@ class Solution {
                 visited[i] = false;
             }
         }
+};
+```
+
+## Subset
+
+## Combination
+
+## N Queens
+
+```C++
+class Solution {
+/* In this problem, we can go row by row, and in each position, we need to check
+*  if the column, the 45° diagonal and the 135° diagonal had a queen before.
+* Solution: Directly check the validity of each position using nQueens.
+*/
+public:
+    vector<vector<string> > solveNQueens(int n) {
+        vector<vector<string> > res;
+        vector<string> nQueens(n, string(n, '.'));
+        solveNQueens(res, nQueens, 0, n);
+        return res;
+    }
+private:
+    void solveNQueens(vector<vector<string> >& res, \
+                      vector<string>& nQueens, \
+                      int row, int& n) {
+        if (row == n) {
+            res.push_back(nQueens);
+            return;
+        }
+        for (int col = 0; col != n; ++col)
+            if (isValid(nQueens, row, col, n)) {
+                nQueens[row][col] = 'Q';
+                solveNQueens(res, nQueens, row + 1, n);
+                nQueens[row][col] = '.';
+            }
+    }
+    bool isValid(vector<string>& nQueens, int row, int col, int& n) {
+        //check if the column had a queen before.
+        for (int i = 0; i != row; ++i)
+            if (nQueens[i][col] == 'Q')
+                return false;
+        //check if the 45° diagonal had a queen before.
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; --i, --j)
+            if (nQueens[i][j] == 'Q')
+                return false;
+        //check if the 135° diagonal had a queen before.
+        for (int i = row - 1, j = col + 1; i >= 0 && j < n; --i, ++j)
+            if (nQueens[i][j] == 'Q')
+                return false;
+        return true;
+    }
 };
 ```
 
@@ -149,53 +201,5 @@ class Solution {
             }
             return false;
         }
-};
-```
-
-## N Queens
-
-```C++
-class Solution {
-/* In this problem, we can go row by row, and in each position, we need to check
-*  if the column, the 45° diagonal and the 135° diagonal had a queen before.
-* Solution: Directly check the validity of each position using nQueens.
-*/
-public:
-    vector<vector<string> > solveNQueens(int n) {
-        vector<vector<string> > res;
-        vector<string> nQueens(n, string(n, '.'));
-        solveNQueens(res, nQueens, 0, n);
-        return res;
-    }
-private:
-    void solveNQueens(vector<vector<string> >& res, \
-                      vector<string>& nQueens, \
-                      int row, int& n) {
-        if (row == n) {
-            res.push_back(nQueens);
-            return;
-        }
-        for (int col = 0; col != n; ++col)
-            if (isValid(nQueens, row, col, n)) {
-                nQueens[row][col] = 'Q';
-                solveNQueens(res, nQueens, row + 1, n);
-                nQueens[row][col] = '.';
-            }
-    }
-    bool isValid(vector<string>& nQueens, int row, int col, int& n) {
-        //check if the column had a queen before.
-        for (int i = 0; i != row; ++i)
-            if (nQueens[i][col] == 'Q')
-                return false;
-        //check if the 45° diagonal had a queen before.
-        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; --i, --j)
-            if (nQueens[i][j] == 'Q')
-                return false;
-        //check if the 135° diagonal had a queen before.
-        for (int i = row - 1, j = col + 1; i >= 0 && j < n; --i, ++j)
-            if (nQueens[i][j] == 'Q')
-                return false;
-        return true;
-    }
 };
 ```

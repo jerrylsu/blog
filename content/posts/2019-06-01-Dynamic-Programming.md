@@ -127,7 +127,7 @@ def minPathSum(self, grid):
 
 取最小的是因为加上(i, j)这一点一定时正方形。画图理解
 
-```python
+```Python
 class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         if not matrix:
@@ -153,21 +153,43 @@ class Solution:
 
 dp[j]是前一个状态， j属于0 ~ i-1中最大的状态
 
-```python
+```Python
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         if not nums: return 0
         
         dp = [1] * len(nums)
         
-        for i in range(len(nums)):                 # 分别计算每一个状态
-            for j in range(i):                     # 遍历寻上前一个满足条件的状态
+        for i in range(len(nums)):         # 分别计算每一个状态
+            for j in range(i):             # 遍历寻上前一个满足条件的状态
                 if nums[j] < nums[i]:
-                    dp[i] = max(dp[i], dp[j] + 1)  # dp[i]迭代放置最大状态
+                    dp[i] = max(dp[i], dp[j] + 1) # dp[i]迭代放置最大状态
                     
         return max(dp)
 ```
 
+```C++
+class Solution{
+    public:
+        int lengthOfLIS(vector<int>& nums){
+            int n = nums.size();
+            if(n < 1) return n;
+            vector<int> dp(n, 1);
+            for(int i = 1; i < n; ++i){
+                for(int j = 0; j < i; ++j){
+                    if(nums[j] < nums[i]){
+                        dp[i] = max(dp[i], dp[j] + 1);
+                    }
+                }
+            }
+
+            int max_length = 1;
+            for(auto& ele : dp)
+                max_length = max(max_length, ele);
+            return max_length;
+        }
+};
+```
 ### 接龙型动态规划
 
 #### Maximum Subarray    

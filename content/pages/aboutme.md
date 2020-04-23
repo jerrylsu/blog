@@ -7,5 +7,13 @@ status: hidden
 slug: landing-page-about-hidden
 ---
 
+## Algorithms
+
+- [BackTracking](https://www.jerrulsu.com/BackTracking.html)
+
+- [Dynamic Programming](https://www.jerrulsu.com/Dynamic-Programming.html)
+
+## Reinforcement Learning
+
  <div align=center> ![home](images/home.jpeg) </div>
 

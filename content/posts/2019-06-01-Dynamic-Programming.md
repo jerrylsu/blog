@@ -154,6 +154,8 @@ class Solution:
 dp[j]是前一个状态， j属于0 ~ i-1中最大的状态
 
 ```Python
+Python
+
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         if not nums: return 0
@@ -169,6 +171,8 @@ class Solution:
 ```
 
 ```C++
+C++
+
 class Solution{
     public:
         int lengthOfLIS(vector<int>& nums){

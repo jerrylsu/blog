@@ -10,7 +10,7 @@ slug: landing-page-about-hidden
 
 **[Dynamic Programming](https://www.jerrulsu.com/Dynamic-Programming.html)**
 
-## **Reinforcement Learning**
+## Reinforcement Learning
 
  <div align=center> ![home](images/home.jpeg) </div>
 

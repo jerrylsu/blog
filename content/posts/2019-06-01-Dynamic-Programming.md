@@ -147,11 +147,11 @@ class Solution:
 
 #### Longest Increasing Subsequence (LIS)
 
-状态的定义：dp[i]
+状态的定义：dp[i]是以第i个元素结尾的最大上升序列的长度
 
-本题特殊在于：当前状态dp[i]并非由前一个状态dp[i-1]直接推来，而是在0 ~ i-1的状态dp[0] ~ dp[i-1]中搜寻。如下：
+本题特殊在于：当前状态dp[i]并非由前一个状态dp[i-1]直接推来，而是由前dp[0] ~ dp[i-1]状态中中最大的推来。如下：
 
-dp[j]是前一个状态， j属于0 ~ i-1遍历
+dp[j]是前一个状态， j属于0 ~ i-1中最大的状态
 
 ```python
 class Solution:

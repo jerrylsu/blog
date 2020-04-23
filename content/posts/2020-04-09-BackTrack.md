@@ -96,6 +96,7 @@ class Solution {
 *  if the column, the 45° diagonal and the 135° diagonal had a queen before.
 * Solution: Directly check the validity of each position using nQueens.
 */
+
 public:
     vector<vector<string> > solveNQueens(int n) {
         vector<vector<string> > res;
@@ -123,10 +124,12 @@ private:
         for (int i = 0; i != row; ++i)
             if (nQueens[i][col] == 'Q')
                 return false;
+
         //check if the 45° diagonal had a queen before.
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; --i, --j)
             if (nQueens[i][j] == 'Q')
                 return false;
+
         //check if the 135° diagonal had a queen before.
         for (int i = row - 1, j = col + 1; i >= 0 && j < n; --i, ++j)
             if (nQueens[i][j] == 'Q')

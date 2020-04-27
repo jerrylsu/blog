@@ -61,13 +61,7 @@ Tags: Algorithm, Dynamic Programming
 2. 回到Base case中设置不被依赖的**边界状态**
 3. 分析**普遍状态**如何依赖
 
-## 动态规划的分类
-
-根据如何定义状态，将动态规划分类：
-
-### 坐标型动态规划
-
-#### Triangle
+### Triangle
 
 ```python
 def minimumTotal(self, triangle):
@@ -87,7 +81,7 @@ def minimumTotal(self, triangle):
     return min(dp[-1])
 ```
 
-#### Minimum Path Sum
+### Minimum Path Sum
 
 ```python
 Python
@@ -147,7 +141,7 @@ class Solution{
 };
 ```
 
-#### Maximal Square
+### Maximal Square
 
 状态定义：dp[i][j]表示以坐标为 i, j 的这个点，作为正方形的右下角，可以扩展的最大边长
 
@@ -173,7 +167,7 @@ class Solution:
         return res**2
 ```
 
-#### Longest Increasing Subsequence (LIS)
+### Longest Increasing Subsequence (LIS)
 
 状态的定义：dp[i]是以第i个元素结尾的最大上升序列的长度
 
@@ -222,9 +216,7 @@ class Solution{
         }
 };
 ```
-### 接龙型动态规划
-
-#### Maximum Subarray    
+### Maximum Subarray    
 
 - 状态定义： dp[i]表示以nums[i]元素结尾（包含nums[i]）最大子数组的和
 
@@ -275,7 +267,7 @@ def maxSubArray(self, nums):  # 空间优化
     return res
 ```
 
-#### Maximum Product Subarray
+### Maximum Product Subarray
 
 - dp状态：
 
@@ -325,7 +317,7 @@ def maxProduct(self, nums: List[int]) -> int:
     return res
 ```
 
-#### Coin Change
+### Coin Change
 
 >**分析:** 有多少种面值的硬币，前一个状态dp[i - coin]就有多少种。 i表示当前的要计算的总额，i - coin表示去掉添加上来的硬币面值剩下总额。
 
@@ -351,12 +343,3 @@ def coinChange(self, coins: List[int], amount: int) -> int:
     return dp[-1] if dp[-1] != float('inf') else -1
 ```
 
-### 划分行动态规划
-
-### 双序列动态规划
-
-### 背包型动态规划
-
-### 区间型动态规划
-
-#### Longest Palindromic Substring

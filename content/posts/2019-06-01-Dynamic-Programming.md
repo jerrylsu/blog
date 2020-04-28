@@ -219,15 +219,15 @@ class Solution{
 
 ### Longest Common Subsequence (LCS)
 
-状态的定义： dp[i][j]是字串string1[0 ~ i]与字串string[0 ~ j]的最长公共字串的长度。
+状态的定义： dp[i][j]是子串string1[0 ~ i]与字串string[0 ~ j]的最长公共字串的长度。
 
 递推方程：**若求原问题dp[i][j]，从子问题dp[i-1][j-1]或者max(dp[i-1][j], dp[i][j-1])递推而来。**
 
-- 当string1[i] == string2[j]时，原问题dp[i][j] = dp[i-1][j-1] + 1，即string1[0 ~ i]与字串string[0 ~ j]的最长公共字串的长度加1
+- 当string1[i] == string2[j]时，原问题dp[i][j] = dp[i-1][j-1] + 1，即string1[0 ~ i-1]与字串string[0 ~ j-1]的最长公共字串的长度加1
 
-- 当string1[i] != string2[j]时，则必须求解dp[i-1][j]和dp[i][j-1]两个子问题，原问题dp[i][j] = max(dp[i-1][j], dp[i][j-1])，即string1[0 ~ i-1]与字串string[0 ~ j]的LCS与string1[0 ~ i]与字串string[0 ~ j-1]的LCS。
+- 当string1[i] != string2[j]时，则必须求解dp[i-1][j]和dp[i][j-1]两个子问题并取最大的结果，原问题dp[i][j] = max(dp[i-1][j], dp[i][j-1])，即子串string1[0 ~ i-1]与string[0 ~ j]的LCS与子串string1[0 ~ i]与string[0 ~ j-1]的LCS中最大的LCS。
 
-边界初始化技巧：字符串前增加一个空字符。
+边界初始化技巧：字符串前增加一个空字符#。
 
 ```cpp
 C++
@@ -249,12 +249,10 @@ class Solution{
             */
             for(int i = 1; i <= len1; ++i){
                 for(int j = 1; j <= len2; ++j){
-                    if(text1[i-1] == text2[j-1]){
+                    if(text1[i-1] == text2[j-1])
                         dp[i][j] = dp[i-1][j-1] + 1;
-                    }
-                    else{
+                    else
                         dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
-                    }
                 }
             }
             return dp[len1][len2];

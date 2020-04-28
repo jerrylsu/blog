@@ -215,6 +215,18 @@ class Solution{
             return max_length;
         }
 };
+
+### Longest Common Subsequence (LCS)
+
+状态的定义： dp[i][j]是字串string1[0 ~ i]与字串string[0 ~ j]的最长公共字串的长度。
+
+递推方程：**若求原问题dp[i][j]，从子问题dp[i-1][j-1]或者max(dp[i-1][j], dp[i][j-1])递推而来。**
+
+- 当string1[i] == string2[j]时，原问题dp[i][j] = dp[i-1][j-1] + 1，即string1[0 ~ i]与字串string[0 ~ j]的最长公共字串的长度加1
+
+- 当string1[i] != string2[j]时，则必须求解dp[i-1][j]和dp[i][j-1]两个子问题，原问题dp[i][j] = max(dp[i-1][j], dp[i][j-1])，即string1[0 ~ i-1]与字串string[0 ~ j]的LCS与string1[0 ~ i]与字串string[0 ~ j-1]的LCS。
+
+边界初始化技巧：字符串前增加一个空字符。
 ```
 ### Maximum Subarray    
 

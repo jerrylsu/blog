@@ -215,6 +215,7 @@ class Solution{
             return max_length;
         }
 };
+```
 
 ### Longest Common Subsequence (LCS)
 
@@ -227,7 +228,40 @@ class Solution{
 - 当string1[i] != string2[j]时，则必须求解dp[i-1][j]和dp[i][j-1]两个子问题，原问题dp[i][j] = max(dp[i-1][j], dp[i][j-1])，即string1[0 ~ i-1]与字串string[0 ~ j]的LCS与string1[0 ~ i]与字串string[0 ~ j-1]的LCS。
 
 边界初始化技巧：字符串前增加一个空字符。
+
+```C++
+C++
+
+class Solution{
+    public:
+        int longestCommonSubsequence(string text1, string text2){
+            int len1 = text1.size();
+            int len2 = text2.size();
+            if(len1 == 0 || len2 == 0)
+                return 0;
+            vector<vector<int>> dp(len1+1, vector<int>(len2+1, 0));
+            /* 增加一个特殊字符#，利于初始化base case
+                    # a b a c k
+                 #  0 0 0 0 0 0
+                 a  0
+                 b  0
+                 s  0
+            */
+            for(int i = 1; i <= len1; ++i){
+                for(int j = 1; j <= len2; ++j){
+                    if(text1[i-1] == text2[j-1]){
+                        dp[i][j] = dp[i-1][j-1] + 1;
+                    }
+                    else{
+                        dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+                    }
+                }
+            }
+            return dp[len1][len2];
+        }
+};
 ```
+
 ### Maximum Subarray    
 
 - 状态定义： dp[i]表示以nums[i]元素结尾（包含nums[i]）最大子数组的和

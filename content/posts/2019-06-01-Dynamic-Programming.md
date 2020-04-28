@@ -268,6 +268,8 @@ class Solution{
 
 $$dp[i] = \begin{cases} nums[i], &\ dp[i-1] \leq 0 \\\ dp[i-1] + nums[i], &\ dp[i-1] > 0 \end{cases}$$
 
+注：因为是连续子数组，所以dp[i]当前状态，只能由dp[i-1]状态推来。
+
 - 转移方程代码实现： dp[i] = max(dp[i-1] + nums[i], nums[i])
 
 **分析：**
@@ -283,12 +285,6 @@ $$dp[i] = \begin{cases} nums[i], &\ dp[i-1] \leq 0 \\\ dp[i-1] + nums[i], &\ dp[
 - nums[i]加上正dp[i-1]一定比自身大，取$dp[i-1] + nums[i]$
 
 由于dp[i]仅与dp的前一个状态有关，即在计算dp[i]时，$dp[i-2],dp[i-3]...,dp[0]$对于dp[i]没有影响，因此可以空间优化省去dp数组。
-
-**测试用例：**
-
-功能测试：数组全负数，数组全正数，数组有正有负
-
-特殊用例：数组不存在
 
 ```python
 def maxSubArray(self, nums):

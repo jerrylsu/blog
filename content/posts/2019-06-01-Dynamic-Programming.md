@@ -111,7 +111,7 @@ def minPathSum(self, grid):
     return dp[-1][-1]
 ```
 
-```C++
+```cpp
 C++
 
 class Solution{
@@ -192,7 +192,7 @@ class Solution:
         return max(dp)
 ```
 
-```C++
+```cpp
 C++
 
 class Solution{
@@ -229,7 +229,7 @@ class Solution{
 
 边界初始化技巧：字符串前增加一个空字符。
 
-```C++
+```cpp
 C++
 
 class Solution{

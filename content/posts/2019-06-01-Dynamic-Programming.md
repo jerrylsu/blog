@@ -260,6 +260,54 @@ class Solution{
 };
 ```
 
+### Longest Palindromic Substring
+
+状态定义：dp[i][j]是字符串s[i:j]是否为回文子串。
+
+base case：1. 单个字母dp[i][i] 2. 相邻字母dp[i][i+1]
+
+dp数组遍历方式：遍历所有可能字串长度len （子串长度len + 其实位置start）方式
+
+```cpp
+class Solution{
+    public:
+        string longestPalindrome(string s){
+            int n = s.size();
+            if(n == 0) return s;
+
+            int start_substr = 0;
+            int max_len = 1;
+            vector<vector<bool>> dp(n, vector<bool>(n, false));
+
+            // base case one letter
+            for(int i = 0; i < n; ++i)
+                dp[i][i] = true;
+
+            // nase case two letter
+            for(int i = 0; i < n - 1; ++i){
+                if(s[i] == s[i+1]){
+                    dp[i][i+1] = true;
+                    start_substr = i;
+                    max_len = 2;
+                }
+            }
+
+            for(int len = 3; len <= n; ++len){ // length of substring
+                for(int start = 0; start < n - len + 1; ++start){  // start position of substring
+                    int end = start + len - 1;  // end position of substring
+                    if(dp[start+1][end-1] && s[start] == s[end]){
+                        start_substr = start;
+                        max_len = len;
+                        dp[start][end] = true;
+                    }
+                }
+            }
+
+            return s.substr(start_substr, max_len);
+        }
+};
+```
+
 ### Maximum Subarray    
 
 - 状态定义： dp[i]表示以nums[i]元素结尾（包含nums[i]）最大子数组的和

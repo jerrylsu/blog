@@ -266,7 +266,7 @@ class Solution{
 
 base case：1. 单个字母dp[i][i] 2. 相邻字母dp[i][i+1]
 
-dp数组遍历方式：遍历所有可能字串长度len （子串长度len + 其实位置start）方式
+dp数组遍历方式：遍历所有可能字串长度len （子串长度len + 开始位置start）方式
 
 ```cpp
 class Solution{

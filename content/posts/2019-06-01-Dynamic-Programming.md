@@ -291,10 +291,12 @@ class Solution{
                     max_len = 2;
                 }
             }
-
-            for(int len = 3; len <= n; ++len){ // length of substring
-                for(int start = 0; start < n - len + 1; ++start){  // start position of substring
-                    int end = start + len - 1;  // end position of substring
+            // length of substring
+            for(int len = 3; len <= n; ++len){ 
+                // start position of substring
+                for(int start = 0; start < n - len + 1; ++start){  
+                    // end position of substring
+                    int end = start + len - 1;  
                     if(dp[start+1][end-1] && s[start] == s[end]){
                         start_substr = start;
                         max_len = len;

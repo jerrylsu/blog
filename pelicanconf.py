@@ -59,14 +59,14 @@ PROJECTS = [
      'description': 'Improving automated understanding of complex question answer content.'},
     {'name': 'RASA',
     'url': 'https://github.com/RasaHQ/rasa',
-    'description': 'Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants'},
+    'description': 'Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management - Create chatbots and voice assistants'},
     {'name': 'Algorithms',
     'url': 'https://github.com/jerrylsu/Algorithms',
-    'description': 'Algorithms in python'},
+    'description': 'Algorithms in C++ and Python'},
     {'name': 'Blog',
      'url': 'https://github.com/jerrylsu/blog',
      'description': 'Jerry\'s Blog'},
-    {'name': 'Featuretools_demo',
+    {'name': 'Auto Featuretools',
      'url': 'https://github.com/jerrylsu/featuretools_demo',
      'description': 'Featuretools automatically creates features from temporal and relational datasets'}]
 

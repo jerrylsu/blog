@@ -42,7 +42,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = True
+DEFAULT_PAGINATION = False
 
 # You can use the DISPLAY_PAGES_ON_MENU setting to control whether all those pages are displayed in the primary navigation menu. (Default is True.)
 DISPLAY_PAGES_ON_MENU = True

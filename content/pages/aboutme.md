@@ -8,9 +8,9 @@ slug: landing-page-about-hidden
 ---
 
 ##### [Data Structures and Algorithms](https://www.jerrulsu.com/pages/algorithms.html)
-[Deep Learning](Deep Learning)
-[Natural Language Processing](Natural language Processing)
-##### Reinforcement Learning
+##### [Deep Learning]()
+##### [Natural Language Processing]()
+##### [Reinforcement Learning]()
 
  <div align=center> ![home](images/home.jpeg) </div>
 

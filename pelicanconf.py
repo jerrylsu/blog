@@ -71,7 +71,7 @@ PROJECTS = [
      'description': 'Featuretools automatically creates features from temporal and relational datasets'}]
 
 # Home Page — Write Welcome Message
-LANDING_PAGE_TITLE = "It is never too late to learn."
+# LANDING_PAGE_TITLE = "It is never too late to learn."
 
 # Plugins and extensions
 MARKDOWN = {

@@ -3,7 +3,7 @@ Date: 2019-05-04 15:04:40
 Slug: about
 Tags: about
 
-**Hello Jerry**
+**Contact**
 
 - Github: [github.com/jerrylsu](https://github.com/jerrylsu)
 - Kaggle: [https://www.kaggle.com/jerrylsu](https://www.kaggle.com/jerrylsu)

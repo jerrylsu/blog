@@ -7,8 +7,8 @@ status: hidden
 slug: landing-page-about-hidden
 ---
 
-### [Algorithms](https://www.jerrulsu.com/pages/algorithms.html)
-### Reinforcement Learning
+#### [Algorithms](https://www.jerrulsu.com/pages/algorithms.html)
+#### Reinforcement Learning
 
  <div align=center> ![home](images/home.jpeg) </div>
 

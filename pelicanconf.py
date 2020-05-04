@@ -42,7 +42,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False 
+DEFAULT_PAGINATION = True
 
 # You can use the DISPLAY_PAGES_ON_MENU setting to control whether all those pages are displayed in the primary navigation menu. (Default is True.)
 DISPLAY_PAGES_ON_MENU = True
@@ -71,7 +71,7 @@ PROJECTS = [
      'description': 'Featuretools automatically creates features from temporal and relational datasets'}]
 
 # Home Page — Write Welcome Message
-# LANDING_PAGE_TITLE = "It is never too late to learn."
+LANDING_PAGE_TITLE = "It is never too late to learn."
 
 # Plugins and extensions
 MARKDOWN = {

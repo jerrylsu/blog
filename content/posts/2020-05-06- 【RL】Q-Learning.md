@@ -1,7 +1,7 @@
 Status: published
 Date: 2020-05-06 06:53:33
 Author: Jerry Su
-Slug: Q-Learning
+Slug: 【RL】Q-Learning
 Title: 【RL】Q Learning
 Category: Reinforcement Learning 
 Tags: Reinforcement Learning 

@@ -14,6 +14,9 @@ Tags: English
 
 ![adj](../images/English/adj.png)
 
+![adj2](../images/English/adj2.png)
+
+
 ## 定语
 前4后7
 

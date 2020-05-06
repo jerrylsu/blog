@@ -18,11 +18,18 @@ Tags: English
 
 
 ## 定语
-前4后7
+定语：对名词进行修饰限定
+
+**前4后7**。翻译成中文时都需要放到**名词**前面。
 
 ![dingyu](../images/English/dingyu.png)
 
 ![dingyu2](../images/English/dingyu2.png)
+
+![dingyu3](../images/English/dingyu3.png)
+
+
+e.g. 
 
 ## 非谓语动词短语零件
 - 零件9: **`to + v`**（宾语）定式短语 

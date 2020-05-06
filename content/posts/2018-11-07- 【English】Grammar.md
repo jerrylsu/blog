@@ -1,12 +1,21 @@
 Status: published
 Date: 2018-11-07 09:22:57
 Author: Jerry Su
-Slug: 非谓语
-Title: 非谓语
+Slug: Grammar
+Title: Grammar
 Category: English
 Tags: English
 
 [TOC]
+
+## 形容词短语
+
+**adj + 介词短语 / to do / enough**
+![adj](../images/English/adj.png)
+
+## 定语
+前4后7
+
 
 ## 非谓语动词短语零件
 - 零件9: **`to + v`**（宾语）定式短语 

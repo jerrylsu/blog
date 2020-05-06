@@ -74,6 +74,8 @@ Response for Request (System Action：request_slots)
 
 - case3: **在目标请求槽中，且在状态剩余槽中。**问题未曾回答system_action in goal.request_slots and not in self.state.rest_slots 
 
+在目标的请求槽中，并且在状态的剩余槽中，
+
 - case4: **不在目标的请求槽和信息槽中**，即不在用户模拟器goal中。
 
 将当前对话状态的信息槽填值为：self.state.inform_slots.slots=dialog_config.I_DO_NOT_CARE并回复。并检查self.state的请求槽和剩余槽栈是否为空，设置对话状态。

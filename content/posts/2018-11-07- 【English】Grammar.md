@@ -22,6 +22,8 @@ Tags: English
 
 ![dingyu](../images/English/dingyu.png)
 
+![dingyu2](../images/English/dingyu2.png)
+
 ## 非谓语动词短语零件
 - 零件9: **`to + v`**（宾语）定式短语 
 - 零件10：**`v-ing`** (宾语）定式短语
@@ -29,7 +31,7 @@ Tags: English
 
 1. `to + v`与`v-ing`:一般做主、宾、定、状、补、表
 
-2. `v-ed`:多做定语
+2. `v-ed`:多做定语，表被动
 
 3. `to + v`与`v-ing`区别：`to + v`倾向于将来或临时性动作；`v-ing`倾向于长期性、习惯性、计划性动作。
 

@@ -2,7 +2,7 @@ Status: published
 Date: 2020-05-06 06:53:33
 Author: Jerry Su
 Slug: Q-Learning
-Title: Q Learning
+Title: 【RL】Q Learning
 Category: Reinforcement Learning 
 Tags: Reinforcement Learning 
 
@@ -52,7 +52,7 @@ q_table
 num_episodes = 10000
 max_steps_per_episode = 100
 
-learning_rate = 0.1  # deeplizard.com/learn/video/mo96Nqlo1L8
+learning_rate = 0.1 
 discount_rate = 0.99
 
 # for exploration-exploitation trade-off: epsilon-greedy policy
@@ -77,7 +77,8 @@ for episode in range(num_episodes):
     
     for step in range(max_steps_per_episode):
         
-        # exploration-exploitation trade-off: agent explores or exploits the environment in this time-step.
+        # exploration-exploitation trade-off: agent explores or 
+        # exploits the environment in this time-step.
         exploration_rate_threshold = random.uniform(0, 1)
         if exploration_rate_threshold > exploration_rate:
             action = np.argmax(q_table[state, :])
@@ -90,8 +91,8 @@ for episode in range(num_episodes):
         new_state, reward, done, info = env.step(action)
         
         # Update Q-Table for Q(s, a)
-        q_table[state, action] = (1 - learning_rate) * q_table[state, action] + \
-                                 learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
+        q_table[state, action] = (1 - learning_rate) * q_table[state, action] \
+        + learning_rate * (reward + discount_rate * np.max(q_table[new_state, :]))
         
         # transition to the next state
         state = new_state
@@ -101,8 +102,8 @@ for episode in range(num_episodes):
             break
 
     # exploration rate decay
-    exploration_rate = min_exploration_rate + (max_exploration_rate - min_exploration_rate) * \
-                       np.exp(-exploration_decay_rate * episode)
+    exploration_rate = min_exploration_rate + (max_exploration_rate - min_exploration_rate) \
+                       * np.exp(-exploration_decay_rate * episode)
     
     rewards_all_episodes.append(rewards_current_episode)
 

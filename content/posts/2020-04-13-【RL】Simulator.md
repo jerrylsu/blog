@@ -59,12 +59,21 @@ Plato Paper: Statistical User Simulation with a Hidden Agenda
 在对话过程中，用户模拟器维护着一个紧凑的，类似堆栈的表示形式，称为用户议程Agenda，其中用户状态被分解为议程A和目标G。该目标G由约束C和请求R组成。在每个时间步t处，用户模拟器都会基于当前状态和上一个代理动作生成下一个用户动作，然后更新当前状态。
 当用户模拟器收到输入时，它会参考Policy/ Rule以查看将哪些内容推送到议程Agenda中，作为对输入的响应。 经过一些整理后（例如，删除重复的内容或不再有效的内容），用户模拟器会将一个或多个项目从议程Agenda中弹出作为回复。
 
+## Design
 用户模拟器维护每一轮的状态self.state，self.state具有字段request_slots, inform_slots, rest_slots, history_slots, turn, diaact
 
 Response for Request (System Action：request_slots) 
 
-- case1: system_action in goal.inform_slots
+- case1: **在目标信息槽中**system_action in goal.inform_slots
+
 系统agent的问题槽在用户模拟器目标的信息槽中，1. 用目标信息槽值直接填self.state.inform_slots作为回复，2. 同时从状态self.state的剩余槽栈self.state.rest_slots中删除，3. 并清空self.state.request_slots状态的请求槽，因为已经确定为用户模拟器回答的陈述句。
 
-- case2: system_action in goal.request_slots and not in self.state.rest_slots and in self.history_slots
-系统agent的问题槽在用户模拟器目标的请求槽中，并且在用户对话状态的历史槽中，不在剩余栈槽中。表示该问题已经回答，从历史槽中取值构造回复即可。
+- case2: **在目标请求槽中，且在状态历史槽中，不在剩余槽中。**问题已经回答system_action in goal.request_slots and not in self.state.rest_slots and in self.history_slots
+
+系统agent的问题槽在用户模拟器目标的请求槽中，并且在用户对话状态的历史槽中，不在剩余栈槽中。表示该问题已经回答，1. 从历史槽中取值构造回复即可。2. 清空self.state.request_slots状态的请求槽 
+
+- case3: **在目标请求槽中，且在状态剩余槽中。**问题未曾回答system_action in goal.request_slots and not in self.state.rest_slots 
+
+- case4: **不在目标的请求槽和信息槽中**，即不在用户模拟器goal中。
+
+将当前对话状态的信息槽填值为：self.state.inform_slots.slots=dialog_config.I_DO_NOT_CARE并回复。并检查self.state的请求槽和剩余槽栈是否为空，设置对话状态。

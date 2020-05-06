@@ -20,6 +20,7 @@ Tags: English
 ## 定语
 前4后7
 
+![dingyu](../images/English/dingyu.png)
 
 ## 非谓语动词短语零件
 - 零件9: **`to + v`**（宾语）定式短语 

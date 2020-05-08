@@ -8,13 +8,29 @@ Tags: Algorithm, Linked List
 
 [TOC]
 
+## 链表结点定义
+```cpp
+class ListNode{
+    public:
+        int val;
+        ListNode* next;
+
+        ListNode() : val(0), next(nullptr) {}
+        ListNode(int x) : val(x), next(nullptr) {}
+        ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
+
+```
+
 ## 链表基本操作
-链表的基本操作与技巧，需要熟记于心，信手拈来！
+链表的基本操作与技巧，需要熟记于心，信手拈来
+
 1. 插入、删除、翻转（基础）
+
 2. 合并与中分（进阶）
 
-### 删除重复节点
-Remove Duplicates from Sorted List
+### Remove Duplicates from Sorted List
+
 由于重复节点要保留一个，则不需要考虑删除头节点的特殊情况。
 ```python
 class Solution:
@@ -29,9 +45,10 @@ class Solution:
         return head
 ```
 
-### 翻转链表
-Reverse Linked List
+### Reverse Linked List
 ```python
+Python
+
 class Solution:
         if not head or not head.next:
             return head
@@ -44,9 +61,32 @@ class Solution:
         return pre
 ```
 
-### 合并链表
-Merge Two Sorted Lists
+```cpp
+C++
+
+class Solution{
+public:
+    ListNode* reverseList(ListNode* head){
+        if(!head) return nullptr;
+        ListNode *pre, *cur, *post;
+        cur = head;
+        pre = nullptr;
+        while(cur){
+            post = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = post;
+        }
+        return pre;
+    }
+};
+
+```
+
+### Merge Two Sorted Lists
 ```python
+Python
+
 class Solution:
     def mergeTwoLists(self, l1, l2):
         dummy = cur = ListNode(-1)
@@ -62,16 +102,50 @@ class Solution:
         return dummy.next
 ```
 
+```cpp
+C++
+
+class Solution{
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
+        if(!l1 && !l2) return nullptr;
+        if(!l1 || !l2) return !l1 ? l2 : l1;
+
+        ListNode dummy(-1), *current;
+        current = &dummy;
+        while(l1 && l2){
+            if(l1->val < l2->val){
+                current->next = l1;
+                l1 = l1->next;
+            }else{
+                current->next = l2;
+                l2 = l2->next;
+            }
+            current = current->next;
+        }
+        current->next = l1 == nullptr ? l2 : l1;
+        return dummy.next;
+    }
+};
+```
+
 ## 擅用Dummy节点
 以下两种情况下需要使用`Dummy Node`：
+
 1. 当链表的结构发生变化时
+
 2. 当需要返回的链表头不确定时
 
 ### Remove Duplicates from Sorted List II
+
 <font color=red>重要!!!</font>
+
 - 由于要删掉所有的重复项，头节点也可能被删除，而最终却还需要返回链表的头节点，所以定义一个新的节点dummy链上原链表来简化。
+
 1. `dummy = p = ListNode(-1)`
+
 2. `p = p.next`
+
 3. `dummy.next`
 
 ```python
@@ -132,16 +206,23 @@ class Solution:
 分析：为了保持cache的性能，使查找，插入，删除都有较高的性能，我们使用**双向链表**和**哈希表**作为cache的数据结构，因为：
 
 - 双向链表**插入**和**删除**效率高
+
 - 哈希表保存每个节点的地址，可以基本保证在O(1)时间内**查找**节点
 
 具体实现细节：
+
 - 越靠近链表头部，表示节点上次访问距离现在时间最短，尾部的节点表示最近访问最少
+
 - 查询或者访问节点时，如果节点存在，把该节点交换到链表头部，同时更新hash表中该节点的地址
+
 - 插入节点时，如果cache的size达到了上限，则删除尾部节点，同时要在hash表中删除对应的项。新节点都插入链表头部。
 
 注意：
+
 - 这题更多的是考察用数据结构进行设计的能力，在写代码时尽量将子函数拆分出来，先写个整体的框架。
+
 - 移出链表最后一个节点时，要记得在链表和哈希表中都移出该元素，所以节点中也要记录Key的信息，方便在哈希表中移除   
+
 - 头尾节点采用dummy的技巧，极大简化程序。
 
 ```python

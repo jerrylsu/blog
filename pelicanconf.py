@@ -54,15 +54,18 @@ DISPLAY_PAGES_ON_MENU = True
 PROJECTS_TITLE = "Related Projects"
 
 PROJECTS = [
+    {'name': 'Task-based Conversation Bot',
+     'url': 'https://github.com/jerrylsu/TC-Bot',
+     'description': 'Task-based conversation bot based on user simulator and deep reinforcement learning.'},
     {'name': 'Google QUEST Q&A Labeling',
      'url': 'https://github.com/jerrylsu/google_qa_challenge',
      'description': 'Improving automated understanding of complex question answer content.'},
     {'name': 'RASA',
     'url': 'https://github.com/RasaHQ/rasa',
-    'description': 'Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management - Create chatbots and voice assistants'},
-    {'name': 'Algorithms',
+    'description': 'Open source machine learning framework to automate text and voice-based conversations: NLU, dialogue management - Create chatbots and voice assistants'},
+    {'name': 'Data Structure and Algorithms',
     'url': 'https://github.com/jerrylsu/Algorithms',
-    'description': 'Algorithms in C++ and Python'},
+    'description': 'Data Structure and Algorithms in C++ and Python'},
     {'name': 'Blog',
      'url': 'https://github.com/jerrylsu/blog',
      'description': 'Jerry\'s Blog'},

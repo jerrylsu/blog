@@ -18,6 +18,7 @@ ctrl + w + ←(h)/↑(j)/↓(k)/→(l)
 ctrl + w + w
 ```
 
+## ~/.vimrc
 ```
 set undolevels=1000     " Lots and lots of undo
 set history=50          " Size of :command history

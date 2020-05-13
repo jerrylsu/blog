@@ -3,7 +3,7 @@ Date: 2020-05-04 15:04:40
 Slug: algorithms
 Tags: algorithms
 
-**[Linked List](https://www.jerrulsu.com/Linked-List.html)**
+**[Linked List](https://www.jerrulsu.com/LinkedList.html)**
 
 **[Binary Tree](https://www.jerrulsu.com/Binary-Tree-and-Divide-Conquer.html)**
 

@@ -47,9 +47,17 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 ## 期望回报
 在一个MDP过程中，是什么驱动强化学习智能体？**期望回报 Expected Return**
 
-**在一个MDP过程中，智能体的目标是最大化它的奖励Reward**。数学表示方式：
+**在一个MDP过程中，智能体的目标是最大化它的期望奖励Reward**。数学表示方式：
 
 定义在在$t$时刻所获得的期望奖励$G$是： \begin{equation*} G_{t}=R_{t+1}+R_{t+2}+R_{t+3}+\cdots +R_{T}\text{,} \end{equation*}  $T$是最后一个时间步。
 
 **期望奖励的概念非常重要，因为这是智能体的目标就是最大化期望奖励。期望奖励是推动智能体做出决策的动力。**
+
+## 折扣期望回报
+**在一个MDP过程中，智能体的目标是最大化它的期望折扣奖励Reward**
+
+折扣率$\gamma$，取值0~1之间，是折扣将来奖励的比率。  \begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\cdots \\ &=&\sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\text{.} \end{eqnarray*}
+
+
+
 

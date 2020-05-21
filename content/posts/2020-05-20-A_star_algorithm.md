@@ -2,7 +2,7 @@ Status: published
 Date: 2020-05-20 23:28:18
 Author: Jerry Su
 Slug: A_star_algorithm
-Title: A_star_algorithm
+Title: A* Heuristic Algorithm
 Category: A*
 Tags: A*, Algorithm
 

@@ -74,5 +74,9 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 动作值函数：$q_\pi$表示基于策略$\pi$的动作值函数。即**在给定一个状态，基于策略$\pi$选择一个动作后，给定的值，这个值用来评价选择该动作有多好。值用期望奖励定义**
 
+$q_\pi$称Q值函数，Q: quality
+
 \begin{eqnarray*} q_{\pi }\left( s,a\right) &=&E_{\pi }\left[ G_{t}\mid S_{t}=s,A_{t}=a \rule[-0.05in]{0in}{0.2in}\right] \\ &=&E_{\pi }\left[ \sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\mid S_{t}=s,A_{t}=a\right] \text{.} \end{eqnarray*}
+
+
 

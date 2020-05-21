@@ -45,6 +45,7 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 \begin{equation*} p\left( s^{\prime },r\mid s,a\right) =\Pr \left\{ S_{t}=s^{\prime },R_{t}=r\mid S_{t-1}=s,A_{t-1}=a\right\} \text{.} \end{equation*}
 
 ## 期望回报
+### 期望奖励
 在一个MDP过程中，是什么驱动强化学习智能体？**期望回报 Expected Return**
 
 **在一个MDP过程中，智能体的目标是最大化它的期望奖励Reward**。数学表示方式：
@@ -53,7 +54,7 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 **期望奖励的概念非常重要，因为这是智能体的目标就是最大化期望奖励。期望奖励是推动智能体做出决策的动力。**
 
-## 折扣期望回报
+### 折扣期望奖励
 **在一个MDP过程中，智能体的目标是最大化它的期望折扣奖励Reward**
 
 折扣率$\gamma$，取值0~1之间，是折扣将来奖励的比率。  \begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\cdots \\ &=&\sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\text{.} \end{eqnarray*}
@@ -62,4 +63,16 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 <font color=red>\begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\gamma ^{3}R_{t+4}+\cdots \\ &=&R_{t+1}+\gamma \left( R_{t+2}+\gamma R_{t+3}+\gamma ^{2}R_{t+4}+\cdots \right) \\ &=&R_{t+1}+\gamma G_{t+1} \end{eqnarray*}</font>
 
+## 策略与值函数
+
+策略：给定一个状态，智能体选择任意一个动作的概率是多少。
+
+策略用符号$\pi$表示，$\pi(a|s)$：在$t$时刻，$\pi$策略下，给定状态$s$选择动作$a$的概率是$\pi(a|s)$。$\pi$是动作$a$的概率分布。
+
+
+值函数：智能体选择某一个状态有多好。从reward的角度看就是，在给定一个状态选择一个动作可能增加或者减少reward。
+
+动作值函数：$q_\pi$表示基于策略$\pi$的动作值函数。即**在给定一个状态，基于策略$\pi$选择一个动作后，给定的值，这个值用来评价选择该动作有多好。值用期望奖励定义**
+
+\begin{eqnarray*} q_{\pi }\left( s,a\right) &=&E_{\pi }\left[ G_{t}\mid S_{t}=s,A_{t}=a \rule[-0.05in]{0in}{0.2in}\right] \\ &=&E_{\pi }\left[ \sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\mid S_{t}=s,A_{t}=a\right] \text{.} \end{eqnarray*}
 

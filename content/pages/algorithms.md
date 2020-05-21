@@ -19,3 +19,5 @@ Tags: algorithms
 
 **[Dynamic Programming](https://www.jerrulsu.com/Dynamic-Programming.html)**
 
+**[A* Heuristic](https://www.jerrulsu.com/A_star_algorithm.html)**
+

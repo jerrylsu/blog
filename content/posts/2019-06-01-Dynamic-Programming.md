@@ -439,7 +439,7 @@ def maxProduct(self, nums: List[int]) -> int:
 
 - 状态的定义： dp[i]到金额i（类似于台阶）所需要的最少硬币数。
 
-- 转移方程：$dp[i]  = min(dp[i-coin_1],\ dp[i-coin_2],...,\ dp[i-coin_n])$
+- 转移方程： $dp[i]  = min(dp[i-coin_1],\ dp[i-coin_2],...,\ dp[i-coin_n])$
 
 - 初始状态：dp[0] = 0：面值为0需要0个硬币数; 若硬币面值有2， 5， 7三种，则dp[1]是转移方程无法计算出的，所以也需要手工初始化，因为这里求最小所以将其初始化为无穷大float('inf')。
 

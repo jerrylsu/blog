@@ -58,6 +58,8 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 折扣率$\gamma$，取值0~1之间，是折扣将来奖励的比率。  \begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\cdots \\ &=&\sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\text{.} \end{eqnarray*}
 
+折扣奖励的定义使智能体更关心即时奖励而不是未来奖励，因为未来奖励将得到更大的折扣。因此，尽管智能体确实考虑了预期在将来获得的奖励，但当智能体做出关于采取特定动作的决定时，越直接的奖励就具有更大的影响力。
 
+<font color=red>\begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\gamma ^{3}R_{t+4}+\cdots \\ &=&R_{t+1}+\gamma \left( R_{t+2}+\gamma R_{t+3}+\gamma ^{2}R_{t+4}+\cdots \right) \\ &=&R_{t+1}+\gamma G_{t+1} \end{eqnarray*}</font>
 
 

@@ -79,14 +79,22 @@ $q_\pi$称Q值函数，Q: quality
 
 \begin{eqnarray*} q_{\pi }\left( s,a\right) &=&E_{\pi }\left[ G_{t}\mid S_{t}=s,A_{t}=a \rule[-0.05in]{0in}{0.2in}\right] \\ &=&E_{\pi }\left[ \sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\mid S_{t}=s,A_{t}=a\right] \text{.} \end{eqnarray*}
 
-## 最优策略
+### 最优策略
 什么是最优策略？ 
 
 \begin{equation*}\pi \geq \pi^\prime \text{ if and only if } q_{π}(s, a) \geq q_{π^\prime}(s, a) \text{ for all } s\in\boldsymbol{S}\text{.} \end{equation*}
 
 对于所有状态$s$，当且仅当基于策略$\pi$的值函数均大于其他所有策略$\pi^\prime$的值函数时，这个策略$\pi$就是最优测策略。
 
-## 最优动作值函数
-相似的，最优策略有一个最优动作值函数，即最优Q值函数，$q_*$表示。 
+### 最优Q值函数
+相似的，**最优策略有一个最优动作值函数，即最优Q值函数，$q_*$表示。**
 
 \begin{equation*} q_{\ast }\left( s,a\right) =\max_{\pi }q_{\pi }\left( s,a\right) \end{equation*}
+
+$q_*$表示对于给定状态动作对，该策略比任何其他策略更能获得最大期望奖励。
+
+## 贝尔曼最优方程
+$q_*$最优Q值函数的基本属性，满足贝尔曼最优方程：
+
+\begin{eqnarray*} q_{\ast }\left( s,a\right) &=&E\left[ R_{t+1}+\gamma \max_{a^{\prime }}q_{\ast }\left( s^\prime,a^{\prime }\right)\right] \end{eqnarray*}
+

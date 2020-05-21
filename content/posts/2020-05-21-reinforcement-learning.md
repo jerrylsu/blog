@@ -83,3 +83,5 @@ $q_\pi$称Q值函数，Q: quality
 什么是最佳策略？ 
 
 \pi \geq \pi^\prime \text{ if and only if } q_{π}(s, a) \geq q_{π^\prime}(s, a) \text{ for all } s\in\boldsymbol{S}\text{.}
+
+对于所有状态$s$，当且仅当基于策略$\pi$的值函数均大于其他所有策略$\pi^\prime$的值函数时，这个策略$\pi$就是最佳测策略。

@@ -70,6 +70,7 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 策略用符号$\pi$表示，$\pi(a|s)$：在$t$时刻，$\pi$策略下，给定状态$s$选择动作$a$的概率是$\pi(a|s)$。$\pi$是动作$a$的概率分布。
 
 ### Q值函数
+Value Functions, which generally give us an idea of how good some given state-action pair is for an agent in terms of expected reward. 
 值函数：智能体选择某一个状态有多好。从reward的角度看就是，在给定一个状态选择一个动作可能增加或者减少reward。
 
 动作值函数：$q_\pi$表示基于策略$\pi$的动作值函数。即**在给定一个状态，基于策略$\pi$选择一个动作后，给定的值，这个值用来评价选择该动作有多好。值用期望奖励定义**
@@ -79,4 +80,6 @@ $q_\pi$称Q值函数，Q: quality
 \begin{eqnarray*} q_{\pi }\left( s,a\right) &=&E_{\pi }\left[ G_{t}\mid S_{t}=s,A_{t}=a \rule[-0.05in]{0in}{0.2in}\right] \\ &=&E_{\pi }\left[ \sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\mid S_{t}=s,A_{t}=a\right] \text{.} \end{eqnarray*}
 
 ## 最优策略
+什么是最佳策略？ 
 
+\pi \geq \pi^\prime \text{ if and only if } q_{π}(s, a) \geq q_{π^\prime}(s, a) \text{ for all } s\in\boldsymbol{S}\text{.}

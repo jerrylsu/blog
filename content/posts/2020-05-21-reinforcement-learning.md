@@ -61,7 +61,7 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 折扣奖励的定义使智能体更关心即时奖励而不是未来奖励，因为未来奖励将得到更大的折扣。因此，尽管智能体确实考虑了预期在将来获得的奖励，但当智能体做出关于采取特定动作的决定时，越直接的奖励就具有更大的影响力。
 
-<font color=red>\begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\gamma ^{3}R_{t+4}+\cdots \\ &=&R_{t+1}+\gamma \left( R_{t+2}+\gamma R_{t+3}+\gamma ^{2}R_{t+4}+\cdots \right) \\ &=&R_{t+1}+\gamma G_{t+1} \end{eqnarray*}</font>
+<span style="color: red; "> \begin{eqnarray*} G_{t} &=&R_{t+1}+\gamma R_{t+2}+\gamma ^{2}R_{t+3}+\gamma ^{3}R_{t+4}+\cdots \\ &=&R_{t+1}+\gamma \left( R_{t+2}+\gamma R_{t+3}+\gamma ^{2}R_{t+4}+\cdots \right) \\ &=&R_{t+1}+\gamma G_{t+1} \end{eqnarray*}</span>
 
 ## 策略与值函数
 ### 策略
@@ -78,5 +78,5 @@ $q_\pi$称Q值函数，Q: quality
 
 \begin{eqnarray*} q_{\pi }\left( s,a\right) &=&E_{\pi }\left[ G_{t}\mid S_{t}=s,A_{t}=a \rule[-0.05in]{0in}{0.2in}\right] \\ &=&E_{\pi }\left[ \sum_{k=0}^{\infty }\gamma ^{k}R_{t+k+1}\mid S_{t}=s,A_{t}=a\right] \text{.} \end{eqnarray*}
 
-
+## 最优策略
 

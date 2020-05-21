@@ -8,7 +8,9 @@ Tags: Reinforcement Learning
 
 [TOC]
 
-## 马尔可夫决策过程 MDP
+## 马尔可夫决策过程
+构建强化学习问题：马尔可夫决策过程 Markov Decision Processes (MDPs) 
+
 ### MDP组件
 马尔可夫决策过程为我们提供了一种形式化顺序决策的方法。 这种形式化是构建通过强化学习解决的问题的基础。
 
@@ -38,4 +40,16 @@ Tags: Reinforcement Learning
 $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 ### 转换概率
+因为集合$S$和$R$是有限集，随机变量$S_t$和$R_t$具有明确定义的概率分布，即
+
 \begin{equation*} p\left( s^{\prime },r\mid s,a\right) =\Pr \left\{ S_{t}=s^{\prime },R_{t}=r\mid S_{t-1}=s,A_{t-1}=a\right\} \text{.} \end{equation*}
+
+## 期望回报
+在一个MDP过程中，是什么驱动强化学习智能体？**期望回报 Expected Return**
+
+**在一个MDP过程中，智能体的目标是最大化它的奖励Reward**。数学表示方式：
+
+定义在在$t$时刻所获得的期望奖励$G$是： \begin{equation*} G_{t}=R_{t+1}+R_{t+2}+R_{t+3}+\cdots +R_{T}\text{,} \end{equation*}  $T$是最后一个时间步。
+
+**期望奖励的概念非常重要，因为这是智能体的目标就是最大化期望奖励。期望奖励是推动智能体做出决策的动力。**
+

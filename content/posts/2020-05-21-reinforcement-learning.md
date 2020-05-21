@@ -32,5 +32,7 @@ Tags: Reinforcement Learning
 
 1. 在每一个时间步$t = 0, 1, 2, ...$, $Agent$接收环境的状态$S_t \in S$，基于当前状态$S_t$，$Agent$选择一个动作$A_t \in A$。形成一个state-action对($S_t, A_t$)。
 
-2. 时间推移到下一个时间步$t + 1$，环境受到$Agent$选择的动作$A_t$影响，将状态从$S_t$转为$S_{t+1} \in S$，此时Agent获得一个数值奖励$R_{t+1} \in R$，该奖励是关于Agent从状态$S_t$选择动作$A_t$的奖励。
+2. 时间推移到下一个时间步$t + 1$，环境受到$Agent$选择的动作$A_t$影响，将状态从$S_t$转为$S_{t+1} \in S$，此时Agent获得一个数值奖励$R_{t+1} \in R$，该奖励是关于Agent从状态$S_t$选择动作$A_t$的奖励。即奖励函数：$f(S_t, A_t) = R_{t+1}$
+
+$Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 

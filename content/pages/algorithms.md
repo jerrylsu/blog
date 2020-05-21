@@ -15,7 +15,7 @@ Tags: algorithms
 
 **[Depth First Search]()**
 
-**[BackTracking](https://www.jerrulsu.com/BackTracking.html)**
+**[Back Tracking](https://www.jerrulsu.com/BackTracking.html)**
 
 **[Dynamic Programming](https://www.jerrulsu.com/Dynamic-Programming.html)**
 

@@ -66,4 +66,4 @@ class GraphNode:
 
 [Topological Sorting](https://www.jerrulsu.com/Topological-Sorting.html)
 
-### 矩阵上的宽松搜
+### 矩阵上的宽搜

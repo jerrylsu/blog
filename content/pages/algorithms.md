@@ -13,7 +13,7 @@ Tags: algorithms
 
 **[Breadth First Search](https://www.jerrulsu.com/Breadth-First-Search.html)**
 
-**[Depth First Search]()**
+**[Depth First Search](https://www.jerrulsu.com/binary-tree-and-divide-conquer.html)**
 
 **[Back Tracking](https://www.jerrulsu.com/BackTracking.html)**
 

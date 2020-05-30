@@ -459,8 +459,7 @@ class Solution:
 
 ###  Insert / Remove / Find / Validate
 
-## Leetcode
-### Lowest Common Ancestor of a Binary Search Tree
+### 二叉搜索树的最近公共祖先
 ```python
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
@@ -473,7 +472,7 @@ class Solution:
             return root  # 包含p或q就是root和p，q在root两边情况。
 ```
 
-### Lowest Common Ancestor of a Binary Tree
+### 二叉树的最近公共祖先
 1. 我们自底部遍历，一旦我们到达一个与两个节点之一匹配的节点，我们就将它传递给它的父节点。
 2. 否则，在左右孩子中查找：
    - 如果左右孩子均返回一个节点，p和q存在，root就是LCA。

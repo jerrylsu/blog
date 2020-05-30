@@ -312,6 +312,8 @@ class Codec:
 ```
 
 ### 前中序重构二叉树
+
+[leetcode solution](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/)
 ```
 class Solution {
 public:

@@ -3,7 +3,7 @@ Date: 2020-05-04 15:04:40
 Slug: algorithms
 Tags: algorithms
 
-## Data Structure
+### <font color=green>Data Structure</font>
 
 **[Matrix]()**
 
@@ -19,7 +19,7 @@ Tags: algorithms
 
 **[Binary Tree](https://www.jerrulsu.com/Binary-Tree.html)**
 
-## Algorithms
+### <font color=green>Algorithms</font>
 
 **[Sort](https://www.jerrulsu.com/Sort.html)**
 
@@ -37,7 +37,7 @@ Tags: algorithms
 
 **[A* Heuristic](https://www.jerrulsu.com/A_star_algorithm.html)**
 
-## Reinforcement Learning
+### <font color=green>Reinforcement Learning</font>
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 

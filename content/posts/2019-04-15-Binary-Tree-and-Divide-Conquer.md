@@ -8,7 +8,7 @@ Tags: Algorithm, Divide Conquer
 
 [TOC]
 
-## 分治算法 Divide Conquer Algorithm
+### 分治算法
 **分治法的重点在于`问题的划分`和`返回状态的定义`**
 ### 遍历法 VS 分治法
 1. **`递归`**是实现方式，**`遍历法`**和**`分治法`**是可以用**`递归`**实现的算法思想
@@ -16,22 +16,18 @@ Tags: Algorithm, Divide Conquer
 3. **`遍历法`**的结果要改参数，返回参数；**`分治法`**的结果直接返回，是个更好的接口，因为传入的参数最好不要改。
 4. **`递归是自顶向下`**Top down  VS  **`分治是自底向上`**Bottom up
 
-![TraversalDivideConquer](images/Binary-Tree-and-Divide-Conquer/TraversalDivideConquer.jpg)
+![TraversalDivideConquer](../images/Binary-Tree-and-Divide-Conquer/TraversalDivideConquer.jpg)
 
-### **递归 VS 非递归**
+### 递归 VS 非递归
 - 非递归其实是模拟递归用的Stack
 
 **为什么自己模拟的可以，调用计算机的就不行呢 ？**
 - 因为`heap memory ≈ memory size`，new出的stack在里面，不用担心栈溢出。
 - 而`stack memory ≈ process memory`是计算机分给每个程序的一个很小的独占的空间，所以递归的深度太深，容易栈溢出。
 
-## 二叉树的遍历 Binary Tree Traversal
-- `Preorder`: root, left, right
-- `Inorder`: left, root, right
-- `Postorder`: left, right, root
+### 前序遍历 
+递归
 
-### 前序遍历 Preorder Traversal
-#### 递归 Recursion
 ```python
 def preorderTraversal(root):
     res = []
@@ -41,12 +37,14 @@ def preorderTraversal(root):
 def traversal(root, res):
     if not root: 
         return
-    append(root.val)
+    res.append(root.val)
     traversal(root.left, res)
     traversal(root.right, res)
 ```
-#### 分治 Divide Conquer
+**分治**
+
 分治法的返回状态定义：**`子树的先序遍历结果 List`**
+
 ```python
 def preorderTraversal(root):
     # end condition
@@ -66,7 +64,8 @@ def preorderTraversal(root):
     # return result
     return res
 ```
-#### 非递归 Non-Recursion
+非递归
+
 ```python
 # 1. 首先把root入栈
 # 2. 出栈的元素同时放进结果列表
@@ -86,8 +85,9 @@ def preorderTraversal(root):
     return res
 ```
 
-### 中序遍历 Inorder Traversal
-#### 递归 Recursion
+### 中序遍历
+递归
+
 ```python
 def inorderTraversal(root):
     res = []
@@ -101,7 +101,8 @@ def traversal(root, res):
     res.append(root.val)
     traversal(root.right, res)
 ```
-#### 分治 Divide Conquer
+分治
+
 ```python
 def inorderTraversal(root):
     # end condition
@@ -121,11 +122,13 @@ def inorderTraversal(root):
     # return result
     return res
 ```
-#### 非递归 Non-Recursion
+非递归
+
 1. 对于任一结点`cur`，
 2. 若其左孩子不为空，则将`cur`入栈并将`cur`的左孩子置为当前的`cur`，然后对当前结点`cur`再进行相同的处理；
 3. 若其左孩子为空，则取栈顶元素并进行出栈操作，访问该栈顶结点，然后将当前的`cur`置为栈顶结点的右孩子；
 4. 直到`cur`为`None`并且栈为空则遍历结束
+
 ```python
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
@@ -146,8 +149,9 @@ class Solution:
         return res
 ```
 
-### 后序遍历 Postorder Traversal
-#### 递归 Recursion
+### 后序遍历
+递归
+
 ```python
 def postorderTraversal(root):
     res = []
@@ -161,7 +165,8 @@ def traversal(root, res):
     traversal(root.right, res)
     append(root.val)
 ```
-#### 分治 Divide Conquer
+分治
+
 ```python
 def postorderTraversal(root):
     # end condition
@@ -181,10 +186,13 @@ def postorderTraversal(root):
     # return result
     return res
 ```
-#### 非递归 Non-Recursion
+非递归
 
-### 层序遍历 Level order Traversal
-#### Binary Tree Level Order Traversal
+```
+pass
+```
+
+### 层序遍历
 
 - 使用队列数据结构：collections.deque
 
@@ -197,6 +205,8 @@ def postorderTraversal(root):
 - 遍历该层节点依次出队，查看左右孩子，存在即入队尾。
 
 ```python
+Python
+
 from collections import deque
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
@@ -215,6 +225,30 @@ class Solution:
             res.append(cur_level)
         return res
 ```
+
+```cpp
+CPP
+
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> res;
+        if(root == nullptr) retur res;
+        stack<TreeNode*> stk;
+        stk.push(root);
+        while(!stk.empty()) {
+            TreeNode* node = stk.top();
+            stk.pop();
+            res.push_back(node->val);
+            if(node->right) stk.push(node->right);
+            if(node->left) stk.push(node->left);
+        }
+        return res;
+    }
+};
+
+```
+
 #### Binary Tree Zigzag Level Order Traversal
 ```python
 class Solution:
@@ -277,9 +311,68 @@ class Codec:
         return root
 ```
 
-## 二叉树的属性 Binary Tree Attributes
-### Maximum Depth of Binary Tree
+### 前中序重构二叉树
+```
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        unordered_map<int, int> map;
+        int n = preorder.size();
+
+        // 使用hash结构快速在中序遍历的结果中定位根结点的位置
+        for(int i = 0; i < n; ++i) {
+            map[inorder[i]] = i;
+        }
+
+        return myBuildTree(map, preorder, inorder, 0, n - 1, 0, n - 1);
+    }
+
+    TreeNode* myBuildTree(unordered_map<int, int>& map,
+                        vector<int>& preorder,
+                        vector<int>& inorder,
+                        int preorder_left,
+                        int preorder_right,
+                        int inorder_left,
+                        int inorder_right) {
+        if(preorder_left > preorder_right) return nullptr;
+
+        // 前序遍历第一个结点为根结点
+        int preorder_root = preorder_left;
+        // 建立根结点
+        TreeNode* root = new TreeNode(preorder[preorder_root]);
+
+        // 根结点在中序中的位置
+        int inorder_root = map[preorder[preorder_root]];
+
+        // 中序的左子树左右区间
+        int inorder_sublefttree_left = inorder_left;
+        int inorder_sublefttree_right = inorder_root - 1;
+        // 中序的右子树左右区间
+        int inorder_subrighttree_left = inorder_root + 1;
+        int inorder_subrighttree_right = inorder_right;
+
+        // 前序的左子树左右区间
+        int preorder_sublefttree_left = preorder_left + 1;
+        int preorder_sublefttree_right = inorder_sublefttree_right - inorder_sublefttree_left + preorder_sublefttree_left;
+        // 前序的右子树左右区间
+        int preorder_subrighttree_left = preorder_sublefttree_right + 1;
+        int preorder_subrighttree_right = preorder_right;
+
+        root->left = myBuildTree(map, preorder, inorder,
+                                 preorder_sublefttree_left, preorder_sublefttree_right,
+                                 inorder_sublefttree_left, inorder_sublefttree_right);
+        root->right = myBuildTree(map, preorder, inorder,
+                                  preorder_subrighttree_left, preorder_subrighttree_right,
+                                  inorder_subrighttree_left, inorder_subrighttree_right);
+        return root;
+    }
+};
+```
+
+### 二叉树的属性
+#### Maximum Depth of Binary Tree
 分治法的返回状态定义：**`子树的最大深度`**
+
 ```python
 class Solution:
     def maxDepth(self, root):
@@ -299,6 +392,7 @@ class Solution:
 ```
 ### Minimum Depth of Binary Tree
 分治法的返回状态定义：**`子树的最小深度`**
+
 ```python
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
@@ -330,8 +424,9 @@ class Solution:
             # return result
             return res
 ```
-###  Balanced Binary Tree
+###  平衡二叉树
 分治法的返回状态定义：**`子树的是否是平衡二叉树和子树的深度 (bool, int)`**
+
 ```python
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
@@ -353,8 +448,8 @@ class Solution:
         return abs(leftDepth - rightDepth) <= 1, max(leftDepth, rightDepth) + 1
 ```
 
-## 二叉搜索树 Binary Search Tree
-### 二叉搜索树基本性质
+### 二叉搜索树 BST
+二叉搜索树基本性质
 - 定义：左子树都比根节点小，右子树都不小于根节点。左右子树也必须是BST。单节点树是BST。
 - BST的中序遍历是**`不降序列`**
 

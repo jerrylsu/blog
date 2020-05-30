@@ -3,11 +3,27 @@ Date: 2020-05-04 15:04:40
 Slug: algorithms
 Tags: algorithms
 
-**[Sort](https://www.jerrulsu.com/Sort.html)**
+## Data Structure
+
+**[Matrix]()**
+
+**[Stack]()**
+
+**[Queue]()**
+
+**[Heap]()**
+
+**[HashTable]()**
 
 **[Linked List](https://www.jerrulsu.com/LinkedList.html)**
 
 **[Binary Tree](https://www.jerrulsu.com/Binary-Tree.html)**
+
+## Algorithms
+
+**[Sort](https://www.jerrulsu.com/Sort.html)**
+
+**[Two Points]()**
 
 **[Binary Search](https://www.jerrulsu.com/Binary-Search.html)**
 
@@ -20,6 +36,8 @@ Tags: algorithms
 **[Dynamic Programming](https://www.jerrulsu.com/Dynamic-Programming.html)**
 
 **[A* Heuristic](https://www.jerrulsu.com/A_star_algorithm.html)**
+
+## Reinforcement Learning
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 

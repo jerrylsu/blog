@@ -336,7 +336,9 @@ public:
                         int preorder_right,
                         int inorder_left,
                         int inorder_right) {
-        if(preorder_left > preorder_right) return nullptr;
+        if(preorder_left > preorder_right || inorder_left > inorder_right) {
+            return nullptr;
+        }
 
         // 前序遍历第一个结点为根结点
         int preorder_root = preorder_left;

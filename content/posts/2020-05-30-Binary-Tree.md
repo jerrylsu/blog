@@ -249,7 +249,7 @@ public:
 
 ```
 
-#### 之字层序遍历
+### 之字层序遍历
 ```python
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
@@ -272,7 +272,7 @@ class Solution:
         return res
 ```
 
-#### 序列化和反序列化
+### 序列化和反序列化
 ```python
 from collections import deque
 class Codec:
@@ -373,7 +373,7 @@ public:
 };
 ```
 
-#### 二叉树最大深度
+### 二叉树最大深度
 分治法的返回状态定义：**`子树的最大深度`**
 
 ```python
@@ -456,7 +456,7 @@ class Solution:
 - 定义：左子树都比根节点小，右子树都不小于根节点。左右子树也必须是BST。单节点树是BST。
 - BST的中序遍历是**`不降序列`**
 
-### 二叉搜索树的最近公共祖先
+### 二叉搜索树最近公共祖先
 ```python
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':

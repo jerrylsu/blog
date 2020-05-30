@@ -7,7 +7,7 @@ Tags: algorithms
 
 **[Linked List](https://www.jerrulsu.com/LinkedList.html)**
 
-**[Binary Tree](https://www.jerrulsu.com/Binary-Tree-and-Divide-Conquer.html)**
+**[Binary Tree](https://www.jerrulsu.com/Binary-Tree.html)**
 
 **[Binary Search](https://www.jerrulsu.com/Binary-Search.html)**
 

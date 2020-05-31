@@ -558,18 +558,25 @@ class Solution(object):
 
 
 思路二：DFS，返回状态的定义：
+
 **`dfs(root)返回的是包括root这个结点的单一路径上的最大值。`** 
 
 则可能的结果有：
+
 - left + right +root.val (左右子树和根构成路径为最大值）
+
 - max(left, right) + root.val(左或者右子树和根构成最大值）
+
 - root.val本身为最大值
 
 和全局变量res比较更新即可。
 
 需要注意的是dfs返回值，可能是
+
 - max(left, right) + root.val 某一条路径
+
 - root.val  只是该结点（下面都是负的了）
+
 ```python
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:

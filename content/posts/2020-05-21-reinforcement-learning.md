@@ -71,6 +71,7 @@ $Trajectory: S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, ...$
 
 ### Q值函数
 Value Functions, which generally give us an idea of how good some given state-action pair is for an agent in terms of expected reward. 
+
 值函数：智能体选择某一个状态有多好。从reward的角度看就是，在给定一个状态选择一个动作可能增加或者减少reward。
 
 动作值函数：$q_\pi$表示基于策略$\pi$的动作值函数。即**在给定一个状态，基于策略$\pi$选择一个动作后，给定的值，这个值用来评价选择该动作有多好。值用期望奖励定义**

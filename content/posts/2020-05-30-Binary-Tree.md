@@ -523,13 +523,21 @@ class Solution:
 ```
 ### Binary Tree Maximum Path Sum
 返回状态的定义：`maxPathSum`, `singlePathSum`
+
 - 首先，想一个简化版(single path)，找从root到任意点得最大值。类似于maxDepth，每次加root.val而不再是+1
+
 - 求单路的时候，如果root加左儿子单路或者右儿子单路最后的值都小于0，则返回0，意味着不要root开始的这个单路了
+
 - 本题思路 divide & conquer
+
 求最大路径和就等于下面三个值的最大值：
+
   - 左子树的最大路径和
+  
   - 右子树的最大路径和
+  
   - 左子树单路 + 右子树单路 + root.val
+  
 ```python
 class Solution(object):
     def maxPathSum(self, root):

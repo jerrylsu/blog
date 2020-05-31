@@ -22,7 +22,9 @@ Tags: Algorithm, Binary Tree
 - 非递归其实是模拟递归用的Stack
 
 **为什么自己模拟的可以，调用计算机的就不行呢 ？**
+
 - 因为`heap memory ≈ memory size`，new出的stack在里面，不用担心栈溢出。
+
 - 而`stack memory ≈ process memory`是计算机分给每个程序的一个很小的独占的空间，所以递归的深度太深，容易栈溢出。
 
 ### 前序遍历 

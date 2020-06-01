@@ -8,6 +8,16 @@ Tags: Algorithm, Binary Tree
 
 [TOC]
 
+### 二叉树结构定义
+```cpp
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}
+};
+```
+ 
 ### 分治算法
 **分治法的重点在于`问题的划分`和`返回状态的定义`**
 ### 遍历法 VS 分治法

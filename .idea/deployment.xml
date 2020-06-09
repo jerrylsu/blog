@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="TCBOT">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="blog">
         <serverdata>
           <mappings>
@@ -24,13 +31,6 @@
         </serverdata>
       </paths>
       <paths name="rasa1_8">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="uberPlato">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

@@ -69,6 +69,36 @@ Traceback (most recent call last):
 AttributeError: Can't pickle local object 'Vocab.load.<locals>.<lambda>'
 ```
 
+```python
+    def load(self, word2id_path=None, id2word_path=None):
+        if word2id_path:
+            with open(word2id_path, 'rb') as f:
+                word2id = pickle.load(f)
+            # Can't pickle lambda function
+            self.word2id = defaultdict(lambda: UNK_ID)
+            self.word2id.update(word2id)
+            self.vocab_size = len(self.word2id)
+```
+
 pickle模块不能序列化lambda，需要自定义函数
+
+```python
+from collections import defaultdict
+UNK = 1
+dic = defaultdict(lambda: UNK)
+print(dic['Jerry'])  # res: 1 ---> UNK
+##################################################
+class Test:
+    def default_unk(self):
+        return UNK
+    
+    def update(self):
+        self.w2i = defaultdict(self.default_unk)
+        return self.w2i
+
+test = Test()
+dic = test.update()
+print(dic['Annie'])  # res: 1 ---> UNK
+```
 
 [luly.lamost.org/blog/python_multiprocessing](http://luly.lamost.org/blog/python_multiprocessing.html)

@@ -74,6 +74,7 @@ options to nvidia-docker run.
 
 1. 修改当前Docker的shm-size。挂载点/dev/shm
 
+```
 - docker ps -a
 
 - docker inspect [container id] | grep Id
@@ -87,8 +88,10 @@ options to nvidia-docker run.
 - systemctl start docker
 
 - docker start [container id]
+```
 
 2.  num_workers设置0
+
 ```
 dataloader = torch.utils.data.DataLoader(
         dataset,

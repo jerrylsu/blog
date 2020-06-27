@@ -18,48 +18,8 @@ Traceback (most recent call last):
     obj = _ForkingPickler.dumps(obj)
   File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
     cls(buf, protocol).dump(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 323, in reduce_storage
     fd, size = storage._share_fd_()
 RuntimeError: unable to write to file </torch_3531_3962650647>
-Traceback (most recent call last):
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
-    obj = _ForkingPickler.dumps(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
-    cls(buf, protocol).dump(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 323, in reduce_storage
-    fd, size = storage._share_fd_()
-RuntimeError: unable to write to file </torch_3535_3220118081>
-Traceback (most recent call last):
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
-    obj = _ForkingPickler.dumps(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
-    cls(buf, protocol).dump(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 323, in reduce_storage
-    fd, size = storage._share_fd_()
-RuntimeError: unable to write to file </torch_3531_3470580173>
-Traceback (most recent call last):
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
-    obj = _ForkingPickler.dumps(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
-    cls(buf, protocol).dump(obj)
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 323, in reduce_storage
-    fd, size = storage._share_fd_()
-RuntimeError: unable to write to file </torch_3535_707129964>
-Traceback (most recent call last):
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 724, in _try_get_data
-    data = self.data_queue.get(timeout=timeout)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/queues.py", line 104, in get
-    if not self._poll(timeout):
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 257, in poll
-    return self._poll(timeout)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 414, in _poll
-    r = wait([self], timeout)
-  File "/root/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 920, in wait
-    ready = selector.select(timeout)
-  File "/root/anaconda3/envs/torch/lib/python3.7/selectors.py", line 415, in select
-    fd_event_list = self._selector.poll(timeout)
-  File "/root/anaconda3/envs/torch/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
-    _error_if_any_worker_fails()
 RuntimeError: DataLoader worker (pid 3527) is killed by signal: Bus error.
 ```
 
@@ -70,6 +30,7 @@ is not enough, and you should increase shared memory size either with --ipc=hos
 options to nvidia-docker run.
 ```
 
+[docker_shm](../images/Pytorch/docker_shm.png)
 多进程数据加载Dataloader，Docker容器的共享内存/dev/shm不足
 
 1. 修改当前Docker的shm-size。挂载点/dev/shm

@@ -8,6 +8,41 @@ Tags: Pytorch
 
 [TOC]
 
+### 主卡线程暴涨
+异常： 
+
+[master](../images/Pytorch/bug.png)
+
+正常：
+
+[ma](../images/Pytorch/bug_fix.png)
+
+```python
+def to_var(x, on_cpu=False, gpu_id=None):
+    """Tensor => Variable"""
+    if torch.cuda.is_available() and not on_cpu:
+        x = x.cuda(gpu_id, non_blocking=True)
+        # x = Variable(x)
+    return x
+
+def normal_kl_div(mu1, var1, 
+                  mu2=to_var(torch.FloatTensor([0.0])),
+                  var2=to_var(torch.FloatTensor([1.0]))):
+    one = to_var(torch.FloatTensor([1.0]))
+    return torch.sum(0.5 * (torch.log(var2) - torch.log(var1)
+```
+多线程脚本导入时，函数参数总是执行to_var()。当线程num_workers越多，数据无效装入cuda就越多。
+
+修改
+```python
+def normal_kl_div(mu1, var1, mu2, var2):
+    mu2=to_var(torch.FloatTensor([0.0]))
+    var2=to_var(torch.FloatTensor([1.0]))
+    one = to_var(torch.FloatTensor([1.0]))
+    return torch.sum(0.5 * (torch.log(var2) - torch.log(var1)
+```
+
+
 ### 共享内存问题
 ```
 Training Start!

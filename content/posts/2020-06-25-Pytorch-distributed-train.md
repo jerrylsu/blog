@@ -11,11 +11,11 @@ Tags: Pytorch
 ### 主卡线程暴涨
 异常： 
 
-[master](../images/Pytorch/bug.png)
+![master](../images/Pytorch/bug.png)
 
 正常：
 
-[ma](../images/Pytorch/bug_fix.png)
+![ma](../images/Pytorch/bug_fix.png)
 
 ```python
 def to_var(x, on_cpu=False, gpu_id=None):
@@ -65,7 +65,8 @@ is not enough, and you should increase shared memory size either with --ipc=hos
 options to nvidia-docker run.
 ```
 
-[docker_shm](../images/Pytorch/docker_shm.png)
+![docker_shm](../images/Pytorch/docker_shm.png)
+
 多进程数据加载Dataloader，Docker容器的共享内存/dev/shm不足
 
 1. 修改当前Docker的shm-size。挂载点/dev/shm

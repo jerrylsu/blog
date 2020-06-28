@@ -169,3 +169,9 @@ print(dic['Annie'])  # res: 1 ---> UNK
 ```
 
 [luly.lamost.org/blog/python_multiprocessing](http://luly.lamost.org/blog/python_multiprocessing.html)
+
+### 加载分布式模型到单卡
+
+> when loading the module, you need to provide an appropriate map_location argument to prevent a process to step into others’ devices. If map_location is missing, torch.load will first load the module to CPU and then copy each parameter to where it was saved, which would result in all processes on the same machine using the same set of devices
+
+[https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#save-and-load-checkpoints](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#save-and-load-checkpoints)

@@ -172,6 +172,33 @@ print(dic['Annie'])  # res: 1 ---> UNK
 
 ### 加载分布式模型到单卡
 
+```
+RuntimeError: Error(s) in loading state_dict for MHRED:
+Missing key(s) in state_dict: "encoder.embedding.weight", ...
+Unexpected key(s) in state_dict: "module.encoder.embedding.weight", ...
+```
+
+Distributed包装的模型在保存时，权值参数前面会带有module字符，然而自己在单卡环境下，没有用Distributed包装的模型权值参数不带module。
+
+方案一：保存模型时把module去掉
+```python
+if len(gpu_ids) > 1:
+  t.save(net.module.state_dict(), "model.pth")
+else:
+  t.save(net.state_dict(), "model.pth")
+```
+
+方案二： 创建新的模型OrderedDict不包含module
+```python
+loc = 'cuda:{}'.format(self.config.gpu)
+checkpoint = torch.load(checkpoint_path, map_location=loc)
+checkpoint_new = OrderedDict()
+for key, value in checkpoint.items():
+    key = key[7:]  # remove `module.`
+    checkpoint_new[key] = value
+self.model.load_state_dict(checkpoint_new)
+```
+
 > when loading the module, you need to provide an appropriate map_location argument to prevent a process to step into others’ devices. If map_location is missing, torch.load will first load the module to CPU and then copy each parameter to where it was saved, which would result in all processes on the same machine using the same set of devices
 
 [https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#save-and-load-checkpoints](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#save-and-load-checkpoints)

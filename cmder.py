@@ -88,6 +88,9 @@ def _pelican_generate():
 
 
 def _push_github():
+    # set git username & email
+    cmd = f'git config user.name {"Jerry"} && git config user.email {"sa517301@mail.ustc.edu.cn"}'
+    os.system(cmd)
     # backup
     cmd = 'git init && git add --all . && git commit -a -m ...' 
     os.system(cmd)

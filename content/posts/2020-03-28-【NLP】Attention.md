@@ -63,11 +63,9 @@ concat_output = torch.tanh(self.concat(concat_input))
 ```
 
 ### self attention
-
 Encoder or Decoder
 
 ### masked self attention
-
 Decoder 
 
 ![attention](../images/RASA/self_attention.png)

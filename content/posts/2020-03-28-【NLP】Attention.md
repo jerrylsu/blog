@@ -8,14 +8,13 @@ Tags: Deep Learning, NLP, Attention
 
 [TOC]
 
-![attention](../images/RASA/self_attention.png)
 
 [http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention](http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention)
 
 
 ### context attention
 
-Encoder-decoder
+Encoder and Decoder
 
 ```python
 class Attention(nn.Module):
@@ -65,4 +64,10 @@ concat_output = torch.tanh(self.concat(concat_input))
 
 ### self attention
 
+Encoder or Decoder
+
 ### masked self attention
+
+Decoder 
+
+![attention](../images/RASA/self_attention.png)

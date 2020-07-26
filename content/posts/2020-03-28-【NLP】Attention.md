@@ -68,4 +68,6 @@ Encoder or Decoder
 ### masked self attention
 Decoder 
 
+padding masked & sequence masked
+
 ![attention](../images/RASA/self_attention.png)

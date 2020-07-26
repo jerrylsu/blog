@@ -12,7 +12,7 @@ Tags: Deep Learning, NLP, Attention
 [http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention](http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention)
 
 
-### context attention
+### Context attention
 
 Encoder and Decoder
 
@@ -62,10 +62,10 @@ concat_input = torch.cat((last_hidden, context), 1)
 concat_output = torch.tanh(self.concat(concat_input))
 ```
 
-### self attention
+### Self attention
 Encoder or Decoder
 
-### masked self attention
+### Masked self attention
 Decoder 
 
 padding masked & sequence masked

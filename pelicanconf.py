@@ -30,7 +30,7 @@ OUTPUT_SOURCES = False
 SUMMARY_MAX_LENGTH = 50
 SUMMARY_END_SUFFIX = '…'
 DEFAULT_ORPHANS = 0
-DEFAULT_PAGINATION = 15
+DEFAULT_PAGINATION = 10
 NEWEST_FIRST_ARCHIVES = True
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives']
 PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'author': None, 'archives': None}
@@ -115,7 +115,7 @@ TAG_FEED_RSS = None
 # THEMES
 # More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-bootstrap3'
-USE_PAGER = True
+USE_PAGER = False
 BOOTSTRAP_FLUID = True                  # full screen
 SITELOGO = 'jerry.jpg'
 SITELOGO_SIZE = 32
@@ -145,6 +145,8 @@ SIDEBAR_ON_LEFT = True
 HIDE_SIDEBAR = False
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
+TAG_CLOUD_BADGE = True
+TAG_CLOUD_SORTING = 'alphabetically-rev'
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 PADDED_SINGLE_COLUMN_STYLE = False      # The main body of the pages will be generated centered and with padding on the sides
 
@@ -153,17 +155,17 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 I18N_TEMPLATES_LANG = 'en'
 
 MENUITEMS = (
-  ('Project','/pages/project'),
+  ('Project','output/pages/project.md'),
   ('Algorithms','/pages/algorithms'),
   ('About','/pages/about')
 )
 
-SOCIAL = (('Email', 'http://twitter.com/DaanDebie'),
+SOCIAL = (('Email', 'http://twitter.com/DaanDebie', 'linkedin'),
           ('github', 'http://github.com/DandyDev', 'github'),
           ('stackoverflow', 'http://stackoverflow.com/users/872397/dandydev', 'stack-overflow'))
 # PLUGINS
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc','sitemap','tipue_search','render_math', 'i18n_subsites']
+PLUGINS = ['extract_toc','sitemap','tipue_search','render_math', 'i18n_subsites', 'tag_cloud']
 SITEMAP = {
     "format": "xml",
     "priorities": {

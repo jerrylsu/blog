@@ -32,9 +32,8 @@ SUMMARY_END_SUFFIX = '…'
 DEFAULT_ORPHANS = 0
 DEFAULT_PAGINATION = 10
 NEWEST_FIRST_ARCHIVES = True
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives']
-PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'author': None, 'archives': None}
-
+DIRECT_TEMPLATES = ['index', 'authors', 'categories', 'tags', 'archives']
+PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives': None}
 
 TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
@@ -154,11 +153,11 @@ PADDED_SINGLE_COLUMN_STYLE = False      # The main body of the pages will be gen
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 I18N_TEMPLATES_LANG = 'en'
 
-MENUITEMS = (
-  ('Project','output/pages/project.md'),
-  ('Algorithms','/pages/algorithms'),
-  ('About','/pages/about')
-)
+# MENUITEMS = (
+#   ('Project','output/pages/project.md'),
+#   ('Algorithms','/pages/algorithms'),
+#   ('About','/pages/about')
+# )
 
 SOCIAL = (('Email', 'http://twitter.com/DaanDebie', 'linkedin'),
           ('github', 'http://github.com/DandyDev', 'github'),

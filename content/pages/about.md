@@ -1,7 +1,7 @@
-Title: Contact
+Title: About 
 Date: 2019-05-04 15:04:40
-Slug: contact
-Tags: contact
+Slug: about
+Tags: about 
 
 **Contact**
 

@@ -3,7 +3,7 @@ Date: 2019-02-28 06:20:32
 Author: Jerry Su
 Slug: Scala with Gradle in Intellij
 Title: Scala with Gradle in Intellij
-Category: Scala
+Category: 
 Tags: Scala
 
 [TOC]

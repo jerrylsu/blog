@@ -3,7 +3,7 @@ Date: 2019-01-31 07:03:56
 Author: Jerry Su
 Slug: Get/put-data-between-local-and-client/hadoop
 Title: Get/put data between local and client/hadoop
-Category: Hadoop
+Category: 
 Tags: Hadoop
 
 [TOC]

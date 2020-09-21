@@ -3,7 +3,7 @@ Date: 2019-01-31 10:12:06
 Author: Jerry Su
 Slug: Hadoop-Architecture
 Title: Hadoop Architecture
-Category: Hadoop
+Category: 
 Tags: Hadoop
 
 [TOC]

@@ -3,7 +3,7 @@ Date: 2019-07-17 07:19:13
 Author: Jerry Su
 Slug: Scala-Tips
 Title: Scala Tips
-Category: Scala
+Category: 
 Tags: Scala
 
 [TOC]

@@ -3,7 +3,7 @@ Date:  2018-11-17 11:42:33
 Author: Jerry Su
 Slug: Data-Structure-and-Algorithm-in-Python
 Title: Data Structure and Algorithm in Python
-Category: Algorithm
+Category: 
 Tags: Algorithm
 
 [TOC]

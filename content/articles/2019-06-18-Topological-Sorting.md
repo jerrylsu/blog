@@ -3,7 +3,7 @@ Date: 2019-06-18 03:01:02
 Author: Jerry Su
 Slug: Topological-Sorting
 Title: Topological Sorting
-Category: Algorithm
+Category: 
 Tags: Algorithm, Breadth First Search, Sorting
 
 [TOC]

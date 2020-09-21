@@ -3,7 +3,7 @@ Date: 2019-04-17 05:43:19
 Author: Jerry Su
 Slug: Case-Class-vs-Class
 Title: Case Class vs Class
-Category: Scala
+Category: 
 Tags: Scala
 
 [TOC]

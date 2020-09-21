@@ -3,7 +3,7 @@ Date: 2020-01-23 10:53:08
 Author: Jerry Su
 Slug: 【NLP】GlobalAveragePooling1D
 Title:【NLP】GlobalAveragePooling1D
-Category: Deep Learning 
+Category: 
 Tags: Deep Learning, NLP
 
 [TOC]

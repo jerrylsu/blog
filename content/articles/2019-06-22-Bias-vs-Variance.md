@@ -3,7 +3,7 @@ Date: 2019-06-22 04:40:15
 Author: Jerry Su
 Slug: Bias-vs-Variance
 Title: Bias vs Variance
-Category: Machine Learning
+Category: 
 Tags: Machine Learning
 
 [TOC]

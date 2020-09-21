@@ -3,7 +3,7 @@ Date: 2020-01-27 21:14:28
 Author: Jerry Su
 Slug: 【Kaggle】Google-Quest-Challenge
 Title: 【Kaggle】Google Quest Challenge
-Category: Kaggle 
+Category: 
 Tags: Kaggle
 
 [TOC]

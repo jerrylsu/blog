@@ -3,7 +3,7 @@ Date: 2020-01-23 11:17:17
 Author: Jerry Su
 Slug: 【NLP】Embedding
 Title: 【NLP】Embedding
-Category: Deep Learning
+Category: 
 Tags: Deep Learning, NLP
 
 [TOC]

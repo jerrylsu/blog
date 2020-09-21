@@ -3,7 +3,7 @@ Date: 2020-03-08 03:25:53
 Author: Jerry Su
 Slug: Deploy-my-blog-quickly
 Title: Deploy my blog quickly
-Category: Blog
+Category: 
 Tags: Blog
 
 [TOC]

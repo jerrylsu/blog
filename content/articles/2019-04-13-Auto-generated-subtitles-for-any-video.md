@@ -3,7 +3,7 @@ Date: 2019-04-13 06:35:27
 Author: Jerry Su
 Slug: Auto-generated-subtitles-for-any-video
 Title: Auto-generated subtitles for any video
-Category: Tools
+Category: 
 Tags: Tools
 
 [TOC]

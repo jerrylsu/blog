@@ -3,7 +3,7 @@ Date: 2019-04-08 13:10:38
 Author: Jerry Su
 Slug: Binary-Search
 Title: Binary Search
-Category: Algorithm
+Category: 
 Tags: Algorithm, Binary Search
 
 [TOC]

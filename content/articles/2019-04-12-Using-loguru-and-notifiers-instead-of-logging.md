@@ -3,7 +3,7 @@ Date: 2019-04-12 02:31:27
 Author: Jerry Su
 Slug: Using-loguru-and-notifiers-instead-of-logging
 Title: Using loguru and notifiers instead of logging
-Category: Python
+Category: 
 Tags: Python
 
 [TOC]

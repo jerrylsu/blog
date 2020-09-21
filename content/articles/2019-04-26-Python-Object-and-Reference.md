@@ -3,7 +3,7 @@ Date: 2019-04-26 06:32:12
 Author: Jerry Su
 Slug: Python Object and Reference
 Title: Python Object and Reference
-Category: Python
+Category: 
 Tags: Python
 
 [TOC]

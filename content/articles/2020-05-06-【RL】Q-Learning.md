@@ -3,7 +3,7 @@ Date: 2020-05-06 06:53:33
 Author: Jerry Su
 Slug: 【RL】Q-Learning
 Title: 【RL】Q Learning
-Category: Reinforcement Learning 
+Category: 
 Tags: Reinforcement Learning 
 
 [TOC]

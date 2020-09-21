@@ -3,7 +3,7 @@ Date: 2019-07-22 07:37:59
 Author: Jerry Su
 Slug: Hadoop-small-files-problem
 Title: Hadoop-small files problem
-Category: Hadoop
+Category: 
 Tags: Hadoop
 
 [TOC]

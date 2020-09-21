@@ -3,7 +3,7 @@ Date: 2020-04-09 10:12:16
 Author: Jerry Su
 Slug: BackTracking
 Title: BackTracking
-Category: Algorithm
+Category: 
 Tags: Algorithm, BackTracking
 
 [TOC]

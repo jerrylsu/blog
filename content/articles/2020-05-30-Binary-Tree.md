@@ -3,7 +3,7 @@ Date: 2019-04-15 09:18:10
 Author: Jerry Su
 Slug: Binary-Tree
 Title: Binary Tree
-Category: Algorithm
+Category: 
 Tags: Algorithm, Binary Tree
 
 [TOC]

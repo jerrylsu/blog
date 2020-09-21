@@ -3,7 +3,7 @@ Date: 2019-03-28 01:56:02
 Author: Jerry Su
 Slug: Python-logging
 Title: Python logging
-Category: Python
+Category: 
 Tags: Python
 
 [TOC]

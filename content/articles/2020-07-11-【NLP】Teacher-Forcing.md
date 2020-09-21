@@ -3,7 +3,7 @@ Date: 2020-07-11 11:04:54
 Author: Jerry Su
 Slug: 【NLP】Teacher-Forcing
 Title: 【NLP】Teacher Forcing
-Category: NLP
+Category: 
 Tags: Deep Learning, NLP 
 
 [TOC]

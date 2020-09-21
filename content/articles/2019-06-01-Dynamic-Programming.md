@@ -3,7 +3,7 @@ Date: 2019-06-01 01:40:10
 Author: Jerry Su
 Slug: Dynamic-Programming
 Title: Dynamic Programming
-Category: Algorithm
+Category: 
 Tags: Algorithm, Dynamic Programming
 
 [TOC]

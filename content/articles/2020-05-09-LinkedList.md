@@ -3,7 +3,7 @@ Date: 2020-05-09 13:19:30
 Author: Jerry Su
 Slug: LinkedList
 Title: LinkedList
-Category: Algorithm
+Category: 
 Tags: Algorithm, Linked List
 
 [TOC]

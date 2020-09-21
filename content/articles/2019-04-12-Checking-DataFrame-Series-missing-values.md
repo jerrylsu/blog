@@ -3,7 +3,7 @@ Date: 2019-04-12 02:05:45
 Author: Jerry Su
 Slug: Checking-DataFrame/Series-missing-values
 Title: Checking DataFrame/Series missing values
-Category: Python
+Category: 
 Tags: Python
 
 [TOC]

@@ -3,7 +3,7 @@ Date:  2019-04-17 02:14:50
 Author: Jerry Su
 Slug: Singleton-&-Companion-Object
 Title: Singleton & Companion Object
-Category: Scala
+Category: 
 Tags: Scala
 
 [TOC]

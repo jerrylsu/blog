@@ -3,7 +3,7 @@ Date: 2020-06-25 06:24:18
 Author: Jerry Su
 Slug: Pytorch-distributed-train
 Title: Pytorch distributed train
-Category: Pytorch 
+Category: 
 Tags: Pytorch
 
 [TOC]

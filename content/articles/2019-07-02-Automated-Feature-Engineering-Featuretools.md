@@ -3,7 +3,7 @@ Date: 2019-07-02 02:24:25
 Author: Jerry Su
 Slug: Automated-Feature-Engineering:-Featuretools
 Title: Automated Feature Engineering: Featuretools
-Category: Machine Learning
+Category: 
 Tags: Machine Learning, Featuretools
 
 [TOC]

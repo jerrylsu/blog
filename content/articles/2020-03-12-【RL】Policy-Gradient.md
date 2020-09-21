@@ -3,7 +3,7 @@ Date: 2020-03-12 03:40:50
 Author: Jerry Su
 Slug: 【RL】Policy-Gradient
 Title: 【RL】Policy Gradient
-Category: Reinforcement Learning
+Category: 
 Tags: Reinforcement Learning 
 
 [TOC]

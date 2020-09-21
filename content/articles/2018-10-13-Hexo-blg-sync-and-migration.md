@@ -3,7 +3,7 @@ Date: 2018-10-13 20:05:48
 Author: Jerry Su
 Slug: Hexo-blog-sync-and-migration
 Title: Hexo blog sync and migration
-Category: Hexo
+Category: 
 Tags: Hexo
 
 [TOC]

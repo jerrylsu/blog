@@ -3,7 +3,7 @@ Date: 2019-06-16 02:21:38
 Author: Jerry Su
 Slug: Breadth-First-Search
 Title: Breadth First Search
-Category: Algorithm
+Category: 
 Tags: Algorithm, Breadth First Search
 
 [TOC]

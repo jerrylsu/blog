@@ -3,7 +3,7 @@ Date: 2018-10-08 22:34:28
 Author: Jerry Su
 Slug: Leetcode-Index
 Title: Leetcode Index
-Category: Leetcode
+Category: 
 Tags: Leetcode
 
 [TOC]

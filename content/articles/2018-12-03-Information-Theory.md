@@ -3,7 +3,7 @@ Date: 2018-12-03 12:32:47
 Author: Jerry Su
 Slug: Information-Theory
 Title: Information Theory
-Category: Machine Learning
+Category: 
 Tags: Machine Learning
 
 [TOC]

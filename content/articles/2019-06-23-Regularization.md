@@ -3,7 +3,7 @@ Date: 2019-06-23 12:33:43
 Author: Jerry Su
 Slug: L1-and-L2-Regularization
 Title: L1 and L2 Regularization
-Category: Machine Learning
+Category: 
 Tags: Machine Learning, Regularization
 
 [TOC]

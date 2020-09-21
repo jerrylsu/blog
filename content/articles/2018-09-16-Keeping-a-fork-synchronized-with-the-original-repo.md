@@ -3,7 +3,7 @@ Date: 2018-09-16 22:11:53
 Author: Jerry Su
 Slug: Keeping-a-fork-synced-with-the-origin-repo
 Title: Keeping a fork synced with the origin repo
-Category: Git
+Category: 
 Tags: Git
 
 [TOC]

@@ -3,7 +3,7 @@ Date: 2020-05-21 07:20:38
 Author: Jerry Su
 Slug: reinforcement-learning
 Title: 【RL】Reinforcement Learning
-Category: Reinforcement Learning 
+Category: 
 Tags: Reinforcement Learning 
 
 [TOC]

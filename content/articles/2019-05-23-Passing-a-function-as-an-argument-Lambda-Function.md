@@ -3,7 +3,7 @@ Date: 2019-05-23 07:06:14
 Author: Jerry Su
 Slug: Passing-a-function-as-an-argument:-Lambda-Function
 Title: Passing a function as an argument: Lambda Function
-Category: Python
+Category: 
 Tags: Python
 
 ```

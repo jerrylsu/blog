@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Jerry'
-SITENAME = "Jerry Su's Blog"
-# SITEURL = 'https://jerrylsu.net'
+# SITENAME = "Jerry Su's Blog"
+SITENAME = "Jerrylsu.net"
+# SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
 
@@ -116,22 +117,22 @@ TAG_FEED_RSS = None
 THEME = 'pelican-bootstrap3'
 USE_PAGER = False
 BOOTSTRAP_FLUID = True                  # full screen
-SITELOGO = 'jerry.jpg'
+# SITELOGO = 'jerry.jpg'
 SITELOGO_SIZE = 32
 DISPLAY_BREADCRUMBS = True
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 BOOTSTRAP_NAVBAR_INVERSE = True         #  inverse navbar
 
 # About Me
-ABOUT_ME = 'Hello World~'
-# AVATAR = 'jerry.jpg'
+ABOUT_ME = 'Jerry Su'
+#AVATAR = 'jerry.jpg'
 
 # Index page
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
 # Banner Image
-# BANNER = 'extra/pic.jpg'
-# BANNER_SUBTITLE = 'my blog'
+BANNER = 'extra/banner1.jpg'
+BANNER_SUBTITLE = 'Reason is the light and the light of life.'
 
 # Favico
 FAVICON = 'jerry.jpg'
@@ -140,7 +141,7 @@ PYGMENTS_STYLE = 'colorful'
 #PYGMENTS_STYLE = 'emacs'
 
 # Sidebar options
-SIDEBAR_ON_LEFT = True
+SIDEBAR_ON_LEFT = True 
 HIDE_SIDEBAR = False
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
@@ -163,8 +164,14 @@ SOCIAL = (('Email', 'http://twitter.com/DaanDebie', 'linkedin'),
           ('github', 'http://github.com/DandyDev', 'github'),
           ('stackoverflow', 'http://stackoverflow.com/users/872397/dandydev', 'stack-overflow'))
 # PLUGINS
+MARKUP = ("md", "ipynb")
+
+from pelican_jupyter import markup as nb_markup
+IPYNB_MARKUP_USE_FIRST_CELL = True
+IGNORE_FILES = [".ipynb_checkpoints"]
+
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc','sitemap','tipue_search','render_math', 'i18n_subsites', 'tag_cloud']
+PLUGINS = ['extract_toc', 'sitemap', 'tipue_search', 'render_math', 'i18n_subsites', 'tag_cloud', nb_markup]
 SITEMAP = {
     "format": "xml",
     "priorities": {

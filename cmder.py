@@ -96,14 +96,14 @@ def _push_github():
     os.system(cmd)
     cmd = f'git push origin master'
     os.system(cmd)
-    print(DASHES)
+    # print(DASHES)
     # publish
-    path = os.path.join(BASE_DIR, 'output')
-    os.chdir(path)
-    cmd = 'git init && git add --all . && git commit -a -m ...' 
-    os.system(cmd)
-    cmd = f'git push origin master'
-    os.system(cmd)
+    # path = os.path.join(BASE_DIR, 'output')
+    # os.chdir(path)
+    # cmd = 'git init && git add --all . && git commit -a -m ...' 
+    # os.system(cmd)
+    # cmd = f'git push origin master'
+    # os.system(cmd)
 
 
 def publish(blogger, args):

@@ -32,7 +32,7 @@ class Blogger:
     
     def add(self, title: str):
         post_name = '{DATE_DASH}-{title}.md'.format(DATE_DASH=DATE_DASH,title=title.replace(' ', '-'))
-        post_path = os.path.join(BASE_DIR, f'content/posts/{post_name}')
+        post_path = os.path.join(BASE_DIR, f'content/articles/{post_name}')
         self._create_post(post_path, title)
         print(f'\nThe following post is added.\n{post_path}\n')
 

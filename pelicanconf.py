@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Jerry'
-SITENAME = "Jerry的个人主页"
-# SITENAME = "Jerrylsu.net"
+SITENAME = "Jerrylsu.net"
 # SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'

@@ -35,7 +35,9 @@ make install
 
 ### Load wsgi module in Ubuntu
 
+### How do I use a conda environment with mod_wsgi?
 
+[How do I use a conda environment with mod_wsgi?](https://stackoverflow.com/questions/30581316/how-do-i-use-a-conda-environment-with-mod-wsgi)
 
 [ubuntu+apache+mod_wsgi+flask](https://blog.csdn.net/weixin_44520881/article/details/104334076?utm_medium=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.add_param_isCf&depth_1-utm_source=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.add_param_isCf)
 

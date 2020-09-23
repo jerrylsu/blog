@@ -4,7 +4,7 @@ Author: Jerry Su
 Slug: Deploy-model-in-production
 Title: Deploy model in production
 Category: 
-Tags: Deep Learning 
+Tags: Flask, Tools 
 
 [TOC]
 

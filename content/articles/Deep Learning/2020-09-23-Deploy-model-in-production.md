@@ -10,4 +10,4 @@ Tags: Deep Learning
 
 [https://github.com/ahkarami/Deep-Learning-in-Production](https://github.com/ahkarami/Deep-Learning-in-Production)
 
-[https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html#inference](https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html#inference)
+[https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html](https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html)

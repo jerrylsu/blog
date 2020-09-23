@@ -130,7 +130,7 @@ ABOUT_ME = 'Jerry Su'
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
 # Banner Image
-BANNER = 'extra/banner1.jpg'
+BANNER = 'extra/banner.jpg'
 BANNER_SUBTITLE = 'Reason is the light and the light of life.'
 
 # Favico

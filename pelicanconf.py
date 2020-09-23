@@ -51,7 +51,7 @@ MARKDOWN = {
         'markdown.extensions.tables': {  # 表格
         },
         'markdown.extensions.toc': {     # 目录，设置看https://python-markdown.github.io/extensions/toc/
-            'title': '目录',      # 目录题头
+            'title': 'content',      # 目录题头
         },
     },
     'output_format': 'html5',
@@ -159,9 +159,9 @@ I18N_TEMPLATES_LANG = 'en'
 #   ('About','/pages/about')
 # )
 
-SOCIAL = (('Email', 'http://twitter.com/DaanDebie', 'linkedin'),
+SOCIAL = (('Email', 'sa517302@mail.ustc.edu.cn', 'linkedin'),
           ('github', 'http://github.com/DandyDev', 'github'),
-          ('stackoverflow', 'http://stackoverflow.com/users/872397/dandydev', 'stack-overflow'))
+          ('docker', 'https://hub.docker.com/u/jerrysu666', 'docker'))
 # PLUGINS
 MARKUP = ("md", "ipynb")
 

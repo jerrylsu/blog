@@ -6,6 +6,5 @@ Title: Pytorch resources
 Category: 
 Tags: Pytorch 
 
-[TOC]
 
 [Pytorch internals - blog](http://blog.ezyang.com/2019/05/pytorch-internals/)

@@ -170,7 +170,7 @@ IPYNB_MARKUP_USE_FIRST_CELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc', 'sitemap', 'tipue_search', 'render_math', 'i18n_subsites', 'tag_cloud', nb_markup]
+PLUGINS = ['extract_toc', 'sitemap', 'tipue_search', 'render_math', 'i18n_subsites', 'tag_cloud', 'nb_markup']
 SITEMAP = {
     "format": "xml",
     "priorities": {

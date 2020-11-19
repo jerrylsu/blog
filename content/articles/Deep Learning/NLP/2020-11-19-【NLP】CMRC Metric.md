@@ -8,7 +8,7 @@ Tags: Deep Learning, NLP
 
 ## F1
 
-```
+```python
 # find longest common string
 def find_lcs(s1, s2):
 	m = [[0 for i in range(len(s2)+1)] for j in range(len(s1)+1)]
@@ -42,7 +42,7 @@ def calc_f1_score(answers, prediction):
 
 ## EM
 
-```
+```python
 # remove punctuation
 def remove_punctuation(in_str):
 	in_str = in_str.lower().strip()

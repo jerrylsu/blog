@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Jerry 苏ICP备2020055731号'
-CC_LICENSE_COMMERCIAL = 'yes'
-CC_LICENSE_DERIVATIVES = 'yes' 
 SITENAME = "Jerrylsu.net"
 # SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'

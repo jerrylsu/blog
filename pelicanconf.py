@@ -9,7 +9,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
 
 # Basic settings
 USE_FOLDER_AS_CATEGORY = True
-DISPLAY_PAGES_ON_MENU = False 
+DISPLAY_PAGES_ON_MENU = True 
 DISPLAY_CATEGORIES_ON_MENU = False
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
@@ -114,7 +114,7 @@ TAG_FEED_RSS = None
 # THEMES
 # More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-bootstrap3'
-USE_PAGER = True 
+USE_PAGER = False 
 BOOTSTRAP_FLUID = True                  # full screen
 # SITELOGO = 'jerry.jpg'
 SITELOGO_SIZE = 32

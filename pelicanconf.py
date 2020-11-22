@@ -32,7 +32,7 @@ SUMMARY_END_SUFFIX = '…'
 DEFAULT_ORPHANS = 0
 DEFAULT_PAGINATION = 10
 NEWEST_FIRST_ARCHIVES = True
-DIRECT_TEMPLATES = ['index', 'authors', 'categories', 'tags', 'archives']
+DIRECT_TEMPLATES = ['index', 'authors', 'categories', 'tags', 'archives', 'search']
 PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives': None}
 
 TYPOGRIFY = False

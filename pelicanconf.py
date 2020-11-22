@@ -114,7 +114,7 @@ TAG_FEED_RSS = None
 # THEMES
 # More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-bootstrap3'
-USE_PAGER = False
+USE_PAGER = True 
 BOOTSTRAP_FLUID = True                  # full screen
 # SITELOGO = 'jerry.jpg'
 SITELOGO_SIZE = 32

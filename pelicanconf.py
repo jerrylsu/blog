@@ -124,7 +124,7 @@ BOOTSTRAP_NAVBAR_INVERSE = True         #  inverse navbar
 
 # About Me
 ABOUT_ME = 'Jerry Su'
-#AVATAR = 'jerry.jpg'
+AVATAR = 'jerry.jpg'
 
 # Index page
 DISPLAY_ARTICLE_INFO_ON_INDEX = True

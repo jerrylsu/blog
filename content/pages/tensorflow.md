@@ -6,3 +6,5 @@ Title: TENSORFLOW
 
 - [tf.transpose/expand_dims/squeeze](http://www.jerrylsu.net/articles/2020/tensorflow-tf.transpose/expand_dims/squeeze.html)
 
+- [tf.broadcast_to](http://www.jerrylsu.net/articles/2020/tensorflow-tf.broadcast_to.html)
+

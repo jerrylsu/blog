@@ -11,3 +11,7 @@ Title: TENSORFLOW
 - [tf.concat / stack / unstack/split](http://www.jerrylsu.net/articles/2020/tensorflow-tf.concat/split/stack.html)
 
 - [tf.not_equal / reduce_any / boolean_mask](http://www.jerrylsu.net/articles/2020/tensorflow-tf.not_equal/reduce_any/boolean_mask.html)
+
+## Loss
+
+- [loss](http://www.jerrylsu.net/articles/2020/tensorflow-Loss.html)

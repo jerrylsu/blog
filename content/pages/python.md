@@ -5,3 +5,7 @@ Title: PYTHON
 - [Build-in function](http://www.jerrylsu.net/articles/2020/programming-Python-build-in-function.html)
 
 - [Decorator](http://www.jerrylsu.net/articles/2020/programming-Python-Decorator.html)
+
+### Lib
+
+- [requests](http://www.jerrylsu.net/articles/2020/programming-Python-Requests.html)

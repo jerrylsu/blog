@@ -6,7 +6,7 @@ Title: BOOKS
 
 - [流畅的Python](https://book.douban.com/subject/27028517/)
 
-- [Effective Python](https://book.douban.com/subject/26709315/)
+- [Effective Python](https://effectivepython.com/)
 
 
 ### Vim

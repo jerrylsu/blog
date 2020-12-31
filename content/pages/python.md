@@ -7,7 +7,9 @@ Title: PYTHON
 
 - [Decorator](http://www.jerrylsu.net/articles/2020/programming-Python-Decorator.html)
 
-- [Iterable vs Iterator vs Generator](http://www.jerrylsu.net/articles/2020/programming-Python-Iterable-Iterator-Generator.html)
+- [Iterable vs Iterator](http://www.jerrylsu.net/articles/2020/programming-Python-Iterable-Iterator.html)
+
+- [Generator]()
 
 ### Library
 

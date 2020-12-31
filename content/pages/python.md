@@ -9,7 +9,7 @@ Title: PYTHON
 
 - [Iterable vs Iterator](http://www.jerrylsu.net/articles/2020/programming-Python-Iterable-Iterator.html)
 
-- [Generator]()
+- [Generator](http://www.jerrylsu.net/articles/2020/programming-Python-Generator.html)
 
 ### Library
 

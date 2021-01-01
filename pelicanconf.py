@@ -27,7 +27,7 @@ STATIC_PATHS = ['images', 'extra']
 OUTPUT_SOURCES = False
 
 # LICENSE CONTENT
-CUSTOM_LICENSE='Unless otherwise stated, all articles are published under the <a href="http://www.wtfpl.net/about/">WTFPL</a> license.'
+CUSTOM_LICENSE='Unless otherwise stated, all articles are published under the <a href="beian.miit.gov.cn">苏ICP备2020055731号</a>.'
 
 # Pagination
 SUMMARY_MAX_LENGTH = 50

@@ -26,6 +26,9 @@ ARTICLE_EXCLUDES = []
 STATIC_PATHS = ['images', 'extra'] 
 OUTPUT_SOURCES = False
 
+# LICENSE CONTENT
+CUSTOM_LICENSE='Unless otherwise stated, all articles are published under the <a href="http://www.wtfpl.net/about/">WTFPL</a> license.'
+
 # Pagination
 SUMMARY_MAX_LENGTH = 50
 SUMMARY_END_SUFFIX = '…'

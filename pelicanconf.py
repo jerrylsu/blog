@@ -27,7 +27,13 @@ STATIC_PATHS = ['images', 'extra']
 OUTPUT_SOURCES = False
 
 # LICENSE CONTENT
-CUSTOM_LICENSE='<a href="beian.miit.gov.cn">苏ICP备2020055731号</a>'
+CUSTOM_LICENSE='<a href="https://beian.miit.gov.cn">苏ICP备2020055731号</a>'
+
+# GITHUB
+GITHUB_USER = 'jerrylsu'
+GITHUB_REPO_COUNT = 2
+GITHUB_SKIP_FORK = True
+GITHUB_SHOW_USER_LINK = True
 
 # Pagination
 SUMMARY_MAX_LENGTH = 50

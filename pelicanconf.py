@@ -32,8 +32,8 @@ CUSTOM_LICENSE='<a href="https://beian.miit.gov.cn">苏ICP备2020055731号</a>'
 # GITHUB
 GITHUB_USER = 'jerrylsu'
 GITHUB_REPO_COUNT = 2
-GITHUB_SKIP_FORK = True
-GITHUB_SHOW_USER_LINK = True
+GITHUB_SKIP_FORK = 'true'
+GITHUB_SHOW_USER_LINK = 'true'
 
 # Pagination
 SUMMARY_MAX_LENGTH = 50

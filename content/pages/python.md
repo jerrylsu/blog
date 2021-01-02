@@ -13,6 +13,8 @@ Title: PYTHON
 
 ### Library
 
+- [typing]()
+
 - [requests](http://www.jerrylsu.net/articles/2020/programming-Python-Requests.html)
 
 - [os.path](http://www.jerrylsu.net/articles/2020/programming-Python-os.path.html)

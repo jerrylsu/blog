@@ -14,4 +14,6 @@ Title: TENSORFLOW
 
 ### Loss
 
-- [CategoricalCrossentropy / SparseCategoricalCrossentropy](http://www.jerrylsu.net/articles/2020/tensorflow-Loss.html)
+- [CrossEntropy](http://www.jerrylsu.net/articles/2021/pytorch-torch.nn.CrossEntropyLoss.html)
+
+- [CategoricalCrossentropy / SparseCategoricalCrossentropy](http://www.jerrylsu.net/articles/2020/tensorflow-CategoricalCrossentropy%20VS%20SparseCategoricalCrossentropy.html)

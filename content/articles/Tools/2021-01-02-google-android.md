@@ -1,8 +1,8 @@
 Status: published
 Date: 2021-01-02 11:23:36 
 Author: Jerry Su
-Slug: Google
-Title: Google
+Slug: Google-Android
+Title: Google-android
 Category: 
 Tags: Google
 

@@ -13,9 +13,9 @@ Title: PYTHON
 
 ### Library
 
-- [dataclasses](http://www.jerrylsu.net/articles/2021/programming-Python-dataclasses.html)
-
 - [typing](http://www.jerrylsu.net/articles/2021/programming-Python-typing.html)
+
+- [dataclasses](http://www.jerrylsu.net/articles/2021/programming-Python-dataclasses.html)
 
 - [requests](http://www.jerrylsu.net/articles/2020/programming-Python-Requests.html)
 

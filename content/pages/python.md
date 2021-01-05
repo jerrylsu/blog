@@ -13,7 +13,7 @@ Title: PYTHON
 
 ### Library
 
-- [dataclasses]()
+- [dataclasses](http://www.jerrylsu.net/articles/2021/programming-Python-dataclasses.html)
 
 - [typing](http://www.jerrylsu.net/articles/2021/programming-Python-typing.html)
 

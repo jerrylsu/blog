@@ -5,3 +5,6 @@ Title: PROJECTS
 
 ### [2020 BAAI-JD Multimodal Dialog Challenge](http://www.jerrylsu.net/articles/2020/nlp-JDMDC2020.html)
 
+### [Pretrain Language Model](https://github.com/jerrylsu/lm_pretrain)
+
+### [Span-Extraction: Chinese Machine Reading Comprehension]()

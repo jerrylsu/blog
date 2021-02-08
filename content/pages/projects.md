@@ -8,6 +8,6 @@ Title: PROJECTS
 
 ### [Pretrain Language Model](https://github.com/jerrylsu/lm_pretrain)
 
-### [Novel-Molecular-Toxicity-Prediction-Model](https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model)
+### [Novel Molecular Toxicity Prediction](https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model)
 
 ### [2020 BAAI-JD Multimodal Dialog Challenge](http://www.jerrylsu.net/articles/2020/nlp-JDMDC2020.html)

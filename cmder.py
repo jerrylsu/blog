@@ -13,12 +13,12 @@ BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 DASHES = '\n' + '-'*100 + '\n'
 
 
-class Blogger: 
+class Blogger:
     '''Create an instance of Blogger.
     ''' 
     def __init__(self, db: str = ''):
         pass
-    
+
     def _create_post(self, post, title):
         with open(post, 'w', encoding='utf-8') as fout:
             fout.writelines('Status: published\n')
@@ -29,7 +29,7 @@ class Blogger:
             fout.writelines('Category: \n')
             fout.writelines('Tags: \n')
             fout.writelines('\n[TOC]\n')
-    
+
     def add(self, title: str):
         post_name = '{DATE_DASH}-{title}.md'.format(DATE_DASH=DATE_DASH,title=title.replace(' ', '-'))
         post_path = os.path.join(BASE_DIR, f'content/articles/{post_name}')

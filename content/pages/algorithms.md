@@ -1,3 +1,4 @@
+<!-- #region -->
 Date: 2020-05-04 15:04:40
 Title: ALGORITHMS
 Slug: algorithms
@@ -5,16 +6,6 @@ Tags: algorithms
 
 ### 
 
-<table border="1">
-<tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>row 2, cell 2</td>
-</tr>
-</table>
 
  | Data Structure | Algorithms | Machine Learning |
  | :---: | :---: | :---: |
@@ -69,6 +60,7 @@ Tags: algorithms
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 
+<!-- #endregion -->
 
 ```python
 

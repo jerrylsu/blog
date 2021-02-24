@@ -37,6 +37,8 @@ Tags: algorithms
 
 **[A* Heuristic](https://www.jerrulsu.com/A_star_algorithm.html)**
 
+**[Viterbi Algorithm](http://www.jerrylsu.net/articles/2021/algorithms-Viterbi-Algorithm.html)**
+
 ### Reinforcement Learning
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**

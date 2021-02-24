@@ -1,10 +1,13 @@
+<!-- #region -->
 Title: ALGORITHMS
 Date: 2020-05-04 15:04:40
 Slug: algorithms
 Tags: algorithms
 
+
  | Data Structure | Algorithms | Machine Learning |
  | :---: | :---: | :---: |
+ | | | |
  | Matrix | Sort | Viterbi |
  | - | Sliding Window | Q-Learning |
  | Stack | Two Points | - |
@@ -55,6 +58,7 @@ Tags: algorithms
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 
+<!-- #endregion -->
 
 ```python
 

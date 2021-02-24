@@ -6,7 +6,7 @@ Tags: algorithms
 ### 
 
  | Data Structure | Algorithms | Machine Learning |
- | :--- | :--- | :--- |
+ | :---: | :---: | :---: |
  | | | |
  | Matrix | Sort | Viterbi |
  | - | Sliding Window | Q-Learning |

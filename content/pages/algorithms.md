@@ -3,6 +3,18 @@ Date: 2020-05-04 15:04:40
 Slug: algorithms
 Tags: algorithms
 
+ | Data Structure | Algorithms | Machine Learning |
+ | :---: | :---: | :---: |
+ | Matrix | Sort | Viterbi |
+ | - | Sliding Window | Q-Learning |
+ | Stack | Two Points | - |
+ | Queue | Binary Search | - |
+ | Heap | Breadth Fist Search | - |
+ | Hash Table | Depth Fist Search | - |
+ | Linked List | Backtracking | - |
+ | Binary Tree | Dynamic Programming | - |
+ | - | A* Heuristic | - |
+
 ### Data Structure
 
 **[Matrix]()**
@@ -43,3 +55,7 @@ Tags: algorithms
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 
+
+```python
+
+```

@@ -158,6 +158,7 @@ class Attention(nn.Module):
 
         src_len = k.size(1)
         assert key_padding_mask is None or key_padding_mask.shape == (bsz, src_len)
+        # 注意力矩阵，即query与key的求出的矩阵系数
         attn_weights = torch.bmm(q, k.transpose(1, 2))
         assert attn_weights.size() == (bsz * self.num_heads, tgt_len, src_len)
 

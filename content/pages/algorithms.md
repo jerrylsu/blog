@@ -57,7 +57,3 @@ Tags: algorithms
 
 **[Q Learning](https://www.jerrulsu.com/%E3%80%90RL%E3%80%91Q-Learning.html)**
 
-
-```python
-
-```

@@ -17,4 +17,4 @@ Tags: comment
         data-isso-avatar-fg="#9abf88 #5698c4 #e279a3 #9163b6 ..."
         data-isso-vote="true"
         data-vote-levels=""
-        src="http://example.com/isso/js/embed.js"></script>
+        src="http://www.jerrylsu.net/isso/js/embed.js"></script>

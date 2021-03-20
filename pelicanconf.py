@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = 'Jerry'
-SITENAME = "Jerrylsu.net"
+AUTHOR = 'JERRY'
+SITENAME = "JERRYLSU.NET"
 # SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
@@ -23,7 +23,7 @@ PAGE_PATHS = ['pages']          # relative to PATH
 PAGE_EXCLUDES = []
 ARTICLE_PATHS = ['articles']    # relative to PATH
 ARTICLE_EXCLUDES = []
-STATIC_PATHS = ['images', 'extra'] 
+STATIC_PATHS = ['images', 'extra']
 OUTPUT_SOURCES = False
 
 # LICENSE CONTENT
@@ -34,6 +34,10 @@ GITHUB_USER = 'jerrylsu'
 GITHUB_REPO_COUNT = 2
 GITHUB_SKIP_FORK = 'true'
 GITHUB_SHOW_USER_LINK = 'true'
+
+# Custom CSS/JS
+CUSTOM_CSS = 'static/css/custom.css'
+CUSTOM_JS = 'static/js/custom.js'
 
 # Pagination
 SUMMARY_MAX_LENGTH = 50
@@ -48,6 +52,8 @@ TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'CNAME'},
         'extra/jerry.jpg': {'path': 'jerry.jpg'},
+        'extra/custom.css': {'path': 'static/css/custom.css'},
+        'extra/custom.js': {'path': 'static/js/custom.js'}
         }
 DEFAULT_DATE = 'fs'
 

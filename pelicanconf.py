@@ -52,8 +52,8 @@ TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'CNAME'},
         'extra/jerry.jpg': {'path': 'jerry.jpg'},
-        'extra/custom.css': {'path': 'static/css/custom.css'},
-        'extra/custom.js': {'path': 'static/js/custom.js'}
+        'extra/custom.css': {'path': 'custom.css'},
+        'extra/custom.js': {'path': 'custom.js'}
         }
 DEFAULT_DATE = 'fs'
 

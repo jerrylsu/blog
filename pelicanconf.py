@@ -126,15 +126,16 @@ TAG_FEED_ATOM = None
 TAG_FEED_RSS = None
 
 # Comments
-DISQUS_SITENAME = "blog-notmyidea"
+ISSO_SITEURL = "http://www.jerrylsu.net"
+# DISQUS_SITENAME = "blog-notmyidea"
 
 # THEMES
 # More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
 THEME = 'pelican-bootstrap3'
-USE_PAGER = False 
+USE_PAGER = False
 BOOTSTRAP_FLUID = True                  # full screen
 # SITELOGO = 'jerry.jpg'
-SITELOGO_SIZE = 8 
+SITELOGO_SIZE = 8
 DISPLAY_BREADCRUMBS = True
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 BOOTSTRAP_NAVBAR_INVERSE = True         #  inverse navbar

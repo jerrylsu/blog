@@ -13,7 +13,7 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [".git", ".js"]
+OUTPUT_RETENTION = [".git"]
 READERS = {'html': None}
 
 # PATH
@@ -47,7 +47,8 @@ PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives':
 TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'CNAME'},
-        'extra/jerry.jpg': {'path': 'jerry.jpg'}
+        'extra/jerry.jpg': {'path': 'jerry.jpg'},
+        'extra/js/embed.min.js': {'path': 'embed.min.js'}
         }
 DEFAULT_DATE = 'fs'
 

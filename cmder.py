@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
-import sys
-import pelican
+import pelican_jerry as pelican
 import datetime
 from argparse import ArgumentParser
 
@@ -14,8 +13,8 @@ DASHES = '\n' + '-'*100 + '\n'
 
 
 class Blogger:
-    '''Create an instance of Blogger.
-    ''' 
+    """Create an instance of Blogger.
+    """
     def __init__(self, db: str = ''):
         pass
 
@@ -116,6 +115,4 @@ def publish(blogger, args):
 if __name__ == '__main__':
     blogger = Blogger()
     args = parse_args()
-    print(args)
     args.func(blogger, args)
-    

@@ -3,7 +3,7 @@
 
 AUTHOR = 'JERRY'
 SITENAME = "JERRYLSU.NET"
-#SITEURL = 'jerrylsu.net'
+SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
 
@@ -35,10 +35,6 @@ GITHUB_REPO_COUNT = 2
 GITHUB_SKIP_FORK = 'true'
 GITHUB_SHOW_USER_LINK = 'true'
 
-# Custom CSS/JS
-CUSTOM_CSS = 'static/css/custom.css'
-CUSTOM_JS = 'static/js/custom.js'
-
 # Pagination
 SUMMARY_MAX_LENGTH = 50
 SUMMARY_END_SUFFIX = '…'
@@ -51,9 +47,7 @@ PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives':
 TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'CNAME'},
-        'extra/jerry.jpg': {'path': 'jerry.jpg'},
-        'extra/custom.css': {'path': 'custom.css'},
-        'extra/custom.js': {'path': 'custom.js'}
+        'extra/jerry.jpg': {'path': 'jerry.jpg'}
         }
 DEFAULT_DATE = 'fs'
 

@@ -47,8 +47,7 @@ PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives':
 TYPOGRIFY = False
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'extra/CNAME'},
-        'extra/jerry.jpg': {'path': 'extra/jerry.jpg'},
-        'extra/js/embed.min.js': {'path': 'js/embed.min.js'}
+        'extra/jerry.jpg': {'path': 'extra/jerry.jpg'}
         }
 DEFAULT_DATE = 'fs'
 

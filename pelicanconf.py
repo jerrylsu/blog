@@ -27,7 +27,7 @@ STATIC_PATHS = ['images', 'extra']
 OUTPUT_SOURCES = False
 
 # LICENSE CONTENT
-CUSTOM_LICENSE = '<a href="https://beian.miit.gov.cn">SU · ICP-2020055731</a>'
+CUSTOM_LICENSE = '<a href="https://beian.miit.gov.cn">ICP2020055731</a>'
 
 # GITHUB
 GITHUB_USER = 'jerrylsu'

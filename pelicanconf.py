@@ -28,7 +28,6 @@ OUTPUT_SOURCES = False
 
 # LICENSE CONTENT
 CUSTOM_LICENSE = '<a href="https://beian.miit.gov.cn">苏ICP备2020055731号</a>'
-CC_LICENSE = True
 
 # GITHUB
 GITHUB_USER = 'jerrylsu'

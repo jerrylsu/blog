@@ -3,7 +3,7 @@
 
 AUTHOR = 'JERRY'
 SITENAME = "JERRYLSU.NET"
-# SITEURL = 'jerrylsu.net'
+SITEURL = 'jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
 
@@ -125,6 +125,8 @@ AUTHOR_FEED_RSS = None
 TAG_FEED_ATOM = None
 TAG_FEED_RSS = None
 
+# Comments
+DISQUS_SITENAME = "blog-notmyidea"
 
 # THEMES
 # More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3

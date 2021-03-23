@@ -120,7 +120,7 @@ TAG_FEED_ATOM = None
 TAG_FEED_RSS = None
 
 # Comments
-ISSO_SITEURL = "http://www.jerrylsu.net"
+ISSO_SITEURL = "http://www.comments.jerrylsu.net"
 # DISQUS_SITENAME = "blog-notmyidea"
 
 # THEMES

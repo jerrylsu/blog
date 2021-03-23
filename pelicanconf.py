@@ -3,7 +3,7 @@
 
 AUTHOR = 'JERRY'
 SITENAME = "JERRYLSU.NET"
-SITEURL = 'jerrylsu.net'
+SITEURL = 'http://www.jerrylsu.net'
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
 

@@ -1,6 +1,6 @@
 {% if ISSO_SITEURL %}
     <!-- ISSO -->
-<script data-isso="//{{ SITEURL }}}/{{ SITEURL }}/"
+<script data-isso="{{ ISSO_SITEURL }}/"
         data-isso-css="true"
         data-isso-lang="en"
         data-isso-reply-to-self="true"
@@ -14,6 +14,6 @@
         data-isso-avatar-fg="#9abf88 #5698c4 #e279a3 #9163b6 ..."
         data-isso-vote="true"
         data-vote-levels=""
-        src="//{{ SITEURL }}}/{{ SITEURL }}/js/embed.min.js"></script>
+        src="{{ ISSO_SITEURL }}/js/embed.min.js"></script>
     <!-- End ISSO Code -->
 {% endif %}

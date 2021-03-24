@@ -1,6 +1,9 @@
 {% if SITEURL and article.status != "draft" %}
 <div class="comments">
   <h2>Comments</h2>
+  {% if ISSO_SITEURL %}
+    <section id="isso-thread"></section>
+  {% endif %}
   {% if DISQUS_SITENAME %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">

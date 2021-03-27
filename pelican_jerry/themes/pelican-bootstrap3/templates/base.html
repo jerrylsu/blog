@@ -113,6 +113,9 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {%- endif %}
 
+    {% if ISSO_SITEURL %}
+    <script data-isso="{{ ISSO_SITEURL }}/" src="{{ ISSO_SITEURL }}/js/embed.min.js"></script>
+    {% endif %}
 </head>
 <body>
 
@@ -232,7 +235,6 @@
 {% endif %}
 {% include 'includes/sidebar/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
-{% include 'includes/isso_script.html' %}
 {% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 

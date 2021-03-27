@@ -88,6 +88,10 @@
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
+            {% if ISSO_SITEURL %}
+                <hr /><section id="isso-thread"></section>
+                <noscript>les commentaires de ce site utilisent javascript</noscript>
+            {% endif %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/series.html' %}
             {% include 'includes/addthis.html' %}

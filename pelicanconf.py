@@ -171,9 +171,8 @@ I18N_TEMPLATES_LANG = 'en'
 #   ('About','/pages/about')
 # )
 
-SOCIAL = (('Email', 'sa517302@mail.ustc.edu.cn', 'user'),
-          ('Github', 'https://github.com/jerrylsu', 'github'),
-          ('Docker', 'https://hub.docker.com/u/jerrysu666', 'users'))
+SOCIAL = (('Email', 'http://www.jerrylsu.net/pages/home.html', 'user'),
+          ('Github', 'https://github.com/jerrylsu', 'github'))
 # PLUGINS
 MARKUP = ("md", "ipynb")
 

@@ -1,91 +1,18 @@
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
-connected to http://jerrylsu.net/
 connected to http://jerrylsu.net
+comment created: {"id": 2, "parent": null, "created": 1617013222.279301, "modified": null, "mode": 2, "text": "<p>sdsdsdsds</p>", "author": "jerry", "website": "http://jerrylsu.net", "likes": 0, "dislikes": 0, "notification": 0, "hash": "7cc96e8576d8"}
 connected to http://jerrylsu.net
+comment 1 deleted
+comment 2 deleted
+connected to SMTP server
 connected to http://jerrylsu.net
+connected to SMTP server
 connected to http://jerrylsu.net
+connected to SMTP server
 connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
-connected to http://jerrylsu.net
+GET /id/1/activate/MQ.YGGq8Q.6OWkhZzHmpe8UH4z8VMzjjSX5Gw
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 635, in moderate
+    thread = self.threads.get(item['tid'])
+TypeError: 'NoneType' object is not subscriptable

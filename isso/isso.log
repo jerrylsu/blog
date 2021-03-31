@@ -16,3 +16,5 @@ Traceback (most recent call last):
   File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 635, in moderate
     thread = self.threads.get(item['tid'])
 TypeError: 'NoneType' object is not subscriptable
+connected to SMTP server
+connected to http://jerrylsu.net

@@ -423,3 +423,62 @@ Traceback (most recent call last):
   File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
     return con.execute(sql, args)
 sqlite3.OperationalError: no such table: comments
+POST /count
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 964, in counts
+    return JSON(self.comments.count(*data), 200)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/comments.py", line 332, in count
+    threads = dict(self.db.execute([
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
+    return con.execute(sql, args)
+sqlite3.OperationalError: no such table: comments
+POST /count
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 964, in counts
+    return JSON(self.comments.count(*data), 200)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/comments.py", line 332, in count
+    threads = dict(self.db.execute([
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
+    return con.execute(sql, args)
+sqlite3.OperationalError: no such table: comments
+GET /
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/__init__.py", line 45, in dec
+    return func(cls, env, req, *args, **kwargs)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 791, in fetch
+    reply_counts = self.comments.reply_count(uri, after=args['after'])
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/comments.py", line 325, in reply_count
+    return dict(self.db.execute(sql, [url, mode, mode, after]).fetchall())
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
+    return con.execute(sql, args)
+sqlite3.OperationalError: no such table: comments
+POST /count
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 964, in counts
+    return JSON(self.comments.count(*data), 200)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/comments.py", line 332, in count
+    threads = dict(self.db.execute([
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
+    return con.execute(sql, args)
+sqlite3.OperationalError: no such table: comments
+GET /
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/__init__.py", line 45, in dec
+    return func(cls, env, req, *args, **kwargs)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 791, in fetch
+    reply_counts = self.comments.reply_count(uri, after=args['after'])
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/comments.py", line 325, in reply_count
+    return dict(self.db.execute(sql, [url, mode, mode, after]).fetchall())
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/db/__init__.py", line 60, in execute
+    return con.execute(sql, args)
+sqlite3.OperationalError: no such table: comments

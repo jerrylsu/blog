@@ -12,7 +12,7 @@ USE_FOLDER_AS_CATEGORY = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 USE_FOLDER_AS_CATEGORY = True
-DELETE_OUTPUT_DIRECTORY = True 
+DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git"]
 READERS = {'html': None}
 
@@ -152,7 +152,7 @@ PYGMENTS_STYLE = 'colorful'
 #PYGMENTS_STYLE = 'emacs'
 
 # Sidebar options
-SIDEBAR_ON_LEFT = True 
+SIDEBAR_ON_LEFT = True
 HIDE_SIDEBAR = False
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
@@ -196,4 +196,3 @@ SITEMAP = {
     },
 	'exclude': ['drafts/', 'categories/', 'tags/', 'authors/', 'theme/']
 }
-

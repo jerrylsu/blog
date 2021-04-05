@@ -124,7 +124,6 @@ CACHE_CONTENT = True
 CACHE_PATH = 'content/cache'
 CHECK_MODIFIED_METHOD = 'mtime'
 LOAD_CONTENT_CACHE = True
-CONTENT_CACHING_LAYER = 'reader'
 
 # Comments
 ISSO_SITEURL = "http://isso.jerrylsu.net"

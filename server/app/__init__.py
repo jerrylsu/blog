@@ -1,12 +1,15 @@
-import tornado.web
-import tornado.httpserver
-import tornado.ioloop
-import tornado.options
+import tornado.web          # web框架
+import tornado.httpserver   # http服务
+import tornado.ioloop       # 输入输出事件循环
+import tornado.options      # 配置工具
 
 from tornado.options import options, define
+from app.configs import configs
+from app.urls import urls
 
 # define server port
 define("port", default=8180, type=int, help="run port")
+
 
 # define application
 class JerryApplication(tornado.web.Application):
@@ -20,11 +23,16 @@ class JerryApplication(tornado.web.Application):
         super(JerryApplication, self).__init__(handlers=handlers, **settings)
         pass
 
+
 # define service
 def create_server():
+    # 允许命令行启动
     tornado.options.parse_command_line()
+    # 创建http服务
     http_server = tornado.httpserver.HTTPServer(
         JerryApplication()
     )
+    # 绑定监听端口
     http_server.listen(options.port)
+    # 启动事件循环
     tornado.ioloop.IOLoop.instance().start()

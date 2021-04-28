@@ -37,7 +37,7 @@ class Solution:
 
 547. Number of Provinces
 
-```
+```python3
 class Solution:
     """O(N*N)
     N个节点；每个节点至少1条边（只与自己相连），最多N条边（与所有节点相连）。
@@ -61,7 +61,7 @@ class Solution:
 
 417. Pacific Atlantic Water Flow
 
-```
+```python3
 class Solution:
     directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
     
@@ -99,7 +99,7 @@ class Solution:
 
 46. Permutations
 
-```
+```python3
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         results, track = [], []
@@ -120,13 +120,13 @@ class Solution:
 
 77. Combinations
 
-```
+```python3
 
 ```
 
 79. Word Search
 
-```
+```python3
 class Solution:
     """
     Time: O(M*N)

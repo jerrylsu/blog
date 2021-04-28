@@ -169,7 +169,9 @@ class Solution:
         return False
 
     def backtrack(self, board, i, j, word, index):
-        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or board[i][j] == "#" or board[i][j] != word[index]:
+        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]):
+            return False
+        if board[i][j] == "#" or board[i][j] != word[index]:
             return False
         if index == len(word) - 1 and board[i][j] == word[index]:
             return True

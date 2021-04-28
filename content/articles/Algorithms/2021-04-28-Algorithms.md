@@ -12,7 +12,7 @@ Tags: Algorithms
 
 ### DFS
 
-695. Max Area of Island
+#### 695. Max Area of Island
 
 ```python3
 class Solution:
@@ -35,7 +35,7 @@ class Solution:
         return 1 + self.dfs(grid, i - 1, j) + self.dfs(grid, i + 1, j) + self.dfs(grid, i, j - 1) + self.dfs(grid, i, j + 1)
 ```
 
-547. Number of Provinces
+#### 547. Number of Provinces
 
 ```python3
 class Solution:
@@ -59,7 +59,7 @@ class Solution:
                 self.dfs(isConnected, j, visited)
 ```
 
-417. Pacific Atlantic Water Flow
+#### 417. Pacific Atlantic Water Flow
 
 ```python3
 class Solution:
@@ -97,7 +97,7 @@ class Solution:
 
 ### Backtracking
 
-46. Permutations
+#### 46. Permutations
 
 ```python3
 class Solution:
@@ -118,13 +118,13 @@ class Solution:
             track.remove(num)
 ```
 
-77. Combinations
+#### 77. Combinations
 
 ```python3
 
 ```
 
-79. Word Search
+#### 79. Word Search
 
 ```python3
 class Solution:

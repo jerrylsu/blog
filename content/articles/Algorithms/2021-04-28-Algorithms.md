@@ -89,6 +89,23 @@ class Solution:
         return pre
 ```
 
+#### 19. Remove Nth Node From End of List
+
+```python3
+class Solution:
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        dummpy = slow = fast = ListNode(-1)
+        fast.next = head
+        for _ in range(n + 1):
+            fast = fast.next
+        while fast:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
+        return dummpy.next
+
+```
+
 
 ## Search
 

@@ -61,6 +61,35 @@ class Solution:
         return dummpy.next
 ```
 
+#### 234. Palindrome Linked List
+
+```python3
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        fast = head
+        slow = self.reverseLinkedList(slow)
+        while slow:
+            if fast.val != slow.val:
+                return False
+            fast = fast.next
+            slow = slow.next
+        return True
+
+    def reverseLinkedList(self, head: ListNode) -> ListNode:
+        pre, cur = None, head
+        while cur:
+            post = cur.next
+            cur.next = pre
+            pre = cur
+            cur = post
+        return pre
+```
+
+
 ## Search
 
 ### DFS

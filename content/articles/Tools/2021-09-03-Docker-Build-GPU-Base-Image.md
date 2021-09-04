@@ -82,7 +82,7 @@ python -V
 
 修改yum
 
-注意:由于centos7的yum要使用到python2.7.5的环境，我们要指定yum使用的python的版本，不然使用了3.6.8可能会导致yum命令无法使用，修改头部设置为使用python2.7
+`注意:由于centos7的yum要使用到python2.7.5的环境，我们要指定yum使用的python的版本，不然使用了3.6.8可能会导致yum命令无法使用，修改头部设置为使用python2.7`
 
 vim /usr/bin/yum
 

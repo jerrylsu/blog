@@ -1,4 +1,3 @@
-<!-- #region -->
 Status: published
 Date: 2021-09-04 09:26:47
 Author: Jerry Su
@@ -7,6 +6,7 @@ Title: Docker Build GPU Base Image
 Category: 
 Tags: Docker
 
+https://docs.docker.com/engine/reference/commandline/docker/
 
 ## 1.基础镜像选择
 
@@ -118,4 +118,3 @@ docker import gpu_python3.tar nvidia/cuda:1.9.0-cuda10.2-cudnn7-runtime-python3
 
 docker tag nvidia/cuda:1.9.0-cuda10.2-cudnn7-runtime-python3  image:tag
 
-<!-- #endregion -->

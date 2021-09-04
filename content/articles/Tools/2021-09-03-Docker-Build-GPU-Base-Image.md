@@ -6,13 +6,13 @@ Title: Docker Build GPU Base Image
 Category: 
 Tags: Docker
 
-https://docs.docker.com/engine/reference/commandline/docker/
+[https://docs.docker.com/engine/reference/commandline/docker/](https://docs.docker.com/engine/reference/commandline/docker/)
 
 ## 1.基础镜像选择
 
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html
+[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html)
 
-选择Nvidia cuda支持gpu：https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=last_updated&name=10.0
+选择Nvidia cuda支持gpu：[https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=last_updated&name=10.0](https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=last_updated&name=10.0)
 
 runtime版：用于服务部署， 大小1.7G；devel版：用于开发，功能完整，大小3G。
 

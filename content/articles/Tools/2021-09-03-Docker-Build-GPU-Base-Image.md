@@ -86,7 +86,7 @@ python -V
 
 vim /usr/bin/yum
 
-#!/usr/bin/python -→ #!/usr/bin/python2.7
+`#!/usr/bin/python -→ #!/usr/bin/python2.7`
 
 ## 4.安装pip工具
 

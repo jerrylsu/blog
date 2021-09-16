@@ -48,7 +48,7 @@ cd /usr/bin && mv python python.bk
 
 ## 下载python3源码
 
-mkdir -p /usr/local/python/pthon3
+mkdir -p /usr/local/python/python3
 
 cd /usr/local
 

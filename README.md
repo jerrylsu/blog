@@ -61,7 +61,3 @@ $ ./cmder p
 
 ### 5. Apache2
 
-```
-# /etc/apache2
-$ service apache2 start
-```

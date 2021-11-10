@@ -59,17 +59,17 @@ $ echo 'www.jerrulsu.com' >> output/CNAME
 $ ./cmder p
 ```
 
-### 5. Apache2
+### 5. Apache2 web server
 ```
 # /etc/apache2
 service apache2 start
 ```
 
-### 6. isso comments
+### 6. Isso comments server
 
-### 7. jupyterlab
+### 7. Jupyterlab server
 
-Using my blog with jupyterlab.
+Using my blog with jupyterlab server.
 
 - `./jupyterlab.sh`
 
@@ -103,6 +103,37 @@ nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port 8888 > jupyter.l
 # conda install nb_conda
 ```
 
-- terminal
+- **Terminal**
 
-oh-my-zsh(agnoster) + [powerline](https://powerline.readthedocs.io/en/latest/index.html)
+[oh-my-zsh](https://ohmyz.sh/)
+
+vim ~/.zshrc
+
+```
+ZSH_THEME="agnoster"
+```
+
+[powerline](https://powerline.readthedocs.io/en/latest/index.html)
+
+Settings > Advanced Settings Editor > Terminal > User Preferences
+
+```
+{
+    // Terminal
+    // @jupyterlab/terminal-extension:plugin
+    // Terminal settings.
+    // *************************************
+
+    // Theme
+    // The theme for the terminal.
+    "theme": "dark",
+    
+    // Font family
+    // The font family used to render text.
+    "fontFamily": "Meslo LG s for PowerLine",
+    
+    // Font size
+    // The font size used to render text.
+    "fontSize": 15,
+}
+```

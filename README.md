@@ -59,5 +59,8 @@ $ echo 'www.jerrulsu.com' >> output/CNAME
 $ ./cmder p
 ```
 
-### 5. Apache2
-
+###5. Apache2
+```
+# /etc/apache2
+service apache2 start
+```

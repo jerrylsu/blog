@@ -140,7 +140,7 @@ Settings > Advanced Settings Editor > Terminal > User Preferences
 
 ### FAQ
 
-[1](1). pelican could not process .ipynb file.
+[1](1). pelican-jupyter could not process .ipynb file.
 
 ```
 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.                                                                                            Could not process articles/Programming/2021-08-05-Python-m.ipynb                                                                                                                                   

@@ -103,7 +103,7 @@ nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port 8888 > jupyter.l
 # conda install nb_conda
 ```
 
-- **Terminal**
+- `Terminal`
 
 [oh-my-zsh](https://ohmyz.sh/)
 
@@ -136,4 +136,11 @@ Settings > Advanced Settings Editor > Terminal > User Preferences
     // The font size used to render text.
     "fontSize": 15,
 }
+```
+
+### FAQ
+
+1. pelican could not process .ipynb file.                                                                                                                                                          
+```[NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.                                                                                            Could not process articles/Programming/2021-08-05-Python-m.ipynb                                                                                                                                   
+basic
 ```

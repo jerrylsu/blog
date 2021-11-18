@@ -149,4 +149,4 @@ basic
 
 pip install nbconvert==5.6.0
 
-[https://github.com/danielfrg/pelican-jupyter/issues/126]https://github.com/danielfrg/pelican-jupyter/issues/126()
+[https://github.com/danielfrg/pelican-jupyter/issues/126](https://github.com/danielfrg/pelican-jupyter/issues/126)

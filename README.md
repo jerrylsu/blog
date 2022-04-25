@@ -67,6 +67,11 @@ service apache2 start
 
 ### 6. Isso comments server
 
+https://posativ.org/isso/docs/quickstart/
+
+- `nohup isso -c /var/www/blog/isso/isso.cfg run > nohup.isso.log.out &`
+
+
 ### 7. Jupyterlab server
 
 Using my blog with jupyterlab server.

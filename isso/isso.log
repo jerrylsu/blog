@@ -1661,3 +1661,25 @@ Traceback (most recent call last):
 sqlite3.OperationalError: no such table: threads
 connected to SMTP server
 connected to http://jerrylsu.net
+connected to SMTP server
+connected to http://jerrylsu.net
+GET /id/1/activate/MQ.YmX9Fg.ebJ_ghgZL2hKMcyhQCYqqfKfYHk
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 635, in moderate
+    thread = self.threads.get(item['tid'])
+TypeError: 'NoneType' object is not subscriptable
+GET /id/1/activate/MQ.YmX9Fg.ebJ_ghgZL2hKMcyhQCYqqfKfYHk
+Traceback (most recent call last):
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/__init__.py", line 150, in dispatch
+    response = handler(request.environ, request, **values)
+  File "/opt/conda/envs/blog/lib/python3.8/site-packages/isso/views/comments.py", line 635, in moderate
+    thread = self.threads.get(item['tid'])
+TypeError: 'NoneType' object is not subscriptable
+connected to SMTP server
+connected to http://jerrylsu.net
+connected to SMTP server
+connected to http://jerrylsu.net
+connected to SMTP server
+connected to http://jerrylsu.net

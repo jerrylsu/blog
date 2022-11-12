@@ -2,5 +2,6 @@
 __pycache__
 output
 .idea
-Algorithms-in-Python
 content/cache
+themes
+plugins

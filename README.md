@@ -20,24 +20,24 @@ The directory of themes and plugins can be pulled by pelican site.
 
 #### download and install theme elegant
 
-[github.com/getpelican/pelican-themes](github.com/getpelican/pelican-themes)
+[https://github.com/getpelican/pelican-themes](https://github.com/getpelican/pelican-themes)
 ```
 $ cd /blog/themes
 
-$ git clone git@github.com:Pelican-Elegant/elegant.git
+$ git clone https://github.com/getpelican/pelican-themes.git
 
-$ pelican-themes --install themes/elegant --verbose
+$ pelican-themes --install themes/pelican-bootstrap3 --verbose
 ```
 
 #### download pelican plugins
 
-[github.com/getpelican/pelican-plugins](github.com/getpelican/pelican-plugins)
+[https://github.com/getpelican/pelican-plugins](https://github.com/getpelican/pelican-plugins)
 ```
 $ cd blog
 
 $ git clone git@github.com:getpelican/pelican-plugins.git
 
-$ mv peliacn-plugins plugins
+$ mv pelican-plugins plugins
 ```
 
 ### 4. Deploy Blog
@@ -49,28 +49,13 @@ $ mkdir output
 
 $ touch output/CNAME
 
-$ echo 'www.jerrulsu.com' >> output/CNAME
+$ echo 'www.jerrylsu.net' >> output/CNAME
 
 # Generate automatically deployment files into output directory
 # and deploy blog to github.com:jerrylsu/jerrylsu.github.io.git.
-# if use windows conda environment on cygwin, you must use command
-# source activate blog && python -i ./cmder p
 
 $ ./cmder p
 ```
-
-### 5. Apache2 web server
-```
-# /etc/apache2
-service apache2 start
-```
-
-### 6. Isso comments server
-
-https://posativ.org/isso/docs/quickstart/
-
-- `nohup isso -c /var/www/blog/isso/isso.cfg run > nohup.isso.log.out &`
-
 
 ### 7. Jupyterlab server
 
@@ -145,7 +130,7 @@ Settings > Advanced Settings Editor > Terminal > User Preferences
 
 ### FAQ
 
-[1](1). pelican-jupyter could not process .ipynb file.
+1. pelican-jupyter could not process .ipynb file.
 
 ```
 [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.                                                                                            Could not process articles/Programming/2021-08-05-Python-m.ipynb                                                                                                                                   
@@ -155,3 +140,18 @@ basic
 pip install nbconvert==5.6.0
 
 [https://github.com/danielfrg/pelican-jupyter/issues/126](https://github.com/danielfrg/pelican-jupyter/issues/126)
+
+
+2. CRITICAL TypeError: object of type 'NoneType' has no len()
+
+```
+(dev)  ✘ sulei03@appledeMacBook-Pro: pelican -s pelicanconf.py content
+
+[15:17:04] CRITICAL TypeError: object of type 'NoneType' has no len()
+```
+
+pelican_jerry/__init__.py
+```
+# cls = settings['PELICAN_CLASS']  # 'pelican.Pelican'
+cls = 'pelican_jerry.Pelican'
+```

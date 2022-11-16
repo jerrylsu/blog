@@ -394,7 +394,8 @@ def get_instance(args):
 
     settings = read_settings(config_file, override=get_config(args))
 
-    cls = settings['PELICAN_CLASS']
+    # cls = settings['PELICAN_CLASS']
+    cls = 'pelican_jerry.Pelican'
     if isinstance(cls, str):
         module, cls_name = cls.rsplit('.', 1)
         module = __import__(module)

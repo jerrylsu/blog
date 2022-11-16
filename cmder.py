@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import os
-import pelican_jerry as pelican
+import subprocess as sp
 import datetime
 from argparse import ArgumentParser
+
+import pelican_jerry as pelican
 
 CONTENT = 'content'
 
@@ -70,7 +72,7 @@ def _subparse_publish(subparsers):
 
 def add(blogger, args):
     blogger.add(' '.join(args.title))
-    
+
 
 def _pelican_generate():
     """Generate the (sub) blog/site using Pelican.
@@ -108,7 +110,7 @@ def _push_github():
 def publish(blogger, args):
     print(DASHES)
     _pelican_generate()
-    _push_github()
+   # _push_github()
     print(DASHES)
 
 

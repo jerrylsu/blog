@@ -26,9 +26,6 @@ ARTICLE_EXCLUDES = []
 STATIC_PATHS = ['images', 'extra']
 OUTPUT_SOURCES = False
 
-# LICENSE CONTENT
-CUSTOM_LICENSE = '<a href="https://beian.miit.gov.cn">ICP2020055731</a>'
-
 # GITHUB
 GITHUB_USER = 'jerrylsu'
 GITHUB_REPO_COUNT = 2
@@ -126,7 +123,7 @@ TAG_FEED_RSS = None
 #LOAD_CONTENT_CACHE = True
 
 # Comments
-ISSO_SITEURL = "http://isso.jerrylsu.net"
+# ISSO_SITEURL = "http://isso.jerrylsu.net"
 # DISQUS_SITENAME = "blog-notmyidea"
 
 # THEMES

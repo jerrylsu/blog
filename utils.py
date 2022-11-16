@@ -30,7 +30,7 @@ def push_github(dir_: str):
     sp.run(cmd, shell=True, check=True)
 
 
-def pelican_generate(dir_: str, fatal: str):
+def pelican_generate(dir_: str):
     """Generate the (sub) blog/site using Pelican.
 
     :param dir_: The name of sub blog directories (en, cn, etc.).
@@ -41,11 +41,9 @@ def pelican_generate(dir_: str, fatal: str):
     blog_dir = BASE_DIR
     os.chdir(blog_dir)
     args = ["-s", os.path.join(blog_dir, "pelicanconf.py")]
-    if fatal:
-        args.extend(["--fatal", fatal])
     pelican.main(args)
 
 
 if __name__ == "__main__":
-    pelican_generate("s", "errors")
+    pelican_generate("s")
 

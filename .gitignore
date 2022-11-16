@@ -5,3 +5,4 @@ output
 content/cache
 themes
 plugins
+sh/jupyter.log

@@ -61,39 +61,11 @@ $ ./cmder p
 
 Using my blog with jupyterlab server.
 
-- `./jupyterlab.sh`
+- start:`cd sh && ./start_jupyterlab.sh`
 
-```
-#!/bin/sh
+- stop: `cd sh && ./stop_jupyterlab.sh`
 
-# enter docker
-
-# pip install jupyterlab -i https://pypi.doubanio.com/simple
-
-cd ~
-jupyter lab --generate-config
-echo 'Please input jupyter lab password'
-jupyter lab password
-echo 'Password input success!'
-
-chmod 777 ~/.jupyter/jupyter_server_config.json
-PASSWORD=$(cat ~/.jupyter/jupyter_server_config.json | grep password | awk -F '"' '{print $4}')
-echo $PASSWORD
-echo "c.NotebookApp.ip='*'" >> ~/.jupyter/jupyter_lab_config.py
-echo "c.NotebookApp.password = '$PASSWORD'" >> ~/.jupyter/jupyter_lab_config.py
-echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_lab_config.py
-echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_lab_config.py
-echo "c.NotebookApp.notebook_dir = '/'" >> ~/.jupyter/jupyter_lab_config.py
-
-# need install oh-my-zsh!!!
-echo "c.ServerApp.terminado_settings = {'shell_command': ['/bin/zsh']}" >> ~/.jupyter/jupyter_lab_config.py
-
-nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port 8888 > jupyter.log 2>&1 &
-
-# conda install nb_conda
-```
-
-- `Terminal`
+### 8. Terminal
 
 [oh-my-zsh](https://ohmyz.sh/)
 

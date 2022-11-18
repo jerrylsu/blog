@@ -4,6 +4,8 @@ slug: Python-built-in-Functions
 title: Python Built-in Functions
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 https://docs.python.org/3/library/functions.html
 

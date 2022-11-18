@@ -4,6 +4,8 @@ slug: Feedback-Prize-Evaluating-Student-Writing
 title: Feedback prize evaluating student writing
 category:
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

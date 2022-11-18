@@ -4,6 +4,8 @@ slug: Hierarchical-Position-Embedding
 title: Hierarchical Position Embedding
 category: 
 tags: Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 预训练模型 预训练的三种embedding
 

@@ -4,6 +4,8 @@ slug: Python-typing
 title: Python - typing
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

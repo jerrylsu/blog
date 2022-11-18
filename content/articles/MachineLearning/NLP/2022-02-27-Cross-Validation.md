@@ -4,6 +4,8 @@ slug:  Creating-folds-properly
 title: Creating folds properly
 category:
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

@@ -6,6 +6,8 @@ category:
 tags: Python
 
 [TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 函数体中存在yield关键字，即为生成器。调用生成器函数会返回一个生成器对象。即生成器函数就是生成器工厂。
 

@@ -4,6 +4,8 @@ slug: Git-LFS-Bandwidth-Issue
 title: Git LFS Bandwidth Issue
 category: 
 tags: Git
+summary: Reason is the light and the light of life.
+toc: show
 
 Response: This repository is over its data quota. Account responsible for LFS bandwidth should purchase more data packs to restore access.
 

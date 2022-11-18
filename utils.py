@@ -37,6 +37,7 @@ def push_github(blog_dir: str):
     path = os.path.join(blog_dir, "output")
     os.chdir(path)
     # commit
+    # cmd = "git init && git add --all . && git commit -a -m ..."
     cmd = "git add --all . && git commit -a -m ..."
     try:
         res = sp.run(cmd, shell=True, check=True)
@@ -45,8 +46,9 @@ def push_github(blog_dir: str):
         logger.error(f"cmd exec error: {cp}")
 
     # publish
-    url = "git@github.com:jerrylsu/jerrylsu.github.io.git"
-    cmd = f"git remote add origin {url} && git push origin master --force"
+    # url = "git@github.com:jerrylsu/jerrylsu.github.io.git"
+    # cmd = f"git remote add origin {url} && git push origin master --force"
+    cmd = "git push origin master --force"
     try:
         res = sp.run(cmd, shell=True, check=True)
         logger.info(res)

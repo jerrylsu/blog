@@ -4,6 +4,8 @@ slug: Paddle-nn-functional-unfold
 title: Paddle.nn.functional.unfold
 category: 
 tags: Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

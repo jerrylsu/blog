@@ -4,6 +4,8 @@ slug:  Image-Tilt-Correction
 title: Image tilt correction
 category:
 tags: CV
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

@@ -4,6 +4,8 @@ slug: HMM-Viterbi-Algorithm
 title: HMM Viterbi Algorithm
 category: 
 tags: Deep Learning, NLP, Viterbi, Algorithm, HMM, CRF
+summary: Reason is the light and the light of life.
+toc: show
 
 ### HMM
 

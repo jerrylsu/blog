@@ -4,6 +4,8 @@ slug: Multiprocessing-in-FastAPI
 title: Multiprocessing in FastAPI
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

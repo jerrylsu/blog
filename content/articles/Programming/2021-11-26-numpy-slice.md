@@ -6,6 +6,8 @@ category:
 tags: Numpy
 
 [TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 `None`在对应位置增加一个维度(类似于`unsqueeze(axis=)`)
 

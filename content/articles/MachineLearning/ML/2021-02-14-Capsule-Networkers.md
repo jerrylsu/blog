@@ -4,6 +4,8 @@ slug: Capsule-Networkers
 title: Capsule Networkers
 category: 
 tags: Deep Learning
+summary: Reason is the light and the light of life.
+toc: show
 
 [Dynamic Routing Between Capsules](https://papers.nips.cc/paper/2017/file/2cad8fa47bbef282badbb8de5374b894-Paper.pdf)
 

@@ -4,6 +4,8 @@ slug:  Mapping-Chars-and-Words-to-Tokens
 title: Mapping chars and words to tokens
 category:
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 [How to Convert Characters, Tokens, and Words](https://www.kaggle.com/c/feedback-prize-2021/discussion/298094)
 

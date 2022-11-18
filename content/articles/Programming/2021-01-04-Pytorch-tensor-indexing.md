@@ -4,6 +4,8 @@ slug: Pytorch-fancy-indexing
 title: Pytorch fancy indexing
 category: 
 tags: Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 花式索引
 

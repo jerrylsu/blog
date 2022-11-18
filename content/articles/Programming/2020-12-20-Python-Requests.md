@@ -4,6 +4,8 @@ slug: Python-Requests
 title: Python Requests
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

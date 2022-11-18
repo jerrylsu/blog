@@ -4,6 +4,8 @@ slug: Longformer-Torch2Paddle
 title: Longformer Torch2Paddle
 category: 
 tags: Paddle, Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 [PaddlePaddle-Longformer-model-base-4096](https://huggingface.co/Jerry666/paddlepaddle-longformer-base-4096/tree/main)
 

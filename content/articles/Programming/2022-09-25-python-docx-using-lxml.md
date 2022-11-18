@@ -4,6 +4,8 @@ slug: python-docx-using-lxml
 title: Python docx using lxml
 category: 
 tags: Python, Docx, lxml
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

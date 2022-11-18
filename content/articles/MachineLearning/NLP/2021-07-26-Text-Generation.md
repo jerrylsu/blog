@@ -4,6 +4,8 @@ slug: Text-Generation
 title: Text-Generation
 category: 
 tags: Deep Learning, NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 ### Autoregressive Text Generation
 

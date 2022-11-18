@@ -4,6 +4,8 @@ slug: Pytorch-View-vs-Reshape
 title: Pytorch View vs Reshape
 category: 
 tags: Pytorch, Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 torch.view has existed for a long time. It will return a tensor with the new shape. The returned tensor will share the underling data with the original tensor. See the [documentation here](https://pytorch.org/docs/master/tensors.html?highlight=view#torch.Tensor.view).
 

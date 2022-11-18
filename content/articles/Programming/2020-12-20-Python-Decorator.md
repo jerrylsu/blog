@@ -4,6 +4,8 @@ slug: Python-Decorator
 title: Python Decorator
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 @lock vs @lock()  装饰器 vs 装饰器工厂函数  
 

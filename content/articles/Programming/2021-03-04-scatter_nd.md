@@ -4,6 +4,8 @@ slug: scatter_nd
 title: Scatter_nd
 category: 
 tags: Deep Learning, Pytorch, Tensorflow
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

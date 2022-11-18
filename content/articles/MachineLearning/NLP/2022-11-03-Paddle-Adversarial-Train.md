@@ -4,6 +4,8 @@ slug: Paddle-Adversarial-Train
 title: Paddle adversarial train
 category: 
 tags: Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

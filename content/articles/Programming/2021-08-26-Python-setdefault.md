@@ -4,6 +4,8 @@ slug: Python-setdefault
 title: Python - setdefault
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 https://www.cnblogs.com/zzliu/p/10809205.html
 

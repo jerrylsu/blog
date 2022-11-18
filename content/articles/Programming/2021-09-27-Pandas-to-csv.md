@@ -4,6 +4,8 @@ slug: Pandas-to-csv
 title: Pandas-to-csv
 category: 
 tags: Pandas
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

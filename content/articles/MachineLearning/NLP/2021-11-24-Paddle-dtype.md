@@ -4,6 +4,8 @@ slug: Paddle-dtype
 title: Paddle dtype
 category: 
 tags: Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

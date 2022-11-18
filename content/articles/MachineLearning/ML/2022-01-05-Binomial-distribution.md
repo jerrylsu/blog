@@ -4,6 +4,8 @@ slug: Binomial-distribution
 title: Binomial distribution
 category: 
 tags: Machine Learning, Statistics
+summary: Reason is the light and the light of life.
+toc: show
 
 n次伯努利实验，样本相互独立，单次成功概率为p，服从参数为n和p的二项分布:
 

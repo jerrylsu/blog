@@ -4,6 +4,8 @@ slug: pytorch-create-tensor
 title: Pytorch-create-tensor
 category: 
 tags: Deep Learning, Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 CLASS torch.Tensor
     

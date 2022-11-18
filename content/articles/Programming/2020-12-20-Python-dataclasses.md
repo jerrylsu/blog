@@ -4,6 +4,8 @@ slug: Python-dataclasses
 title: Python dataclasses
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

@@ -6,6 +6,8 @@ category:
 tags: Numpy
 
 [TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

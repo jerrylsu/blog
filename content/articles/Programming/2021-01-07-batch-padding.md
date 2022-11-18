@@ -4,6 +4,8 @@ slug: batch padding
 title: batch padding
 category: 
 tags: Deep Learning, Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

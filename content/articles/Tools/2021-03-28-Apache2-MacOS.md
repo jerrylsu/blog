@@ -4,6 +4,8 @@ slug: Apache2 MacOS
 title: Apache2 MacOS
 category: 
 tags: Apache2, Blog, Server
+summary: Reason is the light and the light of life.
+toc: show
 
 Apache2 version: `sudo apachectl -v`
 

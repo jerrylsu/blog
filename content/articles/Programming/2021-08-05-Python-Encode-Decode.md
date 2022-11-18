@@ -4,6 +4,8 @@ slug: Python-Encode-Decode
 title: Python Encode Decode
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

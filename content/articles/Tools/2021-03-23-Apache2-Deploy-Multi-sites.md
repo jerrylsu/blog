@@ -4,6 +4,8 @@ slug: Apache2 Deploy Multi-sites
 title: Apache2 Deploy Multi-sites
 category: 
 tags: Apache2, Server
+summary: Reason is the light and the light of life.
+toc: show
 
 [I submit the issue](https://github.com/posativ/isso/issues/718)
 

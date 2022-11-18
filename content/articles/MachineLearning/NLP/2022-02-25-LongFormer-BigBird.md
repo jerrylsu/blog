@@ -4,6 +4,8 @@ slug:  Longformer-BigBird
 title: Longformer BigBird
 category:
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 ## allenai/longformer-large-4096
 

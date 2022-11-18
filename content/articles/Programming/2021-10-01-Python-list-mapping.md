@@ -4,6 +4,8 @@ slug: Pandas-list-mapping
 title: Pandas-list-mapping
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

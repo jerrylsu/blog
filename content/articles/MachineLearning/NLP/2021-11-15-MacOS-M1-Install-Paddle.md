@@ -4,6 +4,8 @@ slug: Mac m1 install Paddle
 title: Mac m1 install Paddle
 category: 
 tags: Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 Mac m1系统mini-conda,环境安装paddle问题？
 

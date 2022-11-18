@@ -4,6 +4,8 @@ slug: paddle implements torch.repeat_interleave/K.repeat_elements using paddle.r
 title: paddle implements torch.repeat_interleave/K.repeat_elements using paddle.reshape & paddle.tile
 category: 
 tags: Deep Learning, Pytorch, Paddle
+summary: Reason is the light and the light of life.
+toc: show
 
 https://pytorch.org/docs/stable/generated/torch.Tensor.repeat.html#torch.Tensor.repeat
 

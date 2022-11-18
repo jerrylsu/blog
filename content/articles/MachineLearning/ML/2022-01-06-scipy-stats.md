@@ -4,6 +4,8 @@ slug: Scipy-stats
 title: Scipy stats
 category: 
 tags: Machine Learning, Statistics, Scipy
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

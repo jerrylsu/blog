@@ -5,13 +5,13 @@ import nbformat
 from loguru import logger
 import subprocess as sp
 
-from utils import BASE_DIR
+from utils import BLOG_DIR
 
 
-def start_jupyterlab():
+def start_jupyterlab(blog_dir: str):
     """Start jupyterlab.
     """
-    path = os.path.join(BASE_DIR, "sh")
+    path = os.path.join(blog_dir, "sh")
     os.chdir(path)
     cmd = "bash start_jupyterlab.sh"
     try:
@@ -21,10 +21,10 @@ def start_jupyterlab():
         logger.error(f"cmd exec error: {cp}")
 
 
-def stop_jupyterlab():
+def stop_jupyterlab(blog_dir: str):
     """Stop jupyterlab.
     """
-    path = os.path.join(BASE_DIR, "sh")
+    path = os.path.join(blog_dir, "sh")
     os.chdir(path)
     cmd = "bash stop_jupyterlab.sh"
     try:
@@ -76,7 +76,9 @@ def _format_cell(cell: dict, cell_type: str) -> bool:
     if not lines:
         return False
     # remove "- " for pelican page with markdown.
-    formatted = "\n".join([line[2:] if line.startswith("- ") else line for line in lines])
+    formatted = [line[2:] if line.startswith("- ") else line for line in lines]
+    formatted = formatted + ["summary: Reason is the light and the light of life.", "toc: show"]
+    formatted = "\n".join(formatted)
     # remove the trailing new line
     formatted = formatted.rstrip("\n")
     if formatted != code:
@@ -99,5 +101,5 @@ def format_notebook(ipynb_file_path: str):
 
 
 if __name__ == "__main__":
-    batch_convert_notebook_to_markdown_file("/Users/sulei03/Documents/blog/content/articles")
-    # start_jupyterlab()
+    batch_convert_notebook_to_markdown_file("/Users/sulei03/Documents/blog/content/pages")
+    # start_jupyterlab(BLOG_DIR)

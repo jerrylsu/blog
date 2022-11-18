@@ -4,6 +4,8 @@ slug: Python-list.index
 title: Python - list.index
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 1. Return first index of value
 ```

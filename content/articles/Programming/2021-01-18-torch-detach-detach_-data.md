@@ -4,6 +4,8 @@ slug: tensor.detach/torch.detach_/torch.data
 title: tensor.detach/torch.detach_/torch.data
 category: 
 tags: Deep Learning, Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 https://pytorch.org/docs/stable/autograd.html#torch.Tensor.detach
 

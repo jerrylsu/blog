@@ -4,6 +4,8 @@ slug: NLP-Unicode-Tokenizer-Mapping
 title: NLP Unicode Tokenizer Mapping
 category: 
 tags: Python, NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ```python

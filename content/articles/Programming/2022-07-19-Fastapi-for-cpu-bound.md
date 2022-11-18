@@ -4,6 +4,8 @@ slug: FastAPI-for-CPU-Bound-Task
 title: FastAPI for CPU-Bound Task
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 fastAPI
 

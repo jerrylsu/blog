@@ -4,6 +4,8 @@ slug: Pytorch-stride-as_strided
 title: Pytorch tensor.stride & tensor.as_strided
 category: 
 tags: Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 ## tensor.stride()
 

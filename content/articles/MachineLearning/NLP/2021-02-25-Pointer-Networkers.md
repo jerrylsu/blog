@@ -4,6 +4,8 @@ slug: Pointer-Networkers
 title: Pointer Networkers
 category: 
 tags: Deep Learning, NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Pointer Networkers
 

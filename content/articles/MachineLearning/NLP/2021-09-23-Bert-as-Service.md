@@ -4,6 +4,8 @@ slug: Bert-as-Service
 title: Bert as Service
 category: 
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 git clone git@github.com:hanxiao/bert-as-service.git
 

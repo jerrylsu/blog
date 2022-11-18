@@ -4,6 +4,8 @@ slug: Base64-Encode-Decode
 title: Base64-encode-decode
 category: 
 tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 ## python encode decode
 

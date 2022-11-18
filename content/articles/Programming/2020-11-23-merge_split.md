@@ -4,6 +4,8 @@ slug: tf.concat/split/stack
 title: tf.concat/split/stack
 category: 
 tags: Deep Learning, TensorFlow
+summary: Reason is the light and the light of life.
+toc: show
 
 # Merge and Split
 

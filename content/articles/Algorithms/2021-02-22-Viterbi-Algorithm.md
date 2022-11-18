@@ -4,6 +4,8 @@ slug: Viterbi-Algorithm
 title: Viterbi Algorithm
 category: 
 tags: Viterbi, Algorithm
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 矩阵法numpy
 
@@ -477,6 +479,15 @@ b
 
     array([[0.001, 0.002, 0.007, 0.009, 0.009, 0.072, 0.15 , 0.12 , 0.03 ]])
 
+
+
+
+```python
+!jupyter nbconvert --to markdown 2021-02-22-Viterbi-Algorithm.ipynb
+```
+
+    [NbConvertApp] Converting notebook 2021-02-22-Viterbi-Algorithm.ipynb to markdown
+    [NbConvertApp] Writing 9793 bytes to 2021-02-22-Viterbi-Algorithm.md
 
 
 

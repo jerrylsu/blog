@@ -4,6 +4,8 @@ slug: torch.lt/torch.gt/torch.le/torch.ge/torch.ne
 title: torch.lt/torch.gt/torch.le/torch.ge/torch.ne
 category: 
 tags: Deep Learning, Pytorch
+summary: Reason is the light and the light of life.
+toc: show
 
 [https://pytorch.org/docs/stable/torch.html#comparison-ops](https://pytorch.org/docs/stable/torch.html#comparison-ops)
 

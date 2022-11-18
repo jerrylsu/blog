@@ -4,6 +4,8 @@ slug: Cross-Entropy
 title: Cross Entropy
 category: 
 tags: NLP
+summary: Reason is the light and the light of life.
+toc: show
 
 理解几个概念：
 

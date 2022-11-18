@@ -1,14 +1,16 @@
 Title: About
 Summary: Warm the world with cold reason
 Author: JerrySu
-Date: 2022-10-07 10:00
 
+
+#### Jerry
 
 - NLP, Baidu
 
 - Email: sa517301@mail.ustc.edu.cn
 
 - Github: [github.com/jerrylsu](https://github.com/jerrylsu)
+
 
 #### PROJECTS
 
@@ -27,6 +29,7 @@ Date: 2022-10-07 10:00
 - Oct. 2020 - Present, **[Pyutils: Python pacakage that contains misc utils](https://github.com/jerrylsu/pyutils)**
 
 - Sep. 2018 - Present, **[Jerry's Technology Blog with Pelican](https://github.com/jerrylsu/blog)**
+
 
 #### EXPERIENCE
 

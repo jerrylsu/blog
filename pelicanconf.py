@@ -9,7 +9,7 @@ AUTHOR = 'JERRY'
 SITENAME = 'JERRYLSU.NET'
 SITETITLE = 'JERRYLSU.NET'
 SITESUBTITLE = 'Warm the World with Cold Reason.'
-# SITEDESCRIPTION = 'Jerry's blog, powered by Bootstrap and Pelican'
+SITEDESCRIPTION = 'Warm the World with Cold Reason.'
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 

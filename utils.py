@@ -6,8 +6,8 @@ import subprocess as sp
 
 import pelican_jerry as pelican
 
-BLOG_DIR = os.path.dirname(os.path.realpath(__file__))
 DASHES = "-" * 120 + "\n"
+BLOG_DIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def auto_git_push(blog_dir: str):
@@ -72,7 +72,6 @@ def publish():
     pelican_generate(BLOG_DIR)
     print("\n[Publish] Blog" + DASHES)
     push_github(BLOG_DIR)
-
 
 
 if __name__ == "__main__":

@@ -67,11 +67,13 @@ def pelican_generate(blog_dir: str):
 def publish():
     """Publish the blog to GitHub pages.
     """
+    print("Push blog", DASHES)
     auto_git_push(BLOG_DIR)
-    print(DASHES)
+    print("Pelican blog", DASHES)
     pelican_generate(BLOG_DIR)
+    print("Publish blog", DASHES)
     push_github(BLOG_DIR)
-    print(DASHES)
+
 
 
 if __name__ == "__main__":

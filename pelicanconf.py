@@ -7,9 +7,9 @@ from datetime import datetime
 AUTHOR = 'JERRY'
 
 SITENAME = 'JERRYLSU.NET'
-SITETITLE = 'JERRYLSU.NET'
-SITESUBTITLE = 'Warm the World with Cold Reason.'
-SITEDESCRIPTION = 'Warm the World with Cold Reason.'
+SITETITLE = 'JERRYLSU'
+SITESUBTITLE = 'Warm the world with cold Reason'
+SITEDESCRIPTION = 'Warm the world with cold Reason'
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 

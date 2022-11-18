@@ -61,9 +61,9 @@ $ ./cmder p
 
 Using my blog with jupyterlab server.
 
-- start:`cd sh && ./start_jupyterlab.sh`
+- start:`./start_jupyterlab.sh`
 
-- stop: `cd sh && ./stop_jupyterlab.sh`
+- stop: `./stop_jupyterlab.sh`
 
 ### 8. Terminal
 

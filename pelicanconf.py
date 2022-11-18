@@ -1,201 +1,197 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+from datetime import datetime
 
+# Site info
 AUTHOR = 'JERRY'
-SITENAME = "JERRYLSU.NET"
+
+SITENAME = 'JERRYLSU.NET'
+SITETITLE = 'JERRYLSU.NET'
+# SITESUBTITLE = 'A simple theme for blog, powered by Bootstrap and Pelican'
+# SITEDESCRIPTION = 'A simple theme for blog, powered by Bootstrap and Pelican'
+SITELOGO = 'jerry.jpg'
+COPYRIGHT_YEAR = datetime.now().year
+
+# when developing: don't specify URL, use document-relative URLs 
 SITEURL = 'http://www.jerrylsu.net'
+RELATIVE_URLS = True
+
+# Locale and Language
+LOCALE = 'en_US'
+DEFAULT_LANG = 'en'
 TIMEZONE = 'Asia/Shanghai'
-DEFAULT_DATE_FORMAT = '%Y-%m-%d %a'
+DATE_FORMATS = {
+    'en': '%b %d, %Y',
+}
 
-# Basic settings
-USE_FOLDER_AS_CATEGORY = True
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = False
-USE_FOLDER_AS_CATEGORY = True
-DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = [".git"]
-READERS = {'html': None}
-
-# PATH
+# Build settings
 PATH = 'content'
-OUTPUT_PATH = 'output'
-PAGE_PATHS = ['pages']          # relative to PATH
-PAGE_EXCLUDES = []
-ARTICLE_PATHS = ['articles']    # relative to PATH
-ARTICLE_EXCLUDES = []
-STATIC_PATHS = ['images', 'extra']
-OUTPUT_SOURCES = False
+THEME = 'simplify-theme'
 
-# GITHUB
-GITHUB_USER = 'jerrylsu'
-GITHUB_REPO_COUNT = 2
-GITHUB_SKIP_FORK = 'true'
-GITHUB_SHOW_USER_LINK = 'true'
+ARTICLE_PATHS = ['articles']
+ARTICLE_URL = 'articles/{slug}.html'
+ARTICLE_SAVE_AS = 'articles/{slug}.html'
+ARTICLE_PRIMARY_PATH = 'articles'
 
-# Pagination
-SUMMARY_MAX_LENGTH = 50
-SUMMARY_END_SUFFIX = '…'
-DEFAULT_ORPHANS = 0
-DEFAULT_PAGINATION = 10
-NEWEST_FIRST_ARCHIVES = True
-DIRECT_TEMPLATES = ['index', 'authors', 'categories', 'tags', 'archives', 'search']
-PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'archives': None}
+PAGE_PATHS = [
+    'pages'
+]
 
-TYPOGRIFY = False
+DIRECT_TEMPLATES = [
+    'index', 
+    'authors', 
+    'categories', 
+    'tags', 
+    'archives', 
+    '404',
+    'search',
+]
+
 EXTRA_PATH_METADATA = {
         'extra/CNAME': {'path': 'CNAME'},
-        'extra/jerry.jpg': {'path': 'extra/jerry.jpg'}
+        'extra/jerry.jpg': {'path': 'jerry.jpg'}
         }
-DEFAULT_DATE = 'fs'
 
-# Markdown扩展
+# below pages are not included in the theme, but you want to customize them in html and layout
+# TEMPLATE_PAGES = {
+#     'pages/test.html': 'pages/test.html'
+# }
+
+DEFAULT_PAGINATION = 10
+DEFAULT_DATE = (2010, 10, 10, 10, 10, 10)
+
+OUTPUT_PATH = 'output'
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = [".git"]  # delete output directory without ".git"
+
+IGNORE_FILES = [".ipynb_checkpoints"]
+
+# Feed generation, usually not needed when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# Advanced Settings
+FORMATTED_FIELDS = [] # removed 'summary'
+STATIC_PATHS = ['images', 'extra']
+
+# Plugins
+# since version 4.5, plugins are installed as python packages, refer to requirements.txt
+# PLUGIN_PATHS = [
+#     '../../pelican-plugins'
+# ]
+# # PLUGINS
+# MARKUP = ("md", "ipynb")
+#
+# from pelican_jupyter import markup as nb_markup
+# IPYNB_MARKUP_USE_FIRST_CELL = True
+# IGNORE_FILES = [".ipynb_checkpoints"]
+
+PLUGINS = [
+    # 'extract_toc',
+    'sitemap', # generate sitemap document, see <https://www.sitemaps.org>
+    'minchin.pelican.plugins.post_stats', # generate post statistics
+    'related_posts', # find articles those share common tags
+    'neighbors', # find next, previous article
+    'share_post', # static sharing buttons
+    'tipue_search', # generate data for searching
+    # 'tag_cloud',
+    'render_math',
+    #'i18n_subsites',
+    #nb_markup
+]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+RELATED_POSTS_MAX = 5
+RELATED_POSTS_SKIP_SAME_CATEGORY = False
+
+# Markdown extensions
+TYPOGRIFY = True
 MARKDOWN = {
+    'extensions': [
+        # official extensions
+        'markdown.extensions.extra', # include extensions: abbr, attr_list, def_list, fenced_code, footnotes, tables
+        'markdown.extensions.codehilite', # to generate code color scheme using pygments
+        'markdown.extensions.meta', # to parse key:value pairs at the begining of file
+        'markdown.extensions.sane_lists',# for better list 
+        'markdown.extensions.toc', # add Table of Content
+        'markdown.extensions.nl2br', # easily to add new line, but make attr_list and legacy_attrs hard to control
+        #'markdown.extensions.admonition', # to make  alert box
+        #'markdown.extensions.legacy_attrs', # insert attribs into element, but markdown already has a built-in function that do the same thing
+        #'markdown.extensions.legacy_em', # to use legacy emphasis
+        #'markdown.extensions.smarty', # converts ASCII dashes, quotes and ellipses to their HTML entity equivalents
+        #'markdown.extensions.wikilinks',
+
+        # 3rd party extensions
+        'markdown_checklist.extension', # show checkbox in list
+        #'markdown_captions', # convert <img> to <figure> and <figcaption>
+    ],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight'},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
-        'markdown.extensions.tables': {  # 表格
-        },
-        'markdown.extensions.toc': {     # 目录，设置看https://python-markdown.github.io/extensions/toc/
-            'title': 'content',      # 目录题头
-        },
     },
     'output_format': 'html5',
 }
 
-# URL Settings
-SLUGIFY_SOURCE = 'title'
-SLUG_REGEX_SUBSTITUTIONS = [
-        (r'[^\w\s-]', ''),  # remove non-alphabetical/whitespace/'-' chars
-        (r'(?u)\A\s*', ''),  # strip leading whitespace
-        (r'(?u)\s*\Z', ''),  # strip trailing whitespace
-        (r'[-\s]+', '-'),  # reduce multiple whitespace or '-' to single '-'
-    ]
-RELATIVE_URLS = False
-FILENAME_METADATA = '(?P<slug>.*)'
-DRAFT_URL = 'drafts/articles/{slug}.html'
-DRAFT_SAVE_AS = DRAFT_URL
-ARTICLE_URL = 'articles/{date:%Y}/{category}-{slug}.html'
-ARTICLE_SAVE_AS = ARTICLE_URL
-DRAFT_PAGE_URL = 'drafts/pages/{slug}.html'
-DRAFT_PAGE_SAVE_AS = DRAFT_PAGE_URL
-PAGE_URL = 'pages/{slug}.html'
-PAGE_SAVE_AS = PAGE_URL
-CATEGORY_URL = 'categories/{slug}.html'
-CATEGORY_SAVE_AS = CATEGORY_URL
-CATEGORIES_SAVE_AS = 'categories/index.html'
-TAG_URL = 'tags/{slug}.html'
-TAG_SAVE_AS = TAG_URL
-TAGS_SAVE_AS = 'tags/index.html'
-AUTHOR_URL = 'authors/{slug}.html'
-AUTHOR_SAVE_AS = AUTHOR_URL
-AUTHORS_SAVE_AS = 'authors/index.html'
-YEAR_ARCHIVE_URL = 'articles/{date:%Y}/index.html'
-YEAR_ARCHIVE_SAVE_AS = YEAR_ARCHIVE_URL
-ARCHIVES_URL = 'articles/index.html'
-ARCHIVES_SAVE_AS = ARCHIVES_URL
-DEFAULT_LANG = 'en'
-DEFAULT_CATEGORY = 'misc'
+# Social widget
+SOCIAL = {
+	'facebook': 'https://facebook.com/jerrylsu',
+    'github': 'https://github.com/jerrylsu',
+    'linkedin': 'https://www.linkedin.com/in/jerrylsu',
+    'twitter': 'https://twitter.com/Jerrylsu666',
+    'email': 'sa517301@mail.ustc.edu.cn',
+}
 
-# Feed generation is usually not desired when developing
-FEED_DOMAIN = None
-FEED_ATOM = None
-FEED_ALL_ATOM = None
-FEED_ATOM_URL = None
-FEED_RSS = None
-FEED_RSS_URL = None
-FEED_ALL_ATOM_URL = None
-FEED_ALL_RSS = None
-FEED_ALL_RSS_URL = None
-CATEGORY_FEED_RSS = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-TRANSLATION_FEED_RSS = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-TAG_FEED_ATOM = None
-TAG_FEED_RSS = None
+# Site validation
+# CLAIM_GOOGLE = ""
+# CLAIM_BING = ""
 
-# cache
-#CACHE_CONTENT = True
-#CACHE_PATH = 'content/cache'
-#CHECK_MODIFIED_METHOD = 'mtime'
-#LOAD_CONTENT_CACHE = True
+# Search Engine
+# you can use static search engine like TipueSearch or dynami engine like Google Custom Search Engine
+# GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
 
 # Comments
-# ISSO_SITEURL = "http://isso.jerrylsu.net"
-# DISQUS_SITENAME = "blog-notmyidea"
+DISQUS_SITENAME = "jerrylsu-github-io"
 
-# THEMES
-# More settings for https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
-THEME = 'pelican-bootstrap3'
-USE_PAGER = False
-BOOTSTRAP_FLUID = True                  # full screen
-# SITELOGO = 'jerry.jpg'
-SITELOGO_SIZE = 8
-DISPLAY_BREADCRUMBS = True
-DISPLAY_CATEGORY_IN_BREADCRUMBS = True
-BOOTSTRAP_NAVBAR_INVERSE = True         #  inverse navbar
+# Sharing
+# SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
+ADD_THIS_ID = "ra-5d9ffca0db80069e" # can be on index, any article or page, and can track user activities
 
-# About Me
-ABOUT_ME = 'Jerry Su'
-# AVATAR = 'jerry.jpg'
+# Tracking
+GOOGLE_ANALYTICS = "UA-42618265-2" # old method
+# GOOGLE_SITE_TAG = "UA-42618265-2" # new method to use with Tag Manager
+# GOOGLE_TAG_MANAGER = ""
 
-# Index page
-DISPLAY_ARTICLE_INFO_ON_INDEX = True
+# Ads
+# GOOGLE_ADSENSE = {
+#     'id': 'ca-pub-9105473411342324',
+#     'ads': {
+#         'home': '7539833074',
+#         'sidebar': '5458247602',
+#         'page': '',
+#         'article': '',
+#     }
+# }
 
-# Banner Image
-BANNER = 'extra/banner.jpg'
-BANNER_SUBTITLE = 'Reason is the light and the light of life.'
+# HEAP_ANALYTICS = ""
 
-# Favico
-FAVICON = 'jerry.jpg'
+# MATOMO_SITENAME = 'vuquangtronggithubio' # new site of PIWIK
 
-PYGMENTS_STYLE = 'colorful'
-#PYGMENTS_STYLE = 'emacs'
-
-# Sidebar options
-SIDEBAR_ON_LEFT = True
-HIDE_SIDEBAR = False
-DISPLAY_TAGS_ON_SIDEBAR = True
-DISPLAY_TAGS_INLINE = True
-TAG_CLOUD_BADGE = True
-TAG_CLOUD_SORTING = 'alphabetically-rev'
-DISPLAY_CATEGORIES_ON_SIDEBAR = True
-PADDED_SINGLE_COLUMN_STYLE = False      # The main body of the pages will be generated centered and with padding on the sides
-
-
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-I18N_TEMPLATES_LANG = 'en'
-
-# MENUITEMS = (
-#   ('Project','output/pages/project.md'),
-#   ('Algorithms','/pages/algorithms'),
-#   ('About','/pages/about')
-# )
-
-SOCIAL = (('Email', 'http://www.jerrylsu.net/pages/home.html', 'user'),
-          ('Github', 'https://github.com/jerrylsu', 'github'))
-# PLUGINS
-MARKUP = ("md", "ipynb")
-
-from pelican_jupyter import markup as nb_markup
-IPYNB_MARKUP_USE_FIRST_CELL = True
-IGNORE_FILES = [".ipynb_checkpoints"]
-
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['extract_toc', 'sitemap', 'tipue_search', 'render_math', 'i18n_subsites', 'tag_cloud', nb_markup]
-SITEMAP = {
-    "format": "xml",
-    "priorities": {
-        "articles": 0.7,
-        "indexes": 0.1,
-        "pages": 0.2,
-    },
-    "changefreqs": {
-        "articles": "always",
-        "indexes": "always",
-        "pages": "always",
-    },
-	'exclude': ['drafts/', 'categories/', 'tags/', 'authors/', 'theme/']
-}
+# PIWIK_SITE_ID = ""
+# PIWIK_URL = ""
+# PIWIK_SSL_URL = ""

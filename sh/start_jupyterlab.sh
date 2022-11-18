@@ -1,6 +1,10 @@
 #!/bin/sh
 
-# pip install jupyterlab -i https://pypi.doubanio.com/simple
+BLOG_DIR=$(dirname $(pwd))
+
+# env
+# pip install jupyterlab==3.5.0 -i https://pypi.doubanio.com/simple
+# conda install -y nb_conda    # need jinja2==3.0.3
 
 jupyter lab --generate-config
 echo 'Please input jupyter lab password'
@@ -16,9 +20,6 @@ echo "c.NotebookApp.ip='*'" >> ~/.jupyter/jupyter_lab_config.py
 echo "c.NotebookApp.password = '$PASSWORD'" >> ~/.jupyter/jupyter_lab_config.py
 echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_lab_config.py
 echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_lab_config.py
-cd ~
-echo "c.NotebookApp.notebook_dir = 'Documents/blog'" >> ~/.jupyter/jupyter_lab_config.py
+echo "c.NotebookApp.notebook_dir = '$BLOG_DIR'" >> ~/.jupyter/jupyter_lab_config.py
 
-nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port 8888 > ./jupyter.log 2>&1 &
-
-# conda install nb_conda
+nohup jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port 8888 > ./jupyterlab.log 2>&1 &

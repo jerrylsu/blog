@@ -1,14 +1,13 @@
 """Utils for the blog module.
 """
 import os
-import shutil
 from loguru import logger
 import subprocess as sp
 
 import pelican_jerry as pelican
 
 BLOG_DIR = os.path.dirname(os.path.realpath(__file__))
-DASHES = "\n" + "-" * 120 + "\n"
+DASHES = "-" * 120 + "\n"
 
 
 def auto_git_push(blog_dir: str):
@@ -67,11 +66,11 @@ def pelican_generate(blog_dir: str):
 def publish():
     """Publish the blog to GitHub pages.
     """
-    print("[Push] Blog" + DASHES)
+    print("\n[Push] Blog" + DASHES)
     auto_git_push(BLOG_DIR)
-    print("[Pelican] Blog" + DASHES)
+    print("\n[Pelican] Blog" + DASHES)
     pelican_generate(BLOG_DIR)
-    print("[Publish] Blog" + DASHES)
+    print("\n[Publish] Blog" + DASHES)
     push_github(BLOG_DIR)
 
 

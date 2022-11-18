@@ -5,8 +5,8 @@ Slug: Pytorch-Transformer
 Title: Pytorch Transformer
 Category: 
 Tags: Pytorch
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [pytorch transformer](https://wmathor.com/index.php/archives/1455/)
 

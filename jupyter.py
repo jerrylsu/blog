@@ -101,5 +101,5 @@ def format_notebook(ipynb_file_path: str):
 
 
 if __name__ == "__main__":
-    batch_convert_notebook_to_markdown_file("/Users/sulei03/Documents/blog/content/pages")
+    batch_convert_notebook_to_markdown_file("/Users/sulei03/Documents/blog/content/articles")
     # start_jupyterlab(BLOG_DIR)

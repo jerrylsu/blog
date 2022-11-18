@@ -5,8 +5,8 @@ Slug: Spark:-Shuffling-and-Partitioning
 Title: Spark: Shuffling and Partitioning
 Category: 
 Tags: Spark
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 # Shuffling
 ## org.apache.spark.rdd.RDD[(String, Int)]= ShuffledRDD[366] 

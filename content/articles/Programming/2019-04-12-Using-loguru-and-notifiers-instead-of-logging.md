@@ -5,8 +5,8 @@ Slug: Using-loguru-and-notifiers-instead-of-logging
 Title: Using loguru and notifiers instead of logging
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 from loguru import logger
 import tempfile

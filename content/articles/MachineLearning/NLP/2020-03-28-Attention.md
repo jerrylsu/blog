@@ -5,8 +5,8 @@ Slug: NLP-Attention
 Title: NLP Attention
 Category: 
 Tags: Deep Learning, NLP, Attention
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 
 [http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention](http://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention)

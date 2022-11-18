@@ -5,8 +5,8 @@ Slug: Breadth-First-Search
 Title: Breadth First Search
 Category: 
 Tags: Algorithm, Breadth First Search
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### 概述
 

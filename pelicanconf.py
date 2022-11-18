@@ -8,8 +8,8 @@ AUTHOR = 'JERRY'
 
 SITENAME = 'JERRYLSU.NET'
 SITETITLE = 'JERRYLSU.NET'
-# SITESUBTITLE = 'A simple theme for blog, powered by Bootstrap and Pelican'
-# SITEDESCRIPTION = 'A simple theme for blog, powered by Bootstrap and Pelican'
+SITESUBTITLE = 'Warm the World with Cold Reason.'
+# SITEDESCRIPTION = 'Jerry's blog, powered by Bootstrap and Pelican'
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 

@@ -5,8 +5,8 @@ Slug: 【RL】User-Simulator
 Title: 【RL】User Simulator
 Category: 
 Tags: Reinforcement Learning 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## User Simulator BackGround
 

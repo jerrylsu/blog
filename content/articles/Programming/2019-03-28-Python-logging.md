@@ -5,8 +5,8 @@ Slug: Python-logging
 Title: Python logging
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [logging总结](https://juejin.im/post/5bc2bd3a5188255c94465d31)
 

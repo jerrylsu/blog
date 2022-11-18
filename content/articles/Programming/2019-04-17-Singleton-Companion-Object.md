@@ -5,8 +5,8 @@ Slug: Singleton-&-Companion-Object
 Title: Singleton & Companion Object
 Category: 
 Tags: Scala
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Static in Java
 [Static in Java](https://blog.csdn.net/fengyuzhengfan/article/details/38082999)

@@ -5,8 +5,8 @@ Slug: 【RL】Policy-Gradient
 Title: 【RL】Policy Gradient
 Category: 
 Tags: Reinforcement Learning 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 1. Reinforcement Learning
 

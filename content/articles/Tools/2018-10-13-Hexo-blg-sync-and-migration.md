@@ -5,8 +5,8 @@ Slug: Hexo-blog-sync-and-migration
 Title: Hexo blog sync and migration
 Category: 
 Tags: Hexo
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Overview
 ```

@@ -5,8 +5,8 @@ Slug: Google-Android
 Title: Google-android
 Category: 
 Tags: Tools
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 
 ## ADB

@@ -5,8 +5,8 @@ Slug: 【NLP】RASA-Issues
 Title: 【NLP】RASA Issues
 Category: 
 Tags:  Deep Learning, NLP, RASA
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 1. Conversation Design
 

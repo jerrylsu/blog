@@ -5,8 +5,8 @@ Slug: RASA-Featurizer
 Title: 【NLP】RASA Featurizer
 Category: 
 Tags: Deep Learning, NLP, RASA
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 - ### 训练集stories如何构建状态state作为训练输入数据？
 

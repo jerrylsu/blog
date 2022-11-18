@@ -5,6 +5,8 @@ Slug: Docker-export-commit
 Title: Docker export vs commit
 Category: 
 Tags: Docker
+summary: Reason is the light and the light of life.
+toc: show
 
 问题描述：
 

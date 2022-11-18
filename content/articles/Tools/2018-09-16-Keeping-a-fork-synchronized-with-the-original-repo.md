@@ -5,8 +5,8 @@ Slug: Keeping-a-fork-synced-with-the-origin-repo
 Title: Keeping a fork synced with the origin repo
 Category: 
 Tags: Git
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```
 1. fork upstream_repo_url

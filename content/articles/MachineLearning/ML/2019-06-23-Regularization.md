@@ -5,8 +5,8 @@ Slug: L1-and-L2-Regularization
 Title: L1 and L2 Regularization
 Category: 
 Tags: Machine Learning, Regularization
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### L范数
 

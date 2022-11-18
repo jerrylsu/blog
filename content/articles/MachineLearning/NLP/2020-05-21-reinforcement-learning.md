@@ -5,8 +5,8 @@ Slug: reinforcement-learning
 Title: 【RL】Reinforcement Learning
 Category: 
 Tags: Reinforcement Learning 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 马尔可夫决策过程
 构建强化学习问题：马尔可夫决策过程 Markov Decision Processes (MDPs) 

@@ -5,8 +5,8 @@ Slug: Pytorch-distributed-train
 Title: Pytorch distributed train
 Category: 
 Tags: Pytorch
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### 主卡线程暴涨
 异常： 

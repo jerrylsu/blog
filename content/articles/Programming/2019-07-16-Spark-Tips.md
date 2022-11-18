@@ -5,8 +5,8 @@ Slug: Spark-Tips
 Title: Spark Tips
 Category: 
 Tags: Spark
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 - Apache Spark - Best Practices and Tuning
 

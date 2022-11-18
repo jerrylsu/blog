@@ -5,7 +5,7 @@ Slug: Pytorch-contiguous
 Title: Pytorch contiguous
 Category: 
 Tags: Pytorch
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [Pytorch contiguous](https://zhuanlan.zhihu.com/p/64551412)

@@ -5,8 +5,8 @@ Slug: Debugging-Spark-Application
 Title: Debugging Spark Application
 Category: 
 Tags: Spark
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```
 select

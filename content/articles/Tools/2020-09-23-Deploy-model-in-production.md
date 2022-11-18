@@ -5,8 +5,8 @@ Slug: Deploy-model-in-production
 Title: Deploy model in production
 Category: 
 Tags: Tools 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### Install wsgi using code
 

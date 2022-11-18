@@ -5,8 +5,8 @@ Slug: Topological-Sorting
 Title: Topological Sorting
 Category: 
 Tags: Algorithm, Breadth First Search, Sorting
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### Topological Sorting
 

@@ -5,8 +5,8 @@ Slug: Automated-Feature-Engineering:-Featuretools
 Title: Automated Feature Engineering: Featuretools
 Category: 
 Tags: Machine Learning, Featuretools
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 思考：
 

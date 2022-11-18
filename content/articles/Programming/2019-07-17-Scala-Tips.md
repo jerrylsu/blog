@@ -5,8 +5,8 @@ Slug: Scala-Tips
 Title: Scala Tips
 Category: 
 Tags: Scala
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 - foreach
 

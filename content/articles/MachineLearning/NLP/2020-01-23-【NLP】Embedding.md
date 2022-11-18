@@ -5,8 +5,8 @@ Slug: 【NLP】Embedding
 Title: 【NLP】Embedding
 Category: 
 Tags: Deep Learning, NLP
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```
 embedding_dim=16

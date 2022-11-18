@@ -5,8 +5,8 @@ Slug: 【NLP】RASA-Dialogue-Transformers
 Title: 【NLP】RASA Dialogue Transformers
 Category: 
 Tags: Deep Learning, NLP, RASA, BERT
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [Dialogue Transformers](https://arxiv.org/abs/1910.00486)基于transformer架构的dialogue level的对话策略，其中自注意力机制关注多轮对话序列。RNN网络结构是在对整个对话序列进行编码，故而认为历史序列的每一轮对话turn均是相关的。尽管复杂LSTM结构对RNN进行了改进，可以对历史信息选择性遗忘，然后这需要有足够的训练数据。基于这些，在训练数据有限和多主题对话的场景（一组对话中会交叠多种对话片段）下，网络无法解决这些问题。而transformer结构会选取哪些轮参与当前轮对话状态的编码，自然而然的忽略无关和选取相关历史对话轮，有效克服了RNN结构的限制以LSTM对大训练数据的依赖。
 

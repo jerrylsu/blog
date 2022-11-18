@@ -5,8 +5,8 @@ Slug: 【RL】Q-Learning
 Title: 【RL】Q Learning
 Category: 
 Tags: Reinforcement Learning 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```python
 import numpy as np

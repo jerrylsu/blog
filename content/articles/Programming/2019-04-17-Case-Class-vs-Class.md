@@ -5,8 +5,8 @@ Slug: Case-Class-vs-Class
 Title: Case Class vs Class
 Category: 
 Tags: Scala
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 定义
 - class的定义:

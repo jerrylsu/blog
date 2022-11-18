@@ -5,8 +5,8 @@ Slug: 【NLP】Teacher-Forcing
 Title: 【NLP】Teacher Forcing
 Category: 
 Tags: Deep Learning, NLP 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks](https://arxiv.org/pdf/1506.03099.pdf)
 

@@ -5,8 +5,8 @@ Slug: Cross-Validation-CV
 Title: Cross Validation-CV
 Category: 
 Tags: Machine Learning
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [Cross Validation](https://sklearn.apachecn.org/docs/0.21.3/30.html)
 

@@ -5,8 +5,8 @@ Slug: LinkedList
 Title: LinkedList
 Category: 
 Tags: Algorithm, Linked List
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [GitHub LinkedList](https://github.com/jerrylsu/Algorithms/tree/master/03.%20LinkedList)
 

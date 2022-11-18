@@ -5,8 +5,8 @@ Slug: Scala with Gradle in Intellij
 Title: Scala with Gradle in Intellij
 Category: 
 Tags: Scala
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 1. Create a directory (e.g., demo_proj) for your project.
 

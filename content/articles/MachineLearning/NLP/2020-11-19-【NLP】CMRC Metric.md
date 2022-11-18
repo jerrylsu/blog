@@ -5,6 +5,8 @@ Slug: CMRC-Metric
 Title: CMRC Metric
 Category: 
 Tags: Deep Learning, NLP 
+summary: Reason is the light and the light of life.
+toc: show
 
 ## F1
 

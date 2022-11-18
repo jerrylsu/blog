@@ -5,8 +5,8 @@ Slug: 【NLP】GlobalAveragePooling1D
 Title:【NLP】GlobalAveragePooling1D
 Category: 
 Tags: Deep Learning, NLP
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```
 embedding_dim=16

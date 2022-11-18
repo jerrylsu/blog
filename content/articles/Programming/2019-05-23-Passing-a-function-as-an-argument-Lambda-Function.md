@@ -5,6 +5,8 @@ Slug: Passing-a-function-as-an-argument:-Lambda-Function
 Title: Passing a function as an argument: Lambda Function
 Category: 
 Tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 ```
 f = lambda x: x * 2

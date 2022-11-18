@@ -5,8 +5,8 @@ Slug: Logistic-Regression
 Title: Logistic Regression
 Category: 
 Tags: Machine Learning, Logistic Regression
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 1. Linear Regression
 

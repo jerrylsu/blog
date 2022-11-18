@@ -5,6 +5,8 @@ Slug: Convert-pytorch-model-to-tensorflow2
 Title: Convert pytorch checkpoint to tensorflow2
 Category: 
 Tags: Deep Learning, NLP 
+summary: Reason is the light and the light of life.
+toc: show
 
 [https://github.com/huggingface/transformers/issues/6124](https://github.com/huggingface/transformers/issues/6124)
 

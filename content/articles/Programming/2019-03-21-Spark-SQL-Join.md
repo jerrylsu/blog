@@ -5,8 +5,8 @@ Slug: Spark SQL Join
 Title: Spark SQL Join
 Category: 
 Tags: Spark
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 # Join in Hive
 

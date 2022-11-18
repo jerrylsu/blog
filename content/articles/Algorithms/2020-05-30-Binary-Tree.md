@@ -5,8 +5,8 @@ Slug: Binary-Tree
 Title: Binary Tree
 Category: 
 Tags: Algorithm, Binary Tree
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### 二叉树结构定义
 ```cpp

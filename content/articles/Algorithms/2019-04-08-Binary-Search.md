@@ -5,8 +5,8 @@ Slug: Binary-Search
 Title: Binary Search
 Category: 
 Tags: Algorithm, Binary Search
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## 二分查找初级：二分模板
 ### Classical Binary Search

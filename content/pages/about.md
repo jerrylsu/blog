@@ -1,9 +1,8 @@
-date: 2021-01-07 12:17:17
-author: Jerry Su
-slug: about
-title: ABOUT
+Title: About
+Summary: Warm the world with cold reason
+Author: JerrySu
+Date: 2022-10-07 10:00
 
-### JERRY
 
 - NLP, Baidu
 
@@ -11,7 +10,7 @@ title: ABOUT
 
 - Github: [github.com/jerrylsu](https://github.com/jerrylsu)
 
-### PROJECTS
+#### PROJECTS
 
 - Apr. 2022 - Apr. 2022, **[Feedback Prize - Evaluating Student Writing](https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing)**
 
@@ -29,7 +28,7 @@ title: ABOUT
 
 - Sep. 2018 - Present, **[Jerry's Technology Blog with Pelican](https://github.com/jerrylsu/blog)**
 
-### EXPERIENCE
+#### EXPERIENCE
 
 - Jun. 2021 - Present, **Baidu**. Senior Algorithm Engineer
 

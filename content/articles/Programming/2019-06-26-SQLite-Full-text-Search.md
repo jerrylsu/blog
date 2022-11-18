@@ -5,8 +5,8 @@ Slug: SQLite-Full-text-Search
 Title: SQLite Full-text Search
 Category: 
 Tags: SQL, Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### Sqlite Full-text Search
 

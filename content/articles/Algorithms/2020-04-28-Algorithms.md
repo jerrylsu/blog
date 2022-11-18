@@ -5,8 +5,8 @@ Slug: Algorithms
 Title: Algorithms
 Category: 
 Tags: Algorithms 
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Linked List
 

@@ -5,8 +5,8 @@ Slug: Deploy-my-blog-quickly
 Title: Deploy my blog quickly
 Category: 
 Tags: Blog
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### 1. Clone Blog 
 

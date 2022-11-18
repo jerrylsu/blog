@@ -5,8 +5,8 @@ Slug: Information-Theory
 Title: Information Theory
 Category: 
 Tags: Machine Learning
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Information Theory
 

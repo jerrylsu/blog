@@ -5,8 +5,8 @@ Slug: Bias-vs-Variance
 Title: Bias vs Variance
 Category: 
 Tags: Machine Learning
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### 方差与偏差
 

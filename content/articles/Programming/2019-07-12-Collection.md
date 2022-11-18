@@ -5,8 +5,8 @@ Slug: Scala-Collection
 Title: Scala Collection
 Category: 
 Tags: Scala
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### collection.mutable
 ![mutable](images/Scala/mutable.png)

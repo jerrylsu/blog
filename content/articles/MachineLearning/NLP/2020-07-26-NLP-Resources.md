@@ -5,8 +5,8 @@ Slug: NLP-Resources
 Title: NLP Resources
 Category: 
 Tags: NLP
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ### Paper
 

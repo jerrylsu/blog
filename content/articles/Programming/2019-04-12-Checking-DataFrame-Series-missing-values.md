@@ -5,8 +5,8 @@ Slug: Checking-DataFrame/Series-missing-values
 Title: Checking DataFrame/Series missing values
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Checking DataFrame missing values
 `cols_missing = frame.columns[frame.isna().any()]`

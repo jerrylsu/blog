@@ -5,8 +5,8 @@ Slug: Data-Structure-and-Algorithm-in-Python
 Title: Data Structure and Algorithm in Python
 Category: 
 Tags: Algorithm
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Sort
 ### Quick Sort

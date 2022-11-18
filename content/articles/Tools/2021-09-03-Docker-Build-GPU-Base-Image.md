@@ -5,6 +5,8 @@ Slug: Docker-Build-GPU-Base-Image
 Title: Docker Build GPU Base Image
 Category: 
 Tags: Docker
+summary: Reason is the light and the light of life.
+toc: show
 
 [https://docs.docker.com/engine/reference/commandline/docker/](https://docs.docker.com/engine/reference/commandline/docker/)
 

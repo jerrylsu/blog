@@ -5,8 +5,8 @@ Slug: Leetcode-Index
 Title: Leetcode Index
 Category: 
 Tags: Leetcode
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 <font color=red>1. Two Sum</font>
 [**<font color=green>2. Add Two Numbers</font>**](http://www.jerrulsu.com/2018/09/26/2-Add-Two-Numbers/)

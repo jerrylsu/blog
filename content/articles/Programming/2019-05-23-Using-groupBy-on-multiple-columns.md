@@ -5,6 +5,8 @@ Slug: Using-groupBy-on-multiple-columns
 Title: Using groupBy on multiple columns
 Category: 
 Tags: Python
+summary: Reason is the light and the light of life.
+toc: show
 
 
 Group By X means put all those with the same value for X in the one group.

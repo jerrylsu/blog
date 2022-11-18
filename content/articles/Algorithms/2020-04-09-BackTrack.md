@@ -5,8 +5,8 @@ Slug: BackTracking
 Title: BackTracking
 Category: 
 Tags: Algorithm, BackTracking
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 [Ref. Backtracking](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/)
 

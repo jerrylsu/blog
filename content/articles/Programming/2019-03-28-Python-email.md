@@ -5,8 +5,8 @@ Slug: Python-email
 Title: Python email
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```python
 import smtplib

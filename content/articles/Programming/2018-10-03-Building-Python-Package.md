@@ -5,8 +5,8 @@ Slug: Building-Python-Package-with-Pybuilder
 Title: Building Python Package with Pybuilder
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ## Building Python Package
 

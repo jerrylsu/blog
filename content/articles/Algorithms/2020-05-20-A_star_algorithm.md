@@ -5,8 +5,8 @@ Slug: A_star_algorithm
 Title: A* Heuristic Algorithm
 Category: 
 Tags: A*, Algorithm
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 ```cpp
 #include <algorithm>  // for sort

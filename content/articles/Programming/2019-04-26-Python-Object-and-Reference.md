@@ -5,8 +5,8 @@ Slug: Python Object and Reference
 Title: Python Object and Reference
 Category: 
 Tags: Python
-
-[TOC]
+summary: Reason is the light and the light of life.
+toc: show
 
 C/C++中函数传递参数方式有：按值传递 和 按址传递。而在一切皆对象的Python中则完全不可延续C/C++的思想，而是要有**可变对象**和**不可变对象**的概念才能理解。
 

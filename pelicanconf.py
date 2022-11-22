@@ -41,7 +41,6 @@ DIRECT_TEMPLATES = [
     'authors', 
     'categories', 
     'tags',
-    "annie",
     'archives', 
     '404',
     'search',

@@ -9,9 +9,7 @@ $ conda create -n blog python=3.6.8
 
 $ conda activate blog
 
-$ pip install pelican -i https://pypi.doubanio.com/simple
-
-$ pip install bs4 markdown webassets cssmin -i https://pypi.doubanio.com/simple
+$ pip install -r requirements.txt -i https://pypi.doubanio.com/simple
 ```
 
 ### 3. Install themes & plugins

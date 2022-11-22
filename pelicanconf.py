@@ -21,9 +21,7 @@ RELATIVE_URLS = True
 LOCALE = 'en_US'
 DEFAULT_LANG = 'en'
 TIMEZONE = 'Asia/Shanghai'
-DATE_FORMATS = {
-    'en': '%b %d, %Y',
-}
+DATE_FORMATS = {'en': '%b %d, %Y'}
 
 # Build settings
 PATH = 'content'
@@ -49,9 +47,9 @@ DIRECT_TEMPLATES = [
 ]
 
 EXTRA_PATH_METADATA = {
-        'extra/CNAME': {'path': 'CNAME'},
-        'extra/jerry.jpg': {'path': 'jerry.jpg'}
-        }
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/jerry.jpg': {'path': 'jerry.jpg'}
+}
 
 # below pages are not included in the theme, but you want to customize them in html and layout
 # TEMPLATE_PAGES = {
@@ -92,16 +90,16 @@ STATIC_PATHS = ['images', 'extra']
 
 PLUGINS = [
     # 'extract_toc',
-    'sitemap', # generate sitemap document, see <https://www.sitemaps.org>
+    'sitemap',        # generate sitemap document, see <https://www.sitemaps.org>
     'minchin.pelican.plugins.post_stats', # generate post statistics
-    'related_posts', # find articles those share common tags
-    'neighbors', # find next, previous article
-    'share_post', # static sharing buttons
-    'tipue_search', # generate data for searching
+    'related_posts',  # find articles those share common tags
+    'neighbors',      # find next, previous article
+    'share_post',     # static sharing buttons
+    'tipue_search',   # generate data for searching
     # 'tag_cloud',
     'render_math',
-    #'i18n_subsites',
-    #nb_markup
+    # 'i18n_subsites',
+    # nb_markup
 ]
 
 SITEMAP = {
@@ -150,7 +148,7 @@ MARKDOWN = {
 
 # Social widget
 SOCIAL = {
-	'facebook': 'https://facebook.com/jerrylsu',
+    'facebook': 'https://facebook.com/jerrylsu',
     'github': 'https://github.com/jerrylsu',
     'linkedin': 'https://www.linkedin.com/in/jerrylsu',
     'twitter': 'https://twitter.com/Jerrylsu666',

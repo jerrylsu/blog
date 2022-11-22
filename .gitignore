@@ -5,4 +5,5 @@ output
 content/cache
 themes
 plugins
-sh/jupyterlab.log
+jupyterlab.log
+autotools

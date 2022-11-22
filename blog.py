@@ -1,6 +1,7 @@
 import os
 import time
 from loguru import logger
+from argparse import Namespace
 from autotools.autotools import Git, NoteBook, Pelican, JupyterLab
 
 DASHES = '-' * 120
@@ -9,8 +10,7 @@ DASHES = '-' * 120
 class Blogger:
     """Create an instance of Blogger.
     """
-    def __init__(self, blog_dir: str):
-        self.blog_dir = blog_dir
+    def __init__(self):
         self.git_engine = Git()
         self.pelican_engine = Pelican()
         self.nb_engine = NoteBook()
@@ -37,25 +37,25 @@ class Blogger:
             return False
         return True
 
-    def _pelican_generate(self):
+    def _pelican_generate(self, args: Namespace):
         """Generate the blog/site using Pelican.
         """
-        self.pelican_engine.generate(self.blog_dir)
+        self.pelican_engine.generate(args.blog_dir)
 
-    def publish(self):
+    def publish(self, args: Namespace):
         """Publish the blog to GitHub pages.
         """
         # 1.Push commits of this repository to dclong/blog on GitHub.
         logger.info("[Push] Blog " + DASHES)
-        self._push_github(self.blog_dir)
+        self._push_github(args.blog_dir)
 
         # 2.Generate the blog/site using Pelican.
         logger.info("[Pelican] Blog " + DASHES)
-        self._pelican_generate()
+        self._pelican_generate(args.blog_dir)
 
         # 3.Push compiled output to GitHub to generate GitHub pages.
         logger.info("[Publish] Blog " + DASHES)
-        output_path = os.path.join(self.blog_dir, "output")
+        output_path = os.path.join(args.blog_dir, "output")
         self._push_github(path=output_path)
 
     def launch_jupyterlab(self, port: int = 8888, notebook_dir: str = "~/Documents/blog") -> bool:
@@ -79,9 +79,3 @@ class Blogger:
             return status
         logger.info(f"Jupyterlab server kill success, pid: {pid_jupyterlab}")
         return status
-
-
-if __name__ == "__main__":
-    blog = Blogger(blog_dir="/Users/sulei03/Documents/blog")
-    blog.publish()
-    pass

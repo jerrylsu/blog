@@ -37,10 +37,10 @@ class Blogger:
             return False
         return True
 
-    def _pelican_generate(self, args: Namespace):
+    def _pelican_generate(self, path: str):
         """Generate the blog/site using Pelican.
         """
-        self.pelican_engine.generate(args.blog_dir)
+        self.pelican_engine.generate(path)
 
     def publish(self, args: Namespace):
         """Publish the blog to GitHub pages.

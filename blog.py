@@ -2,7 +2,7 @@ import os
 import time
 from loguru import logger
 from argparse import Namespace
-from autotools.autotools import Git, NoteBook, Pelican, JupyterLab
+from autotools import Git, NoteBook, Pelican, JupyterLab
 
 DASHES = '-' * 120
 

@@ -6,10 +6,10 @@ from datetime import datetime
 # Site info
 AUTHOR = 'JERRY'
 
-SITENAME = 'JERRYLSU.NET'
-SITETITLE = 'JERRYLSU'
-SITESUBTITLE = 'Warm the world with cold Reason'
-SITEDESCRIPTION = 'Warm the world with cold Reason'
+SITENAME = 'JERRYLSU'
+SITETITLE = 'JERRYLSU.NET'
+# SITESUBTITLE = 'Warm the world with cold Reason'
+# SITEDESCRIPTION = 'Warm the world with cold Reason'
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 
@@ -40,7 +40,8 @@ DIRECT_TEMPLATES = [
     'index', 
     'authors', 
     'categories', 
-    'tags', 
+    'tags',
+    "annie",
     'archives', 
     '404',
     'search',
@@ -73,7 +74,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Advanced Settings
-FORMATTED_FIELDS = [] # removed 'summary'
+FORMATTED_FIELDS = []  # removed 'summary'
 STATIC_PATHS = ['images', 'extra']
 
 # Plugins

@@ -28,7 +28,7 @@ Modified: 2022-04-07 20:00
 
 - Jun. 2020 - Sep. 2020, **[BAAI-JD Multimodal Dialog Challenge](http://www.jerrylsu.net/articles/2020/nlp-JDMDC2020.html)**
 
-- Oct. 2020 - Present, **[Pyutils: Python pacakage that contains misc utils](https://github.com/jerrylsu/pyutils)**
+- Oct. 2020 - Present, **[autotools: This is a Python pacakage that contains automation tools.](https://github.com/jerrylsu/autotools)**
 
 - Sep. 2018 - Present, **[Jerry's Technology Blog with Pelican](https://github.com/jerrylsu/blog)**
 

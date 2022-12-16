@@ -4,7 +4,6 @@ slug: Brackets-Matching
 title: Brackets Matching
 category: 
 tags: Algorithm
-summary: Reason is the light and the light of life.
 toc: show
 
 
@@ -37,7 +36,7 @@ def brackets_match(text: str) -> int:
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2022-12-16-Brackets-Matching.ipynb to markdown
-    [NbConvertApp] Writing 1800 bytes to 2022-12-16-Brackets-Matching.md
+    [NbConvertApp] Writing 1137 bytes to 2022-12-16-Brackets-Matching.md
 
 
 

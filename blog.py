@@ -45,7 +45,7 @@ class Blogger:
     def publish(self, args: Namespace):
         """Publish the blog to GitHub pages.
         """
-        # 1.Push commits of this repository to dclong/blog on GitHub.
+        # 1.Push commits of this repository to jerrylsu/blog on GitHub.
         logger.info("[Push] Blog " + DASHES)
         self._push_github(args.blog_dir)
 

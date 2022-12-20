@@ -37,5 +37,6 @@ if __name__ == '__main__':
     """
     blogger = Blogger()
     # blogger.launch_jupyterlab()
+    # blogger.kill_jupyterlab()
     args = parse_args()
     args.func(args)

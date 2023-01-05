@@ -25,6 +25,6 @@ toc: show
 
 ###### 4.Reference
 
-https://github.com/google/evcxr/blob/main/evcxr_jupyter/README.md
+[https://github.com/google/evcxr/blob/main/evcxr_jupyter/README.md](https://github.com/google/evcxr/blob/main/evcxr_jupyter/README.md)
 
-https://datacrayon.com/posts/programming/rust-notebooks/setup-anaconda-jupyter-and-rust/
+[https://datacrayon.com/posts/programming/rust-notebooks/setup-anaconda-jupyter-and-rust/](https://datacrayon.com/posts/programming/rust-notebooks/setup-anaconda-jupyter-and-rust/)

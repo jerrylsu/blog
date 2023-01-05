@@ -52,16 +52,16 @@ $ echo 'www.jerrylsu.net' >> output/CNAME
 # Generate automatically deployment files into output directory
 # and deploy blog to github.com:jerrylsu/jerrylsu.github.io.git.
 
-$ ./cmder p
+$ python main.py p -c
 ```
 
 ### 7. Jupyterlab server
 
 Using my blog with jupyterlab server.
 
-- start:`./start_jupyterlab.sh`
+- launch:`python main.py l`
 
-- stop: `./stop_jupyterlab.sh`
+- kill: `python main.py k`
 
 ### 8. Terminal
 
@@ -87,11 +87,11 @@ Settings > Advanced Settings Editor > Terminal > User Preferences
     // Theme
     // The theme for the terminal.
     "theme": "dark",
-    
+
     // Font family
     // The font family used to render text.
     "fontFamily": "Meslo LG s for PowerLine",
-    
+
     // Font size
     // The font size used to render text.
     "fontSize": 15,

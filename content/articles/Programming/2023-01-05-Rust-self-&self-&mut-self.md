@@ -13,6 +13,5 @@ toc: show
 - **&mut self**: (self: &mut Self) If we wanted to change the instance that we’ve called the method on as part of what the method does, we’d use &mut self as the first parameter.
 
 
-
-https://stackoverflow.com/questions/59018413/when-to-use-self-self-mut-self-in-methods
+[https://stackoverflow.com/questions/59018413/when-to-use-self-self-mut-self-in-methods](https://stackoverflow.com/questions/59018413/when-to-use-self-self-mut-self-in-methods)
 

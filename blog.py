@@ -58,18 +58,20 @@ class Blogger:
         output_path = os.path.join(args.blog_dir, "output")
         self._push_github(path=output_path)
 
-    def launch_jupyterlab(self, port: int = 8888, notebook_dir: str = "~/Documents/blog") -> bool:
+    def launch_jupyterlab(self, args: Namespace) -> bool:
         """Launch jupyterlab server.
         """
-        status = self.jupyterlab_engine.launch(port=port, notebook_dir=notebook_dir)
+        status = self.jupyterlab_engine.launch(port=args.port, notebook_dir=args.notebook_dir)
         if not status:
             logger.info(f"Jupyterlab server launch failed.")
             return status
         time.sleep(1)
-        logger.info(f"Jupyterlab server launch success, pid: {self.jupyterlab_engine.get_jupyterlab_pid()}")
+        logger.info(f"Jupyterlab server launch success, port: {args.port}, "
+                    f"pid: {self.jupyterlab_engine.get_jupyterlab_pid()}, "
+                    f"notebook_dir: {args.notebook_dir}")
         return status
 
-    def kill_jupyterlab(self) -> bool:
+    def kill_jupyterlab(self, args: Namespace) -> bool:
         """Kill jupyterlab server.
         """
         pid_jupyterlab = self.jupyterlab_engine.get_jupyterlab_pid()

@@ -26,7 +26,7 @@ Modified: 2022-04-07 20:00
 
 - Jan. 2021 - Apr. 2021, **[Novel Molecular Toxicity Prediction](https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model)**
 
-- Jun. 2020 - Sep. 2020, **[BAAI-JD Multimodal Dialog Challenge](http://www.jerrylsu.net/articles/2020/nlp-JDMDC2020.html)**
+- Jun. 2020 - Sep. 2020, **[2nd, BAAI-JD Multimodal Dialog Challenge](https://www.jerrylsu.net/articles/JDMDC2020.html)**
 
 - Oct. 2020 - Present, **[autotools: This is a Python pacakage that contains automation tools.](https://github.com/jerrylsu/autotools)**
 

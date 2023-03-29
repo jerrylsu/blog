@@ -13,6 +13,8 @@ In recent years, there has been a growing interest in building models that can f
 
 ![self-instruct]({static}/images/Self-instruct/self-instruct.jpeg)
 
+The Self-Instruct process is an iterative bootstrapping algorithm that starts with a seed set of manually-written instructions and uses them to prompt the language model to generate new instructions and corresponding input-output instances. These generations are then filtered to remove low-quality or similar ones, and the resulting data is added back to the task pool. This process can be repeated multiple times, resulting in a large collection of instructional data that can be used to fine-tune the language model to follow instructions more effectively.
+
 
 ```python
 !jupyter nbconvert --to markdown 2023-03-29-Self-instruct.ipynb
@@ -20,5 +22,5 @@ In recent years, there has been a growing interest in building models that can f
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2023-03-29-Self-instruct.ipynb to markdown
-    [NbConvertApp] Writing 1248 bytes to 2023-03-29-Self-instruct.md
+    [NbConvertApp] Writing 1586 bytes to 2023-03-29-Self-instruct.md
 

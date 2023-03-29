@@ -12,3 +12,13 @@ toc: show
 In recent years, there has been a growing interest in building models that can follow natural language instructions to perform a wide range of tasks. These models, known as "instruction-tuned" language models, have demonstrated the ability to generalize to new tasks. However, their performance is heavily dependent on the quality and quantity of the human-written instruction data used to train them, which can be limited in diversity and creativity. To overcome these limitations, it is important to develop alternative approaches for supervising instruction-tuned models and improving their instruction-following capabilities.
 
 ![self-instruct]({static}/images/Self-instruct/self-instruct.jpeg)
+
+
+```python
+!jupyter nbconvert --to markdown 2023-03-29-Self-instruct.ipynb
+```
+
+    [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+    [NbConvertApp] Converting notebook 2023-03-29-Self-instruct.ipynb to markdown
+    [NbConvertApp] Writing 1248 bytes to 2023-03-29-Self-instruct.md
+

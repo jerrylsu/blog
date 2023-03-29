@@ -4,7 +4,6 @@ slug: Self-Instruct
 title: Self instruct
 category: 
 tags: LM, NLP
-summary: Reason is the light and the light of life.
 toc: show
 
 **Self-Instruct** is a framework that helps language models improve their ability to follow natural language instructions. It does this by using the model's own generations to create a large collection of instructional data. With Self-Instruct, it is possible to improve the instruction-following capabilities of language models without relying on extensive manual annotation.
@@ -22,5 +21,5 @@ The Self-Instruct process is an iterative bootstrapping algorithm that starts wi
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2023-03-29-Self-instruct.ipynb to markdown
-    [NbConvertApp] Writing 1586 bytes to 2023-03-29-Self-instruct.md
+    [NbConvertApp] Writing 2147 bytes to 2023-03-29-Self-instruct.md
 

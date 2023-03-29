@@ -1,7 +1,7 @@
 date: 2023-04-29 11:17:17
 author: Jerry Su
 slug: Self-Instruct
-title: Self instruct
+title: SELF-INSTRUCT: Aligning Language Model with Self Generated Instructions
 category: 
 tags: LM, NLP
 toc: show
@@ -21,5 +21,5 @@ The Self-Instruct process is an iterative bootstrapping algorithm that starts wi
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2023-03-29-Self-instruct.ipynb to markdown
-    [NbConvertApp] Writing 2147 bytes to 2023-03-29-Self-instruct.md
+    [NbConvertApp] Writing 2095 bytes to 2023-03-29-Self-instruct.md
 

@@ -2,7 +2,7 @@ Title: About
 Summary: Warm the world with cold reason
 Author: JerrySu
 Date: 2018-10-07 10:00
-Modified: 2022-04-07 20:00
+Modified: 2023-07-22 20:00
 
 
 #### Jerry
@@ -16,6 +16,10 @@ Modified: 2022-04-07 20:00
 
 #### PROJECTS
 
+- Oct. 2020 - Present, **[autotools: This is a Python pacakage that contains automation tools.](https://github.com/jerrylsu/autotools)**
+
+- Sep. 2018 - Present, **[Jerry's Technology Blog with Pelican](https://github.com/jerrylsu/blog)**
+
 - Apr. 2022 - Apr. 2022, **[Feedback Prize - Evaluating Student Writing](https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing)**
 
 - Mar. 2021 - Apr. 2021, **[Utterance Rewriter with Transformer and Pointer Networker](https://github.com/jerrylsu/UtteranceRewriter)**
@@ -27,10 +31,6 @@ Modified: 2022-04-07 20:00
 - Jan. 2021 - Apr. 2021, **[Novel Molecular Toxicity Prediction](https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model)**
 
 - Jun. 2020 - Sep. 2020, **[2nd, BAAI-JD Multimodal Dialog Challenge](https://www.jerrylsu.net/articles/JDMDC2020.html)**
-
-- Oct. 2020 - Present, **[autotools: This is a Python pacakage that contains automation tools.](https://github.com/jerrylsu/autotools)**
-
-- Sep. 2018 - Present, **[Jerry's Technology Blog with Pelican](https://github.com/jerrylsu/blog)**
 
 
 #### EXPERIENCE

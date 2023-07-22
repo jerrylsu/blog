@@ -39,7 +39,7 @@ Modified: 2022-04-07 20:00
 
 - Dec. 2019 - May. 2021, **CloudWalk**. Algorithm Engineer
 
-- Sep. 2018 - Oct. 2019, **eBay**. Data Scientist Intern, advised by [Ben](https://www.linkedin.com/in/ben-chuanlong-du-1239b221/)
+- Sep. 2018 - Oct. 2019, **eBay**. Data Scientist Intern, advised by [Ben](https://www.legendu.net/)
 
 - Jul. 2018 - Aug. 2018, **Tencent**. Algorithm Engineer Intern
 

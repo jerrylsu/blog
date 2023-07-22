@@ -37,11 +37,5 @@ Modified: 2023-07-22 20:00
 
 - Jun. 2021 - Present, **Baidu**. Senior Algorithm Engineer
 
-- Dec. 2019 - May. 2021, **CloudWalk**. Algorithm Engineer
-
 - Sep. 2018 - Oct. 2019, **eBay**. Data Scientist Intern, advised by [Ben](https://www.legendu.net/)
-
-- Jul. 2018 - Aug. 2018, **Tencent**. Algorithm Engineer Intern
-
-- May. 2017 - Jun. 2018, **USTC**. Research Assistant
 

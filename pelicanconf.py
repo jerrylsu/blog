@@ -148,7 +148,7 @@ MARKDOWN = {
 
 # Social widget
 SOCIAL = {
-    'facebook': 'https://facebook.com/jerrylsu',
+    # 'facebook': 'https://facebook.com/jerrylsu',
     'github': 'https://github.com/jerrylsu',
     'linkedin': 'https://www.linkedin.com/in/jerrylsu',
     'twitter': 'https://twitter.com/Jerrylsu666',

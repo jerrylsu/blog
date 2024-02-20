@@ -14,8 +14,10 @@ toc: show
 
 
 调整后的概率计算公式为：
+
 $P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}}$
-其中，\(P(w_i)\)是单词\(w_i\)的原始概率，\(P'(w_i)\)是调整温度后的概率，\(T\)是温度参数。
+
+其中，$P(w_i)$是单词$w_i$的原始概率，$P'(w_i)$是调整温度后的概率，$T$是温度参数。
 
 ### 温度影响
 - **高温度**（\(T > 1\)）：使概率分布更加平坦（即使低概率的单词也有更高的被选中机会）。这导致文本生成更加多样化和不可预测，但也可能增加生成文本中出现不相关或非连贯内容的风险。
@@ -83,7 +85,7 @@ $CumulativeProbability(i) \geq p$
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 2407 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 2405 bytes to 2024-02-20-Top-p-Sampling.md
 
 
 

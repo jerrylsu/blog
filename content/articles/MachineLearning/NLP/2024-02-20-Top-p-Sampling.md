@@ -80,15 +80,84 @@ $CumulativeProbability(i) \geq p$
 
 
 ```python
+class TopPLogitsWarper(LogitsWarper):
+    """
+    [`LogitsWarper`] that performs top-p, i.e. restricting to top tokens summing to prob_cut_off <= prob_cut_off.
+
+    Args:
+        top_p (`float`):
+            If set to < 1, only the smallest set of most probable tokens with probabilities that add up to `top_p` or
+            higher are kept for generation.
+        filter_value (`float`, *optional*, defaults to `-float("Inf")`):
+            All filtered values will be set to this float value.
+        min_tokens_to_keep (`int`, *optional*, defaults to 1):
+            Minimum number of tokens that cannot be filtered.
+
+    Examples:
+    ```python
+    >>> from transformers import AutoTokenizer, AutoModelForCausalLM, set_seed
+
+    >>> set_seed(0)
+    >>> model = AutoModelForCausalLM.from_pretrained("gpt2")
+    >>> tokenizer = AutoTokenizer.from_pretrained("gpt2")
+
+    >>> text = "It is probably one of the most important things for parents to teach children about patience and acceptance. In this way, we as a society can ensure"
+    >>> inputs = tokenizer(text, return_tensors="pt")
+
+    >>> # Generate sequences without top_p sampling
+    >>> # We see that the answer tends to have a lot of repeated tokens and phrases
+    >>> outputs = model.generate(**inputs, max_length=55)
+    >>> print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
+    'It is probably one of the most important things for parents to teach children about patience and acceptance. In this way, we as a society can ensure that our children are not taught to be impatient or to be afraid of the future.\n\nThe first step is to teach them'
+
+    >>> # Generate sequences with top_p sampling: set `do_sample=True` to use top_p sampling with `top_p` arugment
+    >>> # We already see that the answer has less repetitive tokens and is more diverse
+    >>> outputs = model.generate(**inputs, max_length=55, do_sample=True, top_p=0.25)
+    >>> print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
+    'It is probably one of the most important things for parents to teach children about patience and acceptance. In this way, we as a society can ensure that children learn to be more accepting of others and to be more tolerant of others.\n\nWe can also teach children to be'
+
+    >>> # Generate sequences with top_p sampling with a larger top_p value
+    >>> # We see that as we increase the top_p value, less probable tokens also get selected during text generation, making the answer more diverse
+    >>> # Pro Tip: In practice, we tend to use top_p values between 0.9 and 1.0!
+    >>> outputs = model.generate(**inputs, max_length=55, do_sample=True, top_p=0.95)
+    >>> print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
+    'It is probably one of the most important things for parents to teach children about patience and acceptance. In this way, we as a society can ensure we have the best learning environment, so that we can teach to learn and not just take advantage of the environment.\n\nThe'
+    ```
+    """
+
+    def __init__(self, top_p: float, filter_value: float = -float("Inf"), min_tokens_to_keep: int = 1):
+        top_p = float(top_p)
+        if top_p < 0 or top_p > 1.0:
+            raise ValueError(f"`top_p` has to be a float > 0 and < 1, but is {top_p}")
+        if not isinstance(min_tokens_to_keep, int) or (min_tokens_to_keep < 1):
+            raise ValueError(f"`min_tokens_to_keep` has to be a positive integer, but is {min_tokens_to_keep}")
+
+        self.top_p = top_p
+        self.filter_value = filter_value
+        self.min_tokens_to_keep = min_tokens_to_keep
+
+    @add_start_docstrings(LOGITS_PROCESSOR_INPUTS_DOCSTRING)
+    def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
+        sorted_logits, sorted_indices = torch.sort(scores, descending=False)
+        cumulative_probs = sorted_logits.softmax(dim=-1).cumsum(dim=-1)
+
+        # Remove tokens with cumulative top_p above the threshold (token with 0 are kept)
+        sorted_indices_to_remove = cumulative_probs <= (1 - self.top_p)
+        # Keep at least min_tokens_to_keep
+        sorted_indices_to_remove[..., -self.min_tokens_to_keep :] = 0
+
+        # scatter sorted tensors to original indexing
+        indices_to_remove = sorted_indices_to_remove.scatter(1, sorted_indices, sorted_indices_to_remove)
+        scores = scores.masked_fill(indices_to_remove, self.filter_value)
+        return scores
+```
+
+
+```python
 !jupyter nbconvert --to markdown 2024-02-20-Top-p-Sampling.ipynb
 ```
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 2399 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 2370 bytes to 2024-02-20-Top-p-Sampling.md
 
-
-
-```python
-
-```

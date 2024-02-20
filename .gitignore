@@ -7,3 +7,4 @@ themes
 plugins
 jupyterlab.log
 autotools
+workdir

@@ -1,6 +1,7 @@
 date: 2024-02-20 11:17:17
 author: Jerry Su
-title: Nucleus Sampling，Top-p Sampling
+slug: Nucleus Sampling Top-p Sampling
+title: Nucleus Sampling Top-p Sampling
 category: 
 tags: LLM, NLP
 toc: show
@@ -66,15 +67,10 @@ $CumulativeProbability(i) \geq p$
 
 
 ```python
-!jupyter nbconvert --to markdown 2024-01-04-Vary.ipynb
+!jupyter nbconvert --to markdown 2024-02-20-Top-p-Sampling.ipynb
 ```
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
-    [NbConvertApp] Converting notebook 2024-01-04-Vary.ipynb to markdown
-    [NbConvertApp] Writing 10547 bytes to 2024-01-04-Vary.md
+    [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
+    [NbConvertApp] Writing 1980 bytes to 2024-02-20-Top-p-Sampling.md
 
-
-
-```python
-
-```

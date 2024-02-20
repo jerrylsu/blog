@@ -14,7 +14,7 @@ toc: show
 
 
 调整后的概率计算公式为：
-$ P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}} $
+$P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}}$
 其中，\(P(w_i)\)是单词\(w_i\)的原始概率，\(P'(w_i)\)是调整温度后的概率，\(T\)是温度参数。
 
 ### 温度影响

@@ -83,7 +83,7 @@ $CumulativeProbability(i) \geq p$
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 1980 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 2407 bytes to 2024-02-20-Top-p-Sampling.md
 
 
 

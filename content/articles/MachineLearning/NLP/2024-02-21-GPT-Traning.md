@@ -3,7 +3,7 @@ author: Jerry Su
 slug: GPT-Train
 title: GPT Training
 category: 
-tags: LLM, NLP
+tags: LLM
 toc: show
 
 ## Teacher Forcing
@@ -26,6 +26,11 @@ toc: show
 ```
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
-    [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 6822 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Converting notebook 2024-02-21-GPT-Traning.ipynb to markdown
+    [NbConvertApp] Writing 755 bytes to 2024-02-21-GPT-Traning.md
 
+
+
+```python
+
+```

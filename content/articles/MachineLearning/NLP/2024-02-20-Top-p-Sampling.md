@@ -3,7 +3,7 @@ author: Jerry Su
 slug: Nucleus Sampling Top-p Sampling
 title: Nucleus Sampling Top-p Sampling
 category: 
-tags: LLM, NLP
+tags: LLM
 toc: show
 
 ### 1. 温度调节（Temperature Scaling）
@@ -160,7 +160,7 @@ class TopPLogitsWarper(LogitsWarper):
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 6822 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 6832 bytes to 2024-02-20-Top-p-Sampling.md
 
 
 

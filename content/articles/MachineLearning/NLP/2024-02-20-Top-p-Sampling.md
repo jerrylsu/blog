@@ -6,7 +6,7 @@ category:
 tags: LLM
 toc: show
 
-### 1. 温度调节（Temperature Scaling）
+#### 1. 温度调节（Temperature Scaling）
 
 - 为了调整概率分布的“锐利度”，可以引入一个温度参数（Temperature）。温度较高时，概率分布变得更加平坦，增加了低概率单词被选中的机会；温度较低时，概率分布变得更尖锐，高概率单词被选中的机会增加。
 
@@ -24,7 +24,7 @@ $P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}
 - **中等温度** $T = 1$：保持原始概率分布不变，不对分布进行平滑或尖锐化处理。
 
 
-### 2. 核采样（Nucleus Sampling，Top-p Sampling）
+#### 2. 核采样（Nucleus Sampling，Top-p Sampling）
 
 - 核采样是一种更高级的采样策略，它选择累积概率超过某个阈值p的最小单词集。这允许模型动态调整采样的单词数量，基于当前上下文的不确定性。
 
@@ -35,7 +35,7 @@ $P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}
 - 核采样的关键思想是从词汇分布中选择一个词汇子集，使得这个子集中词汇的累积概率接近但不超过一个预先定义的阈值p（0 < p < 1）。这个子集被称为“核”（nucleus），只有这个核中的词汇会被考虑用于下一步的随机采样。这样，生成的文本既不会过于随机（因为避免了极低概率词的干扰），也不会过于确定性（因为没有限制为前K个最高概率的词）。
 
 
-### 3. 累计概率
+#### 3. 累计概率
 
 累积概率的计算是在处理概率分布时的一个关键步骤，尤其是在执行如核采样（Top-p Sampling）这样的任务时。累积概率为我们提供了一个方式，来确定随机事件发生的概率范围。在核采样中，它帮助我们决定哪些词汇（单词）的集合应该被考虑进来，以确保这个集合覆盖了预定比例$p$的概率总和。这里是累积概率计算的具体步骤：
 
@@ -160,7 +160,7 @@ class TopPLogitsWarper(LogitsWarper):
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 6832 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 6827 bytes to 2024-02-20-Top-p-Sampling.md
 
 
 

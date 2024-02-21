@@ -19,7 +19,6 @@ $P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}
 
 其中，$P(w_i)$是单词$w_i$的原始概率，$P'(w_i)$是调整温度后的概率，$T$是温度参数。
 
-### 温度影响
 - **高温度** $T > 1$：使概率分布更加平坦（即使低概率的单词也有更高的被选中机会）。这导致文本生成更加多样化和不可预测，但也可能增加生成文本中出现不相关或非连贯内容的风险。
 - **低温度** $T < 1$：使概率分布更加尖锐，即增加高概率单词被选中的机会，同时降低低概率单词的影响。这导致生成的文本更加确定、连贯，但可能降低文本的多样性和创新性。
 - **中等温度** $T = 1$：保持原始概率分布不变，不对分布进行平滑或尖锐化处理。
@@ -34,6 +33,7 @@ $P'(w_i) = \frac{e^{\frac{\log(P(w_i))}{T}}}{\sum_{j} e^{\frac{\log(P(w_j))}{T}}
 **核采样原理**
 
 - 核采样的关键思想是从词汇分布中选择一个词汇子集，使得这个子集中词汇的累积概率接近但不超过一个预先定义的阈值p（0 < p < 1）。这个子集被称为“核”（nucleus），只有这个核中的词汇会被考虑用于下一步的随机采样。这样，生成的文本既不会过于随机（因为避免了极低概率词的干扰），也不会过于确定性（因为没有限制为前K个最高概率的词）。
+
 
 ### 3. 累计概率
 
@@ -77,6 +77,7 @@ $CumulativeProbability(i) \geq p$
 因此，为了确保累积概率超过0.6，我们需要选择单词A、B、C作为考虑的词汇范围。
 
 通过这种方式，核采样算法确保在生成下一个单词时，考虑了概率分布中最重要的部分，同时保持了一定程度的随机性和多样性。
+
 
 
 ```python
@@ -159,5 +160,10 @@ class TopPLogitsWarper(LogitsWarper):
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
     [NbConvertApp] Converting notebook 2024-02-20-Top-p-Sampling.ipynb to markdown
-    [NbConvertApp] Writing 2370 bytes to 2024-02-20-Top-p-Sampling.md
+    [NbConvertApp] Writing 6822 bytes to 2024-02-20-Top-p-Sampling.md
 
+
+
+```python
+
+```

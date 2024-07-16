@@ -1,10 +1,10 @@
 Status: published
 Date: 2020-04-28 03:48:00
 Author: Jerry Su
-Slug: Algorithms
-Title: Algorithms
+Slug: Algorithm
+Title: Algorithm
 Category: 
-Tags: Algorithms 
+Tags: Algorithm
 summary: Reason is the light and the light of life.
 toc: show
 

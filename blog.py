@@ -2,7 +2,7 @@ import os
 import time
 from loguru import logger
 from argparse import Namespace
-from autotools import Git, NoteBook, Pelican, JupyterLab
+from autotools import Git, Pelican, JupyterLab
 
 DASHES = '-' * 120
 
@@ -13,7 +13,6 @@ class Blogger:
     def __init__(self):
         self.git_engine = Git()
         self.pelican_engine = Pelican()
-        self.nb_engine = NoteBook()
         self.jupyterlab_engine = JupyterLab()
 
     def _push_github(

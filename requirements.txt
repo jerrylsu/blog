@@ -20,6 +20,7 @@ pelican-tag_cloud
 pelican-render_math
 pelican-i18n_subsites
 minchin.pelican.plugins.post_stats
+pelican-search
 git+https://github.com/getpelican/pelican-plugins/#egg=pelican-tipue-search&subdirectory=tipue_search
 git+https://github.com/jerrylsu/autotools.git
 

@@ -89,16 +89,16 @@ STATIC_PATHS = ['images', 'extra']
 # IGNORE_FILES = [".ipynb_checkpoints"]
 
 PLUGINS = [
-    # 'extract_toc',
+    'extract_toc',
     'sitemap',        # generate sitemap document, see <https://www.sitemaps.org>
     'minchin.pelican.plugins.post_stats', # generate post statistics
     'related_posts',  # find articles those share common tags
     'neighbors',      # find next, previous article
     'share_post',     # static sharing buttons
     'tipue_search',   # generate data for searching
-    # 'tag_cloud',
+    'tag_cloud',
     'render_math',
-    # 'i18n_subsites',
+    'i18n_subsites',
     # nb_markup
 ]
 

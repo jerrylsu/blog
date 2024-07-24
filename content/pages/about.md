@@ -1,10 +1,11 @@
-Title: About
-Summary: Warm the world with cold reason
-Author: JerrySu
-Modified: 2024-07-22 20:00
-
-
-#### Jerry
+---
+author: Jerry
+title: About me
+layout: page
+date: 2024-07-22 20:00
+status: hidden
+slug: landing-page-about-hidden
+---
 
 **Baidu**. Senior Algorithm Engineer, Jun. 2021 - Present
 

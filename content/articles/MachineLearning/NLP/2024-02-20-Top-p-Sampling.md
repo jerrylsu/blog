@@ -150,3 +150,7 @@ $CumulativeProbability(i) \geq p$
 因此，为了确保累积概率超过0.6，我们需要选择单词A、B、C作为考虑的词汇范围。
 
 通过这种方式，核采样算法确保在生成下一个单词时，考虑了概率分布中最重要的部分，同时保持了一定程度的随机性和多样性。
+
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5717141856714752-proj')</script>

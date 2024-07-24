@@ -9,10 +9,6 @@ slug: landing-page-about-hidden
 
 **Baidu**. Senior Algorithm Engineer, Jun. 2021 - Present
 
-- **Email**: sa517301@mail.ustc.edu.cn
+- **Email**: sa517301@mail.ustc.edu.cn  **Github**: [github.com/jerrylsu](https://github.com/jerrylsu)
 
-- **Github**: [github.com/jerrylsu](https://github.com/jerrylsu)
-
-- **YouTube**: [https://www.youtube.com/@jerrysu780](https://www.youtube.com/@jerrysu780)
-    
-- **Twitter**: [https://twitter.com/Jerrylsu666](https://twitter.com/Jerrylsu666)
+- **YouTube**: [https://www.youtube.com/@jerrysu780](https://www.youtube.com/@jerrysu780)  **Twitter**: [https://twitter.com/Jerrylsu666](https://twitter.com/Jerrylsu666)

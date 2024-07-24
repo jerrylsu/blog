@@ -12,7 +12,7 @@ $ conda activate blog
 $ pip install -r requirements.txt -i https://pypi.doubanio.com/simple
 ```
 
-### 3. Install themes & plugins
+### 3. Install themes
 
 The directory of themes and plugins can be pulled by pelican site.
 
@@ -27,6 +27,19 @@ $ git clone https://github.com/getpelican/pelican-themes.git
 $ pelican-themes --install themes/pelican-bootstrap3 --verbose
 ```
 
+#### add commentbox
+
+https://dashboard.commentbox.io/projects/5717141856714752-proj
+```
+<!-- 在这里添加 CommentBox 评论框代码 -->
+        <div class="commentbox"></div>
+        <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script> 
+        <script>commentBox('5717141856714752-proj')</script>
+```
+add into `themes/elegant/templates/base.html` file.
+
+### 4. Install  plugins
+
 #### download pelican plugins
 
 [https://github.com/getpelican/pelican-plugins](https://github.com/getpelican/pelican-plugins)
@@ -38,7 +51,17 @@ $ git clone git@github.com:getpelican/pelican-plugins.git
 $ mv pelican-plugins plugins
 ```
 
-### 4. Deploy Blog
+### 4. Localhost Deploy
+
+```
+$ pelican content
+
+$ pelican --listen
+
+# visit http://localhost:8000/
+```
+
+### 5. Deploy Blog
 
 ```
 $ mkdir output

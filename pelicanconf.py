@@ -151,14 +151,6 @@ SOCIAL = (
     ("RSS", SITEURL + "/feeds/all.atom.xml"),
 )
 
-# Site validation
-# CLAIM_GOOGLE = ""
-# CLAIM_BING = ""
-
-# Search Engine
-# you can use static search engine like TipueSearch or dynami engine like Google Custom Search Engine
-# GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
-
 # Landing Page
 PROJECTS_TITLE = "Related Projects"
 PROJECTS = [

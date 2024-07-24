@@ -8,7 +8,8 @@ AUTHOR = 'JERRY'
 
 SITENAME = 'JERRYLSU'
 SITETITLE = 'JERRYLSU.NET'
-LANDING_PAGE_TITLE = "Warm the world with cold Reason"
+SITESUBTITLE = 'Warm the world with cold Reason'
+SITEDESCRIPTION = 'Warm the world with cold Reason'
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 
@@ -24,7 +25,7 @@ DATE_FORMATS = {'en': '%b %d, %Y'}
 
 # Build settings
 PATH = 'content'
-THEME = 'elegant'
+THEME = 'simplify-theme'
 
 ARTICLE_PATHS = ['articles']
 ARTICLE_URL = 'articles/{slug}.html'
@@ -84,7 +85,7 @@ STATIC_PATHS = ['images', 'extra']
 # MARKUP = ("md", "ipynb")
 
 PLUGINS = [
-    'extract_toc',
+    # 'extract_toc',
     'sitemap',        # generate sitemap document, see <https://www.sitemaps.org>
     'minchin.pelican.plugins.post_stats', # generate post statistics
     'related_posts',  # find articles those share common tags
@@ -143,13 +144,13 @@ MARKDOWN = {
 }
 
 # Social widget
-SOCIAL = (
-    ('Email', '[email protected]', 'sa517301@mail.ustc.edu.cn'),
-    ("Github", "https://github.com/jerrylsu", "Jerry Github"),
-    ("YouTube", "https://www.youtube.com/@jerrysu780"),
-    ("Twitter", "https://twitter.com/Jerrylsu666"),
-    ("RSS", SITEURL + "/feeds/all.atom.xml"),
-)
+SOCIAL = {
+    # 'facebook': 'https://facebook.com/jerrylsu',
+    'github': 'https://github.com/jerrylsu',
+    'linkedin': 'https://www.linkedin.com/in/jerrylsu',
+    'twitter': 'https://twitter.com/Jerrylsu666',
+    'email': 'sa517301@mail.ustc.edu.cn',
+}
 
 # Site validation
 # CLAIM_GOOGLE = ""
@@ -159,36 +160,33 @@ SOCIAL = (
 # you can use static search engine like TipueSearch or dynami engine like Google Custom Search Engine
 # GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
 
-# Landing Page
-PROJECTS_TITLE = "Related Projects"
-PROJECTS = [
-        {
-        "name": "Autotools",
-        "url": "https://github.com/jerrylsu/autotools",
-        "description": "A Python pacakage that contains automation tools.",
-    },
-    {
-        "name": "Pelican Blog",
-        "url": "https://github.com/jerrylsu/blog",
-        "description": "Jerry's Technology Blog with Pelican.",
-    },
-    {
-        "name": "NMTP",
-        "url": "https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model",
-        "description": "Novel Molecular Toxicity Prediction.",
-    },
-    {
-        "name": "ESW",
-        "url": "https://github.com/jerrylsu/autotools",
-        "description": "Feedback Prize - Evaluating Student Writing.",
-    },
-    {
-        "name": "Mult-Dialog",
-        "url": "https://www.jerrylsu.net/articles/JDMDC2020.html",
-        "description": "2nd, BAAI-JD Multimodal Dialog Challenge.",
-    },
-]
-
 # Comments
-UTTERANCES_REPO = True
-UTTERANCES_FILTER = True
+DISQUS_SITENAME = "jerrylsu-github-io"
+
+# Sharing
+# SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
+ADD_THIS_ID = "ra-5d9ffca0db80069e" # can be on index, any article or page, and can track user activities
+
+# Tracking
+GOOGLE_ANALYTICS = "UA-42618265-2" # old method
+# GOOGLE_SITE_TAG = "UA-42618265-2" # new method to use with Tag Manager
+# GOOGLE_TAG_MANAGER = ""
+
+# Ads
+# GOOGLE_ADSENSE = {
+#     'id': 'ca-pub-9105473411342324',
+#     'ads': {
+#         'home': '7539833074',
+#         'sidebar': '5458247602',
+#         'page': '',
+#         'article': '',
+#     }
+# }
+
+# HEAP_ANALYTICS = ""
+
+# MATOMO_SITENAME = 'vuquangtronggithubio' # new site of PIWIK
+
+# PIWIK_SITE_ID = ""
+# PIWIK_URL = ""
+# PIWIK_SSL_URL = ""

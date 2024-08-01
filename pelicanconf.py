@@ -162,7 +162,7 @@ PROJECTS = [
     {
         "name": "DocTuning",
         "url": "https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing",
-        "description": "A Few-shot Modeling Platform.",
+        "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },
     {
         "name": "Ernie4Paddle",

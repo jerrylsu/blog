@@ -161,17 +161,17 @@ PROJECTS = [
     },
     {
         "name": "DocTuning",
-        "url": "https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing",
+        "url": "https://github.com/jerrylsu/articles/DocTuning.html",
         "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },
     {
         "name": "Ernie4Paddle",
-        "url": "https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing",
+        "url": "https://github.com/jerrylsu/articles/Ernie4Paddle.html",
         "description": "Feedback Prize - Evaluating Student Writing.",
     },
     {
         "name": "Multi-Dialogue",
-        "url": "https://www.jerrylsu.net/articles/JDMDC2020.html",
+        "url": "https://www.jerrylsu.net/articles/JD-Multimodal-Dialogue-Challenge.html",
         "description": "2nd, BAAI-JD Multimodal Dialogue Challenge.",
     },
     {

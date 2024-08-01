@@ -154,30 +154,35 @@ SOCIAL = (
 # Landing Page
 PROJECTS_TITLE = "Related Projects"
 PROJECTS = [
-        {
-        "name": "Autotools",
-        "url": "https://github.com/jerrylsu/autotools",
-        "description": "A Python pacakage that contains automation tools.",
-    },
     {
-        "name": "Pelican Blog",
-        "url": "https://github.com/jerrylsu/blog",
-        "description": "Jerry's Technology Blog with Pelican.",
-    },
-    {
-        "name": "NMTP",
+        "name": "UCSG",
         "url": "https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model",
-        "description": "Novel Molecular Toxicity Prediction.",
+        "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     },
     {
-        "name": "ESW",
+        "name": "DocTuning",
+        "url": "https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing",
+        "description": "A Few-shot Modeling Platform.",
+    },
+    {
+        "name": "Ernie4Paddle",
         "url": "https://github.com/jerrylsu/Kaggle-Feedback-Prize-Evaluating-Student-Writing",
         "description": "Feedback Prize - Evaluating Student Writing.",
     },
     {
-        "name": "Mult-Dialog",
+        "name": "Multi-Dialogue",
         "url": "https://www.jerrylsu.net/articles/JDMDC2020.html",
-        "description": "2nd, BAAI-JD Multimodal Dialog Challenge.",
+        "description": "2nd, BAAI-JD Multimodal Dialogue Challenge.",
+    },
+    {
+        "name": "Jerry's Blog",
+        "url": "https://github.com/jerrylsu/blog",
+        "description": "Jerry's Technology Blog with Pelican.",
+    },
+    {
+        "name": "Autotools",
+        "url": "https://github.com/jerrylsu/autotools",
+        "description": "A Python pacakage that contains automation tools.",
     },
 ]
 

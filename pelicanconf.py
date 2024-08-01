@@ -156,7 +156,7 @@ PROJECTS_TITLE = "Related Projects"
 PROJECTS = [
     {
         "name": "UCSG",
-        "url": "https://github.com/jerrylsu/Novel-Molecular-Toxicity-Prediction-Model",
+        "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
         "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     },
     {

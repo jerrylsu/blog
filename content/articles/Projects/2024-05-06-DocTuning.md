@@ -11,15 +11,15 @@ toc: show
 
 A Few-shot Modeling Platform for Natural Language Processing.
 
-## Home
+- **Home**
 ![bar]({static}/images/DocTuning/1.jpg)
 
-## Task
+- **Task**
 ![line]({static}/images/DocTuning/2.jpg)
 
-## Train
+- **Train**
 ![line]({static}/images/DocTuning/3.jpg)
 
-## Eval
+- **Eval**
 ![line]({static}/images/DocTuning/4.jpg)
 

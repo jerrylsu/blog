@@ -161,12 +161,12 @@ PROJECTS = [
     },
     {
         "name": "DocTuning",
-        "url": "https://github.com/jerrylsu/articles/DocTuning.html",
+        "url": "https://www.jerrylsu.net/articles/DocTuning.html",
         "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },
     {
         "name": "Ernie4Paddle",
-        "url": "https://github.com/jerrylsu/articles/Ernie4Paddle.html",
+        "url": "https://www.jerrylsu.net/articles/Ernie4Paddle.html",
         "description": "Feedback Prize - Evaluating Student Writing.",
     },
     {

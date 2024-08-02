@@ -12,6 +12,7 @@ markdown-captions
 markdown-checklist
 pelican==4.8.0
 pelican-jupyter==0.10.1
+pelican_youtube
 pelican-sitemap
 pelican-related_posts
 pelican-neighbors

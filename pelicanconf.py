@@ -77,13 +77,14 @@ STATIC_PATHS = ['images', 'extra']
 
 # Plugins
 # since version 4.5, plugins are installed as python packages, refer to requirements.txt
-# PLUGIN_PATHS = [
-#     './plugins'
-# ]
+PLUGIN_PATHS = [
+    './pelican-plugins'
+]
 # # PLUGINS
 # MARKUP = ("md", "ipynb")
 
 PLUGINS = [
+    # 'pelican_youtube',
     'extract_toc',
     'sitemap',        # generate sitemap document, see <https://www.sitemaps.org>
     'minchin.pelican.plugins.post_stats', # generate post statistics

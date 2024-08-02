@@ -1,6 +1,6 @@
 ---
 author: Jerry
-title: About me
+title: Contact me
 layout: page
 date: 2024-07-22 20:00
 status: hidden

@@ -48,7 +48,6 @@ $ cd blog
 
 $ git clone git@github.com:getpelican/pelican-plugins.git
 
-$ mv pelican-plugins plugins
 ```
 
 ### 4. Localhost Deploy

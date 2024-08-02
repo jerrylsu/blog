@@ -5,6 +5,7 @@ output
 content/cache
 themes
 plugins
+pelican-plugins
 jupyterlab.log
 autotools
 workdir

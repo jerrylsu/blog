@@ -156,6 +156,11 @@ SOCIAL = (
 PROJECTS_TITLE = "Related Projects"
 PROJECTS = [
     {
+        "name": "IndicatorQA",
+        "url": "IndicatorQA",
+        "description": "A Retrieval-Augmented Generation System that efficiently fetches relevant indicators and correlates associated data to answer queries accurately.",
+    },
+    {
         "name": "UCSG",
         "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
         "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",

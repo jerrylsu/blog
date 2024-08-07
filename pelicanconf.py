@@ -173,7 +173,17 @@ PROJECTS = [
     {
         "name": "Ernie4Paddle",
         "url": "https://www.jerrylsu.net/articles/Ernie4Paddle.html",
-        "description": "A Language Model development suite based on the PaddlePaddle deep learning framework.",
+        "description": "A language model development suite based on the PaddlePaddle deep learning framework.",
+    },
+    {
+        "name": "DocReviewAssistant",
+        "url": "Assisted review",
+        "description": "Operations Automation Platform: Document Assisted Review.",
+    },
+    {
+        "name": "UTCX",
+        "url": "PlaceHold",
+        "description": "Universal Text Classification.",
     },
     {
         "name": "GlobalPointer",

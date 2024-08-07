@@ -11,8 +11,8 @@ Ernie4Paddle
 
 Update
 ----
-- 2024.06.05: 新增OpenChartUCEModel模型评估工具及Benchmark。
-- 2024.05.24: 新增OpenChartUCEModel多模态图表结构化抽取推理引擎open_chart_uce_api。
+- 2024.06.05: 新增[OpenChartUCSGModel](https://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html)模型评估工具及Benchmark。
+- 2024.05.24: 新增[OpenChartUCSGModel](https://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html)多模态图表结构化抽取推理引擎open_chart_uce_api。
 - 2024.05.06: 新增DocTuning小样本建模平台。
 - 2023.08.02: 新增UIEX模型算子预处理uiex_async_server_api服务，提供对PDF文档的支持。
 - 2023.07.17: 新增JupyterLab工具以及对应Tools脚本。
@@ -32,7 +32,7 @@ Update
 - 2022.09.07: 新增data数据工程，支持各种版式、流式文档转换成文本格式的数据集。
 - 2022.09.06: 新增VisualDL可视化组件，支持超参数，模型结构，输入文本等可视化和实验数据持久化。
 - 2022.08.26: 新增基于PaddleNLP标准化训练器Trainer，支持自定义拓展。
-- 2022.08.24: 新增GlobalPointer模型Metric评价指标F1和准召。
+- 2022.08.24: 新增[GlobalPointer](https://www.jerrylsu.net/articles/Global-Pointer-Multi-Head-Attention-without-Value-Operation.html)模型Metric评价指标F1和准召。
 - 2022.08.24: 新增Multi Cross Entropy损失函数。
 - 2022.08.23: Ernie4Paddle架构重构，功能模块化，代码解耦。
-- 2022.08.22: 基于PaddleNLP继承重写Ernie GlobalPointer模型，重写ErnieEmbedding层增加层次分解编码。
+- 2022.08.22: 基于PaddleNLP继承重写Ernie [GlobalPointer](https://www.jerrylsu.net/articles/Global-Pointer-Multi-Head-Attention-without-Value-Operation.html)模型，重写ErnieEmbedding层增加层次分解编码。

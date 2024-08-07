@@ -161,13 +161,13 @@ PROJECTS = [
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",
     },
     {
-        "name": "UCSG",
+        "name": "OpenChartUCSG",
         "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
         "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     },
     {
         "name": "GP",
-        "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
+        "url": "https://www.jerrylsu.net/articles/Global-Pointer-Multi-Head-Attention-without-Value-Operation.html",
         "description": "Named Entity Recognition via Multi-Head Attention without Value Operation.",
     },
     {
@@ -178,7 +178,7 @@ PROJECTS = [
     {
         "name": "Ernie4Paddle",
         "url": "https://www.jerrylsu.net/articles/Ernie4Paddle.html",
-        "description": "Feedback Prize - Evaluating Student Writing.",
+        "description": "A Language Model development suite based on the PaddlePaddle deep learning framework.",
     },
     {
         "name": "Multi-Dialogue",

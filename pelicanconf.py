@@ -153,20 +153,20 @@ SOCIAL = (
 )
 
 # Landing Page
-PROJECTS_TITLE = "Related Projects"
+PROJECTS_TITLE = "Projects List"
 PROJECTS = [
     {
-        "name": "IndicatorQA",
+        "name": "👏👏👏IndicatorQA",
         "url": "IndicatorQA",
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",
     },
     {
-        "name": "OpenChartUCSG",
+        "name": "🔥🔥🔥UCSG",
         "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
         "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     },
     {
-        "name": "DocTuning",
+        "name": "🚀🚀🚀DocTuning",
         "url": "https://www.jerrylsu.net/articles/DocTuning.html",
         "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },
@@ -176,7 +176,7 @@ PROJECTS = [
         "description": "A Language Model development suite based on the PaddlePaddle deep learning framework.",
     },
     {
-        "name": "GP",
+        "name": "GlobalPointer",
         "url": "https://www.jerrylsu.net/articles/Global-Pointer-Multi-Head-Attention-without-Value-Operation.html",
         "description": "Named Entity Recognition via Multi-Head Attention without Value Operation.",
     },

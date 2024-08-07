@@ -8,7 +8,7 @@ AUTHOR = 'JERRY'
 
 SITENAME = 'JERRYLSU'
 SITETITLE = 'JERRYLSU.NET'
-LANDING_PAGE_TITLE = "☀️Warm the world with cold Reason"
+LANDING_PAGE_TITLE = "☀️☀️☀️Warm the world with cold Reason❄️"
 SITELOGO = 'jerry.jpg'
 COPYRIGHT_YEAR = datetime.now().year
 

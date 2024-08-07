@@ -1,12 +1,55 @@
 date: 2022-08-22 11:17:17
 author: Jerry Su
-slug: Global-Pointer
-title: Global Pointer
+slug: Global-Pointer-Multi-Head-Attention-without-Value-Operation
+title: Global Pointer: Multi-Head Attention without Value Operation
 category: 
 tags: NLP
 toc: show
 
-## PaddlePaddle
+[TOC]
+
+## Background
+
+1. **单个字符的子序列**：对于长度为 $n$ 的序列，有 $n$ 个可能的单个字符的子序列。
+
+2. **长度为$k$的子序列**：对于任意 $1 < k \leq n$，序列中可以有 $n - k + 1$ 个长度为 $k$ 的子序列，因为可以从序列的起始位置开始取长度为 $k$ 的子序列，也可以从序列的第二个字符开始取，依此类推，直到从序列的第 $n-k+1$ 个字符开始。
+
+3. **所有可能的子序列总数**：要得到序列中所有可能的非空子序列的总数，我们需要对所有可能的子序列长度求和，即从长度为 1 加到长度为 $n$ ：
+
+$$\text{子序列总数} = \sum_{k=1}^{n} (n - k + 1) = n + (n-1) + (n-2) + \ldots + 1=  \frac{n(n + 1)}{2}$$
+
+## Problem Description
+
+从 $\frac{n(n + 1)}{2}$ 候选实体中选取真正实体。如果有 $m$ 种实体类型，即转换为 $m$ 个 $\frac{n(n + 1)}{2}$ 选 $k$ 的多标签分类问题。
+
+## Mathematical Form
+
+**Multi-Head Attention without Value Operation**
+
+设长度为 $n$ 的输入 $t$ 经过编码后得到向量序列 $[h_1, h_2, \ldots, h_n]$，即**Token Representation**，通过变换
+
+$$q_{i, \alpha} = W_{q, \alpha} h_i + b_{g, \alpha}$$
+$$k_{i, \alpha} = W_{k, \alpha} h_i + b_{k, \alpha}$$
+
+我们可以得到序列向量序列 $[q_{1, \alpha}, q_{2, \alpha}, \ldots, q_{n, \alpha}]$ 和 $[k_{1, \alpha}, k_{2, \alpha}, \ldots, k_{n, \alpha}]$，它们是识别第 $\alpha$ 种类型实体所用的向量序列。定义**Span Prediction**
+
+$$S_{\alpha}(i, j) = q_{i, \alpha} \cdot k_{j, \alpha}$$
+
+是类型为 $\alpha$ 的实体的打分（logits），这里的 $t[i:j]$ 指的是序列 $t$ 的第 $i$ 个到第 $j$ 个元素组成的连续子串。
+
+GlobalPointer 就是简化版 Multi-Head Attention，有多少种实体就对应多少个头，相比 Multi-Head Attention 去掉了 $Value$ 相关的运算。
+
+
+## Global Pointer
+
+**Multi-Head Attention without Value Operation**
+
+
+![GP]({static}/images/GlobalPointer/GP.jpg)
+
+## Loss
+
+## GP4Paddle
 
 ```python
 # !/usr/bin/env python3

@@ -48,6 +48,54 @@ GlobalPointer 就是简化版 Multi-Head Attention，有多少种实体就对应
 ![GP]({static}/images/GlobalPointer/GP.jpg)
 
 ## Loss
+```python
+# !/usr/bin/env python3
+# -*- coding: UTF-8 -*-
+#
+################################################################################
+#
+# Copyright (c) All Rights Reserved
+#
+################################################################################
+"""
+Multi Cross Entropy Loss.
+"""
+import paddle
+import paddle.nn as nn
+import paddle.nn.functional as F
+
+__all__ = ['MultiCrossEntropyLoss']
+
+
+class MultiCrossEntropyLoss(nn.Layer):
+    """Multi Cross Entropy Loss implementation.
+    """
+    def __init__(self):
+        super(MultiCrossEntropyLoss, self).__init__()
+
+    def forward(self, pred, label):
+        """
+        Args:
+            pred: the predict logits.(batch_size, entity_type_num, seq_len, seq_len)
+            label: the label logits.(batch_size, entity_type_num, seq_len, seq_len)
+
+        Returns:
+            Tensor: Returns tensor `loss`, the multi cross entropy loss of predict and label.
+        """
+        batch_size, entity_type_num = pred.shape[:2]
+        label = label.reshape((batch_size * entity_type_num, -1))
+        pred = pred.reshape((batch_size * entity_type_num, -1))
+
+        pred = (1. - 2. * label) * pred  # -1 -> pos classes, 1 -> neg classes
+        pred_neg = pred - label * 1e12  # mask the pred outputs of pos classes
+        pred_pos = pred - (1. - label) * 1e12  # mask the pred outputs of neg classes
+        zeros = paddle.zeros_like(pred[..., :1], )
+        pred_neg = paddle.concat([pred_neg, zeros], axis=-1)
+        pred_pos = paddle.concat([pred_pos, zeros], axis=-1)
+        neg_loss = paddle.logsumexp(pred_neg, axis=-1)
+        pos_loss = paddle.logsumexp(pred_pos, axis=-1)
+        return (neg_loss + pos_loss).mean()
+```
 
 ## GP4Paddle
 

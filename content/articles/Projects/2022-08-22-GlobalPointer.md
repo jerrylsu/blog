@@ -192,3 +192,5 @@ class ErnieForGlobalPointer(ErniePretrainedModel):
 Refs.
 
 [Jianlin Su, Ahmed Murtadha, et al. Global Pointer: Novel Efficient Span-based Approach for Named Entity Recognition](https://arxiv.org/pdf/2208.03054)
+
+[Jianlin Su, Mingren Zhu, Ahmed Murtadha, et al. ZLPR: A Novel Loss for Multi-label Classification](https://arxiv.org/pdf/2208.02955)

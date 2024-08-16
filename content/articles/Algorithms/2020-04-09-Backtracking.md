@@ -1,14 +1,13 @@
 Status: published
 Date: 2020-04-09 10:12:16
 Author: Jerry Su
-Slug: BackTracking
-Title: BackTracking
+Slug: Backtracking
+Title: Backtracking
 Category: 
-Tags: Algorithm, BackTracking
-summary: Reason is the light and the light of life.
-toc: show
+Tags: Algorithm, Backtracking
+summary: Reason is the light and the light of life.=
 
-[Ref. Backtracking](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-xiang-jie-by-labuladong-2/)
+[TOC]
 
 ## BackTracking
 
@@ -33,6 +32,27 @@ def dfs(路径, 选择列表):
         撤销选择
 ```
 写dfs函数时，需要维护走过的**路径**和当前可以做的**选择列表**，当触发**结束条件**时，将**路径**记入结果集。
+
+```
+def backtracking(参数) {
+    if 满足结束条件:
+        存放结果
+        return
+
+    for 选择 in 本层集合中元素（树中节点孩子的数量就是集合的大小）:
+        处理节点
+        backtracking(路径，选择列表) # 递归
+        回溯，撤销处理结果
+```
+
+## 排列Permutation
+
+## 组合Combination
+
+## 子集Subset
+
+## 分割
+
 
 ## Permutation I/II
 

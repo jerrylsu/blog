@@ -28,18 +28,3 @@ def brackets_match(text: str) -> int:
         error = [item[0] for item in stack] + error
     return error
 ```
-
-
-```python
-!jupyter nbconvert --to markdown 2022-12-16-Brackets-Matching.ipynb
-```
-
-    [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
-    [NbConvertApp] Converting notebook 2022-12-16-Brackets-Matching.ipynb to markdown
-    [NbConvertApp] Writing 1137 bytes to 2022-12-16-Brackets-Matching.md
-
-
-
-```python
-
-```

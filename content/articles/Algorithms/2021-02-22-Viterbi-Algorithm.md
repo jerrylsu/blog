@@ -478,19 +478,3 @@ b
 
 
     array([[0.001, 0.002, 0.007, 0.009, 0.009, 0.072, 0.15 , 0.12 , 0.03 ]])
-
-
-
-
-```python
-!jupyter nbconvert --to markdown 2021-02-22-Viterbi-Algorithm.ipynb
-```
-
-    [NbConvertApp] Converting notebook 2021-02-22-Viterbi-Algorithm.ipynb to markdown
-    [NbConvertApp] Writing 9793 bytes to 2021-02-22-Viterbi-Algorithm.md
-
-
-
-```python
-
-```

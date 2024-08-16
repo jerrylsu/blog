@@ -89,18 +89,3 @@ solution.maxSlidingWindow(nums=[1,3,-1,-3,5,3,6,7], k=3)
 
     [3, 3, 5, 5, 6, 7]
 
-
-
-
-```python
-!jupyter nbconvert --to markdown 2021-02-24-Sliding-Window.ipynb
-```
-
-    [NbConvertApp] Converting notebook 2021-02-24-Sliding-Window.ipynb to markdown
-    [NbConvertApp] Writing 2138 bytes to 2021-02-24-Sliding-Window.md
-
-
-
-```python
-
-```

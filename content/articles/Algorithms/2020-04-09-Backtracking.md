@@ -1,11 +1,9 @@
-Status: published
-Date: 2020-04-09 10:12:16
-Author: Jerry Su
-Slug: Backtracking
-Title: Backtracking
-Category: 
-Tags: Algorithm, Backtracking
-summary: Reason is the light and the light of life.=
+date: 2020-04-09 10:12:16
+author: Jerry Su
+slug: Backtracking
+title: Backtracking
+category: 
+tags: Algorithm, Backtracking
 
 [TOC]
 

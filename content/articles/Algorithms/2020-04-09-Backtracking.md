@@ -4,6 +4,7 @@ slug: Backtracking
 title: Backtracking
 category: 
 tags: Algorithm, Backtracking
+toc: show
 
 [TOC]
 

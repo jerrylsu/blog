@@ -8,6 +8,8 @@ Tags: Algorithm, Dynamic Programming
 summary: Reason is the light and the light of life.
 toc: show
 
+[TOC]
+
 ## 什么是动态规划
 动态规划是一种最优化方法，一般的表现形式是求最值。因而求解动态规划的核心问题便是穷举，穷举所有结果获取最优值。类似于回溯问题，暴力穷举所有可能的结果，但穷举的效率极其低下。针对于动态规划这类问题，均有一个共同的特点就是存在**重叠子问题**，利用这个特性采用DP Table备忘表的技巧优化穷举，避免重复计算。（引出自顶向下法递归法）
 

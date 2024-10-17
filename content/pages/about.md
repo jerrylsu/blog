@@ -11,4 +11,4 @@ slug: landing-page-about-hidden
 
 - **Email**: sa517301@mail.ustc.edu.cn
 
-- [**Github**](https://github.com/jerrylsu) [**YouTube**](https://www.youtube.com/@jerrysu780) [**Twitter**](https://twitter.com/Jerrylsu666)
+- [**Github**](https://github.com/jerrylsu) [**HuggingFace**](https://huggingface.co/Jerry666) 

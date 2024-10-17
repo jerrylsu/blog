@@ -160,11 +160,11 @@ PROJECTS = [
         "url": "IndicatorQA",
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",
     },
-    {
-        "name": "🔥🔥🔥UCSG",
-        "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
-        "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
-    },
+    # {
+    #     "name": "🔥🔥🔥UCSG",
+    #     "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
+    #     "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
+    # },
     {
         "name": "🚀🚀🚀DocTuning",
         "url": "https://www.jerrylsu.net/articles/DocTuning.html",

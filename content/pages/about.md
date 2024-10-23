@@ -7,7 +7,7 @@ status: hidden
 slug: landing-page-about-hidden
 ---
 
-- **Baidu**. Senior Algorithm Engineer, Jun. 2021 - Present
+- **Baidu**. Senior Algorithm Engineer
 
 - **Email**: sa517301@mail.ustc.edu.cn
 

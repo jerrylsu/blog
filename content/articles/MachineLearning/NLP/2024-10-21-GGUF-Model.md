@@ -8,12 +8,12 @@ toc: show
 
 [TOC]
 
-## 1.介绍
+## 介绍
 GGUF 是一种文件格式，用于存储用于 GGML 推理的模型和基于 GGML 的执行器。 GGUF 是一种二进制格式，旨在快速加载和保存模型并易于阅读。传统上，模型是使用 PyTorch 或其他框架开发的，然后转换为 GGUF 以在 GGML 中使用。
 
 ![gguf]({static}/images/gguf.png)
 
-## 2.准备工作
+## 准备工作
 基于生成式多模态文字识别模型GOT_OCR2.0示例。首先枚举GOT_OCR2.0模型全部权重键值对，获取模型网络结构命名。方法如下：
 
 ```python
@@ -113,7 +113,7 @@ model.mm_projector_vary.bias   ->   [1024]
 Tensor count: 472
 ```
 
-## 3.定义模型架构
+## 定义模型架构
 在转换脚本convert_hf_to_gguf.py中定义模型类，继承自Model父类。
 
 ```python
@@ -128,7 +128,7 @@ class GOTOCR2Model(Model):
             self._set_vocab_qwen()
 ```
 
-## 4.定义张量布局
+## 定义张量布局
 
 ```python
 class MODEL_ARCH(IntEnum):
@@ -228,7 +228,7 @@ TENSOR_NAMES: dict[MODEL_TENSOR, str] = {
 }
 ```
 
-## 5.张量映射
+## 张量映射
 将原始张量名称映射到 GGUF 中的标准化等效名称。作为一般规则，在向 GGUF 添加新的张量名称之前，请确保等效命名尚不存在。找到等效的 GGUF 张量名称后，将其添加到tensor_mapping.py 文件中。如果张量名称是重复层/块的一部分，则关键字 bid 替换。
 
 ```python
@@ -369,10 +369,18 @@ class TensorNameMap:
 
 **注意：**张量名称必须以 .weight 后缀结尾， quantize量化工具会默认处理权重。
 
-## 6.模型参数转换
-`
+## 模型参数转换
+```python
 python convert_hf_to_gguf.py --outtype bf16 --model ~/GOT-OCR2_0 --outfile ~/output/GOT-OCR2_0-GGUF
-`
+```
 
-## 7.实现
-https://github.com/jerrylsu/gguf-py
+## 实现
+[https://github.com/jerrylsu/gguf-py](https://github.com/jerrylsu/gguf-py)
+
+## 致谢🙏
+
+[ggml](https://github.com/ggerganov/ggml): Tensor library for machine learning.
+
+[llama.cpp](https://github.com/ggerganov/llama.cpp): LLM inference in C/C++.
+
+[GOT-OCR2.0](https://github.com/Ucas-HaoranWei/GOT-OCR2.0): Official code implementation of General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model.

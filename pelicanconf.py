@@ -156,6 +156,11 @@ SOCIAL = (
 PROJECTS_TITLE = "Projects List"
 PROJECTS = [
     {
+        "name": "🚀🚀🚀gguf-py",
+        "url": "https://www.jerrylsu.net/articles/GGUF-Model.html",
+        "description": "This is a Python package for writing binary files in the GGUF based on llama_cpp.",
+    },
+    {
         "name": "👏👏👏IndicatorQA",
         "url": "IndicatorQA",
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",

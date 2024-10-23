@@ -156,22 +156,22 @@ SOCIAL = (
 PROJECTS_TITLE = "Projects List"
 PROJECTS = [
     {
-        "name": "🔥🔥🔥GGUF-py",
+        "name": "GGUF-py🔥🔥🔥",
         "url": "https://www.jerrylsu.net/articles/GGUF-Model.html",
         "description": "This is a Python package for writing binary files in the GGUF based on llama_cpp.",
     },
     {
-        "name": "👏👏👏IndicatorQA",
+        "name": "IndicatorQA👏👏👏",
         "url": "IndicatorQA",
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",
     },
     # {
-    #     "name": "🔥🔥🔥UCSG",
+    #     "name": "UCSG🔥🔥🔥",
     #     "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
     #     "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     # },
     {
-        "name": "🚀🚀🚀DocTuning",
+        "name": "DocTuning🚀🚀🚀",
         "url": "https://www.jerrylsu.net/articles/DocTuning.html",
         "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },

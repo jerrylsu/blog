@@ -1,7 +1,7 @@
 bs4==4.11.1
 loguru==0.6.0
 psutil==5.9.4
-jupyterlab==3.5.0
+jupyterlab==3.6.7
 jinja2==3.0.3
 cssmin==0.2.0
 nbformat==5.7.0

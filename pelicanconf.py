@@ -185,11 +185,11 @@ PROJECTS = [
         "url": "Assisted review",
         "description": "Operations Automation Platform: Document Assisted Review.",
     },
-    {
-        "name": "UTCX",
-        "url": "PlaceHold",
-        "description": "Universal Text Classification.",
-    },
+    # {
+    #     "name": "UTCX",
+    #     "url": "PlaceHold",
+    #     "description": "Universal Text Classification.",
+    # },
     {
         "name": "GlobalPointer",
         "url": "https://www.jerrylsu.net/articles/Global-Pointer-Multi-Head-Attention-without-Value-Operation.html",
@@ -204,6 +204,11 @@ PROJECTS = [
         "name": "Jerry's Blog",
         "url": "https://github.com/jerrylsu/blog",
         "description": "Jerry's Technology Blog with Pelican.",
+    },
+    {
+        "name": "Algorithms",
+        "url": "https://github.com/jerrylsu/Algorithms-in-Python",
+        "description": "Algorithms Simple and Readable Solution in Python.",
     },
     {
         "name": "Autotools",

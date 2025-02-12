@@ -171,14 +171,14 @@ PROJECTS = [
     #     "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
     # },
     {
-        "name": "DocTuning🚀🚀🚀",
-        "url": "https://www.jerrylsu.net/articles/DocTuning.html",
-        "description": "A Few-shot Modeling Platform for Natural Language Processing.",
-    },
-    {
-        "name": "Ernie4Paddle",
+        "name": "Ernie4Paddle🚀🚀🚀",
         "url": "https://www.jerrylsu.net/articles/Ernie4Paddle.html",
         "description": "A language model development suite based on the PaddlePaddle deep learning framework.",
+    },
+    {
+        "name": "DocTuning",
+        "url": "https://www.jerrylsu.net/articles/DocTuning.html",
+        "description": "A Few-shot Modeling Platform for Natural Language Processing.",
     },
     {
         "name": "DocReviewAssistant",

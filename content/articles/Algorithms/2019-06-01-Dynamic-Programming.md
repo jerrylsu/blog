@@ -1,7 +1,7 @@
 Status: published
 Date: 2019-06-01 01:40:10
 Author: Jerry Su
-Slug: Dynamic-Programming
+Slug: Dynamic-Programming.bk
 Title: Dynamic Programming
 Category: 
 Tags: Algorithm, Dynamic Programming

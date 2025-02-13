@@ -26,6 +26,8 @@ DATE_FORMATS = {'en': '%b %d, %Y'}
 PATH = 'content'
 THEME = 'elegant'
 
+USE_SHORTCUT_ICONS = True
+
 ARTICLE_PATHS = ['articles']
 ARTICLE_URL = 'articles/{slug}.html'
 ARTICLE_SAVE_AS = 'articles/{slug}.html'
@@ -82,6 +84,8 @@ PLUGIN_PATHS = [
 ]
 # # PLUGINS
 # MARKUP = ("md", "ipynb")
+
+TIPUE_SEARCH = True
 
 PLUGINS = [
     # 'pelican_youtube',

@@ -45,7 +45,7 @@ class Blogger:
         """Publish the blog to GitHub pages.
         """
         # 1.Push commits of this repository to jerrylsu/blog on GitHub.
-        logger.info("[Push] Blog " + DASHES)
+        logger.info("[Push] Blog Code " + DASHES)
         self._push_github(args.blog_dir)
 
         # 2.Generate the blog/site using Pelican.
@@ -53,7 +53,7 @@ class Blogger:
         self._pelican_generate(args.blog_dir)
 
         # 3.Push compiled output to GitHub to generate GitHub pages.
-        logger.info("[Publish] Blog " + DASHES)
+        logger.info("[Publish] Blog Web " + DASHES)
         output_path = os.path.join(args.blog_dir, "output")
         self._push_github(path=output_path)
 

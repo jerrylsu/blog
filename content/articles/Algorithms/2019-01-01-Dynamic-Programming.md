@@ -10,6 +10,26 @@ toc: show
 
 [TOC]
 
+### 股票买卖系列问题
+
+`状态定义：`
+
+dp[i][k][0]第i天交易限制k次不持有股票的最大利润
+
+dp[i][k][1]第i天交易限制k次持有股票的最大利润
+
+初始化状态：
+
+dp[-1][0][0]
+
+
+状态转移方程：
+
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k-1][1] - price[i])：今天不持有 = max(昨天也不持有，今天买入)
+
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k][0] + price[i])：今天持有 = max(昨天也持有，今天卖出)
+
+
 ### 188.买卖股票的最佳时机IV
 
 ### 300.最长递增子序列
@@ -19,6 +39,8 @@ toc: show
 - 时间复杂度：O(N²)
 
 - 空间复杂度：O(N)
+
+- `状态定义dp[i]：`以nums[i]结尾的递增子序列的长度。
 
 ```
 def lengthOfLIS(nums):
@@ -35,6 +57,27 @@ def lengthOfLIS(nums):
     return max(dp)
 ```
 
+### 674.最长连续递增序列
+
+- 问题定义：一个数组的最长递增子序列（LIS, Longest Increasing Subsequence）是从中选择若干个元素（不一定连续），使得这些元素保持递增，且长度最长。
+
+- 时间复杂度：O(N)
+
+- 空间复杂度：O(N)
+
+- `状态定义dp[i]：`以下标nums[i]结尾的连续递增子序列的长度。`
+
+- 重点在于：`连续`。因为连续所以我们只需要从前一个状态dp[i-1]，即以nums[i-1]结尾，转移到dp[i]即可。所以不像是300题不连续特性，去遍历dp[0]到dp[j](j属于[0, i)])的状态。从时间复杂度的角度仔细体会300和674之间的区别。
+
+```
+def findLengthOfLCIS(self, nums: List[int]) -> int:
+    dp = [1 for _ in range(len(nums))]
+    for i in range(1, len(nums)):
+        if nums[i] > nums[i-1]:
+            dp[i] = dp[i-1] + 1
+    return max(dp)
+```
+
 ### 72.编辑距离
 
 - 问题定义：计算两个字符串之间的最小编辑操作数，使得一个字符串能够转换成另一个字符串。
@@ -42,6 +85,8 @@ def lengthOfLIS(nums):
 - 时间复杂度：O(M * N)
 
 - 空间复杂度：O(M * N)
+
+- 状态定义dp[i][j]：字符串word[:i]转换成字符串word[:j]需要的最小操作数。
 
 ```
 def minDistance(self, word1: str, word2: str) -> int:

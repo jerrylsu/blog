@@ -42,7 +42,7 @@ DIRECT_TEMPLATES = [
     'authors', 
     'categories', 
     'tags',
-    # 'archives', 
+    'archives', 
     '404',
     'search',
 ]
@@ -159,21 +159,21 @@ SOCIAL = (
 # Landing Page
 PROJECTS_TITLE = "Projects List"
 PROJECTS = [
-    {
-        "name": "GGUF-py🔥🔥🔥",
-        "url": "https://www.jerrylsu.net/articles/GGUF-Model.html",
-        "description": "This is a Python package for writing binary files in the GGUF based on llama_cpp.",
-    },
+    # {
+    #     "name": "GGUF-py🔥🔥🔥",
+    #     "url": "https://www.jerrylsu.net/articles/GGUF-Model.html",
+    #     "description": "This is a Python package for writing binary files in the GGUF based on llama_cpp.",
+    # },
     {
         "name": "IndicatorQA👏👏👏",
         "url": "IndicatorQA",
         "description": "A Indicator Question Answering Agent based on Retrieval-Augmented Generation.",
     },
-    # {
-    #     "name": "UCSG🔥🔥🔥",
-    #     "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
-    #     "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
-    # },
+    {
+        "name": "UCSG🔥🔥🔥",
+        "url": "http://www.jerrylsu.net/articles/Universal-Chart-Structural-Multimodal-Generation-and-Extraction.html",
+        "description": "Universal Chart Structural Multimodal Generation and Extraction via One Classification Token.",
+    },
     {
         "name": "Ernie4Paddle🚀🚀🚀",
         "url": "https://www.jerrylsu.net/articles/Ernie4Paddle.html",

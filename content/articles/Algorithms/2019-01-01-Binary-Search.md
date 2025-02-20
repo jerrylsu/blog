@@ -12,6 +12,12 @@ toc: show
 
 ### 704.Binary Search
 
+- 问题定义：在有序数组中查找target值。
+
+- 时间复杂度：`O(logN)`
+
+- 空间复杂度：`O(1)`
+
 ```
 def binary_search(nums: List[int], target: int) -> int:
     if not nums:
@@ -27,7 +33,7 @@ def binary_search(nums: List[int], target: int) -> int:
             left = mid
     # mid未搜索到，检查边界
     if nums[left] == target:
-        rerurn left
+        return left
     if nums[right] == target:
         return right
     return -1                               # 未搜索到

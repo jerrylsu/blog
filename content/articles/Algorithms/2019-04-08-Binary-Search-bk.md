@@ -2,9 +2,7 @@ Status: published
 Date: 2019-04-08 13:10:38
 Author: Jerry Su
 Slug: Binary-Search-bk
-Title: Binary Search
 Category: 
-Tags: Algorithm, Binary Search
 summary: Reason is the light and the light of life.
 toc: show
 

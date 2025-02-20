@@ -91,14 +91,13 @@ PLUGINS = [
     # 'pelican_youtube',
     'extract_toc',
     'sitemap',        # generate sitemap document, see <https://www.sitemaps.org>
-    'minchin.pelican.plugins.post_stats', # generate post statistics
+    'post_stats',     # generate post statistics
     'related_posts',  # find articles those share common tags
     'neighbors',      # find next, previous article
     'share_post',     # static sharing buttons
     'tipue_search',   # generate data for searching
     'render_math',
     'i18n_subsites',
-    # nb_markup
     # "liquid_tags.img",
     # "liquid_tags.include_code",
 ]

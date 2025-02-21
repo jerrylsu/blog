@@ -63,6 +63,12 @@ def binary_search(nums: List[int], target: int) -> int:
 
 ### 33.搜索旋转排序数组
 
+- 问题定义：在旋转有序数组中查找target值。
+
+- 时间复杂度：`O(logN)`
+
+- 空间复杂度：`O(1)`
+
 ```
 def search(self, nums: List[int], target: int) -> int:
         if not nums:

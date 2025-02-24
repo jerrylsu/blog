@@ -27,9 +27,11 @@ dp[-1][0][0]
 **`状态转移方程：`**
 
 ```
-dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + price[i])：今天不持有 = max(昨天也不持有，昨天持有+今天卖出)
+# 今天不持有 = max(昨天也不持有，昨天持有+今天卖出)
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + price[i])
 
-dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - price[i])：今天持有 = max(昨天也持有，昨天不持有+今天买入)
+# 今天持有 = max(昨天也持有，昨天不持有+今天买入)
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - price[i])
 ```
 
 **`状态穷举：`**
@@ -79,6 +81,57 @@ def maxProfit(self, prices: List[int]) -> int:
         dp[i][1] = max(dp[i-1][1], - prices[i])
     return dp[-1][0]
 ```
+
+### 121.买卖股票的最佳时机
+k = 无穷 情况，简化状态转移方程：
+```
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
+```
+===>
+```
+dp[i-1][k][0] = dp[i-1][k-1][0] # k = 0 k无穷大，则k和k - 1相等。
+```
+===>
+```
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]) # k不受限制，无需记录
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
+```
+===>
+```
+dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+dp[i][1] = max(dp[i-1][1], dp[i-1][0]- prices[i])
+```
+===>
+```
+def maxProfit(self, prices: List[int]) -> int:
+    n = len(prices)
+    dp = [[0] * 2 for _ in range(n)]
+    dp[0][0], dp[0][1] = 0, -prices[0] 
+    for i in range(1, n):
+        dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+        dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
+    return dp[-1][0]
+```
+
+### 714.买卖股票的最佳时机含手续费
+
+基于121题 k = 无穷 情况，买入时扣除手续费即可
+
+```
+def maxProfit(self, prices: List[int]) -> int:
+    n = len(prices)
+    dp = [[0] * 2 for _ in range(n)]
+    dp[0][0], dp[0][1] = 0, -prices[0] - fee
+    for i in range(1, n):
+        dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+        dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i] - fee)
+    return dp[-1][0]
+```
+
+### 309.买卖股票的最佳时机含冷冻期
+
+基于121题 k = 无穷 情况，在买入是需要冷冻期，即第 i 天选择 buy 的时候，要从 i-2 的状态转移，而不是 i-1 。
 
 ### 188.买卖股票的最佳时机IV
 

@@ -14,6 +14,8 @@ toc: show
 
 - `状态定义：`
 
+**dp[i][k][0 or 1]**
+
 dp[i][k][0]第i天交易限制k次不持有股票的最大利润
 
 dp[i][k][1]第i天交易限制k次持有股票的最大利润
@@ -22,13 +24,38 @@ dp[i][k][1]第i天交易限制k次持有股票的最大利润
 
 dp[-1][0][0]
 
-
 - `状态转移方程：`
 
 ```
-dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k-1][1] - price[i])：今天不持有 = max(昨天也不持有，今天买入)
+dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + price[i])：今天不持有 = max(昨天也不持有，昨天持有+今天卖出)
 
-dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k][0] + price[i])：今天持有 = max(昨天也持有，今天卖出)
+dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - price[i])：今天持有 = max(昨天也持有，昨天不持有+今天买入)
+```
+
+- `状态穷举：`
+
+```
+0 <= i <= n - 1, 1 <= k <= K
+n 为天数，大 K 为交易数的上限，0 和 1 代表是否持有股票，总共`n × K × 2`种状态。
+
+for 0 <= i < n:
+    for 1 <= k <= K:
+        for s in (0, 1):
+            dp[i][k][0] = max(昨天也不持有，昨天持有+今天卖出)
+            dp[i][k][1] = max(昨天也持有，昨天不持有今天买入)
+```
+
+### 121.买卖股票的最佳时机
+
+```
+def maxProfit(self, prices: List[int]) -> int:
+    n = len(prices)
+    dp = [[0] * 2 for _ in range(n)]
+    dp[0][0], dp[0][1] = 0, -prices[0] 
+    for i in range(1, n):
+        dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+        dp[i][1] = max(dp[i-1][1], - prices[i])
+    return dp[-1][0]
 ```
 
 ### 188.买卖股票的最佳时机IV

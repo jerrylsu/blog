@@ -46,12 +46,12 @@ for 0 <= i < n:
             # dp[i][k][0] = max(昨天也不持有，昨天持有+今天卖出)
             # dp[i][k][1] = max(昨天也持有，昨天不持有+今天买入)
             dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
-            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
+            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]) # 只有买入时算作一次交易
 ```
 
-### 121.买卖股票的最佳时机
+### 121.买卖股票的最佳时机 k=1
 
-k = 1情况，简化状态转移方程：
+`k = 1`情况，简化状态转移方程：
 ```
 dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
 dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
@@ -82,8 +82,8 @@ def maxProfit(self, prices: List[int]) -> int:
     return dp[-1][0]
 ```
 
-### 121.买卖股票的最佳时机
-k = 无穷 情况，简化状态转移方程：
+### 121.买卖股票的最佳时机 k无穷
+`k = 无穷`情况，简化状态转移方程：
 ```
 dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
 dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
@@ -100,7 +100,7 @@ dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
 ===>
 ```
 dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
-dp[i][1] = max(dp[i-1][1], dp[i-1][0]- prices[i])
+dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
 ```
 ===>
 ```
@@ -114,9 +114,9 @@ def maxProfit(self, prices: List[int]) -> int:
     return dp[-1][0]
 ```
 
-### 714.买卖股票的最佳时机含手续费
+### 714.买卖股票的最佳时机含手续费 k无穷
 
-基于121题 k = 无穷 情况，买入时扣除手续费即可
+基于121题`k = 无穷`情况，买入时扣除手续费即可
 
 ```
 def maxProfit(self, prices: List[int]) -> int:
@@ -129,11 +129,30 @@ def maxProfit(self, prices: List[int]) -> int:
     return dp[-1][0]
 ```
 
-### 309.买卖股票的最佳时机含冷冻期
+### 309.买卖股票的最佳时机含冷冻期 k无穷
 
-基于121题 k = 无穷 情况，在买入是需要冷冻期，即第 i 天选择 buy 的时候，要从 i-2 的状态转移，而不是 i-1 。
+基于121题`k = 无穷`情况，在买入是需要冷冻期，即第 i 天选择 buy 的时候，要从 i-2 的状态转移，而不是 i-1 。
+```
+dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+dp[i][1] = max(dp[i-1][1], dp[i-2][0] - prices[i])
+```
 
-### 188.买卖股票的最佳时机IV
+```
+def maxProfit(self, prices: List[int]) -> int:
+    n = len(prices)
+    if n < 2:
+        return 0
+    dp = [[0] * 2 for _ in range(n)]
+    # i = 0
+    dp[0][0], dp[0][1] = 0, -prices[0]
+    # i = 1
+    dp[1][0] = max(dp[0][0], dp[0][1] + prices[1])
+    dp[1][1] = max(dp[0][1], - prices[1])
+    for i in range(2, n):
+        dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+        dp[i][1] = max(dp[i-1][1], dp[i-2][0] - prices[i])
+    return dp[-1][0]
+```
 
 ### 300.最长递增子序列
 

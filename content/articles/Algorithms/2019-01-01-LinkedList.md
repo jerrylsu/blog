@@ -17,6 +17,13 @@ class ListNode:
         self.next = next
 ```
 
+### 擅用Dummy节点
+以下两种情况下需要使用`Dummy Node`：
+
+1. 当链表的结构发生变化时
+
+2. 当需要返回的链表头不确定时
+
 ### 21.合并两个有序链表
 ```python
 def mergeTwoLists(list1: ListNode, list2: ListNode):
@@ -24,7 +31,7 @@ def mergeTwoLists(list1: ListNode, list2: ListNode):
         return None
     if not list1 or not list2:
         return list1 or list2
-    cur = dummpy = ListNode(-1)
+    cur = dummy = ListNode(-1)
     while(list1 and list2):
         if list1.val < list2.val:
             cur.next = list1
@@ -34,7 +41,7 @@ def mergeTwoLists(list1: ListNode, list2: ListNode):
             list2 = list2.next
         cur = cur.next
     cur.next = list1 or list2
-    return dummpy.next
+    return dummy.next
 ```
 
 ### 23.合并K个升序链表
@@ -123,12 +130,7 @@ public:
 };
 ```
 
-## 擅用Dummy节点
-以下两种情况下需要使用`Dummy Node`：
 
-1. 当链表的结构发生变化时
-
-2. 当需要返回的链表头不确定时
 
 ### Remove Duplicates from Sorted List II
 
@@ -192,9 +194,6 @@ class Solution:
         dummy2 = more = ListNode(-1)
 ```
 
-## 快慢指针
-
-## 综合设计
 
 ### LRU Cache
 分析：为了保持cache的性能，使查找，插入，删除都有较高的性能，我们使用**双向链表**和**哈希表**作为cache的数据结构，因为：

@@ -17,7 +17,7 @@ class ListNode:
         self.next = next
 ```
 
-### 擅用Dummy节点
+### 擅用dummy结点
 以下两种情况下需要使用`dummy`结点：
 
 1. 当链表的结构发生变化时

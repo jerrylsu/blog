@@ -8,7 +8,7 @@ Tags: Algorithm, Linked List
 summary: Reason is the light and the light of life.
 toc: show
 
-## 链表结点定义
+### 链表结点定义
 ```python
 class ListNode:
     def __init__(self, val: int = 0, next: ListNode = None):
@@ -34,6 +34,21 @@ def mergeTwoLists(list1: ListNode, list2: ListNode):
         cur = cur.next
     cur.next = list1 or list2
     return dummpy.next
+```
+
+### 23.合并K个升序链表
+```python
+def mergeKLists(self, lists: List[ListNode]):
+    if not lists:
+        return None
+    if len(lists) = 1:
+        return lists[0]
+    mid = len(lists) // 2
+    left = mergeKLists(list[:mid])
+    right = mergeKLists(list[mid:])
+    merge = mergeTwoLists(left, right)
+    return merge
+
 ```
 
 ### Remove Duplicates from Sorted List

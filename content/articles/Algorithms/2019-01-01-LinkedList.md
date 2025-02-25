@@ -18,7 +18,7 @@ class ListNode:
 ```
 
 ### 擅用Dummy节点
-以下两种情况下需要使用`Dummy Node`：
+以下两种情况下需要使用`dummy`结点：
 
 1. 当链表的结构发生变化时
 

@@ -6,7 +6,8 @@ Title: LinkedList
 Category: 
 Tags: Algorithm, Linked List
 summary: Reason is the light and the light of life.
-toc: show
+
+[TOC]
 
 ### 链表结点定义
 ```python

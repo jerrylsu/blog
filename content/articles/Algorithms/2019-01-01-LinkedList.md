@@ -8,32 +8,38 @@ Tags: Algorithm, Linked List
 summary: Reason is the light and the light of life.
 toc: show
 
-[GitHub LinkedList](https://github.com/jerrylsu/Algorithms/tree/master/03.%20LinkedList)
-
 ## 链表结点定义
-```cpp
-class ListNode{
-    public:
-        int val;
-        ListNode* next;
-
-        ListNode() : val(0), next(nullptr) {}
-        ListNode(int x) : val(x), next(nullptr) {}
-        ListNode(int x, ListNode* next) : val(x), next(next) {}
-};
-
+```python
+class ListNode:
+    def __init__(self, val: int = 0, next: ListNode = None):
+        self.val = val
+        self.next = next
 ```
 
-## 链表基本操作
-链表的基本操作与技巧，需要熟记于心，信手拈来
-
-1. 插入、删除、翻转（基础）
-
-2. 合并与中分（进阶）
+### 21.合并两个有序链表
+```python
+def mergeTwoLists(list1: ListNode, list2: ListNode):
+    if not list1 and not list2:
+        return None
+    if not list1 or not list2:
+        return list1 or list2
+    cur = dummpy = ListNode(-1)
+    while(list1 and list2):
+        if list1.val < list2.val:
+            cur.next = list1
+            list1 = list2.next
+        else:
+            cur.next = list2
+            list2 = list2.next
+        cur = cur.next
+    cur.next = list1 or list2
+    return dummpy.next
+```
 
 ### Remove Duplicates from Sorted List
 
 由于重复节点要保留一个，则不需要考虑删除头节点的特殊情况。
+
 ```python
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
@@ -49,8 +55,6 @@ class Solution:
 
 ### Reverse Linked List
 ```python
-Python
-
 class Solution:
         if not head or not head.next:
             return head
@@ -61,153 +65,6 @@ class Solution:
             pre = cur
             cur = pos
         return pre
-```
-
-```cpp
-C++
-
-class Solution{
-public:
-    ListNode* reverseList(ListNode* head){
-        if(!head) return nullptr;
-        ListNode *pre, *cur, *post;
-        cur = head;
-        pre = nullptr;
-        while(cur){
-            post = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = post;
-        }
-        return pre;
-    }
-};
-
-```
-
-### Merge Two Sorted Lists
-```python
-Python
-
-class Solution:
-    def mergeTwoLists(self, l1, l2):
-        dummy = cur = ListNode(-1)
-        while l1 and l2:
-            if l1.val < l2.val:
-                cur.next = l1
-                l1 = l1.next
-            else:
-                cur.next = l2
-                l2 = l2.next
-            cur = cur.next
-        cur.next = l1 or l2
-        return dummy.next
-```
-
-```cpp
-C++
-
-class Solution{
-public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
-        if(!l1 && !l2) return nullptr;
-        if(!l1 || !l2) return !l1 ? l2 : l1;
-
-        ListNode dummy(-1), *current;
-        current = &dummy;
-        while(l1 && l2){
-            if(l1->val < l2->val){
-                current->next = l1;
-                l1 = l1->next;
-            }else{
-                current->next = l2;
-                l2 = l2->next;
-            }
-            current = current->next;
-        }
-        current->next = l1 == nullptr ? l2 : l1;
-        return dummy.next;
-    }
-};
-```
-
-### Merge k Sorted Lists
-```cpp
-#include<iostream>
-#include<vector>
-
-using namespace std;
-
-class ListNode {
-    int val;
-    ListNode* next;
-
-    ListNode() : val(0), next(nullptr) { }
-    ListNode(int val) : val(val), next(nullptr) { }
-    ListNode(int val, ListNode* next) : val(val), next(next) { }
-};
-
-
-class Solution {
-public:
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-    /*O(K*N)*/
-        if (lists.size() == 0) { return nullptr; }
-        if (lists.size() == 1) { return lists[0]; }
-
-        ListNode* res = lists[0];
-        int n = lists.size();
-        for (int i = 1; i < n; ++i) {
-            res = mergeLists(res, lists[i]);
-        }
-        return res;
-    }
-
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-    /* 时间复杂度分析：K 条链表的总结点数是 N，平均每条链表有 N/K 个
-     * 节点，因此合并两条链表的时间复杂度是 O(N/K)。从 K 条链表开始
-     * 两两合并成 1 条链表，因此每条链表都会被合并 logK 次，因此 K
-     * 条链表会被合并 K * logK 次，因此总共的时间复杂度是 K*logK*N/K
-     * 即 O（NlogK）。*/
-        return partition(lists, 0, lists.size() - 1);
-    }
-
-    ListNode* partition(vector<ListNode*>& lists, int start, int end) {
-        if (start > end) {{ return nullptr; }
-        if (start == end) { return lists[start]; }
-
-        if (start < end) {
-            int mid = start + ((end - start) >> 1);
-            ListNode* l = partition(lists, start, mid);
-            ListNode* r = partition(lists, mid + 1, end);
-            return mergeTwoLists(l, r);
-        }
-
-        return nullptr;
-    }
-
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
-        if (l1 == nullptr && l2 == nullptr) { return nullptr; }
-        if (l1 == nullptr) { return l2; }
-        if (l2 == nullptr) { return l1; }
-
-        ListNode dummy(-1), *cur;
-        cur = &dummy;
-        while (l1 && l2) {
-            if (l1->val < l2->val) {
-                cur->next = l1;
-                l1 = l1->next;
-            }
-            else{
-                cur->next = l2;
-                l2 = l2->next;
-            }
-            cur = cur->next;
-        }
-        cur->next = l1 == nullptr ? l2 : l1;
-        return dummy.next;
-    }
-};
 ```
 
 ### Sort List

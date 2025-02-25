@@ -24,6 +24,17 @@ class ListNode:
 
 2. 当需要返回的链表头不确定时
 
+```python
+# error
+dummy1 = dummy2 = ListNode(-1)  # 引用同一个对象！
+less = dummy1
+more = dummy2
+
+# right
+dummy1 = less = ListNode(-1)
+dummy2 = more = ListNode(-1)
+```
+
 ### 21.合并两个有序链表
 ```python
 def mergeTwoLists(list1: ListNode, list2: ListNode):
@@ -182,18 +193,6 @@ class Solution:
         less.next = dummy2.next
         return dummy1.next
 ```
-**Error**:
-```python
-        dummy1 = dummy2 = ListNode(-1)  # 引用同一个对象！
-        less = dummy1
-        more = dummy2
-```
-**Right**:
-```python
-        dummy1 = less = ListNode(-1)
-        dummy2 = more = ListNode(-1)
-```
-
 
 ### LRU Cache
 分析：为了保持cache的性能，使查找，插入，删除都有较高的性能，我们使用**双向链表**和**哈希表**作为cache的数据结构，因为：

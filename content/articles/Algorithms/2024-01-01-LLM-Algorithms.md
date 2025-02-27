@@ -1,8 +1,8 @@
 Status: published
-Date: 2024-11-01 13:19:30
+Date: 2024-01-01 13:19:30
 Author: Jerry Su
-Slug: LLM
-Title: LLM
+Slug: LLM Algorithms
+Title: LLM Algorithms
 Category: 
 Tags: Algorithm, NLP, LLM
 summary: Reason is the light and the light of life.

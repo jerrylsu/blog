@@ -200,6 +200,27 @@ def findLengthOfLCIS(self, nums: List[int]) -> int:
     return max(dp)
 ```
 
+### 198.打家劫舍
+
+- 时间复杂度：`O(N)`
+
+- 空间复杂度：`O(N)`
+
+- 状态定义dp[i]：`偷到第i间房的最大金额`。所以第i间房，可以偷也可以不偷。
+
+```python
+def rob(nums: List[int]) -> int:
+    if not nums:
+        return 0
+    if len(nums) < 3:
+        return max(nums)
+    dp = [0 for _ in range(len(nums))]
+    dp[0], dp[1] = nums[0], max(nums[0], nums[1])
+    for i in range(2, len(nums)):
+        dp[i] = max(dp[i-1], dp[i-2] + nums[i])
+    return dp[-1]
+```
+
 ### 72.编辑距离
 
 - 问题定义：计算两个字符串之间的最小编辑操作数，使得一个字符串能够转换成另一个字符串。

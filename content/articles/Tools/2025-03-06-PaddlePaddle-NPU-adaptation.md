@@ -31,7 +31,7 @@ pip download \
   torch==2.1.0 torch-npu==2.1.0.post10
 ```
 
-`pip install --no-index --find-links=./packages *.whl *.tar.gz`
+`pip install --no-index --find-links=./min_package *.whl *.tar.gz`
 
 平台	参数
 Linux x86_64	manylinux2014_x86_64

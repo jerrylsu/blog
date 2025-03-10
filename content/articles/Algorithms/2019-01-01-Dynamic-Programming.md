@@ -71,7 +71,7 @@ dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
 dp[i][1] = max(dp[i-1][1], - prices[i])
 ```
 ===>
-```
+```python
 def maxProfit(self, prices: List[int]) -> int:
     n = len(prices)
     dp = [[0] * 2 for _ in range(n)]
@@ -103,7 +103,7 @@ dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
 dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
 ```
 ===>
-```
+```python
 def maxProfit(self, prices: List[int]) -> int:
     n = len(prices)
     dp = [[0] * 2 for _ in range(n)]
@@ -118,7 +118,7 @@ def maxProfit(self, prices: List[int]) -> int:
 
 基于121题`k = 无穷`情况，买入时扣除手续费即可
 
-```
+```python
 def maxProfit(self, prices: List[int]) -> int:
     n = len(prices)
     dp = [[0] * 2 for _ in range(n)]
@@ -137,7 +137,7 @@ dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
 dp[i][1] = max(dp[i-1][1], dp[i-2][0] - prices[i])
 ```
 
-```
+```python
 def maxProfit(self, prices: List[int]) -> int:
     n = len(prices)
     if n < 2:
@@ -164,7 +164,7 @@ def maxProfit(self, prices: List[int]) -> int:
 
 - 状态定义dp[i]：`以nums[i]结尾的递增子序列的长度。`
 
-```
+```python
 def lengthOfLIS(nums):
     # 初始化dp表
     n = len(nums)
@@ -191,7 +191,7 @@ def lengthOfLIS(nums):
 
 - 重点在于：`连续`。因为连续所以我们只需要从前一个状态dp[i-1]，即以nums[i-1]结尾，转移到dp[i]即可。所以不像是300题不连续特性，去遍历dp[0]到dp[j](j属于[0, i))的状态。从时间复杂度的角度仔细体会300和674之间的区别。
 
-```
+```python
 def findLengthOfLCIS(self, nums: List[int]) -> int:
     dp = [1 for _ in range(len(nums))]
     for i in range(1, len(nums)):
@@ -221,6 +221,8 @@ def rob(nums: List[int]) -> int:
     return dp[-1]
 ```
 
+### 887. 鸡蛋掉落
+
 ### 72.编辑距离
 
 - 问题定义：计算两个字符串之间的最小编辑操作数，使得一个字符串能够转换成另一个字符串。
@@ -231,7 +233,7 @@ def rob(nums: List[int]) -> int:
 
 - 状态定义dp[i][j]：`字符串word[:i]转换成字符串word[:j]需要的最小操作数。`
 
-```
+```python
 def minDistance(self, word1: str, word2: str) -> int:
     # 初始化dp表
     m, n = len(word1) + 1, len(word2) + 1

@@ -18,16 +18,20 @@ pip download \
   --only-binary=:all: \
   --python-version 3.10 \
   --implementation cp \
-  -d packages \
-  pydantic==2.10.6 \
-  fastapi==0.70.0 paddlenlp==2.5.0 requests==2.26.0 \
+  -i http://pip.baidu.com/pypi/simple --trusted-host pip.baidu.com \
+  -d uie_packages \
+  -r requirements.txt
+```
+
+```
+  fastapi==0.70.0 requests==2.26.0 \
   starlette==0.16.0 uvicorn==0.15.0 datasets==2.13.2 \
   opencv_python_headless==4.5.5.64 configparser==7.1.0 \
   pillow==10.2.0 timm==0.9.2 transformers==4.32.1 \
   torch==2.1.0 torch-npu==2.1.0.post10
 ```
 
-`pip install --no-index --find-links=./packages *.whl`
+`pip install --no-index --find-links=./packages *.whl *.tar.gz`
 
 平台	参数
 Linux x86_64	manylinux2014_x86_64

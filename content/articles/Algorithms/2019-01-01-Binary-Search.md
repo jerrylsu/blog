@@ -41,7 +41,7 @@ toc: show
 
 - 空间复杂度：`O(1)`
 
-```
+```python
 def binary_search(nums: List[int], target: int) -> int:
     if not nums:
         return -1
@@ -69,7 +69,7 @@ def binary_search(nums: List[int], target: int) -> int:
 
 - 空间复杂度：`O(1)`
 
-```
+```python
 def search(self, nums: List[int], target: int) -> int:
         if not nums:
             return -1
@@ -93,4 +93,22 @@ def search(self, nums: List[int], target: int) -> int:
         if target == nums[right]:
             return right
         return -1
+```
+
+### 153.寻找旋转排序数组中的最小值
+
+- 时间复杂度：`O(logN)`
+
+- 空间复杂度：`O(1)`
+
+```python
+def findMin(nums):
+    left, right = 0, len(nums) - 1
+    while left < right:
+        mid = left + ((right - left) >> 1)
+        if nums[mid] > nums[right]:
+            left = mid + 1
+        else:
+            right = mid
+    return nums[left]
 ```

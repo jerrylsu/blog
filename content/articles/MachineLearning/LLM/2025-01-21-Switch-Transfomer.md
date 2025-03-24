@@ -3,7 +3,7 @@ author: Jerry Su
 slug: Switch Transformer
 title: Switch Transformer
 category: 
-tags: LLM, NLP, MoE
+tags: LLM, MoE
 toc: show
 
 [TOC]

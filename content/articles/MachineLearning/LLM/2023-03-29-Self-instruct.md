@@ -3,7 +3,7 @@ author: Jerry Su
 slug: Self-Instruct
 title: SELF-INSTRUCT: Aligning Language Model with Self Generated Instructions
 category: 
-tags: LLM, NLP
+tags: LLM
 toc: show
 
 **Self-Instruct** is a framework that helps language models improve their ability to follow natural language instructions. It does this by using the model's own generations to create a large collection of instructional data. With Self-Instruct, it is possible to improve the instruction-following capabilities of language models without relying on extensive manual annotation.
